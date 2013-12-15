@@ -1,0 +1,5 @@
+encoding: UTF-8
+markdown: redcarpet
+name: Jason Doyle's Blog
+pygments: true
+timezone: America/New_York
