@@ -1,0 +1,9 @@
+@mixin background-gradient($top_color:#fff,$bottom_color:#e6e6e6) {
+   background-image: -webkit-gradient(linear, 0 0, 0 100%, from($top_color), color-stop(25%, $top_color), to($bottom_color));
+   background-image: -webkit-linear-gradient($top_color, $top_color 25%, $bottom_color);
+   background-image: -moz-linear-gradient(top, $top_color, $top_color 25%, $bottom_color);
+   background-image: -ms-linear-gradient($top_color, $top_color 25%, $bottom_color);
+   background-image: -o-linear-gradient($top_color, $top_color 25%, $bottom_color);
+   background-image: linear-gradient($top_color, $top_color 25%, $bottom_color);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top_color}', endColorstr='#{$bottom_color}', GradientType=0);
+}

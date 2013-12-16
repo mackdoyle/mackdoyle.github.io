@@ -1,0 +1,20 @@
+@mixin tab($borderColor,$color){
+	background: #e6e6e6;
+	border: 1px solid $borderColor;
+	color: $color;
+	display: block;
+	font-family: $displayStack;
+	font-weight: 700;
+	line-height: 1;
+	padding: 5px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	&:hover{
+		background: $color;
+		color: #fff;
+		// @include box-shadow(#333 2px 2px 0);
+	}
+	@include breakpoint(narrow){
+		padding: 10px 15px; // Bigger click areas for mobile
+	}
+}

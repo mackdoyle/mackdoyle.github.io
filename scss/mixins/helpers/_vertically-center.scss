@@ -1,0 +1,32 @@
+/**
+ * Vertically Center Element Mixin
+ * Apply this mixin to the parent; pass the to-be-centered child's selector as
+ * the argument (or give that child the default class vcentered);
+ * Based on the method of setting display: table; on the parent element and
+ * display: table-cell; vertical-align: middle; on the to-be-centered child.
+ * See the Scut SASS library for more options.
+ *
+ * @param $child
+ *
+ */
+
+@mixin vertically-center($child: ".vcentered") {
+  display: table;
+  & > #{$child} {
+    display: table-cell;
+    vertical-align: middle;
+    *position: absolute;
+    *top: 50%;
+  }
+}
+
+/*
+Another option is to use this trick:
+
+.abs-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+*/
+

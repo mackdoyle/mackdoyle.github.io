@@ -1,0 +1,13 @@
+@mixin rounded($color: transparent, $border: 1px){
+  background: $color;
+  border: #{$border} solid #{$color};
+  @include border-radius(150px); // On larger images, this needs to be higher
+  padding: 6%;
+  // &:hover{ @include box-shadow( rgba($dark,.2) 3px 3px 3px ); }
+}
+// Usage -----
+
+// Default: 		img{ @include rounded; }
+// Color-only: 	img{ @include rounded(#fff); }
+// Custom:			img{ @include rounded(#c00, 10px); }
+// Variables: 	img{ @include rounded($light, 5px); }

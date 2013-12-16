@@ -1,0 +1,18 @@
+// Short Form
+@mixin transition($argument){
+	@include vendor-prefix(transition, $argument);
+}
+// Long Form
+@mixin transition($property,$delay:.2s,$easing:linear) {
+	-webkit-transition:$property $delay $easing;
+	-moz-transition:$property $delay $easing;
+	-o-transition:$property $delay $easing;
+	-ms-transition:$property $delay $easing;
+	transition:$property $delay $easing;
+}
+
+// Usage -----
+// a:hover{
+//		background: red;
+//		@include transition(all .5s ease-in); }
+// }

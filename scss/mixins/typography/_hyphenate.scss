@@ -1,0 +1,17 @@
+// NOTE - This may cause weird text-wrapping issues. Use sparingly.
+@mixin hyphenate($break:null){
+	@if $break != null and $break == 'break-all'{
+		-ms-word-break: break-all;
+		word-break: break-all;
+		word-break: break-word; // Non-standard for webkit
+	}
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	-webkit-hyphenate-before: 2;
+	-webkit-hyphenate-after: 3;
+	hyphenate-lines: 3;
+}
+// Usage -----
+// h1{ @include hyphenate; }
+// h1{ @include hyphenate(break-all); }

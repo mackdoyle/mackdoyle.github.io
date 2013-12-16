@@ -1,0 +1,9 @@
+@mixin headline($size: 32px, $color: inherit, $transform: inherit){
+	font-family: $displayStack;
+	font-size: #{$size} !important;
+	font-weight: 500 !important;
+	line-height: 32px !important;
+	color: #{$color} !important;
+	text-transform: #{$transform} !important;
+	-webkit-font-smoothing: antialiased;
+}

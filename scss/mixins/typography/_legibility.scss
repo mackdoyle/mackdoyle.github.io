@@ -1,0 +1,6 @@
+@mixin legibility{
+	text-rendering: optimizeLegibility;
+}
+
+//	Usage -----
+//	h1{ @include legible; }

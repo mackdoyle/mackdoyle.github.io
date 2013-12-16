@@ -1,0 +1,27 @@
+/**
+ * Margin Bottom Mixin
+ * Allows for quickly applying a standard bottom margin, with pixel fallback, which helps
+ * establish vertical rhythm. It should be close to the content's line height.
+ * Typically apply this to elements that might appear in a content block, like
+ * p, ul, code, iframe, img, etc. so they all conform to the same standard.
+ *
+ * @param $margin - Optional. The value in decimal
+ *
+ */
+
+@mixin margin-bottom($margin: 1.5) {
+  margin-bottom: ($margin * 16) + px;
+  margin-bottom: $margin; // + rem; To rem or not to rem? Not quite sold on rem for line heights yet.
+}
+
+/* Usage
+ * p {
+ *   @include margin-bottom(1.5);
+ * }
+
+ * Results In...
+ * p {
+ *   margin-bottom: 24px;
+ *   margin-bottom: 1.5;
+ * }
+ */

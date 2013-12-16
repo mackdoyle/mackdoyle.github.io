@@ -1,0 +1,6 @@
+@mixin emboss($opacity){
+    text-shadow: black($opacity) 0 1px 0;
+}
+
+// Usage -----
+// selector{ @include emboss(0.8, 0.05); }

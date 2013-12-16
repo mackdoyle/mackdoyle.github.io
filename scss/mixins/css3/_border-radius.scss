@@ -1,0 +1,30 @@
+@mixin border-radius($argument) {
+  @include vendor-prefix(border-radius, $argument);
+}
+
+@mixin border-radius($topleft:3px,$topright:null,$bottomright:null,$bottomleft:null) {
+  @if $topright != null and $bottomright != null and $bottomleft != null {
+    border-top-left-radius: $topleft;
+    border-top-right-radius: $topright;
+    border-bottom-right-radius: $bottomright;
+    border-bottom-left-radius: $bottomleft;
+    -moz-border-radius-topleft: $topleft;
+    -moz-border-radius-topright: $topright;
+    -moz-border-radius-bottomright: $bottomright;
+    -moz-border-radius-bottomleft: $bottomleft;
+    -webkit-border-top-left-radius: $topleft;
+    -webkit-border-top-right-radius: $topright;
+    -webkit-border-bottom-right-radius: $bottomright;
+    -webkit-border-bottom-left-radius: $bottomleft;
+  } @else {
+    -webkit-border-radius: $topleft;
+    -moz-border-radius: $topleft;
+    border-radius: $topleft;
+  }
+}
+
+// Usage -----
+// All: div{ @include border-radius(5px); }
+// Top/Bottom + Left/Right: div{ @include border-radius(5px 5px); }
+// Top + Left/Right + Bottom: div{ @include border-radius(5px 6px 7px); }
+// Top + Left + Bottom + Right: div{ @include border-radius(5px 6px 7px 8px); }

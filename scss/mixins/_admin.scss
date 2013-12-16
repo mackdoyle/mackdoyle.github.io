@@ -1,0 +1,5 @@
+@mixin test{
+	border: 1px solid pink;
+}
+//  Syntax:
+//  selector{ @include test; }

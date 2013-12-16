@@ -1,5 +1,26 @@
+# standard jekyll configuration
+name: "Jason Doyle's Blog"
+permalink: /articles/:title
 encoding: UTF-8
-markdown: redcarpet
-name: Jason Doyle's Blog
+lsi: TRUE
 pygments: true
 timezone: America/New_York
+exclude: ['scss', 'CNAME', '.git','.gitignore']
+markdown: rdiscount
+
+# configuration required for some pages
+domain: jmd.io
+title: Jason Doyle Blog
+author: Jason Doyle
+email: jasonmackdoyle@gmail.com
+
+# configuration for enhancements, uncomment to enable
+
+# feedburner:
+#   id: feedburnerid
+
+# google_analytics:
+#   account: UA-XXXXX-X
+
+github:
+    username: mackdoyle/mackdoyle.github.io

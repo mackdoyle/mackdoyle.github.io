@@ -1,0 +1,28 @@
+/*
+* Generic mixin for creating dynamic semi-tranparant colors with support for older IE
+*
+* @Param String attribute
+*   Any CSS attribute that can take a color as its value
+* @Param String color
+*   A CSS color in any format (I think)
+* @Param String background
+*   A CSS color in any format (I think)
+*
+* Usage
+* ---------------------------------
+* .button {
+*   @include alpha-attribute('background-color', rgba(black, 0.5), white);
+*   @include alpha-attribute('border-color', rgba(black, 0.5), orange);
+* }
+*
+* Example: http://codepen.io/jlong/pen/IEpvh
+*/
+
+@mixin alpha-attribute($attribute, $color, $background) {
+    $percent: alpha($color) * 100%;
+    $opaque: opacify($color, 1);
+    $solid-color: mix($opaque, $background, $percent);
+
+    #{$attribute}: $solid-color;
+    #{$attribute}: $color;
+}

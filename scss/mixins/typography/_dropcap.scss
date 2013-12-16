@@ -1,0 +1,13 @@
+@mixin dropcap($font: inherit,$color: inherit){
+	&:first-child:first-letter {
+		color: #{$color};
+		float: left;
+		font: normal 4em/1 #{$font};
+		padding: .1em .2em 0 0;
+	}
+}
+
+//	Usage -----
+//	Default: h1{ @include dropcap; }
+//	Custom: h1{ @include dropcap(Georgia, #c00); }
+//	Variables: h1{ @include dropcap($copyStack, $light); }

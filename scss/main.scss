@@ -1,0 +1,51 @@
+
+/* -------------------------------------------------------- */
+//  G L O B A L
+/* -------------------------------------------------------- */
+//  This file will hold styles for the mobile version of your website (mobile first). This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide.
+
+// @import url(http://fonts.googleapis.com/css?family=Raleway:100,400|Open+Sans:700,400,300);
+
+//  Variables -------- *
+
+  // Fonts
+  $headlineStack:  serif;
+	$copyStack: "Helvetica Neue",sans-serif;
+	$footnoteStack: sans-serif;
+  $iconStack: "FontAwesome";
+
+  // Layout
+	$gutter-size: 15px;
+	$content-padding: 0 $gutter-size;
+
+
+  // System Color Palette
+  @import "colors";
+
+  // Universal Reset
+  @import "reset";
+
+  // Code Syntax
+  @import "syntax";
+
+  // Mixins
+  @import "mixins";
+
+  // Fonts
+  @import "fonts";
+  @import "icons/variables";
+  @import "icons/mixins";
+  @import "icons/core";
+  @import "icons/extras";
+  @import "icons/icons";
+
+  // Forms
+  @import "forms";
+
+  // Base
+  @import "base";
+
+  // General Layout
+  @import "layout";
+
+

@@ -1,0 +1,36 @@
+
+/* Sans Serif */
+@font-face {
+    font-family: 'Avenir Standard';
+    src: url('../font/avenirltstd-book-webfont.eot');
+    src: url('../font/avenirltstd-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/avenirltstd-book-webfont.woff') format('woff'),
+         url('../font/avenirltstd-book-webfont.ttf') format('truetype'),
+         url('../font/avenirltstd-book-webfont.svg#avenirltstd-book') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'Avenir Standard';
+		font-weight: normal;
+		src: url('../font/avenirltstd_light-webfont.svg#avenirltstd_light') format('svg');
+	}
+	@font-face {
+		font-family: 'Avenir Standard';
+		font-weight: bold;
+		src: url('../font/avenirltstd-book-webfont.svg#avenirltstd-book') format('svg');
+	}
+}
+
+/* Icons */
+@font-face{
+	font-weight:normal;
+	font-style:normal;
+	font-family:'FontAwesome';
+	src:url("../font/fontawesome-webfont.eot?v=3.2.1");
+	src:url("../font/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"),
+	    url("../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg"),
+      url("../font/fontawesome-webfont.woff?v=3.2.1") format("woff"),
+      url("../font/fontawesome-webfont.ttf?v=3.2.1") format("truetype");
+}

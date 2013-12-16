@@ -1,0 +1,5 @@
+@mixin opacity($int) {
+  filter: alpha(opacity=$int);
+	-moz-opacity:$int/100;
+	opacity:$int/100;
+}

@@ -1,0 +1,6 @@
+@mixin letterpress($opacity){
+    text-shadow: white($opacity) 0 1px 0;
+}
+
+// Usage -----
+// selector{ @include letterpress(0.8); }

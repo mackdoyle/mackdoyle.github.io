@@ -1,0 +1,27 @@
+@mixin navigation-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	> li{
+		display: block;
+		float: left;
+		width: auto;
+		&:last-child{
+			margin-right: 0;
+		}
+		a{
+			display: block;
+		}
+		@include breakpoint(mobile){
+			float: none;
+			a{
+				border-top: 1px dotted $lightGray;
+				padding: 1em;
+			}
+		}
+	}
+}
+
+// Usage -----
+// ul.nav{ @include navigation-list; }
