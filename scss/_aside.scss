@@ -1,0 +1,70 @@
+
+.aside-container{
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 100%; }
+
+  h1 { margin-bottom: 1em; }
+  p { margin: 1em 0; }
+
+  a         { color: $light; }
+  a:hover   { color: $medium; }
+  a:visited { color: $medium; }
+
+  .header a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .title {
+    display: inline-block;
+    margin-bottom: 2em;
+  }
+
+  .title a {
+    color: $light;
+  }
+
+  .title a:hover {
+    color: $medium;
+  }
+
+  .header a.extra {
+    color: $light;
+    margin-left: 1em;
+  }
+
+  .header a.extra:hover {
+    color: $medium;
+  }
+
+  .meta {
+    color: $light;
+  }
+
+  .footer {
+    font-size: 80%;
+    color: $mediumGray;
+    border-top: 4px solid #eee;
+    margin-top: 2em;
+    overflow: hidden;
+  }
+
+  .footer .contact {
+    float: left;
+    margin-right: 3em;
+  }
+
+  .footer .contact a {
+    color: $light;
+  }
+
+  .footer .rss {
+    margin-top: 1.1em;
+    margin-right: -.2em;
+    float: right;
+  }
+
+  .footer .rss img {
+    border: 0;
+  }
+}
