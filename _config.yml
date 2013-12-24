@@ -1,16 +1,16 @@
 # standard jekyll configuration
-name: "Jason Doyle's Blog"
+name: "Home of Jason Doyle"
 permalink: /articles/:title
 encoding: UTF-8
 lsi: TRUE
 pygments: true
 timezone: America/New_York
-exclude: ['scss', 'CNAME', '.git','.gitignore']
+exclude: ['scss', 'CNAME', '.git','.gitignore', '.DS_Store', 'codekit-config.json']
 markdown: rdiscount
 
 # configuration required for some pages
 domain: jmd.io
-title: Jason Doyle Blog
+title: Jason Doyle
 author: Jason Doyle
 email: jasonmackdoyle@gmail.com
 

@@ -1,0 +1,36 @@
+@mixin breakpoint($point) {
+	@if      $point == I----------I {
+		@media (max-width: 1400px) {@content;}
+	}
+	@else if $point == I---------I {
+		@media (max-width: 1280px) {@content;}
+	}
+	@else if $point == I--------I {
+		@media (max-width: 1024px) {@content;}
+	}
+	@else if $point == I------I {
+		@media (max-width: 768px) {@content;}
+	}
+	@else if $point == I----I {
+		@media (max-width: 720px) {@content;}
+	}
+	@else if $point == I---I {
+		@media (max-width: 600px) {@content;}
+	}
+	@else if $point == I--I {
+		@media (max-width: 480px) {@content;}
+	}
+	@else if $point == I-I {
+		@media (max-width: 320px) {@content;}
+	}
+}
+
+
+// Usage
+// -------------------- *
+//	a{
+//		color: red;
+// 	  @include breakpoint(---){
+// 		 color: blue;
+//		}
+// }

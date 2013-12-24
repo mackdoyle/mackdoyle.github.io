@@ -1,0 +1,27 @@
+// Gams
+// Gams is a boilerplate Scss library extended from Bitters. It is meant to be dropped
+// into a new project and give you a nice starting point.
+// Learn more about Bitters (bitters.bourbon.io)
+// Requires Bourbon (bourbon.io)
+// --------------------------------------------------------------------------------- *
+
+// Authored Dependencies
+// -------------------------- *
+  @import "reset";
+  @import "icons/icons";
+  @import "fonts";
+  @import "muted-blue-theme";
+  @import "syntax";
+  @import "mixins/base";
+  @import "extends/base";
+  @import "typography";
+  @import "flashes";
+
+
+
+// Patterns
+// -------------------------- *
+  @import "patterns/forms";
+  @import "patterns/tables";
+  @import "patterns/lists";
+  @import "patterns/code";

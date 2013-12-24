@@ -1,0 +1,76 @@
+@mixin menu($style: default){
+	ul.menu{
+		float: right;
+		font-family:$displayStack;
+		font-weight: 700;
+		@include font-size(.8);
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		text-indent: 0;
+		text-transform: uppercase;
+		width: 100%;
+		> li.leaf{
+			list-style-type: none;
+			list-style-image: none;
+			float: left;
+			margin: 0;
+			// margin: 0 0 0 10px;
+			padding: 5px;
+			width: auto;
+			@if $style == 'default'{
+				a{
+					background: #fff;
+					border: 1px solid $whereLightGray;
+					color: $whereBlue;
+					display: block;
+					padding: 5px 10px;
+					&:hover{
+						background: $whereBlue;
+						color: #fff;
+					}
+				}
+			}
+			@else if $style == 'footer' {
+				a{
+					color: #fff;
+					display: block;
+					font-size: .8em;
+					padding: 10px;
+					&:hover{
+						color: $whereBlue;
+					}
+				}
+				@include breakpoint(narrow){
+					float: none;
+					margin: 0;
+					padding: 0;
+					text-indent: 0;
+					a{
+						font-size: 1em;
+						padding: 15px;
+						&:hover{
+							background: $whereBlue;
+							color: #fff;
+						}
+						&:active{
+							background: $whereGray;
+							color: #fff;
+						}
+					}
+				}
+			}
+			@else if $style == 'pillbox' {
+				a{
+					@include button($whereBlue);
+				}
+			}
+			@else if $style == 'pillbox-footer' {
+			a{
+				@include button($whereBlack, micro);
+			}
+		}
+		}
+	}
+}

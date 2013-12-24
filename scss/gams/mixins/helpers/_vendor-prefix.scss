@@ -1,0 +1,11 @@
+// Simple prefixer that can be called with less code than the Bourbon mixin.
+// @param $property
+// @param $value
+// Usage: @include vendor-prefix(border-radius, 10px);
+@mixin vendor-prefix($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}

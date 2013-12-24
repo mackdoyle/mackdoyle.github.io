@@ -1,0 +1,15 @@
+/* Welcome to the rash.
+ * This is the main file that imports the base files for all the partials. This file
+ * is not meant to define any styles itself.
+ * */
+
+// Vendor Dependencies
+@import "bourbon/bourbon";
+
+// Authored Dependencies
+@import "gams/gams";
+
+// Sections
+@import "global/layout";
+@import "global/sidebar/sidebar";
+@import "global/content/posts";

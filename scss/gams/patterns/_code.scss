@@ -1,0 +1,39 @@
+
+/* Code
+---------------------------------------------- */
+
+/* Standard
+-------------------------- */
+pre {
+  border: 1px solid #ddd;
+  //background-color: $dark-gray;
+  padding: 0 .4em;
+  @include border-radius(3);
+}
+
+p code {
+  font-family: Menlo, monospace;
+  font-color: #008abc;
+  border: 1px solid #008abc;
+  background-color: #cce0e9;
+  padding: 0 .2em;
+  @include vendor-prefix(border-radius, 3px);
+}
+
+pre code {
+  font-family: Menlo, monospace;
+  border: none;
+  
+}
+
+/* Terminal
+-------------------------- */
+pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+pre.terminal code {
+  background-color: #333;
+}

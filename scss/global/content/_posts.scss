@@ -1,0 +1,11 @@
+/* global/content/posts */
+h2+p{
+  font-family: $sans-serif-font;
+  font-weight: normal;
+  font-size:.8rem !important
+}
+p:nth-child(1){
+  font-family: $sans-serif-font;
+  font-weight: 600;
+}
+
