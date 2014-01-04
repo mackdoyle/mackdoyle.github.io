@@ -1,0 +1,26 @@
+/**
+ *
+ * Welcome to the tip.
+ * This is the main file that imports the base files for all the partials. This file
+ * is not meant to define any styles itself.
+ *
+ */
+
+// Vendor Dependencies
+@import
+	"bourbon/bourbon",
+	"foundation/foundation";
+
+// Authored Dependencies
+@import
+	"gams/gams";
+
+// Sections
+@import
+  "global/settings",
+	"global/layout",
+	"global/base",
+	"global/sidebar/sidebar",
+	"global/content/posts",
+	"global/content/annotated";
+

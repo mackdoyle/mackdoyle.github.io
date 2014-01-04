@@ -1,0 +1,131 @@
+/* global/content/posts */
+header{
+  text-align: center;
+  h1, h2{
+    a{
+      @include transition(all .25s ease-in-out);
+      &:hover{
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+      }
+    }
+  }
+  .meta{
+    font-family: $sans-serif-font;
+    font-weight: normal;
+    &:before{
+      content: "";
+    }
+    &:after{
+      content: "";
+    }
+  }
+}
+// First paragraph of a post
+p:nth-child(1){
+  font-family: $serif-font;
+  font-weight: 600;
+}
+
+p {
+  a{
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.highlight{
+  margin: ($baseline-height * 1rem) auto;
+}
+
+
+//Post Teasers
+.box {
+  footer{
+    display: table;
+    vertical-align: middle;
+    width:100%;
+    .footer-col{
+      display: table-cell;
+    }
+  }
+
+  .more{
+    text-align: right;
+    a{
+      position: relative;
+      text-decoration: none;
+      white-space: nowrap;
+      @include gams-button($light-gray, "default", "black");
+    }
+  }
+
+  // Category List
+  .category-list-container{
+    .categories{
+      font-size: 12px;
+      line-height: 16px;
+      vertical-align: middle;
+      .first{
+
+      }
+      li:not(.first){
+        a{
+          @include gams-pillbox(#efefef, "default", #666666);
+        }
+      }
+    }
+  }
+
+  // Tag List
+  .tag-list-container{
+    .inline-list tags{
+
+    }
+  }
+}
+
+// Post Notes
+.post-note{
+  position: fixed;
+  overflow: hidden;
+  top: 5%;
+  left: 1050px;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 1%;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: .8rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: -1px -1px 0px rgba(33,0,0,1);
+  @include border-radius(0 6 6 0);
+  &:before {
+    // Clipped shadow
+    content: "\f000";
+    font-family: FontAwesome;
+    position: absolute;
+  	width: 20px;
+  	height: 100px;
+  	top: 0px;
+  	left: -20px;
+  	z-index: 5;
+  	background: rgba(0,0,0,0.3);
+  	@include border-radius(50%);
+  	@include box-shadow(0px 5px 10px 0px rgba(0,0,0,0.3));
+  }
+  &:after {
+    // Ribbon background
+    width: 98%;
+    height: 50%;
+    background: rgba(153,0,0,1);
+    position: absolute;
+    content: "\f000";
+    font-family: FontAwesome;
+    left: 0;
+    top: 25%;
+    z-index: -1;
+    @include border-radius(0 16px 16px 0);
+    @include box-shadow(0px 0px 6px 0px rgba(0,0,0,0.3));
+  }
+}
+

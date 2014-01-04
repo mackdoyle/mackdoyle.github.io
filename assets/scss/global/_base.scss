@@ -1,0 +1,50 @@
+/**
+ *
+ * Site Specific Global Style
+ *
+*/
+body {
+	background: $foreground;
+}
+
+hr {
+  border-bottom: 1px solid $border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $line-height 0;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+.inline-list {
+  li{
+	  display: inline-block;
+	  text-align: justify;
+	  vertical-align: middle;
+  }
+}
+
+// SVG Icons
+// -------------------------------
+.svg-icon{
+  vertical-align: middle;
+  stroke-width:.5;
+  fill: azure;
+  stroke: lightsteelblue;
+  stroke-width: 1;
+}
+
+.light{
+  stroke:#f8f8f8;
+  opacity:.3;
+}
+
+.tiny {
+  width: 16px;
+  margin: 12px;
+}
+

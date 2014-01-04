@@ -1,0 +1,36 @@
+
+/* Code
+---------------------------------------------- */
+
+/* Standard
+-------------------------- */
+pre {
+  overflow: auto;
+  padding: 2.25rem .4rem;
+}
+
+p code {
+  font-family: $monospace-font;
+  font-color: #008abc;
+  border: 1px solid #008abc;
+  background-color: #cce0e9;
+  padding: 0 .2em;
+  @include vendor-prefix(border-radius, 3px);
+}
+
+pre code {
+  font-family: $monospace-font;
+  border: none;
+}
+
+/* Terminal
+-------------------------- */
+pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+pre.terminal code {
+  background-color: #333;
+}

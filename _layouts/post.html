@@ -1,11 +1,22 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">by {{ page.author }} &middot {{ page.date | date_to_string }}</p>
-
 <article>
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">By {{ page.author }} &middot; <time datetime="{{ page.date | date_to_string }}" title="{{ page.date | date_to_string }}">{{ page.date | date_to_string }}</time></p>
+  </header>
+
   {{ content }}
+
+  <footer>
+	  {% if page.categories.size > 0 %}
+	    <div class="footer-col">{% include widgets/postCategoryList.html %}</div>
+	  {% endif %}
+    {% if page.tags.size > 0 %}
+      <div class="footer-col">{% include widgets/postTagList.html %}</div>
+    {% endif %}
+  </footer>
 </article>
 
-<div>{% include widgets/postTagList.html %}</div>
+

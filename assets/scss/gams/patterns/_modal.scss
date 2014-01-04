@@ -1,0 +1,18 @@
+
+/* Modal
+---------------------------------------------- */
+//Variables
+$modal-overlay-bkg: rgba(0,0,0,0.5);
+$modal-bkg: white;
+$modal-position-top: 50px;
+$modal-default-width: 80%;
+
+
+.modal{
+  position: absolute;
+  top: $modal-position-top;
+  width: $modal-default-width;
+  .overlay{
+    background: $modal-overlay-bkg;
+  }
+}

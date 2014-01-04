@@ -1,0 +1,27 @@
+---
+layout: default
+title: Home of Jason Doyle
+---
+<!--<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>-->
+
+{% for post in site.posts %}
+  <article class="box">
+    <header>
+		  <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
+      <p class="meta"><time datetime="{{post.date | date: "%M-%d-%Y"}}" title="{{post.date | date: "%M-%d-%Y"}}">{{post.date | date: "%M.%d.%Y"}}</time> &middot; by {{ post.author }} </p>
+    </header>
+    {{ post.excerpt | markdownify }}
+
+    <footer>
+		  {% include widgets/postCategoryList.html %}
+      {% include widgets/postTagList.html %}
+      <p class="more"><a href="{{ post.url }}#more" title="Read more about '{{ post.title }}'">Read More</a></p>
+    </footer>
+	</article>
+{% endfor %}

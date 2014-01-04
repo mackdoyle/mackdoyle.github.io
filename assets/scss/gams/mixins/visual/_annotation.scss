@@ -1,0 +1,214 @@
+//============================================================
+//Annotations with line pointers
+// @param y-position: num required
+// @param x-position: num required
+// @param box-width: num optional
+// @param box-height: num optional
+//
+//============================================================
+/* Variables
+-------------------------------------- */
+// Colors
+$bkg-color: rgba(255,255,255,0.9);
+$line-color: rgba(255,255,255,0.5);
+$text-color: rgba(0,0,0,0.6);
+$shadow-color:  rgba(0,0,0,0.1);
+
+// Sizing
+$endpointSize: 8px;
+
+/* Functions
+-------------------------------------- */
+//@function toggleColors(){
+  //@return ("blue !important");
+//}
+
+
+/* Mixins
+-------------------------------------- */
+@mixin annotation($y-position, $x-position, $box-width:275, $box-height:75 ) {
+  position: relative;
+  display: block;
+  top: $y-position + px;
+  left: $x-position + px;
+  width: $box-width + px;
+  height: $box-height + px;
+  background: $bkg-color;
+  padding: 10px;
+  border: 1px solid $line-color;
+  border-radius: 3px;
+  color: $text-color;
+  z-index: 10;
+  box-shadow: 24px 24px 8px $shadow-color;
+  transition: box-shadow .2s;
+}
+
+// Pointer
+// Defines the vertical and horizontal line segments using absolutly positioned :before and :after pseudo elements. Their lengths are derived form the annotation box size in that the vertical line segment is 100% of the box height and the horizontal line segment is 100% of the box width.
+@mixin pointer($direction){
+  position:relative;
+  &:before{
+    // x line
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%); //Allows for positioning from center
+    width: 1px;
+    height: 100%;
+    background: $line-color; 
+    z-index: 20;
+    box-shadow: 24px 24px 4px $shadow-color;
+    @include xLinePosition($direction);
+  }
+  &:after{
+    // y line
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%); //Allows for positioning from center
+    width: 100%;
+    height: 1px;
+    background: $line-color; 
+    z-index: 20;
+    box-shadow: 24px 24px 4px $shadow-color;
+    @include yLinePosition($direction);
+  }
+  // endpoint
+  .endpoint {
+    position: absolute;
+    transform: translate(-50%, -50%); //Allows for positioning from center
+    height: $endpointSize;
+    width: $endpointSize;
+    color: #fff;
+    background: $line-color;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 30;
+    box-shadow: 24px 24px 4px $shadow-color;
+    @include endpointPosition($direction);
+  }
+}
+
+@mixin xLinePosition($direction){  
+  @if($direction == "left"){
+    display: none; 
+  }@elseif($direction == "left-up"){
+    top:  0%;
+    left: -100%;
+  }@elseif($direction == "up-left"){
+    top:  -50%;
+    left: 50%;
+  }@elseif($direction == "up"){
+    top: -50%;
+    left: 50%;
+  }@elseif($direction == "up-right"){
+    top:  -50%;
+    left: 50%;
+  }@elseif($direction == "right-up"){
+    top:  0%;
+    left: 200%;
+  }@elseif($direction == "right"){
+    display: none;
+  }@elseif($direction == "right-down"){
+    top:  100%;
+    left: 200%;
+  }@elseif($direction == "down-right"){
+    top:  150%;
+    left: 50%;
+  }@elseif($direction == "down"){
+    top:  150%;
+    left: 50%;
+  }@elseif($direction == "down-left"){
+    top:  150%;
+    left: 50%;
+  }@elseif($direction == "left-down"){
+    top:  100%;
+    left: -100%
+  }@else{
+    top:  50%;
+    left: 50%;
+  }
+}
+
+@mixin yLinePosition($direction){  
+  @if($direction == "left"){
+    top:  50%;
+    left: -50%;  
+  }@elseif($direction == "left-up"){
+    top:  50%;
+    left: -50%;
+  }@elseif($direction == "up-left"){
+    top:  -100%;
+    left: 0%;
+  }@elseif($direction == "up"){
+    display: none;
+  }@elseif($direction == "up-right"){
+    top:  -100%;
+    left: 100%;
+  }@elseif($direction == "right-up"){
+    top:  50%;
+    left: 150%;
+  }@elseif($direction == "right"){
+    top:  50%;
+    left: 150%;
+  }@elseif($direction == "right-down"){
+    top:  50%;
+    left: 150%;
+  }@elseif($direction == "down-right"){
+    top:  200%;
+    left: 100%;
+  }@elseif($direction == "down"){
+    display: none;
+  }@elseif($direction == "down-left"){
+    top:  200%;
+    left: 0%;
+  }@elseif($direction == "left-down"){
+    top:  50%;
+    left: -50%;
+  }@else{
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@mixin endpointPosition($direction){  
+  @if($direction == "left"){
+    top:  50%;
+    left: -100%; 
+  }@elseif($direction == "left-up"){
+    top:  -50%;
+    left: -100%;
+  }@elseif($direction == "up-left"){
+    top:  -100%;
+    left: -50%;
+  }@elseif($direction == "up"){
+    top: -100%;
+    left: 50%;
+  }@elseif($direction == "up-right"){
+    top: -100%;
+    left: 150%;
+  }@elseif($direction == "right-up"){
+    top:  -50%;
+    left: 200%;
+  }@elseif($direction == "right"){
+    top:  50%;
+    left: 200%;
+  }@elseif($direction == "right-down"){
+    top:  150%;
+    left: 200%;
+  }@elseif($direction == "down-right"){
+    top:  200%;
+    left: 150%;
+  }@elseif($direction == "down"){
+    top:  200%;
+    left: 50%;
+  }@elseif($direction == "down-left"){
+    top:  200%;
+    left: -50%;
+  }@elseif($direction == "left-down"){
+    top:  150%;
+    left: -100%;
+  }@else{
+    top: 0px;
+    left: 0px;
+  }
+}
+

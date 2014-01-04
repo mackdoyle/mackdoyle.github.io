@@ -1,0 +1,50 @@
+/**
+ * Vertical Rhythm Mixin
+ * Jason Doyle - 1/1/2014
+ *
+ * This mixin attempts to consolidate the basic properties needed to align text on
+ * a baseline grid for creating vertical rhythm.
+ *
+ * It returns rem-based font-size, line-height and bottom margin
+ * values as well as px based fall backs for crapo browsers.
+ *
+ * @param $size - Required. The font-size rem value.
+ * @param $line - Optional. The line-height value.
+ * @param $bottom = Optional. A margin-bottom rem value
+ *
+ * @TODO: Line-height perfection is achieved by adding the width of the line
+ * to the equation. This mixin could be improved by changing the font-size and line-height
+ * for various standard paragraph widths. See: http://www.pearsonified.com/typography/
+ */
+
+@mixin font-rhythm($size: 1, $line-height: 1.5, $margin-bottom: 0){
+  font-size     : ($size * 16) * 1px !important;
+  line-height   : ($line-height * 16) * 1px;
+  margin-bottom : ($margin-bottom * 16) * 1px;
+  font-size     : $size * 1rem !important;
+  line-height   : $line-height * 1rem;
+  margin-bottom : $margin-bottom * 1rem;
+}
+
+/* Usage
+ * p {
+ *   @include font-size(2, 2.5, 2.5);
+ * }
+
+ * Results In...
+ * p {
+ *   font-size: 32px;
+ *   line-height: 48px;
+ *   margin-bottom: 48px;
+ *   font-size: 2rem;
+ *   line-height: 2.5rem;
+ *   margin-bottom: 2.5rem
+ * }
+ *
+ * Did you Know?
+ * Appending the sizing type by multiplying it by 1 rather than adding it,
+ * leaves the value's data type as a number. This means it can still be used in math operations.
+ * Example:
+ *    16 + px = "16px"
+ *    16 * 1px = 16(px)
+ */

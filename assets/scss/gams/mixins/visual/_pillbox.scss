@@ -1,0 +1,45 @@
+/**
+ *
+ * @param $color: button background color
+ * @param $size: micro, wide
+ * @param $fontColor: font color
+ *
+ */
+
+@mixin gams-pillbox($color, $size: default, $fontColor: white){
+  background: $color;
+	color: $fontColor;
+	text-align: center;
+	vertical-align: middle;
+
+	@if $size == "micro"{
+    font-size: 10px;
+		padding: 0 20px;
+		width: auto;
+	} @else if $size == "wide" {
+    font-size: 14px;
+		max-width: 250px;
+    margin: .75em auto;
+		padding: 0 20px;
+		width: auto;
+	} @else {
+      padding: 3px 12px;
+      border-radius: 3px;
+      font-size: 12px;
+      line-height: 16px;
+	}
+	@include transition(all .25s ease-in-out);
+	&:hover{
+		background: darken($color,10);
+	}
+
+	@include breakpoint(narrow){
+		padding: 12px 24px; // Bigger click areas for mobile
+	}
+}
+
+
+//	USAGE
+//  @include gams-pillbox($blue); (by Color Variable)
+//  @include gams-pillbox(#c00); (by Hex Code)
+//  @include gams-pillbox(red); (by Color Name)

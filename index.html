@@ -2,26 +2,26 @@
 layout: default
 title: Home of Jason Doyle
 ---
-<!--<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>-->
+
 
 {% for post in site.posts %}
   <article class="box">
-  	<header>					
-		<h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
-		<time datetime="{{post.date | date: "%M-%d-%Y"}}" title="{{post.date | date: "%M-%d-%Y"}}">{{post.date | date: "%M.%d.%Y"}}</time>
-		by {{post.author}}
-	</header>	
-	{{ post.excerpt | markdownify }}
-	<footer>	
-		{% include widgets/postCategoryList.html %}
-		{% include widgets/postTagList.html %}	
-		<p class="more" style="float:right; margin-top: -1.8em;"><a href="{{ post.url }}#more" title="Read more about '{{ post.title }}'">Read more &hellip;</a></p>
-	</footer>
+    <header>
+		  <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
+		  <p class="meta">By {{ post.author }} &middot; <time datetime="{{ post.date | date_to_string }}" title="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></p>
+    </header>
+
+    {{ post.excerpt | markdownify }}
+
+    <footer>
+		  {% if post.categories.size > 0 %}
+		    <div class="footer-col">{% include widgets/postCategoryList.html %}</div>
+		  {% endif %}
+      {% if post.tags.size > 0 %}
+        <div class="footer-col">{% include widgets/postTagList.html %}</div>
+      {% endif %}
+      <div class="footer-col"><div class="more"><a href="{{ post.url }}#more" title="Read more about '{{ post.title }}'">Read More</a></div></div>
+    </footer>
+
 	</article>
 {% endfor %}

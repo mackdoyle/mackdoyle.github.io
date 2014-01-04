@@ -1,0 +1,23 @@
+{
+  "convertHtmlOutput": true,
+  "customRubyPath": null,
+  "debug": true,
+  "domain": null,
+  "followLeader": false,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": "scss",
+  "preprocessorScriptOutput": "assets/js",
+  "preprocessorStyleOutput": "css",
+  "projectDescription": "My project description",
+  "projectName": "jason",
+  "publishedId": null,
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": "localhost:4000",
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "simple",
+  "useCompass": false
+}

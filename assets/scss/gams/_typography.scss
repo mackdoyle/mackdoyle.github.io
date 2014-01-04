@@ -1,0 +1,134 @@
+/**
+ * Typography
+ *
+ * Baseline Quick Reference (for 36px headline):
+ * PX  |  REM  | Height | Bottom
+ * ---------------------------
+ * 36  | 2.250 |  1.2   |   0.0
+ * 18  | 1.125 |  2.0   |   0.0
+ * 12  | 0.750 |  4.0   |   0.0
+ *
+ * font-rhythm mixin usage:
+ * font-size = [num], line-height = font-size * [num], margin-bottom = font-size * [num]
+ */
+
+body {
+  font-family: $sans-serif-font;
+  font-size:100%;
+  color: $copy-color;
+  -webkit-font-smoothing: antialiased;
+  @include font-size(1);
+}
+
+h1, h2, h3, h4, h5, h6, h1 a {
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: $sans-serif-font;
+  color: $headline-color;
+  margin: 0;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+h1 {
+  font-weight: 400;
+  @include font-rhythm($baseline-height, $baseline-height, 0);
+}
+
+h2 {
+  font-weight: 600;
+  @include font-rhythm($baseline-height, $baseline-height, 0);
+}
+
+h3 {
+  font-weight: 600;
+  @include font-size(1.5);
+}
+
+h4 {
+  @include font-size(1.25);
+}
+
+h5 {
+  @include font-size(1); // 1 * 16 = 16px
+}
+
+h6 {
+  @include font-size(1);
+}
+
+.meta {
+  //display: none;
+  @include font-rhythm(.75, $baseline-height, 0);
+}
+
+.box header .meta {
+  //display: none;
+  @include font-rhythm(.75, $baseline-height, 0);
+}
+
+p {
+  @include font-rhythm(1.125, $baseline-height, $baseline-height);
+
+}
+
+.box p {
+  @include font-rhythm(1.125, $baseline-height, 0);
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: $hover-link-color;
+  }
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted $border-color;
+  cursor: help;
+}
+
+address {
+  display: block;
+  margin: 0 0 ($line-height / 2);
+}
+
+hgroup {
+  @include margin-bottom();
+}
+
+del {
+  color: lighten($copy-color, 15);
+}
+
+blockquote {
+  border-left: 2px solid $border-color;
+  color: lighten($copy-color, 15);
+  margin: $line-height 0;
+  padding-left: $line-height / 2;
+}
+
+cite {
+  color: lighten($copy-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+// Visual Flow
+// ------------------------------------------------
+article, section, p img {
+  margin-bottom: $baseline-height * 1rem;
+}
+
+footer {
+  margin-top: $baseline-height * 1rem;
+  line-height: $baseline-height * 1rem;
+  margin-bottom: ($baseline-height * 2) * 1rem;
+}

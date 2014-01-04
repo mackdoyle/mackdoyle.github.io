@@ -1,26 +1,47 @@
-# standard jekyll configuration
+# Standard Jekyll Configuration
+# -----------------------------------------------------------------
 name: "Home of Jason Doyle"
 permalink: /articles/:title
 encoding: UTF-8
 lsi: TRUE
 pygments: true
 timezone: America/New_York
-exclude: ['scss', 'CNAME', '.git','.gitignore', '.DS_Store', 'codekit-config.json', '.UlyssesRoot', '.Ulysses-Group.plist']
+exclude: ['scss', 'CNAME', '.git','.gitignore', '.DS_Store', 'codekit-config.json', '.UlyssesRoot', '.Ulysses-Group.plist', 'Gruntfile.js']
 markdown: rdiscount
 
-# configuration required for some pages
+# Configuration required for some pages
+# -----------------------------------------------------------------
 domain: jmd.io
 title: Jason Doyle
 author: Jason Doyle
 email: jasonmackdoyle@gmail.com
 
-# configuration for enhancements, uncomment to enable
-
-# feedburner:
-#   id: feedburnerid
-
-# google_analytics:
-#   account: UA-XXXXX-X
-
+# Github Specific Settings
+# -----------------------------------------------------------------
 github:
     username: mackdoyle/mackdoyle.github.io
+
+# Configuration for enhancements, uncomment to enable
+# -----------------------------------------------------------------
+
+# <--------------------------
+# Github Style Markdown:
+# markdown: redcarpet
+# redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+#
+# redcarpet allows you to replace {% highlight javascript %} with ```javascript
+# -------------------------->
+
+# <--------------------------
+# feedburner:
+#   id: feedburnerid
+# -------------------------->
+
+# <--------------------------
+# google_analytics:
+#   account: UA-XXXXX-X
+# -------------------------->
+
+
+
