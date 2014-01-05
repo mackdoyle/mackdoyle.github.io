@@ -1,0 +1,161 @@
+/* global/sidebar/sidebar-wide */
+@mixin sidebar-variant($variant:wide){
+  background-color: $body-color-i;
+
+  @if $variant == "wide" {
+
+    // Wide Styles
+    // ------------------------------------------
+    &:hover:before {
+      background: transparent;
+      /* Override display:none to make the transition work. */
+      display: inherit;
+      visibility: collapse;
+      margin-bottom: -1em;
+      opacity: 0;
+      transition-delay: 0s, 250ms;
+    }
+    &:before {
+      content: "";
+      background: rgba(255,255,255,.8);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 275px;
+      height: 100%;
+      z-index: 9999;
+      transition-property: opacity, visibility;
+      transition-duration: 250ms, 0s;
+      transition-timing-function: ease-in-out, linear;
+      opacity: 1;
+    }
+    h1 {
+      @include font-size(1.2);
+      font-weight: normal;
+      font-family: $sans-serif-font !important;
+      color: $headline-color-i;
+      .logo{
+        @include font-size(6);
+        font-family: $logo-font !important;
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      font-family: $sans-serif-font !important;
+      color: $copy-color-i;
+      margin: 1.5em 0;
+      @include font-size(.85);
+    }
+
+    a {
+      font-family: $sans-serif-font !important;
+      color: $link-color-i;
+      @include font-size(.85);
+      @include transition(color 0.1s linear);
+      &:hover {
+        color: lighten($link-color-i, 75%);
+      }
+      &:visited {
+        color: $hover-link-color-i;
+      }
+    }
+
+    .avatar{
+      display: inline-block;
+      overflow: hidden;
+      width: 50%;
+      border-radius: 50%;
+      line-height: 100%;
+      box-shadow: inset 0px 0px 5px 5px rgba(0,0,0,0.5);
+    }
+
+    section {
+      color: $copy-color-i;
+      text-align: center;
+      border-top: 1px solid $medium-blue;
+      margin-top: 2em;
+      overflow: hidden;
+      @include font-size(.85);
+      .contact {
+        a {
+          color: $link-color-i;
+          font-family: $sans-serif-font !important;
+          font-weight: normal;
+          @include font-size(.85);
+          @include transition(color 0.1s linear);
+          &:hover {
+            color: lighten($link-color-i, 10%);
+          }
+        }
+      }
+    }
+
+  }@else if $variant == "narrow" {
+
+    // Narrow Styles
+    // ------------------------------------------
+    h1 {
+      @include font-rhythm(1.2, 1.2, 0);
+      font-weight: normal;
+      font-family: $sans-serif-font !important;
+      color: $headline-color-i;
+      .logo{
+        @include font-size(6);
+        font-family: $logo-font !important;
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      font-family: $sans-serif-font !important;
+      color: $copy-color-i;
+      margin: 1.5em 0;
+      @include font-size(.85);
+    }
+
+    a {
+      font-family: $sans-serif-font !important;
+      color: $link-color-i;
+      @include font-size(.85);
+      @include transition(color 0.1s linear);
+      &:hover {
+        color: lighten($link-color-i, 75%);
+      }
+      &:visited {
+        color: $hover-link-color-i;
+      }
+    }
+
+    .avatar{
+      display: inline-block;
+      overflow: hidden;
+      width: 40px;
+      border-radius: 50%;
+      line-height: 100%;
+      box-shadow: inset 0px 0px 5px 5px rgba(0,0,0,0.5);
+    }
+
+    section {
+      display: inline-block;
+      color: $copy-color-i;
+      text-align: center;
+      border-top: 1px solid $medium-blue;
+      margin-top: 2em;
+      overflow: hidden;
+      @include font-size(.85);
+      .contact {
+        a {
+          color: $link-color-i;
+          font-family: $sans-serif-font !important;
+          font-weight: normal;
+          @include font-size(.85);
+          @include transition(color 0.1s linear);
+          &:hover {
+            color: lighten($link-color-i, 10%);
+          }
+        }
+      }
+    }
+  }
+}

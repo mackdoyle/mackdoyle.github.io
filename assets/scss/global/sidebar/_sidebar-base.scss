@@ -1,0 +1,14 @@
+/* global/sidebar/sidebar */
+@import "sidebar-variations";
+
+.sidebar-container {
+
+  @include breakpoint(M----M){
+    @include sidebar-variant(wide);
+  }
+
+  @include breakpoint(I----I){
+     @include sidebar-variant(narrow);
+  }
+
+}

@@ -2,18 +2,24 @@
 layout: page
 title: Categories
 ---
-<!-- categories -->	
+<!-- categories -->
 {% for category in site.categories %}
-<div class="box">
-	<h1>{{ category | first }}<a name="{{ category | first | cgi_escape }}"></a></h1>
-	<ul class="postList">	
+<div>
+	<h3>{{ category | first }}</h3>
+
 	{% for posts in category %}
-      {% for post in posts %}
-		<li><a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }} <span>{{ post.date | date: '%d.%m.%y' }}</span></a></li>						
-	{% endfor %}{% endfor %}
-	</ul>
-</div>				
+    {% for post in posts %}
+      <article class="box">
+        <header>
+          <h1><a href="{{ post.url }}" title="{{ post.title }}">{{post.title}}</a></h1>
+          <p class="meta"><i class="icon-entypo-user lighten">&nbsp;</i> {{ post.author }} &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="{{ post.date | date: '%B %d, %Y' }}" title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
+        </header>
+		    {{ post.excerpt }}
+		  </article>
+    {% endfor %}
+	{% endfor %}
+</div>
 {% endfor %}
-	
+
 
 

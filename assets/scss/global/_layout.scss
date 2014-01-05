@@ -17,7 +17,7 @@
   padding: $gutter-size;
   margin: 0 auto;
   text-align: center;
-  @include breakpoint(I--I){
+  @include breakpoint(I----I){
     width: 100%;
     height: 60px;
   }
@@ -31,10 +31,10 @@
   width: auto;
   max-width: 720px;
   height: 100%;
+  @include baseline-it(36, 50, 20, 20, 15, 0); //Baseline Grid for type testing
 }
 
 .content-container-draft {
-  @include baseline-it(36, 50, 20, 20, 15); //Baseline Grid for type testing
   position: relative;
   overflow: auto;
   padding: $gutter-size;
@@ -42,4 +42,5 @@
   width: auto;
   max-width: 720px;
   height: 100%;
+  @include baseline-it(36, 50, 20, 20, 15, 1); //Baseline Grid for type testing
 }

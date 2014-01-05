@@ -2239,6 +2239,71 @@ ul.pagination {
     float: none;
     display: inline-block; }
 
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: black;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 98;
+  display: none;
+  top: 0;
+  left: 0; }
+
+.reveal-modal {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  left: 50%;
+  z-index: 99;
+  height: auto;
+  margin-left: -40%;
+  width: 80%;
+  background-color: white;
+  padding: 1.25rem;
+  border: solid 1px #666666;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  top: 6.25rem; }
+  .reveal-modal .column,
+  .reveal-modal .columns {
+    min-width: 0; }
+  .reveal-modal > :first-child {
+    margin-top: 0; }
+  .reveal-modal > :last-child {
+    margin-bottom: 0; }
+  .reveal-modal .close-reveal-modal {
+    font-size: 1.375rem;
+    line-height: 1;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.6875rem;
+    color: #aaaaaa;
+    font-weight: bold;
+    cursor: pointer; }
+
+@media only screen and (min-width: 40.063em) {
+  .reveal-modal {
+    padding: 1.875rem;
+    top: 6.25rem; }
+    .reveal-modal.tiny {
+      margin-left: -15%;
+      width: 30%; }
+    .reveal-modal.small {
+      margin-left: -20%;
+      width: 40%; }
+    .reveal-modal.medium {
+      margin-left: -30%;
+      width: 60%; }
+    .reveal-modal.large {
+      margin-left: -35%;
+      width: 70%; }
+    .reveal-modal.xlarge {
+      margin-left: -47.5%;
+      width: 95%; } }
+@media print {
+  .reveal-modal {
+    background: #fff !important; } }
 table {
   background: white;
   margin-bottom: 1.25rem;
@@ -3763,6 +3828,19 @@ th.hide-for-touch {
 .touch th.show-for-touch {
   display: table-cell !important; }
 
+/**
+ * Gams
+ * Updated: 12-27-2013
+ * @author Jason Doyle
+ * @version 0.1
+
+ * Gams is a boilerplate Scss library extended from Bitters. It is meant to be dropped
+ * into a new project and give you a nice starting point.
+ * By design, Gams only effects standard tags. So no class definitions need to be added to use it.
+
+ * Learn more about Bitters (bitters.bourbon.io)
+ * Requires Bourbon (bourbon.io)
+ */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -3912,6 +3990,23 @@ table {
  * @param $fontColor: font color
  *
  */
+/*
+    USAGE:
+    div.tooltip-three {
+      background: #444;
+      width: 200px;
+      height: 100px;
+      position:relative;
+      &:after {
+        @include arrow(20px, 20px, up, #444);
+        content: '';
+        top: -20px;
+        left: 0px;
+        margin: 0 0 0 0;
+        position: absolute;
+      }
+    }
+*/
 /* Variables
 -------------------------------------- */
 /* Functions
@@ -4805,60 +4900,6 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-/* Serif */
-@font-face {
-  font-family: 'Droid Serif';
-  src: url("../../fonts/droidserif-webfont.eot");
-  src: url("../../fonts/droidserif-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/droidserif-webfont.woff") format("woff"), url("../../fonts/droidserif-webfont.ttf") format("truetype"), url("../../fonts/droidserif-webfont.svg#droid_serifregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Droid Serif';
-  src: url("../../fonts/droidserif-bold-webfont.eot");
-  src: url("../../fonts/droidserif-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/droidserif-bold-webfont.woff") format("woff"), url("../../fonts/droidserif-bold-webfont.ttf") format("truetype"), url("../../fonts/droidserif-bold-webfont.svg#droid_serifbold") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Droid Serif';
-  src: url("../../fonts/droidserif-italic-webfont.eot");
-  src: url("../../fonts/droidserif-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/droidserif-italic-webfont.woff") format("woff"), url("../../fonts/droidserif-italic-webfont.ttf") format("truetype"), url("../../fonts/droidserif-italic-webfont.svg#droid_serifitalic") format("svg");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Droid Serif';
-  src: url("../../fonts/droidserif-bolditalic-webfont.eot");
-  src: url("../../fonts/droidserif-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/droidserif-bolditalic-webfont.woff") format("woff"), url("../../fonts/droidserif-bolditalic-webfont.ttf") format("truetype"), url("../../fonts/droidserif-bolditalic-webfont.svg#droid_serifbold_italic") format("svg");
-  font-weight: bold;
-  font-style: italic; }
-
-/* Sans Serif */
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url("../../fonts/proximanova-webfont-webfont.eot");
-  src: url("../../fonts/proximanova-webfont-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/proximanova-webfont-webfont.woff") format("woff"), url("../../fonts/proximanova-webfont-webfont.ttf") format("truetype"), url("../../fonts/proximanova-webfont-webfont.svg#proxima_novaregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url("../../fonts/proximanova-sbold-webfont-webfont.eot");
-  src: url("../../fonts/proximanova-sbold-webfont-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/proximanova-sbold-webfont-webfont.woff") format("woff"), url("../../fonts/proximanova-sbold-webfont-webfont.ttf") format("truetype"), url("../../fonts/proximanova-sbold-webfont-webfont.svg#proxima_novasemibold") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: 'Proxima Nova';
-    font-weight: normal;
-    src: url("../../fonts/proximanova-webfont-webfont.svg#proxima_novaregular") format("svg"); }
-
-  @font-face {
-    font-family: 'Proxima Nova';
-    font-weight: bold;
-    src: url("../../fonts/proximanova-sbold-webfont-webfont.svg#proxima_novasemibold") format("svg"); } }
 .highlight {
   background-color: #302f28;
   border: 1px solid #ddd;
@@ -5251,18 +5292,6 @@ footer {
   line-height: 2.25rem;
   margin-bottom: 4.5rem; }
 
-/**
- * Baseline It
- * Adds visible lines to the background for typography positioning.
- *
- * Usage:
- * 1. Pass the height you want the grid and the RGB color value on the url.
- * 2. An optional offset value can be passed to compensate for padding or margins that effect the starting point.
- * 3. While testing, you can click anywhere on the element to hide the baseline grid
- *
- * Example: basehold.it/i/[LINE HEIGHT]/[RED]/[GREEN]/[BLUE]
- * Further usage instructions can be found at basehold.it
-*/
 fieldset {
   background: #e0e6e8;
   border: 1px solid #c3ced2;
@@ -5408,9 +5437,23 @@ pre.terminal code {
   background-color: #333; }
 
 /**
+ * Baseline It
+ * Adds visible lines to the background for typography positioning.
  *
- * Site Specific Global Settings
+ * @param $height: The grid height you want to set.
+ * @param $red: 0-255. The red value for the RGB color of the grid lines
+ * @param $green: 0-255. The green value for the RGB color of the grid lines
+ * @param $blue: 0-255. The blue value for the RGB color of the grid lines
+ * @param $offset: The amount of pixels you want to offset the start of the grid by.
+ * @param $state: [0,1]. 0 - The grid is off bay default. 1 - The grid is on by default
  *
+ * Usage:
+ * 1. Pass the height you want the grid and the RGB color value on the url.
+ * 2. An optional offset value can be passed to compensate for padding or margins that effect the starting point.
+ * 3. While testing, you can click anywhere on the element to hide the baseline grid
+ *
+ * Example: basehold.it/i/[LINE HEIGHT]/[RED]/[GREEN]/[BLUE]
+ * Further usage instructions can be found at basehold.it
 */
 /* global/layout */
 .container {
@@ -5429,7 +5472,7 @@ pre.terminal code {
   padding: 15px;
   margin: 0 auto;
   text-align: center; }
-  @media (max-width: 480px) {
+  @media (max-width: 720px) {
     .sidebar-container {
       width: 100%;
       height: 60px; } }
@@ -5441,18 +5484,22 @@ pre.terminal code {
   margin-left: 305px;
   width: auto;
   max-width: 720px;
-  height: 100%; }
+  height: 100%;
+  background-image: inherit; }
+  .content-container:active {
+    background-image: url("http://basehold.it/i/36/50/20/20");
+    background-position-y: 15px; }
 
 .content-container-draft {
-  background-image: url("http://basehold.it/i/36/50/20/20");
-  background-position-y: 15px;
   position: relative;
   overflow: auto;
   padding: 15px;
   margin-left: 305px;
   width: auto;
   max-width: 720px;
-  height: 100%; }
+  height: 100%;
+  background-image: url("http://basehold.it/i/36/50/20/20");
+  background-position-y: 15px; }
   .content-container-draft:active {
     background-image: inherit; }
 
@@ -5480,103 +5527,58 @@ img {
   text-align: justify;
   vertical-align: middle; }
 
-.svg-icon {
-  vertical-align: middle;
-  stroke-width: .5;
-  fill: azure;
-  stroke: lightsteelblue;
-  stroke-width: 1; }
-
-.light {
-  stroke: #f8f8f8;
-  opacity: .3; }
-
-.tiny {
-  width: 16px;
-  margin: 12px; }
-
 /* global/sidebar/sidebar */
-.sidebar-container {
-  background-color: #353839; }
-  .sidebar-container:hover:before {
-    background: transparent;
-    /* Override display:none to make the transition work. */
-    display: inherit;
-    visibility: collapse;
-    margin-bottom: -1em;
-    opacity: 0;
-    transition-delay: 0s, 250ms; }
-  .sidebar-container:before {
-    content: "";
-    background: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 275px;
-    height: 100%;
-    z-index: 9999;
-    transition-property: opacity, visibility;
-    transition-duration: 250ms, 0s;
-    transition-timing-function: ease-in-out, linear;
-    opacity: 1; }
-  .sidebar-container h1 {
-    font-size: 19.2px !important;
-    line-height: 24px;
-    font-size: 1.2rem !important;
-    line-height: 1.5rem;
-    font-weight: normal;
-    font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
-    color: #c3ced2; }
-    .sidebar-container h1 .logo {
-      font-size: 96px !important;
+/* global/sidebar/sidebar-wide */
+@media (min-width: 721px) {
+  .sidebar-container {
+    background-color: #353839; }
+    .sidebar-container:hover:before {
+      background: transparent;
+      /* Override display:none to make the transition work. */
+      display: inherit;
+      visibility: collapse;
+      margin-bottom: -1em;
+      opacity: 0;
+      transition-delay: 0s, 250ms; }
+    .sidebar-container:before {
+      content: "";
+      background: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 275px;
+      height: 100%;
+      z-index: 9999;
+      transition-property: opacity, visibility;
+      transition-duration: 250ms, 0s;
+      transition-timing-function: ease-in-out, linear;
+      opacity: 1; }
+    .sidebar-container h1 {
+      font-size: 19.2px !important;
       line-height: 24px;
-      font-size: 6rem !important;
+      font-size: 1.2rem !important;
       line-height: 1.5rem;
-      font-family: "Oswald", "Lucida Grande", "Helvetica Neue", sans-serif !important;
-      text-transform: uppercase; }
-  .sidebar-container p {
-    font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
-    color: #c3ced2;
-    margin: 1.5em 0;
-    font-size: 13.6px !important;
-    line-height: 24px;
-    font-size: 0.85rem !important;
-    line-height: 1.5rem; }
-  .sidebar-container a {
-    font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
-    color: #87c6dc;
-    font-size: 13.6px !important;
-    line-height: 24px;
-    font-size: 0.85rem !important;
-    line-height: 1.5rem;
-    -webkit-transition: color 0.1s linear;
-    -moz-transition: color 0.1s linear;
-    transition: color 0.1s linear; }
-    .sidebar-container a:hover {
-      color: white; }
-    .sidebar-container a:visited {
-      color: #4caacb; }
-  .sidebar-container .avatar {
-    display: inline-block;
-    overflow: hidden;
-    width: 50%;
-    border-radius: 50%;
-    line-height: 100%;
-    box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5); }
-  .sidebar-container section {
-    font-size: 13.6px !important;
-    line-height: 24px;
-    font-size: 0.85rem !important;
-    line-height: 1.5rem;
-    color: #c3ced2;
-    text-align: center;
-    border-top: 1px solid #46545f;
-    margin-top: 2em;
-    overflow: hidden; }
-    .sidebar-container section .contact a {
-      color: #87c6dc;
-      font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
       font-weight: normal;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
+      color: #c3ced2; }
+      .sidebar-container h1 .logo {
+        font-size: 96px !important;
+        line-height: 24px;
+        font-size: 6rem !important;
+        line-height: 1.5rem;
+        font-family: "Oswald", "Lucida Grande", "Helvetica Neue", sans-serif !important;
+        text-transform: uppercase; }
+    .sidebar-container p {
+      font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
+      color: #c3ced2;
+      margin: 1.5em 0;
+      font-size: 13.6px !important;
+      line-height: 24px;
+      font-size: 0.85rem !important;
+      line-height: 1.5rem; }
+    .sidebar-container a {
+      font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
+      color: #87c6dc;
       font-size: 13.6px !important;
       line-height: 24px;
       font-size: 0.85rem !important;
@@ -5584,8 +5586,113 @@ img {
       -webkit-transition: color 0.1s linear;
       -moz-transition: color 0.1s linear;
       transition: color 0.1s linear; }
-      .sidebar-container section .contact a:hover {
-        color: #aed9e8; }
+      .sidebar-container a:hover {
+        color: white; }
+      .sidebar-container a:visited {
+        color: #4caacb; }
+    .sidebar-container .avatar {
+      display: inline-block;
+      overflow: hidden;
+      width: 50%;
+      border-radius: 50%;
+      line-height: 100%;
+      box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5); }
+    .sidebar-container section {
+      color: #c3ced2;
+      text-align: center;
+      border-top: 1px solid #46545f;
+      margin-top: 2em;
+      overflow: hidden;
+      font-size: 13.6px !important;
+      line-height: 24px;
+      font-size: 0.85rem !important;
+      line-height: 1.5rem; }
+      .sidebar-container section .contact a {
+        color: #87c6dc;
+        font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
+        font-weight: normal;
+        font-size: 13.6px !important;
+        line-height: 24px;
+        font-size: 0.85rem !important;
+        line-height: 1.5rem;
+        -webkit-transition: color 0.1s linear;
+        -moz-transition: color 0.1s linear;
+        transition: color 0.1s linear; }
+        .sidebar-container section .contact a:hover {
+          color: #aed9e8; } }
+@media (max-width: 720px) {
+  .sidebar-container {
+    background-color: #353839; }
+    .sidebar-container h1 {
+      font-size: 19.2px !important;
+      line-height: 19.2px;
+      margin-bottom: 0px;
+      font-size: 1.2rem !important;
+      line-height: 1.2rem;
+      margin-bottom: 0rem;
+      font-weight: normal;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
+      color: #c3ced2; }
+      .sidebar-container h1 .logo {
+        font-size: 96px !important;
+        line-height: 24px;
+        font-size: 6rem !important;
+        line-height: 1.5rem;
+        font-family: "Oswald", "Lucida Grande", "Helvetica Neue", sans-serif !important;
+        text-transform: uppercase; }
+    .sidebar-container p {
+      font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
+      color: #c3ced2;
+      margin: 1.5em 0;
+      font-size: 13.6px !important;
+      line-height: 24px;
+      font-size: 0.85rem !important;
+      line-height: 1.5rem; }
+    .sidebar-container a {
+      font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
+      color: #87c6dc;
+      font-size: 13.6px !important;
+      line-height: 24px;
+      font-size: 0.85rem !important;
+      line-height: 1.5rem;
+      -webkit-transition: color 0.1s linear;
+      -moz-transition: color 0.1s linear;
+      transition: color 0.1s linear; }
+      .sidebar-container a:hover {
+        color: white; }
+      .sidebar-container a:visited {
+        color: #4caacb; }
+    .sidebar-container .avatar {
+      display: inline-block;
+      overflow: hidden;
+      width: 40px;
+      border-radius: 50%;
+      line-height: 100%;
+      box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5); }
+    .sidebar-container section {
+      display: inline-block;
+      color: #c3ced2;
+      text-align: center;
+      border-top: 1px solid #46545f;
+      margin-top: 2em;
+      overflow: hidden;
+      font-size: 13.6px !important;
+      line-height: 24px;
+      font-size: 0.85rem !important;
+      line-height: 1.5rem; }
+      .sidebar-container section .contact a {
+        color: #87c6dc;
+        font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
+        font-weight: normal;
+        font-size: 13.6px !important;
+        line-height: 24px;
+        font-size: 0.85rem !important;
+        line-height: 1.5rem;
+        -webkit-transition: color 0.1s linear;
+        -moz-transition: color 0.1s linear;
+        transition: color 0.1s linear; }
+        .sidebar-container section .contact a:hover {
+          color: #aed9e8; } }
 
 /* global/content/posts */
 header {
@@ -5604,8 +5711,8 @@ header {
     header .meta:after {
       content: ""; }
 
-p:nth-child(1) {
-  font-family: "Droid Serif", serif;
+.article-content p:first-of-type {
+  font-family: "Bitter", "Droid Serif", serif;
   font-weight: 600; }
 
 p a {
@@ -5675,9 +5782,13 @@ p a {
   -webkit-border-radius: 0 6 6 0;
   -moz-border-radius: 0 6 6 0;
   border-radius: 0 6 6 0; }
+  @media (max-width: 1024px) {
+    .post-note {
+      display: none; } }
+  .post-note i {
+    font-size: 1rem; }
   .post-note:before {
-    content: "\f000";
-    font-family: FontAwesome;
+    content: "";
     position: absolute;
     width: 20px;
     height: 100px;
@@ -5696,8 +5807,7 @@ p a {
     height: 50%;
     background: #990000;
     position: absolute;
-    content: "\f000";
-    font-family: FontAwesome;
+    content: "";
     left: 0;
     top: 25%;
     z-index: -1;

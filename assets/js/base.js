@@ -1,5 +1,5 @@
 /**
- * Taken form the Iconic website so investigate how they fit the hero to the broswer
+ * Taken form the Iconic website to investigate how they fit the hero to the broswer window
  */
 
 'use strict';

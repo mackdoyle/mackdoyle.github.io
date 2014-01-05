@@ -3,8 +3,8 @@ layout: default-draft
 ---
 <article>
   <header>
-    <h1>{{ page.title }}</h1>
-    <p class="meta">By {{ page.author }} &middot; <time datetime="{{ page.date | date_to_string }}" title="{{ page.date | date_to_string }}">{{ page.date | date_to_string }}</time></p>
+    <h1>{{ page.title }} - DRAFT</h1>
+    <p class="meta"><i class="icon-entypo-user lighten">&nbsp;</i> {{ page.author }} &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="{{ page.date | date_to_string }}" title="{{ page.date | date_to_string }}">{{ page.date | date_to_string }}</time></p>
   </header>
 
   {{ content }}

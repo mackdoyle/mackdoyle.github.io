@@ -295,7 +295,7 @@
 @font-face {
     font-family: 'entypo';
     src: url('entypo-webfont.eot');
-    }
+}
 
 @font-face {
     font-family: 'entypo';
@@ -304,4 +304,9 @@
     font-weight: normal;
     font-style: normal;
 
+}
+
+// Customizations
+.icon-entypo-user{
+  color: lighten(50);
 }

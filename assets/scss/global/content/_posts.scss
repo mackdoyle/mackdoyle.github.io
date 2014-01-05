@@ -21,7 +21,7 @@ header{
   }
 }
 // First paragraph of a post
-p:nth-child(1){
+.article-content p:first-of-type{
   font-family: $serif-font;
   font-weight: 600;
 }
@@ -86,6 +86,9 @@ p {
 
 // Post Notes
 .post-note{
+  @include breakpoint(I--------I){
+    display: none;
+  }
   position: fixed;
   overflow: hidden;
   top: 5%;
@@ -99,10 +102,12 @@ p {
   color: white;
   text-shadow: -1px -1px 0px rgba(33,0,0,1);
   @include border-radius(0 6 6 0);
+  i {
+    font-size: 1rem;
+  }
   &:before {
     // Clipped shadow
-    content: "\f000";
-    font-family: FontAwesome;
+    content: "";
     position: absolute;
   	width: 20px;
   	height: 100px;
@@ -119,8 +124,7 @@ p {
     height: 50%;
     background: rgba(153,0,0,1);
     position: absolute;
-    content: "\f000";
-    font-family: FontAwesome;
+    content: "";
     left: 0;
     top: 25%;
     z-index: -1;

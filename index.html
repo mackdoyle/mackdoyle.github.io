@@ -8,7 +8,7 @@ title: Home of Jason Doyle
   <article class="box">
     <header>
 		  <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
-		  <p class="meta">By {{ post.author }} &middot; <time datetime="{{ post.date | date_to_string }}" title="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></p>
+		  <p class="meta"><i class="icon-entypo-user lighten">&nbsp;</i> {{ post.author }} &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="{{ post.date | date: '%B %d, %Y' }}" title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
     </header>
 
     {{ post.excerpt | markdownify }}
