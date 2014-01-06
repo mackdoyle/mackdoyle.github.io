@@ -3,12 +3,10 @@ layout: post
 title:  "HTML Canvas getImageData()"
 date:   2013-12-27 20:04:14
 author: Jason Doyle
-categories: css, javascript
+image: /assets/images/articles/pixel-detection.png
+categories: [css, javascript]
 ---
-<div class="article-hero">
-  <img style="margin-bottom:26px" src="/assets/images/articles/pixel-detection.png" onerror="this.onerror=null; this.src='assets/images/articles/pixel-detection.png'">
-</div>
-<div class="article-content">
+
   For my Sassy Annotations mixin, I wanted to color them the inverse of the image that sat upon. To accomplish this I
   would need to find a way to access the pixel data of the image, get the average color value and set the annotations
   to the inverse of that value.
@@ -39,4 +37,3 @@ categories: css, javascript
   <canvas id="target" width="1024" height="880">You're missing the rodeo. Get a modern browser.</canvas>
   {% endhighlight %}
 
-</div>

@@ -5,13 +5,19 @@ title: Home of Jason Doyle
 
 
 {% for post in site.posts %}
-  <article class="box">
+  <article class="teaser">
     <header>
 		  <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
 		  <p class="meta"><i class="icon-entypo-user lighten">&nbsp;</i> {{ post.author }} &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="{{ post.date | date: '%B %d, %Y' }}" title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
     </header>
 
-    {{ post.excerpt | markdownify }}
+    <div class="article-hero">
+      <img style="margin-bottom:26px" src="{{page.image}}">
+    </div>
+
+    <div class="article-content">
+      {{ post.excerpt | markdownify }}
+    </div>
 
     <footer>
 		  {% if post.categories.size > 0 %}

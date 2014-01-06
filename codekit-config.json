@@ -14,18 +14,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/foundation\/components\/_flex-video.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/foundation\/components\/_flex-video.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/foundation\/css\/_flex-video.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/gams\/icons\/font-awesome-ie7.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -35,6 +23,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/gams\/css\/font-awesome-ie7.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/foundation\/components\/_flex-video.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/foundation\/components\/_flex-video.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/foundation\/css\/_flex-video.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -276,18 +276,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/bourbon\/addons\/_button.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/addons\/_button.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_button.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/gams\/mixins\/visual\/_annotation.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -297,6 +285,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_annotation.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/bourbon\/addons\/_button.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/addons\/_button.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_button.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -420,18 +420,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/gams\/icons\/_extras.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/icons\/_extras.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/css\/_extras.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/bourbon\/functions\/_tint-shade.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -441,6 +429,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_tint-shade.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/gams\/icons\/_extras.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/icons\/_extras.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/css\/_extras.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -477,18 +477,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/scss\/bourbon\/css3\/_backface-visibility.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css3\/_backface-visibility.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_backface-visibility.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/bourbon\/helpers\/_gradient-positions-parser.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -498,6 +486,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_gradient-positions-parser.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/bourbon\/css3\/_backface-visibility.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css3\/_backface-visibility.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_backface-visibility.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -615,17 +615,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/_site\/assets\/images\/admin\/baseline-24.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_site\/assets\/images\/admin\/baseline-24.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/_site\/assets\/images\/admin\/baseline-24.png",
-      "initialSize" : 102,
-      "fileType" : 8192
-    },
     "\/assets\/scss\/foundation\/_settings.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -637,6 +626,17 @@
       "outputAbbreviatedPath" : "\/assets\/scss\/css\/_settings.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/_site\/assets\/images\/admin\/baseline-24.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_site\/assets\/images\/admin\/baseline-24.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/_site\/assets\/images\/admin\/baseline-24.png",
+      "initialSize" : 102,
+      "fileType" : 8192
     },
     "\/assets\/scss\/foundation\/components\/_button-groups.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -707,14 +707,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/fonts\/proximanova-webfont-demo.html" : {
+    "\/assets\/scss\/gams\/mixins\/css3\/_placeholder.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/fonts\/proximanova-webfont-demo.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css3\/_placeholder.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_placeholder.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/assets\/scss\/bourbon\/css3\/_placeholder.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -740,27 +743,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/gams\/_muted-blue-theme.scss" : {
+    "\/assets\/scss\/foundation\/components\/_offcanvas.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/_muted-blue-theme.scss",
+      "inputAbbreviatedPath" : "\/assets\/scss\/foundation\/components\/_offcanvas.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/css\/_muted-blue-theme.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/assets\/scss\/bourbon\/functions\/_modular-scale.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/functions\/_modular-scale.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_modular-scale.css",
+      "outputAbbreviatedPath" : "\/assets\/scss\/foundation\/css\/_offcanvas.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -788,15 +779,24 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/foundation\/components\/_offcanvas.scss" : {
+    "\/assets\/fonts\/proximanova-webfont-demo.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/fonts\/proximanova-webfont-demo.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/assets\/scss\/gams\/mixins\/typography\/_dropcap.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/foundation\/components\/_offcanvas.scss",
+      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/typography\/_dropcap.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/foundation\/css\/_offcanvas.css",
+      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_dropcap.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -847,27 +847,27 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/gams\/mixins\/typography\/_dropcap.scss" : {
+    "\/assets\/scss\/bourbon\/functions\/_modular-scale.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/typography\/_dropcap.scss",
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/functions\/_modular-scale.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_dropcap.css",
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_modular-scale.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/gams\/mixins\/css3\/_placeholder.scss" : {
+    "\/assets\/scss\/gams\/_muted-blue-theme.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css3\/_placeholder.scss",
+      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/_muted-blue-theme.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_placeholder.css",
+      "outputAbbreviatedPath" : "\/assets\/scss\/css\/_muted-blue-theme.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -906,15 +906,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/bourbon\/functions\/_grid-width.scss" : {
+    "\/assets\/scss\/bourbon\/css3\/_animation.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/functions\/_grid-width.scss",
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css3\/_animation.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_grid-width.css",
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_animation.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -948,15 +948,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/bourbon\/css3\/_animation.scss" : {
+    "\/assets\/scss\/bourbon\/functions\/_grid-width.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css3\/_animation.scss",
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/functions\/_grid-width.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_animation.css",
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_grid-width.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -992,15 +992,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_site\/assets\/css\/global.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_site\/assets\/css\/global.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/assets\/scss\/gams\/icons\/_core.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1012,6 +1003,15 @@
       "outputAbbreviatedPath" : "\/assets\/scss\/gams\/css\/_core.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/_site\/assets\/css\/global.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_site\/assets\/css\/global.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/assets\/scss\/bourbon\/functions\/_radial-gradient.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1058,18 +1058,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/scss\/gams\/mixins\/typography\/_font-feature-settings.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/typography\/_font-feature-settings.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_font-feature-settings.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/bourbon\/helpers\/_shape-size-stripper.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1079,6 +1067,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_shape-size-stripper.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/gams\/mixins\/typography\/_font-feature-settings.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/typography\/_font-feature-settings.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_font-feature-settings.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -1172,15 +1172,6 @@
       "initialSize" : 15169,
       "fileType" : 8192
     },
-    "\/assets\/images\/entypo\/sprites\/sprites.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/entypo\/sprites\/sprites.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/assets\/scss\/gams\/mixins\/typography\/_font-rhythm.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1192,6 +1183,15 @@
       "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_font-rhythm.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/assets\/images\/entypo\/sprites\/sprites.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/entypo\/sprites\/sprites.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/assets\/scss\/gams\/_reset.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1270,18 +1270,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/bourbon\/functions\/_linear-gradient.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/functions\/_linear-gradient.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_linear-gradient.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/bourbon\/functions\/_transition-property-name.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1291,6 +1279,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_transition-property-name.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/bourbon\/functions\/_linear-gradient.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/functions\/_linear-gradient.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_linear-gradient.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -1737,18 +1737,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/gams\/_syntax.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/_syntax.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/css\/_syntax.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/_site\/articles\/html-canvas-getimagedata\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1767,6 +1755,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_background.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/gams\/_syntax.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/_syntax.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/css\/_syntax.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -2267,6 +2267,18 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/assets\/scss\/bourbon\/addons\/_clearfix.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/addons\/_clearfix.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_clearfix.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/assets\/scss\/gams\/mixins\/css3\/_opacity.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2278,17 +2290,6 @@
       "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_opacity.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/assets\/images\/headshot.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/headshot.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/headshot.png",
-      "initialSize" : 30031,
-      "fileType" : 8192
     },
     "\/assets\/scss\/gams\/icons\/_icons.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2302,17 +2303,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/bourbon\/addons\/_clearfix.scss" : {
+    "\/assets\/images\/headshot.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/addons\/_clearfix.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_clearfix.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/assets\/images\/headshot.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/headshot.png",
+      "initialSize" : 30031,
+      "fileType" : 8192
     },
     "\/assets\/scss\/gams\/mixins\/visual\/_pillbox.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2349,17 +2349,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/images\/articles\/pixel-detection.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/articles\/pixel-detection.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/articles\/pixel-detection.png",
-      "initialSize" : 8883,
-      "fileType" : 8192
-    },
     "\/assets\/scss\/_entypo.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2371,6 +2360,17 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_entypo.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/assets\/images\/articles\/pixel-detection.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/articles\/pixel-detection.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/articles\/pixel-detection.png",
+      "initialSize" : 8883,
+      "fileType" : 8192
     },
     "\/assets\/scss\/foundation\/components\/_dropdown-buttons.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2432,15 +2432,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_includes\/widgets\/googleSearchForm.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_includes\/widgets\/googleSearchForm.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/scss\/foundation\/components\/_grid.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2452,6 +2443,15 @@
       "outputAbbreviatedPath" : "\/assets\/scss\/foundation\/css\/_grid.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/_includes\/widgets\/googleSearchForm.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_includes\/widgets\/googleSearchForm.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_site\/assets\/images\/felt.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2530,18 +2530,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/bourbon\/addons\/_size.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/addons\/_size.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_size.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/foundation\/components\/_dropdown.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2551,6 +2539,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/foundation\/css\/_dropdown.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/bourbon\/addons\/_size.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/addons\/_size.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_size.css",
       "fileType" : 4,
       "debugStyle" : 0
     },

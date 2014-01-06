@@ -4,14 +4,11 @@ title:  "Fixing Joomla Asset Table Issues"
 sub-title: "Those finally getting around to upgrading from the ancient Joomla 1.6 platform may be scratching their heads in confusion. This article take a deep dive into the problem and, hopefully, offer some solutions"
 author: Jason Doyle
 date:   2013-12-14 20:04:14
+image: 
 categories: joomla
 ---
 
-<div class="article-hero">
 
-</div>
-
-<div class="article-content">
   Starting with the introduction of the Access Control List (ACL) implementation in Joomla 1.6, categories, articles some components create a record in the assets table to store properties associated with the ACL. When they do a foreign key relationship is created. Sometimes this relationship can break, causing your site to not behave properly. This is especially true when trying to upgrade from a version of Joomla pre-ACL.
 
   In addition to problems with the foreign key relationships, the assets table stores hierarchal data using the [Adjacency List Model][1]. This article will not go into graph theory but to put simply, each record in the asset table has a relationship to another record. This relationship can also become corrupted and difficult to resolve due to its complexity.
@@ -203,8 +200,6 @@ categories: joomla
   	FROM whm_content cont, whm_assets  assets
   	WHERE (cont.id = SUBSTRING_INDEX(assets.name, 'com_content.article.', -1)) AND   (cont.asset_id  <> assets.id )
   	{% endhighlight %}
-
-</div>
 
 [1]:	http://en.wikipedia.org/wiki/Adjacency_list_model
 [2]:	https://github.com/elinw/AssetDiagnosis

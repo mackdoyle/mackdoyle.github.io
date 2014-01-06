@@ -5722,15 +5722,15 @@ p a {
 .highlight {
   margin: 2.25rem auto; }
 
-.box footer {
+.teaser footer {
   display: table;
   vertical-align: middle;
   width: 100%; }
-  .box footer .footer-col {
+  .teaser footer .footer-col {
     display: table-cell; }
-.box .more {
+.teaser .more {
   text-align: right; }
-  .box .more a {
+  .teaser .more a {
     position: relative;
     text-decoration: none;
     white-space: nowrap;
@@ -5745,13 +5745,13 @@ p a {
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out; }
-    .box .more a:hover {
+    .teaser .more a:hover {
       background: #e0e6e8; }
-.box .category-list-container .categories {
+.teaser .category-list-container .categories {
   font-size: 12px;
   line-height: 16px;
   vertical-align: middle; }
-  .box .category-list-container .categories li:not(.first) a {
+  .teaser .category-list-container .categories li:not(.first) a {
     background: #efefef;
     color: #666666;
     text-align: center;
@@ -5763,7 +5763,7 @@ p a {
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out; }
-    .box .category-list-container .categories li:not(.first) a:hover {
+    .teaser .category-list-container .categories li:not(.first) a:hover {
       background: #d5d5d5; }
 
 .post-note {

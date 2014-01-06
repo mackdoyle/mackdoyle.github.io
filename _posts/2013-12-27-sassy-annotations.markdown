@@ -3,14 +3,11 @@ layout: post
 title:  "Sassy Annotations"
 date:   2013-12-27 20:04:14
 author: Jason Doyle
+image: /assets/images/articles/annotations.png
 categories: css
 ---
 
-<div class="article-hero">
-  <img style="margin-bottom:26px" src="/assets/images/articles/annotations.png" onerror="this.onerror=null; this.src='assets/images/articles/annotations.png'">
-</div>
 
-<div class="article-content">
   A custom mixin for displaying annotations with line pointers.
   <a href="#" data-reveal-id="annotationModal">View Demo</a>
 
@@ -45,4 +42,3 @@ categories: css
     <script src="//codepen.io/assets/embed/ei.js"></script>
     <a class="close-reveal-modal">&#215;</a>
   </div>
-</div>

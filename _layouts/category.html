@@ -11,13 +11,20 @@ title: Home of Jason Doyle
 </ul>-->
 
 {% for post in site.posts %}
-  <article class="box">
+  <article class="teaser">
     <header>
 		  <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
       <p class="meta"><time datetime="{{post.date | date: "%M-%d-%Y"}}" title="{{post.date | date: "%M-%d-%Y"}}">{{post.date | date: "%M.%d.%Y"}}</time> &middot; by {{ post.author }} </p>
     </header>
-    {{ post.excerpt | markdownify }}
 
+    <div class="article-hero">
+      <img style="margin-bottom:26px" src="{{page.image}}">
+    </div>
+
+    <div class="article-content">
+     {{ post.excerpt | markdownify }}
+    </div>
+    
     <footer>
 		  {% include widgets/postCategoryList.html %}
       {% include widgets/postTagList.html %}

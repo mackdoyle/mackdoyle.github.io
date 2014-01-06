@@ -3,14 +3,11 @@ layout: draft
 title:  "Baseline Grid Sass Mixin"
 date:   2014-01-02 20:00:00
 author: Jason Doyle
+image: /assets/images/articles/baseline-grid.png
 categories: css
 ---
 
-<div class="article-hero">
-  <img style="margin-bottom:26px" src="/assets/images/articles/baseline-grid.png" onerror="this.onerror=null; this.src='assets/images/articles/baseline-grid.svg'">
-</div>
 
-<div class="article-content">
   Using a baseline grid to set type is a must if you want to achieve vertical rhythm. Dan Eden & Michael Wright created [basehold.it][1], a
   dead simple solution that adds a baseline grid to an element's background. All you need to do is add a background-image property and point it to their URL.
 
@@ -42,7 +39,7 @@ categories: css
       @include baseline-it(36, 50, 20, 20, 15);
     }
   {% endhighlight %}
-</div>
+
 <div class="post-note"><i class="icon-entypo-circled-info">&nbsp;</i>Click and hold anywhere on the page</div>
 
 [1]:	http://basehold.it
