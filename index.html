@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home of Jason Doyle
+title: Jason Doyle
 ---
 
 
@@ -8,14 +8,14 @@ title: Home of Jason Doyle
   <article class="teaser">
     <header>
 		  <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
-		  <p class="meta"><i class="icon-entypo-user lighten">&nbsp;</i> {{ post.author }} &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="{{ post.date | date: '%B %d, %Y' }}" title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
+		  <p class="meta"><i class="icon-entypo-user lighten-text">&nbsp;</i> {{ post.author }} &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="{{ post.date | date: '%B %d, %Y' }}" title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
     </header>
 
     <div class="article-hero">
-      <img style="margin-bottom:26px" src="{{page.image}}">
+      <img style="margin-bottom:26px" src="{{post.image}}">
     </div>
 
-    <div class="article-content">
+    <div class="article-teaser-content">
       {{ post.excerpt | markdownify }}
     </div>
 

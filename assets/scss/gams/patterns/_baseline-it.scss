@@ -1,35 +1,40 @@
-/**
- * Baseline It
- * Adds visible lines to the background for typography positioning.
- *
- * @param $height: The grid height you want to set.
- * @param $red: 0-255. The red value for the RGB color of the grid lines
- * @param $green: 0-255. The green value for the RGB color of the grid lines
- * @param $blue: 0-255. The blue value for the RGB color of the grid lines
- * @param $offset: The amount of pixels you want to offset the start of the grid by.
- * @param $state: [0,1]. 0 - The grid is off bay default. 1 - The grid is on by default
- *
- * Usage:
- * 1. Pass the height you want the grid and the RGB color value on the url.
- * 2. An optional offset value can be passed to compensate for padding or margins that effect the starting point.
- * 3. While testing, you can click anywhere on the element to hide the baseline grid
- *
- * Example: basehold.it/i/[LINE HEIGHT]/[RED]/[GREEN]/[BLUE]
- * Further usage instructions can be found at basehold.it
-*/
-
+//==========================================================================
+// Baseline It
+// Adds visible lines to the background for typography positioning.
+// 
+// 1. Pass the height you want the grid and the RGB color value of the grid lines.
+// 2. An optional offset value can be passed to compensate for padding or margins 
+//    that effect the starting point.
+// 3. An option value to hide the grid by default can be passed. Click and hold 
+//    anywhere within the element to hide/show the grid.
+// 
+// @param $height: The grid height you want to set.
+// @param $red: 0-255. The red value for the RGB color of the grid lines
+// @param $green: 0-255. The green value for the RGB color of the grid lines
+// @param $blue: 0-255. The blue value for the RGB color of the grid lines
+// @param $offset: The amount of pixels you want to offset the start of the grid by.
+// @param $state: [0,1]. 0 - The grid is off by default. 1 - The grid is on by default
+// 
+// Usage:
+// .content-container {
+//   @include baseline-it(36, 50, 20, 20, 15, 1);
+// }
+// 
+// Credits:
+// This mixin loads the baseline grid created by Dan Eden & Michael Wright at basehold.it
+//==========================================================================
 
 @mixin baseline-it($height:24, $red:0, $green:0, $blue:0, $offset:0, $state: 0) {
   @if $state == 0 {
     // Grid is OFF by default
     background-image: inherit;
     &:active{
-      background-image: url('http://basehold.it/i/'+$height+'/'+$red+'/'+$green+'/'+$blue+''); // baseline grid at 36px with RGB colored lines
+      background-image: url('http://basehold.it/i/'+$height+'/'+$red+'/'+$green+'/'+$blue+'');
       background-position-y: $offset * 1px;
     }
   } @else {
     // Grid is ON by default
-    background-image: url('http://basehold.it/i/'+$height+'/'+$red+'/'+$green+'/'+$blue+''); // baseline grid at 36px with RGB colored lines
+    background-image: url('http://basehold.it/i/'+$height+'/'+$red+'/'+$green+'/'+$blue+'');
     background-position-y: $offset * 1px;
     &:active{
       background-image: inherit;

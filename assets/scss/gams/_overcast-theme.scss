@@ -5,7 +5,7 @@
 
 // Typography
 // --------------------------------------------------------------------------------- *
-  $sans-serif-font: "Open Sans", "Helvetica Neue", sans-serif;
+  $sans-serif-font: Verdana, sans-serif;
   $serif-font: "Bitter","Droid Serif", serif;
   $monospace-font: "Monaco", "Menlo", monospace;
   $logo-font: "Oswald", "Lucida Grande", "Helvetica Neue", sans-serif;
@@ -20,7 +20,7 @@
 // --------------------------------------------------------------------------------- *
 // Base Colors
   $foreground: #fdfdff;
-  $background: #353839;
+  $background: #4a525a;
   $alert: #FBE3E4;
   $notice: #FFF6BF;
   $success: #E6EFC2;
@@ -28,9 +28,10 @@
   $light-blue: #086BB8;
   $medium-blue: #46545F;
   $dark-blue: #344B52;
-  $light-gray: #C3CED2;
+  $light-gray: #eee;
   $medium-gray: #7C8385;
   $dark-gray: #3d4244;
+  $medium-orange: rgb(255, 204, 0);
 
 // Body Color
 // -------------------------- *
@@ -41,7 +42,7 @@
 // -------------------------- *
   $font-color: $medium-blue;
   $font-color-i: $light-gray;
-  $headline-color: $dark-blue;
+  $headline-color: $medium-orange;
   $headline-color-i: $light-gray;
   $accent-color: $medium-gray;
 

@@ -1,0 +1,20 @@
+//============================================================
+
+//Simple stiched border
+// @param $color           :  hex, rgb, rgba, hsa
+// @param $size            :  px, em, rem
+// @param $inset-amount    :  px, em, rem
+//
+//============================================================
+
+@mixin stiches($color: #efefef, $bkg-color: #333333, $size: 2px, $inset-amount: .5rem){
+  border: $size dashed $color;
+  box-shadow: 0 0 0 $inset-amount $bkg-color;
+}
+
+/*
+  USAGE:
+  .container {
+    @include stiches(#999, #efefef, 2px, .5rem);
+  }
+*/

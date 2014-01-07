@@ -17,6 +17,7 @@ hr {
 
 img {
   margin: 0;
+  width:100%;
   max-width: 100%;
 }
 
@@ -28,5 +29,7 @@ img {
   }
 }
 
-
+.lighten-text{
+  color: lighten($font-color, 20);
+}
 
