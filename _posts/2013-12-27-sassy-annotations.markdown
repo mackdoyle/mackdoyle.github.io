@@ -9,7 +9,7 @@ categories: css
 
 
 A custom mixin for displaying annotations with line pointers.
-<a href="#" data-reveal-id="annotationModal">View Demo</a>
+<a href="#" data-reveal-id="annotationModal" class="modal-link">View Demo</a>
 
 Ever since we learned how to <a href="http://css-tricks.com/animation-css-triangles-work/" target="_blank">draw a triangle with CSS</a>, designers have relied upon it for creating tooltips
 to <span class="tooltip">annotate content</span>. This was a great discovery and has its place but, but isn't applicable to all situations.
