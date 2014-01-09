@@ -1,0 +1,17 @@
+/**
+ *
+ * Site Specific Modal Style
+ *
+*/
+
+.modal-link {
+	@include breakpoint("I--I"){
+		display: none;
+	}
+}
+
+.teaser{
+	.modal-link {
+		display: none;
+	}
+}

@@ -34,25 +34,21 @@
   max-width: 720px;
   height: 100%;
   @include baseline-it(36, 50, 20, 20, 15, 0); //Baseline Grid for type testing
-  @include breakpoint(I----I){
+  @include breakpoint(I-----I){
+    padding: $gutter-size 0;
     margin-left: 0;
     width: 100%;
     max-width: 100%;
+  }
+  .article-content,
+  .article-teaser-content {
+    @include breakpoint(I-----I){
+      padding: 0 $gutter-size;
+    }
   }
 }
 
-.content-container-draft {
-  position: relative;
-  overflow: auto;
-  padding: $gutter-size;
-  margin-left: 305px; //Spacing for aside 275px + 30px padding
-  width: auto;
-  max-width: 720px;
-  height: 100%;
+.content-container.draft {
   @include baseline-it(36, 50, 20, 20, 15, 1); //Baseline Grid for type testing
-  @include breakpoint(I----I){
-    margin-left: 0;
-    width: 100%;
-    max-width: 100%;
-  }
 }
+

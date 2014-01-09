@@ -5478,29 +5478,12 @@ pre.terminal code {
   .content-container:active {
     background-image: url("http://basehold.it/i/36/50/20/20");
     background-position-y: 15px; }
-  @media (max-width: 720px) {
-    .content-container {
-      margin-left: 0;
-      width: 100%;
-      max-width: 100%; } }
 
-.content-container-draft {
-  position: relative;
-  overflow: auto;
-  padding: 15px;
-  margin-left: 305px;
-  width: auto;
-  max-width: 720px;
-  height: 100%;
+.content-container.draft {
   background-image: url("http://basehold.it/i/36/50/20/20");
   background-position-y: 15px; }
-  .content-container-draft:active {
+  .content-container.draft:active {
     background-image: inherit; }
-  @media (max-width: 720px) {
-    .content-container-draft {
-      margin-left: 0;
-      width: 100%;
-      max-width: 100%; } }
 
 /**
  *
@@ -5782,6 +5765,18 @@ p a {
     border-radius: 0 16px 16px 0;
     border: 2px dashed #fc0202;
     box-shadow: 0 0 0 2px #990000; }
+
+/**
+ *
+ * Site Specific Modal Style
+ *
+*/
+@media (max-width: 480px) {
+  .modal-link {
+    display: none; } }
+
+.teaser .modal-link {
+  display: none; }
 
 /* global/content/instruction */
 /* Selectors

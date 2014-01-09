@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: draft
 title:  "Baseline Grid Sass Mixin"
 date:   2014-01-02 20:00:00
 author: Jason Doyle
@@ -15,18 +15,18 @@ I wanted to additionally control the background-position so I created a little m
 Nothing groundbreaking, but something everyone needs to have in their library. So here you go. Or grab the gist with extended features <a href="https://gist.github.com/mackdoyle/8277070" target="_blank">here</a>.
 
 	{% highlight scss %}
-		// _baseline-it.scss
-		@mixin baseline-it($height:24, $red:0, $green:0, $blue:0, $offset:0) {
-			background-image: url('http://basehold.it/i/'+$height+'/'+$red+'/'+$green+'/'+$blue+''); 
-			background-position-y: $offset * 1px;
-			&:active{
-				background-image: inherit;
-			}
+  // _baseline-it.scss
+  @mixin baseline-it($height:24, $red:0, $green:0, $blue:0, $offset:0) {
+    background-image: url('http://basehold.it/i/'+$height+'/'+$red+'/'+$green+'/'+$blue+'');
+		background-position-y: $offset * 1px;
+		&:active{
+			background-image: inherit;
 		}
+	}
 	{% endhighlight %}
 
 Don't forget to import the mixin partial
-	
+
 	{% highlight scss %}
 		//global.scss
 		@import "baseline-it";

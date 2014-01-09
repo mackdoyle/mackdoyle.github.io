@@ -24,7 +24,7 @@ relative positioning has to be replaced with more verbose x,y positioning.
 In an attempt to provide a solution for these less-than-edge-cases, I created Sassy Annotations. As the name implies, they require Sass (Scss) but
 that's it. They do use the :before and :after pseudo elements which means they will work in IE 8+.
 
-To deploy a Sassy Annotation, you only need to a two HTML elements and small amount of CSS to position it.
+To deploy a Sassy Annotation, you only need to add two HTML elements and small amount of CSS to position it.
 
 {% highlight html %}
 <div class="annotation-one down-right">
