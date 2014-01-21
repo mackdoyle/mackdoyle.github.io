@@ -6,6 +6,7 @@
 
     // Wide Styles
     // ------------------------------------------
+    /*
     &:hover:before {
       background: transparent;
       display: inherit;
@@ -28,26 +29,27 @@
       transition-timing-function: ease-in-out, linear;
       opacity: 1;
     }
+		*/
+
+		.mobile-menu {
+			display: none;
+		}
 
     header {
       .avatar{
-        display: inline-block;
+        display: none;
         overflow: hidden;
-        width: 50%;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         line-height: 100%;
-        box-shadow: inset 0px 0px 5px 5px rgba(0,0,0,0.5);
+        box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
       }
       h1 {
         font-weight: normal;
-        font-family: $sans-serif-font !important;
-        color: $headline-color-i;
-        @include font-size(1.2);
-        .logo{
-          @include font-size(6);
-          font-family: $logo-font !important;
-          text-transform: uppercase;
-        }
+        font-family: $display-font;
+        color: $light-gray;
+        @include font-rhythm(3.5, 3.5, 0);
       }
     }
 
@@ -55,7 +57,7 @@
       font-family: $sans-serif-font !important;
       color: $font-color-i;
       margin: 1.5em 0;
-      @include font-size(.85);
+      @include font-rhythm(.85);
     }
 
     a {
@@ -75,7 +77,7 @@
       color: $font-color-i;
       text-align: center;
       border-top: 1px solid $medium-blue;
-      margin-top: 2em;
+      margin: 2em 0 0 0;
       overflow: hidden;
       @include font-size(.85);
       .contact {
@@ -93,16 +95,36 @@
     }
 
   }@else if $variant == "narrow" {
-
     // Narrow Styles
     // ------------------------------------------
+
     vertical-align: middle;
     margin: 0 auto;
+
+		// Mobile Menu
+		.mobile-menu {
+			position: absolute;
+			display: inline-block;
+			left: 0;
+			top: 0;
+			width: 60px;
+			height:60px;
+			ul {
+				li {
+					width: 60px;
+					height:60px;
+					a {
+						color: white;
+						@include font-rhythm(2, 2.5, 0);
+					}
+				}
+			}
+		}
 
     header{
       display: inline-block;
       .avatar{
-        display: inline-block;
+        display: none;
         overflow: hidden;
         width: 40px;
         border-radius: 50%;
@@ -114,20 +136,15 @@
         display: inline-block;
         margin-left: 2rem;
         font-weight: normal;
-        font-family: $sans-serif-font !important;
-        color: $headline-color-i;
-        @include font-rhythm(1.2, 1.2, 0);
-        .logo{
-          @include font-size(6);
-          font-family: $logo-font !important;
-          text-transform: uppercase;
-        }
+        font-family: $display-font;
+        color: $light-gray;
+        @include font-rhythm(3.5, 3.5, 0);
       }
     }
 
     section{
       display: none;
     }
-  
+
   }
 }

@@ -1,14 +1,14 @@
 @mixin breakpoint($point) {
-	@if      $point == I----------I {
+	@if      $point == I--------I {
 		@media (max-width: 1400px) {@content;}
 	}
-	@else if $point == I---------I {
+	@else if $point == I-------I {
 		@media (max-width: 1280px) {@content;}
 	}
-	@else if $point == I--------I {
+	@else if $point == I------I {
 		@media (max-width: 1024px) {@content;}
 	}
-	@else if $point == I------I {
+	@else if $point == I-----I {
 		@media (max-width: 768px) {@content;}
 	}
 	@else if $point == I----I {
@@ -25,16 +25,16 @@
 	}
 
 	// Min width breakpoints
-	@else if $point == M----------M {
+	@else if $point == M--------M {
 		@media (min-width: 1401px) {@content;}
 	}
-	@else if $point == M---------M {
+	@else if $point == M-------M {
 		@media (min-width: 1281px) {@content;}
 	}
-	@else if $point == M--------M {
+	@else if $point == M------M {
 		@media (min-width: 1025px) {@content;}
 	}
-	@else if $point == M------M {
+	@else if $point == M-----M {
 		@media (min-width: 769px) {@content;}
 	}
 	@else if $point == M----M {

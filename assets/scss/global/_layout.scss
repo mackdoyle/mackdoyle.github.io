@@ -14,7 +14,7 @@
   left: 0;
   width: 275px;
   height: 100%;
-  padding: $gutter-size;
+  padding: 2rem;
   margin: 0 auto;
   text-align: center;
   @include breakpoint(I----I){
@@ -34,15 +34,16 @@
   max-width: 720px;
   height: 100%;
   @include baseline-it(36, 50, 20, 20, 15, 0); //Baseline Grid for type testing
-  @include breakpoint(I-----I){
+  @include breakpoint(I----I){
     padding: $gutter-size 0;
     margin-left: 0;
     width: 100%;
     max-width: 100%;
   }
   .article-content,
-  .article-teaser-content {
-    @include breakpoint(I-----I){
+  .article-teaser-content,
+  footer {
+    @include breakpoint(I----I){
       padding: 0 $gutter-size;
     }
   }
