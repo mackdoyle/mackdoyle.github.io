@@ -12,7 +12,7 @@ A custom mixin for displaying annotations with line pointers.
 <a href="#" data-reveal-id="annotationModal" class="modal-link">View Demo</a>
 
 Ever since we learned how to <a href="http://css-tricks.com/animation-css-triangles-work/" target="_blank">draw a triangle with CSS</a>, designers have relied upon it for creating tooltips
-to <span class="tooltip">annotate content</span>. This was a great discovery and has its place but, but isn't applicable to all situations.
+to <span data-tooltip data-options="disable_for_touch:true" class="has-tip [tip-bottom]" title="Tooltips are awesome, you should totally use them!">annotate content</span>. This was a great discovery and has its place but, but isn't applicable to all situations.
 The problem appears when tooltips need to stay out of the way of the content they are annotating. Standard speech-bubble-style
 tooltips need to be nestled next to what they are annotating to maintain context. Moving them out a bit means replacing the beloved css triangle
 pointer with a line.
