@@ -7366,7 +7366,7 @@ img {
       .sidebar-container .mobile-menu ul li {
         width: 60px;
         height: 60px;
-        line-height: 45px; }
+        line-height: 80px; }
         .sidebar-container .mobile-menu ul li a {
           color: white;
           font-size: 32px !important;
@@ -7377,6 +7377,8 @@ img {
           margin-bottom: 0rem; }
     .sidebar-container header {
       display: inline-block; }
+      .sidebar-container header a {
+        display: inline-block; }
       .sidebar-container header .avatar {
         display: none;
         overflow: hidden;

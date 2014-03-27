@@ -261,18 +261,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/gams\/patterns\/_code.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/patterns\/_code.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/css\/_code.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/bourbon\/css3\/_backface-visibility.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -282,6 +270,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_backface-visibility.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/gams\/patterns\/_code.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/patterns\/_code.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/css\/_code.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -727,17 +727,14 @@
       "initialSize" : 7760,
       "fileType" : 8192
     },
-    "\/assets\/scss\/bourbon\/css3\/_linear-gradient.scss" : {
+    "\/_site\/assets\/fonts\/demo.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css3\/_linear-gradient.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_linear-gradient.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/_site\/assets\/fonts\/demo.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/scss\/bourbon\/css3\/_placeholder.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -748,6 +745,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_placeholder.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/bourbon\/css3\/_linear-gradient.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css3\/_linear-gradient.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_linear-gradient.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -796,15 +805,6 @@
       "outputAbbreviatedPath" : "\/assets\/images\/ide-themes\/Tomorrow-Palette.png",
       "initialSize" : 6664,
       "fileType" : 8192
-    },
-    "\/_site\/assets\/fonts\/demo.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_site\/assets\/fonts\/demo.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/assets\/scss\/foundation\/components\/_grid.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1243,6 +1243,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/assets\/css\/global.min.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/css\/global.min.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/assets\/scss\/gams\/icons\/_core.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1266,15 +1275,6 @@
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_background-image.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/assets\/css\/global.min.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/css\/global.min.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/assets\/images\/ria-plate.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1678,18 +1678,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/gams\/mixins\/visual\/_image-rendering.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/visual\/_image-rendering.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_image-rendering.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/scss\/bourbon\/addons\/_triangle.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1699,6 +1687,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_triangle.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/assets\/scss\/gams\/mixins\/visual\/_image-rendering.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/visual\/_image-rendering.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_image-rendering.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -2561,16 +2561,14 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_site\/assets\/images\/articles\/baseline-grid.png" : {
+    "\/_site\/articles\/html-canvas-getimagedata\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_site\/assets\/images\/articles\/baseline-grid.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/_site\/assets\/images\/articles\/baseline-grid.png",
-      "initialSize" : 16272,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/_site\/articles\/html-canvas-getimagedata\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/images\/jason-site.sketch\/QuickLook\/Thumbnail.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2595,14 +2593,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_site\/articles\/html-canvas-getimagedata\/index.html" : {
+    "\/_site\/assets\/images\/articles\/baseline-grid.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_site\/articles\/html-canvas-getimagedata\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/_site\/assets\/images\/articles\/baseline-grid.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/_site\/assets\/images\/articles\/baseline-grid.png",
+      "initialSize" : 16272,
+      "fileType" : 8192
     },
     "\/assets\/scss\/gams\/patterns\/_modal.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2649,15 +2649,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/fonts\/proximanova-webfont-demo.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/fonts\/proximanova-webfont-demo.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/scss\/foundation\/components\/_global.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2693,6 +2684,15 @@
       "outputAbbreviatedPath" : "\/assets\/scss\/bourbon\/css\/_clearfix.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/assets\/fonts\/proximanova-webfont-demo.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/fonts\/proximanova-webfont-demo.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/scss\/gams\/mixins\/typography\/_hyphenate.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2752,15 +2752,6 @@
       "initialSize" : 32108,
       "fileType" : 8192
     },
-    "\/assets\/css\/global.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/css\/global.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/assets\/scss\/gams\/mixins\/visual\/_polaroid.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2772,6 +2763,15 @@
       "outputAbbreviatedPath" : "\/assets\/scss\/gams\/mixins\/css\/_polaroid.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/assets\/css\/global.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/css\/global.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/assets\/scss\/foundation\/components\/_block-grid.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2809,17 +2809,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/images\/headshot.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/images\/headshot.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/images\/headshot.png",
-      "initialSize" : 30031,
-      "fileType" : 8192
-    },
     "\/assets\/images\/ide-themes\/Tomorrow.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2829,6 +2818,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/assets\/images\/ide-themes\/Tomorrow.png",
       "initialSize" : 26888,
+      "fileType" : 8192
+    },
+    "\/assets\/images\/headshot.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/images\/headshot.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/images\/headshot.png",
+      "initialSize" : 30031,
       "fileType" : 8192
     },
     "\/assets\/scss\/bourbon\/css3\/_inline-block.scss" : {
