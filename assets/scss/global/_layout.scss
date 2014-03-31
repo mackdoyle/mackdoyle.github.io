@@ -28,18 +28,23 @@
 .content-container {
   position: relative;
   overflow: auto;
-  padding: $gutter-size;
-  margin-left: 305px; //Spacing for aside 275px + 30px padding
+  //padding: $gutter-size;
+  margin-left: 275px; //Spacing for aside 275px + 30px padding
   width: auto;
   max-width: 720px;
   height: 100%;
-  @include baseline-it(36, 50, 20, 20, 15, 0); //Baseline Grid for type testing
+  @include baseline-it(36, 240, 190, 190, 15, 0); //Baseline Grid for type testing
   @include breakpoint(I----I){
     padding: $gutter-size 0;
     margin-left: 0;
     width: 100%;
     max-width: 100%;
   }
+
+  .teaser{
+    padding: $gutter-size;
+  }
+
   .article-content,
   .article-teaser-content,
   footer {
@@ -50,6 +55,6 @@
 }
 
 .content-container.draft {
-  @include baseline-it(36, 50, 20, 20, 15, 1); //Baseline Grid for type testing
+  @include baseline-it(36, 240, 190, 190, 15, 1); //Baseline Grid for type testing
 }
 

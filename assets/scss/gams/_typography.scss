@@ -13,17 +13,17 @@
  */
 
 body {
-  font-family: $sans-serif-font;
+  font-family: $body-font;
   font-size:100%;
-  color: $font-color;
+  color: $body-font-color;
   -webkit-font-smoothing: antialiased;
   @include font-size(1);
 }
 
 h1, h2, h3, h4, h5, h6, h1 a {
   -webkit-font-smoothing: subpixel-antialiased;
-  font-family: $sans-serif-font;
-  color: $headline-color;
+  font-family: $headline-font;
+  color: $body-headline-color;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
@@ -79,10 +79,10 @@ a {
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
-    color: $hover-link-color;
+    color: $link-color-hover;
   }
   &:active, &:focus {
-    color: $hover-link-color;
+    color: $link-color-hover;
     outline: none;
   }
 }
@@ -102,18 +102,18 @@ hgroup {
 }
 
 del {
-  color: lighten($font-color, 15);
+  color: lighten($body-font-color, 15);
 }
 
 blockquote {
   border-left: 2px solid $border-color;
-  color: lighten($font-color, 15);
+  color: lighten($body-font-color, 15);
   margin: $line-height 0;
   padding-left: $line-height / 2;
 }
 
 cite {
-  color: lighten($font-color, 25);
+  color: lighten($body-font-color, 25);
   font-style: italic;
 
   &:before {

@@ -10,7 +10,7 @@ header{
     }
   }
   .meta{
-    font-family: $sans-serif-font;
+    font-family: $body-font;
     font-weight: normal;
     &:before{
       content: "";
@@ -22,7 +22,7 @@ header{
 }
 // First paragraph of a post
 .article-content p:first-of-type{
-  font-family: $serif-font;
+  font-family: $sub-headline-font;
   font-weight: 600;
 }
 
@@ -57,7 +57,7 @@ p {
       position: relative;
       text-decoration: none;
       white-space: nowrap;
-      @include gams-button($light-gray, "default", "black");
+      @include gams-button($button-color, "default", $button-font-color);
     }
   }
 
@@ -72,7 +72,7 @@ p {
       }
       li:not(.first){
         a{
-          @include gams-pillbox(#efefef, "default", #666666);
+          @include gams-pillbox($tag-color, "default", $tag-font-color);
         }
       }
     }
@@ -112,7 +112,7 @@ hr {
 }
 hr:after {
     content: "✫";
-    background:rgb(253, 253, 253);
+    background: $body-color;
     margin: 0 auto;
     padding: 1rem;
 }
@@ -158,7 +158,7 @@ h1 + hr {margin:-0.5em 0 1.5em; font-size: 400%;}
     // Ribbon background
     width: 98%;
     height: 50%;
-    background: rgba(153,0,0,1);
+    background: rgba(137, 4, 113,1);
     position: absolute;
     content: "";
     left: 0;
@@ -166,7 +166,33 @@ h1 + hr {margin:-0.5em 0 1.5em; font-size: 400%;}
     z-index: -1;
     @include border-radius(0 16px 16px 0);
     //@include box-shadow(0px 0px 6px 0px rgba(0,0,0,0.3));
-    @include stiches(#fc0202, rgba(153,0,0,1), 2px, 2px);
+    @include stiches(rgba(75,3,75,1), rgba(137, 4, 113,1), 2px, 2px);
   }
 }
 
+//Background Variants
+.darken-a {
+  background: darken($body-color,2);
+}
+
+.darken-b {
+  background: darken($body-color,4);
+}
+
+.darken-c {
+  background: darken($body-color,6);
+}
+
+.darken-d {
+  background: darken($body-color,8);
+}
+
+.darken-e {
+  background: darken($body-color,10);
+}
+.darken-f {
+  background: darken($body-color,12);
+}
+.darken-g {
+  background: darken($body-color,14);
+}

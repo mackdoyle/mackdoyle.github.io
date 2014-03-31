@@ -5,8 +5,8 @@
 
 // Typography
 // --------------------------------------------------------------------------------- *
-  $sans-serif-font: Verdana, sans-serif;
-  $serif-font: "Bitter","Droid Serif", serif;
+  $body-font: Verdana, sans-serif;
+  $sub-headline-font: "Bitter","Droid Serif", serif;
   $monospace-font: "Monaco", "Menlo", monospace;
   $logo-font: "Oswald", "Lucida Grande", "Helvetica Neue", sans-serif;
   $icon-font: "FontAwesome";
@@ -40,8 +40,8 @@
 
 // Font Colors
 // -------------------------- *
-  $font-color: $medium-blue;
-  $font-color-i: $light-gray;
+  $body-font-color: $medium-blue;
+  $aside-font-color: $light-gray;
   $headline-color: $medium-orange;
   $headline-color-i: $light-gray;
   $accent-color: $medium-gray;
@@ -49,9 +49,9 @@
 // Text Link Colors
 // -------------------------- *
   $link-color: $light-blue;
-  $link-color-i: $lightest-blue;
-  $hover-link-color: darken($link-color, 15);
-  $hover-link-color-i: darken($link-color-i, 15);
+  $aside-link-color: $lightest-blue;
+  $link-color-hover: darken($link-color, 15);
+  $link-color-hover-i: darken($aside-link-color, 15);
 
 // Border color
 // -------------------------- *
@@ -79,7 +79,7 @@
   $form-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
   $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
   $form-font-size: 100%;
-  $form-font-family: $sans-serif-font;
+  $form-font-family: $body-font;
 
 
 // Example grid cal from Compass Blueprint

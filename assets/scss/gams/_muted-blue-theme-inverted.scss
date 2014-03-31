@@ -1,4 +1,4 @@
-// Muted Teal Blue Theme
+// Inverted Muted Teal Blue Theme
 // This file holds the main Scss variables for the site. It is simply a typical _variables
 // partial but given a descriptive name so multiple versions can be swapped for easily
 // changing the general theme settings
@@ -29,36 +29,44 @@
   $dark-blue: #344B52;
   $lightest-gray: #fdfdff;
   $light-gray: #C3CED2;
-  $medium-gray: #7C8385;
+  $medium-gray: #2f3133;
   $dark-gray: #353839;
 
 // Body Color
 // -------------------------- *
-  $body-color: $lightest-gray;
+  $body-color: $medium-gray;
   $aside-color: $dark-gray;
   $block-color: $light-gray;
   $block-color-alt: $medium-gray;
 
 // Font Colors
 // -------------------------- *
-  $body-font-color: $medium-blue;
+  $body-font-color: $light-gray;
   $aside-font-color: $light-gray;
   $block-font-color: $medium-blue;
-  $body-headline-color: $dark-blue;
+  $body-headline-color: $lightest-blue;
   $aside-headline-color: $light-gray;
   $block-headline-color: $light-gray;
   $accent-color: $medium-gray;
 
 // Text Link Colors
 // -------------------------- *
-  $link-color: $light-blue;
-  $link-color-hover: darken($link-color, 15);
+  $link-color: $lightest-blue;
+  $link-color-hover: lighten($link-color, 15);
   $aside-link-color: $lightest-blue;
-  $aside-link-color-hover: darken($aside-link-color, 15);
+  $aside-link-color-hover: lighten($aside-link-color, 15);
 
 // Border color
 // -------------------------- *
   $border-color: $light-gray;
+
+// Button colors
+// -------------------------- *
+  $button-color: $lightest-blue;
+  $button-font-color: $dark-blue;
+  $tag-color: $medium-blue;
+  $tag-font-color: $lightest-gray;
+
 
 // Flash Colors
 // -------------------------- *

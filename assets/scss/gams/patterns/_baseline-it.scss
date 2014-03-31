@@ -1,25 +1,25 @@
 //==========================================================================
 // Baseline It
 // Adds visible lines to the background for typography positioning.
-// 
+//
 // 1. Pass the height you want the grid and the RGB color value of the grid lines.
-// 2. An optional offset value can be passed to compensate for padding or margins 
+// 2. An optional offset value can be passed to compensate for padding or margins
 //    that effect the starting point.
-// 3. An option value to hide the grid by default can be passed. Click and hold 
+// 3. An option value to hide the grid by default can be passed. Click and hold
 //    anywhere within the element to hide/show the grid.
-// 
+//
 // @param $height: The grid height you want to set.
 // @param $red: 0-255. The red value for the RGB color of the grid lines
 // @param $green: 0-255. The green value for the RGB color of the grid lines
 // @param $blue: 0-255. The blue value for the RGB color of the grid lines
 // @param $offset: The amount of pixels you want to offset the start of the grid by.
 // @param $state: [0,1]. 0 - The grid is off by default. 1 - The grid is on by default
-// 
+//
 // Usage:
 // .content-container {
 //   @include baseline-it(36, 50, 20, 20, 15, 1);
 // }
-// 
+//
 // Credits:
 // This mixin loads the baseline grid created by Dan Eden & Michael Wright at basehold.it
 //==========================================================================

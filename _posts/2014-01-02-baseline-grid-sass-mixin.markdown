@@ -3,7 +3,6 @@ layout: draft
 title:  "Baseline Grid Sass Mixin"
 date:   2014-01-02 20:00:00
 author: Jason Doyle
-image: /assets/images/articles/baseline-grid.png
 categories: css
 ---
 

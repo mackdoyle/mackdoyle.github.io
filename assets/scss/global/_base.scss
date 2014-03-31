@@ -4,7 +4,7 @@
  *
 */
 body {
-	background: $foreground;
+	background: $body-color;
 }
 
 hr {
@@ -30,5 +30,9 @@ img {
 }
 
 .lighten-text{
-  color: lighten($font-color, 20);
+  color: lighten($body-font-color, 20);
+}
+
+.darken-text{
+  color: darken($body-font-color, 20);
 }

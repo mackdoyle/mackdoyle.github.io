@@ -1,6 +1,6 @@
 /* global/sidebar/sidebar-wide */
 @mixin sidebar-variant($variant:wide){
-  background-color: $body-color-i;
+  background-color: $aside-color;
 
   @if $variant == "wide" {
 
@@ -47,34 +47,34 @@
       }
       h1 {
         font-weight: normal;
-        font-family: $display-font;
-        color: $light-gray;
+        font-family: $headline-font;
+        color: $aside-headline-color;
         @include font-rhythm(3.5, 3.5, 0);
       }
     }
 
     p {
-      font-family: $sans-serif-font !important;
-      color: $font-color-i;
+      font-family: $body-font !important;
+      color: $aside-font-color;
       margin: 1.5em 0;
       @include font-rhythm(.85);
     }
 
     a {
-      font-family: $sans-serif-font !important;
-      color: $link-color-i;
+      font-family: $body-font !important;
+      color: $aside-link-color;
       @include font-size(.85);
       @include transition(color 0.1s linear);
       &:hover {
-        color: lighten($link-color-i, 75%);
+        color: lighten($aside-link-color, 75%);
       }
       &:visited {
-        color: $hover-link-color-i;
+        color: $aside-link-color-hover;
       }
     }
 
     section {
-      color: $font-color-i;
+      color: $aside-font-color;
       text-align: center;
       border-top: 1px solid $medium-blue;
       margin: 2em 0 0 0;
@@ -82,13 +82,13 @@
       @include font-size(.85);
       .contact {
         a {
-          color: $link-color-i;
-          font-family: $sans-serif-font !important;
+          color: $aside-link-color;
+          font-family: $body-font !important;
           font-weight: normal;
           @include font-size(.85);
           @include transition(color 0.1s linear);
           &:hover {
-            color: lighten($link-color-i, 10%);
+            color: lighten($aside-link-color, 10%);
           }
         }
       }
@@ -140,8 +140,8 @@
         display: inline-block;
         margin-left: 2rem;
         font-weight: normal;
-        font-family: $display-font;
-        color: $light-gray;
+        font-family: $headline-font;
+        color: $aside-headline-color;
         @include font-rhythm(3.5, 3.5, 0);
       }
     }

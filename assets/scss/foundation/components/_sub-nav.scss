@@ -44,11 +44,11 @@ $sub-nav-item-divider-margin: rem-calc(12) !default;
 
 // Create a sub-nav item
 //
-// $font-color - Font color. Default: $sub-nav-font-color.
+// $body-font-color - Font color. Default: $sub-nav-font-color.
 // $font-size - Font size. Default: $sub-nav-font-size.
 // $active-bg - Background of active nav item. Default: $sub-nav-active-bg.
 @mixin sub-nav(
-  $font-color: $sub-nav-font-color,
+  $body-font-color: $sub-nav-font-color,
   $font-size: $sub-nav-font-size,
   $active-bg: $sub-nav-active-bg,
   $active-bg-hover: scale-color(#008CBA, $lightness: -5%)) {
@@ -74,7 +74,7 @@ $sub-nav-item-divider-margin: rem-calc(12) !default;
     font-family: $sub-nav-font-family;
     font-weight: $sub-nav-font-weight;
     font-size: $font-size;
-    color: $font-color;
+    color: $body-font-color;
 
     a {
       text-decoration: $sub-nav-text-decoration;
