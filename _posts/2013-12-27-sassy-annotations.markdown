@@ -28,9 +28,9 @@ To deploy a Sassy Annotation, you only need to add two HTML elements and small a
 
 {% highlight html %}
 <div class="annotation-one down-right">
-		<div class="endpoint"></div>
-		<p>Annotations are created by simply calling the @annotation mixin within a selector and defining the pointer orientation.</p>
-	</div>
+	<div class="endpoint"></div>
+	<p>Annotations are created by simply calling the @annotation mixin within a selector and defining the pointer orientation.</p>
+</div>
 {% endhighlight %}
 
 

@@ -61,6 +61,8 @@
     }
 
     a {
+      display: block;
+      height: auto;
       font-family: $body-font !important;
       color: $aside-link-color;
       @include font-size(.85);
@@ -70,6 +72,11 @@
       }
       &:visited {
         color: $aside-link-color-hover;
+      }
+      // Icon
+      i {
+        font-size: 1.5rem;
+        line-height: 5rem;
       }
     }
 

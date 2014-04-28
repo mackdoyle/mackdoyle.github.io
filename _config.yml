@@ -8,6 +8,7 @@ pygments: true
 timezone: America/New_York
 exclude: ['scss', 'CNAME', '.git','.gitignore', '.DS_Store', 'codekit-config.json', '.UlyssesRoot', '.Ulysses-Group.plist', 'Gruntfile.js']
 markdown: rdiscount
+auto: false
 
 # Configuration required for some pages
 # -----------------------------------------------------------------
