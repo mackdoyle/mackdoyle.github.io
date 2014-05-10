@@ -1,0 +1,45 @@
+//
+// @file
+// Set Icon
+//
+// Mixin for applying svg sprites with png fallback. $icon-sprites adheres to
+// the compass sprites naming convention, so be mindful that "icon" is dependent
+// on your directory structure and names.
+//
+// See:
+// http://compass-style.org/help/tutorials/spriting/
+// https://github.com/killtheliterate/svg-sprites
+// ---------------------------------------------------------------------------
+// Set Icon.
+@mixin svg-sprites($position, $selector, $filename){
+
+  // If set bg on the element.
+  @if $position == '' {
+    #{$selector} {
+      background-image: $icon-sprites; // Set the default sprite CSS
+      background-repeat: no-repeat;
+      @include sprite-background-position($icon-sprites, $filename);
+    }
+
+    .svg #{$selector} {
+      background-image: image-url('icon--svg/#{$filename}.svg', false, false);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  // Else before/after.
+  @else {
+    #{$selector}:#{$position} {
+      background-image: $icon-sprites; // Set the default sprite CSS
+      background-repeat: no-repeat;
+      @include sprite-background-position($icon-sprites, $filename);
+    }
+
+    .svg #{$selector}:#{$position} {
+      background-image: image-url('icon--svg/#{$filename}.svg', false, false);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+}
