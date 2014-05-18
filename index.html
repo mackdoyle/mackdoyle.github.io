@@ -6,30 +6,32 @@ title: Jason Doyle
 
 {% for post in site.posts %}
   <article class="teaser">
-    <header>
-		  <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
-		  <p class="meta"><i class="icon-entypo-user lighten-text">&nbsp;</i> {{ post.author }} &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="{{ post.date | date: '%B %d, %Y' }}" title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
+    <header style="background-image:url('{{post.image}}');">
+      <div class="title">
+        <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
+        {% if post.subtitle %}
+          <p>{{ post.subtitle }}</p>
+        {% endif %}
+        <p class="meta"><i class="icon-entypo-user">&nbsp;</i> {{ page.author }} &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="{{post.date | date: "%M-%d-%Y"}}" title="{{post.date | date: "%M-%d-%Y"}}">{{post.date | date: "%M.%d.%Y"}}</time></p>
+      </div>
     </header>
-
-    <div class="article-hero">
-      <img style="margin-bottom:26px" src="{{post.image}}">
-    </div>
 
     <div class="article-teaser-content">
       {{ post.excerpt | markdownify }}
     </div>
 
     <footer>
+      {% comment %}
 		  {% if post.categories.size > 0 %}
 		    <div class="footer-col">{% include widgets/postCategoryList.html %}</div>
 		  {% endif %}
       {% if post.tags.size > 0 %}
         <div class="footer-col">{% include widgets/postTagList.html %}</div>
       {% endif %}
+      {% endcomment %}
       <div class="footer-col"><div class="more"><a href="{{ post.url }}#more" title="Read more about '{{ post.title }}'">Read More</a></div></div>
     </footer>
 
 	</article>
 
-	<!--<hr>-->
 {% endfor %}
