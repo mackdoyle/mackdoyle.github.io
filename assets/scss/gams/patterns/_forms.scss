@@ -27,10 +27,9 @@ label {
   }
 }
 
-textarea,
-#{$all-text-inputs} {
-  @include box-sizing(border-box);
-  @include transition(border-color);
+textarea, input[type=text]{
+  //@include box-sizing(border-box);
+  //@include transition(border-color);
   background-color: white;
   border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
@@ -54,7 +53,7 @@ textarea,
 }
 
 input[type="search"] {
-  @include appearance(none);
+  //@include appearance(none);
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -74,7 +73,7 @@ select {
 button,
 input[type="submit"] {
   //@extend %button;
-  @include appearance(none);
+  //@include appearance(none);
   cursor: pointer;
   user-select: none;
   vertical-align: middle;

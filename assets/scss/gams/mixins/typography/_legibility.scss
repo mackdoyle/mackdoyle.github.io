@@ -1,6 +1,7 @@
-@mixin legibility{
+@mixin legibility(){
 	text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 //	Usage -----
-//	h1{ @include legible; }
+//	h1{ @include legibility(); }

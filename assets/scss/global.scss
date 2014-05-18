@@ -2,15 +2,15 @@
  *
  * Welcome to the tip.
  * This is the main file that imports the base files for all the partials. This file
- * is not meant to define any styles itself.
+ * is not meant to define any styles itself. (Unless you are reading this from the compiled css)
  *
  */
 
 // Vendor Dependencies
 @import
-	//"../../../libraries/scss/bourbon/bourbon",
-	"bourbon",
-	"foundation/foundation";
+	//"bourbon",
+	"foundation/foundation",
+	"stackicons/stackicons-social-minimal";
 
 // Authored Dependencies
 @import
@@ -20,12 +20,12 @@
 @import
 	"global/layout",
 	"global/base",
-	"global/sidebar/sidebar-base",
 	"global/content/posts",
+	"global/content/annotation",
 	"global/content/modals",
-	"global/content/annotation";
+  "global/header/top-bar";
 
 // Overrides - Load Last
 @import
-  "_overrides";
+  "overrides";
 

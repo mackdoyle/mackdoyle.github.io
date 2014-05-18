@@ -1,0 +1,102 @@
+// Inverted Muted Teal Blue Theme
+// This file holds the main Scss variables for the site. It is simply a typical _variables
+// partial but given a descriptive name so multiple versions can be swapped for easily
+// changing the general theme settings
+
+// Typography
+// --------------------------------------------------------------------------------- *
+  $body-font: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
+  $sub-headline-font: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
+  $headline-font: "Playfair Display","Gilda Display","Lora","PT Serif","Droid Serif","Old Standard TT", "Bitter", serif;
+  $monospace-font: "Monaco", "Menlo", monospace;
+  $logo-font: "Oswald", "Lucida Grande", "Helvetica Neue", sans-serif;
+  $icon-font: "FontAwesome";
+
+// Sizes
+// --------------------------------------------------------------------------------- *
+  $border-radius: em(3);
+  $line-height: 36px;
+
+// Colors
+// --------------------------------------------------------------------------------- *
+// Base Colors
+  $alert: #FBE3E4;
+  $notice: #FFF6BF;
+  $success: #E6EFC2;
+  $lightest-blue: #87c6dc;
+  $light-blue: #086BB8;
+  $medium-blue: #46545F;
+  $dark-blue: #344B52;
+  $lightest-gray: #fdfdff;
+  $light-gray: #C3CED2;
+  $medium-gray: #2f3133;
+  $dark-gray: #202020;
+  $darkest-gray: #101010;
+
+// Body Color
+// -------------------------- *
+  $body-color: white;
+  $aside-color: $dark-gray;
+  $header-color: $darkest-gray;
+  $block-color: $light-gray;
+  $block-color-alt: $medium-gray;
+
+// Font Colors
+// -------------------------- *
+  $body-font-color: $dark-gray;
+  $aside-font-color: $light-gray;
+  $header-font-color: white;
+  $block-font-color: $medium-blue;
+  $body-headline-color: white;
+  $aside-headline-color: $light-gray;
+  $block-headline-color: $light-gray;
+  $accent-color: $medium-gray;
+
+// Text Link Colors
+// -------------------------- *
+  $link-color: $lightest-blue;
+  $link-color-hover: lighten($link-color, 15);
+  $aside-link-color: $lightest-blue;
+  $aside-link-color-hover: lighten($aside-link-color, 15);
+
+// Border color
+// -------------------------- *
+  $border-color: $light-gray;
+
+// Button colors
+// -------------------------- *
+  $button-color: $lightest-blue;
+  $button-font-color: $dark-blue;
+  $tag-color: $medium-blue;
+  $tag-font-color: $lightest-gray;
+
+
+// Flash Colors
+// -------------------------- *
+  $error-color: $alert;
+  $notice-color: $notice;
+  $success-color: $success;
+
+// Layout Variables
+// --------------------------------------------------------------------------------- *
+// Spacing
+// -------------------------- *
+  $gutter-size: 15px;
+  $content-padding: 0 $gutter-size;
+
+// Forms
+// -------------------------- *
+  $form-border-color: $border-color;
+  $form-border-color-hover: darken($border-color, 10);
+  $form-border-color-focus: $accent-color;
+  $form-border-radius: $border-radius;
+  $form-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
+  $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+  $form-font-size: 100%;
+  $form-font-family: $body-font;
+
+
+// Example grid cal from Compass Blueprint
+// Use this to calculate the width based on the total width.
+// $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
+

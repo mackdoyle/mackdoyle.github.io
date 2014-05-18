@@ -12,29 +12,33 @@
  * font-size = [num], line-height = font-size * [num], margin-bottom = font-size * [num]
  */
 
+@import url("http://fonts.googleapis.com/css?family=Playfair+Display|Gilda+Display|Lora|PT+Serif|Droid+Serif|Old+Standard+TT");
+
 body {
   font-family: $body-font;
   font-size:100%;
   color: $body-font-color;
-  -webkit-font-smoothing: antialiased;
   @include font-size(1);
+  @include legibility();
 }
 
 h1, h2, h3, h4, h5, h6, h1 a {
-  -webkit-font-smoothing: subpixel-antialiased;
   font-family: $headline-font;
   color: $body-headline-color;
   margin: 0;
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
 h1 {
-  font-weight: 400;
-  @include font-rhythm($baseline-height, $baseline-height, 0);
+  font-weight: 200;
+  @include font-rhythm($baseline-height * 1.5, $baseline-height * 1.5, 0);
+  line-height: 150%; //overriding font-rhythm line height for now
+  @include breakpoint(I---I){
+    line-height: 120%;
+  }
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 300;
   @include font-rhythm($baseline-height, $baseline-height, 0);
 }
 
@@ -55,8 +59,17 @@ h6 {
   @include font-size(1);
 }
 
+// Sub-headline
+header p {
+  font-family: $sub-headline-font;
+  font-weight: 300;
+  color: $body-headline-color;
+  @include font-rhythm($baseline-height * .75, $baseline-height * .75, 0);
+}
+
 .meta {
   //display: none;
+  color: $body-headline-color;
   @include font-rhythm(.75, $baseline-height, 0);
 }
 

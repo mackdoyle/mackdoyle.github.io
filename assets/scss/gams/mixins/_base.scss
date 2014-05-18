@@ -3,16 +3,20 @@
 // CSS3
 @import
   "css3/border-radius",
+  "css3/transition",
   "css3/box-shadow";
 
 //Helpers
 @import
   "helpers/vendor-prefix",
+  "helpers/abs-center",
+  "helpers/vertically-center",
   "helpers/breakpoints";
 
 // Typography
 @import
   "typography/font-size",
+  "typography/legibility",
   "typography/font-rhythm",
   "typography/margin-bottom";
 
