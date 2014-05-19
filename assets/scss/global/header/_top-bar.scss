@@ -14,8 +14,8 @@
   position: fixed;
   top: 0;
   left: 0;
+  width:100%;
   z-index: 3;
-  //box-shadow: 0px 0px 8px rgba(0,0,0,0.9);
   // Top bar's drop shadow
   &:after {
     content: "";
@@ -38,10 +38,20 @@
 
 
 .top-bar {
-  max-width: 100% !important;
   background: $header-color;
   height: 44px;
-  margin: 0 $gutter-size !important;
+  padding: 0 $gutter-size !important;
+  .title{
+    float: left;
+    .name {
+      font-weight: normal;
+      font-family: $sub-headline-font;
+      color: $body-headline-color;
+      @include font-rhythm(1.3);
+      line-height: 44px;
+    }
+  }
+
   .avatar{
     display: none;
     overflow: hidden;
@@ -51,49 +61,20 @@
     line-height: 100%;
     box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
   }
-  .name {
-    font-weight: normal;
-    font-family: $sub-headline-font;
-    color: $body-headline-color;
-    @include font-rhythm(1.3);
-    line-height: 44px;
-  }
 
-  p {
-    font-family: $body-font !important;
-    color: $aside-font-color;
-    margin: 1.5em 0;
-    @include font-rhythm(.85);
-  }
-}
-
-.top-bar-section ul li{
-  background: transparent;
-  >a {
-    width: inherit;
-    padding: inherit;
-    padding-left: inherit;
-  }
-}
-
-.top-bar-section li:not(.has-form) a:not(.button) {
-  background: transparent;
-  font-size: inherit;
-  &:before {
-    color: rgba(255,255,255,0.7);
-    font-size: 1.2rem;
-  }
-  &:hover{
-    background: transparent;
-  }
-  &:hover:before{
-    background: transparent;
-    color: white;
+  .links {
+    float: right;
+    li{
+      display: inline-block;
+      a {
+        color: $header-font-color;
+        &:hover:before{
+          color: lighten($header-font-color, 20%);
+        }
+      }
+    }
   }
 }
 
 
 
-.top-bar-section li:not(.has-form) a:not(.button) {
-  background: $header-color;
-}
