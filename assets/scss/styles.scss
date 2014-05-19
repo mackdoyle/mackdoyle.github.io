@@ -6,6 +6,11 @@
  *
  */
 
+// Base Files (Styles that are dropped into most projects)
+// -------------------------- *
+@import
+    "base/deopinionate";
+
 // Vendor Dependencies
 @import
 	//"bourbon",
@@ -20,9 +25,7 @@
 @import
 	"global/layout",
 	"global/base",
-	"global/content/posts",
-	"global/content/annotation",
-	"global/content/modals",
+	"global/content/content",
   "global/header/top-bar";
 
 // Overrides - Load Last

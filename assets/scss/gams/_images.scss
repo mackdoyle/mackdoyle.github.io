@@ -1,0 +1,21 @@
+/**
+ * Image Effects
+ * Image effects come in the form of class declations so they can be defined on individual elements.
+ * Mixin versions of these are available for globally applying them to styles
+ */
+
+ // Vingette
+ // Adds a vignette effect over an image using the :after pseudo element and a z-index:1
+.vignette:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: radial-gradient(rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.7));
+}

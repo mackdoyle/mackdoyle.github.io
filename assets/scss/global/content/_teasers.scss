@@ -13,8 +13,8 @@
     background-size: initial;
     background-repeat: no-repeat;
     background-position: top center;
-    background-attachment: fixed;
-    //Vingette
+    //background-attachment: fixed;
+    //Vignette
     &:after{
       content: "";
       position: absolute;

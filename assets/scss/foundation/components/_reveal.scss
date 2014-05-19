@@ -2,7 +2,7 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-@import "global";
+//@import "global";
 
 //
 // @name _reveal.scss
@@ -186,7 +186,7 @@ $close-reveal-modal-class: "close-reveal-modal" !default;
 
         &.radius { @include reveal-modal-style($radius:true); }
         &.round  { @include reveal-modal-style($radius:$reveal-round); }
-        
+
         &.collapse { @include reveal-modal-style($padding:0); }
 
         &.tiny  { @include reveal-modal-base(false, 30%); }

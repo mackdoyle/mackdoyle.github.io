@@ -12,21 +12,22 @@
  * Requires Bourbon (bourbon.io)
  */
 
+// Vendor Dependencies
+// -------------------------- *
+@import
+    "icons/entypo";
+
 // Authored Dependencies
 // -------------------------- *
 @import
-  "reset",
   "settings",
-  "mixins/base",
-  "icons/entypo",
+  "mixins/mixins",
   "themes/clean-theme",
   "syntax",
   "fonts",
   "typography";
 
-
-
-// Patterns
+// Authored Patterns
 // -------------------------- *
 @import
   "patterns/forms",
@@ -34,3 +35,8 @@
   "patterns/lists",
   "patterns/code",
   "patterns/baseline-it";
+
+// Authored Effects
+// -------------------------- *
+@import
+  "images";
