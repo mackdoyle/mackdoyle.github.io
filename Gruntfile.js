@@ -1,207 +1,247 @@
-module.exports = function(grunt) {
-  var hljs = require('highlight.js');
-  hljs.LANGUAGES['scss'] = require('./lib/scss.js')(hljs);
+/**
+ * Grunt Task Configuratiion
+ * @Commands:
+ * grunt          - Start the watcher
+ * grunt sass     - Compiles Sass to CSS
+ * grunt js       - Concats js libs into a single file
+ * grunt uncss    - Remove unused CSS while in development
+ * grunt dev      - Builds files for development purposes
+ * grunt build    - Builds files and makes them production ready
+ * grunt deploy   - Runs build and deploys to a remote server
+ *
+ * @Todo:
+ * 1. Convert to coffescript at some point
+ *
+ */
 
+
+ /**
+ * For remote deployment, you can add a server config to use with grunt-ssh and grunt-shell
+ * You add this in package.json but storing here since you cannot comment in json files
+ * Example for a Drupal site...
+ * "archive": "my_theme.tgz",
+ * "buildPath": "../../../../../build",
+ * "exclude": "--exclude=js/.normal.js",
+ * "remote": {
+ *   "host": "example.com",
+ *   "username": "user",
+ *   "password": "password",
+ *   "basePath": "/path/to/website",
+ *   "path": "web/sites/my_site/themes/my_theme",
+ * }
+ */
+
+module.exports = function(grunt) {
+
+  'use strict';
+
+  // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    foundation: {
-      js: ['js/foundation/foundation.js', 'js/foundation/foundation.*.js'],
-      scss: ['scss/foundation.scss']
-    },
-
-    assemble: {
-      options: {
-        marked: {
-          gfm: true,
-          sanitize: false,
-          highlight: function(code, lang) {
-            if (lang === undefined) lang = 'bash';
-            if (lang === 'html') lang = 'xml';
-            if (lang === 'js') lang = 'javascript';
-            return '<div class="code-container">' + hljs.highlight(lang, code).value + '</div>';
-          }
-        }
-      },
-      dist: {
-        options: {
-          flatten: false,
-          assets: 'dist/docs/assets',
-          data: ['doc/data/*.json'],
-          partials: ['doc/includes/**/*.{html,scss}'],
-          helpers: ['doc/helpers/*.js'],
-          layout: 'doc/layouts/default.html'
-        },
-        expand: true,
-        cwd: 'doc/pages',
-        src: '**/*.{html,md}',
-        dest: 'dist/docs/'
+    // Project Settings
+    settings: {
+      // Set common directories to variables for easy upating
+      dir: {
+        'src': './src',
+        'dist': './assets',
+        'tmp': './tmp'
       }
     },
 
-    sass: {
-      dist: {
-        options: {
-          includePaths: ['scss']
-        },
-        files: {
-          'dist/assets/css/foundation.css': '<%= foundation.scss %>',
-          'dist/assets/css/normalize.css': 'scss/normalize.scss',
-          'dist/docs/assets/css/docs.css': 'doc/assets/scss/docs.scss'
-        }
-      },
-      dist_compressed: {
-        options: {
-          outputStyle:'compressed',
-          includePaths: ['scss']
-        },
-        files: {
-          'dist/assets/css/foundation.min.css': '<%= foundation.scss %>'
-        }
-      }
+    // Clean up temp folders used during build process
+    clean: {
+      after: [
+        '<%= settings.dir.tmp %>'
+      ]
     },
 
-    concat: {
-      dist: {
-        files: {
-          'dist/assets/js/foundation.js': '<%= foundation.js %>'
-        }
-      }
-    },
+    // error check javascript
 
+    //jshint : {
+      //options : {
+        //jshintrc : '.jshintrc'
+      //},
+      //all : ['js/{,**/}*.js', '!js/{,**/}*.min.js']
+    //},
+
+
+    // Minify and concatenate js files
     uglify: {
-      options: {
-        preserveComments: 'some'
-      },
-      dist: {
-        files: {
-          'dist/assets/js/foundation.min.js': ['<%= foundation.js %>'],
-          'dist/docs/assets/js/modernizr.js': ['bower_components/modernizr/modernizr.js'],
-          'dist/docs/assets/js/all.js': ['bower_components/fastclick/lib/fastclick.js', 'bower_components/jquery.autocomplete/dist/jquery.autocomplete.js', '<%= foundation.js %>', 'doc/assets/js/docs.js']
-        }
-      },
-      vendor: {
-        files: {
-          'dist/assets/js/vendor/placeholder.js': 'bower_components/jquery-placeholder/jquery.placeholder.js',
-          'dist/assets/js/vendor/fastclick.js': 'bower_components/fastclick/lib/fastclick.js',
-          'dist/assets/js/vendor/jquery.cookie.js': 'bower_components/jquery.cookie/jquery.cookie.js',
-          'dist/assets/js/vendor/jquery.js': 'bower_components/jquery/jquery.js',
-          'dist/assets/js/vendor/modernizr.js': 'bower_components/modernizr/modernizr.js'
-        }
-      }
-    },
-
-    copy: {
-      dist: {
-        files: [
-          {expand:true, cwd: 'doc/assets/', src: ['**/*','!{scss,js}/**/*'], dest: 'dist/docs/assets/', filter:'isFile'},
-          {expand:true, cwd: 'js/', src: ['foundation/*.js'], dest: 'dist/assets/js', filter: 'isFile'},
-          {src: 'bower_components/jquery/jquery.min.js', dest: 'dist/docs/assets/js/jquery.js'},
-          {expand:true, cwd: 'scss/', src: '**/*.scss', dest: 'dist/assets/scss/', filter: 'isFile'},
-          {src: 'bower.json', dest: 'dist/assets/'}
-        ]
-      }
-    },
-
-    clean: ['dist/'],
-
-    karma: {
-      options: {
-        configFile: 'karma.conf.js',
-        runnerPort: 9999,
-      },
-      continuous: {
-        singleRun: true,
-        browsers: ['TinyPhantomJS', 'SmallPhantomJS']
-      },
       dev: {
-        singleRun: true,
-        browsers: ['TinyPhantomJS', 'SmallPhantomJS', 'TinyChrome', 'Firefox'],
-        reporters: 'dots'
+        options : {
+          mangle : false,
+          compress : false,
+          beautify : true
+        },
+        src: ['<%= settings.dir.src %>/js/vendor/custom.modernizr.js','<%= settings.dir.src %>/js/vendor/jquery-2.1.1.min.js', '<%= settings.dir.src %>/js/base.js'],
+        dest: '<%= settings.dir.dist %>/js/base.min.js'
       },
-      dev_watch: {
-        background: true,
-        browsers: ['TinyPhantomJS', 'SmallPhantomJS', 'TinyChrome', 'Firefox']
-      },
-      mac: {
-        singleRun: true,
-        browsers: ['TinyPhantomJS', 'SmallPhantomJS', 'TinyChrome', 'Firefox', 'Safari'],
-        reporters: 'dots'
-      },
-      win: {
-        singleRun: true,
-        browsers: ['TinyPhantomJS', 'SmallPhantomJS', 'TinyChrome', 'Firefox', 'IE'],
-        reporters: 'dots'
+      dist: {
+        options : {
+          mangle : true,
+          compress : true
+        },
+        src: ['<%= settings.dir.src %>/js/**/*.js','<%= settings.dir.src %>/js/vendor/jquery-2.1.1.min.js', '<%= settings.dir.src %>/js/base.js'],
+        dest: '<%= settings.dir.dist %>/js/base.min.js'
       }
     },
 
-    watch_start: {
-      grunt: { files: ['Gruntfile.js'] },
-      karma: {
-        files: [
-          'dist/assets/js/*.js',
-          'spec/**/*.js',
-          'dist/assets/css/*.css'
-        ],
-        tasks: ['karma:dev_watch:run']
+    // Compile Sass files to CSS
+    // This will compile Sass to Css into the tmp/ directory. Other plugins
+    // will then take the css and further optimize it into the css/ directory
+    sass: {
+      dev: {
+        options: {
+          // cssmin will minify later
+          style: 'expanded',
+          cacheLocation: '<%= settings.dir.src %>/scss/.sass-cache'
+        },
+        files: {
+          '<%= settings.dir.tmp %>/css/styles.css': '<%= settings.dir.src %>/scss/styles.scss'
+        }
+      },
+      dist: {
+        options: {
+          // cssmin will minify later
+          style: 'expanded',
+          cacheLocation: '<%= settings.dir.src %>/scss/.sass-cache'
+        },
+        files: {
+          '<%= settings.dir.tmp %>/css/styles.css': '<%= settings.dir.src %>/scss/styles.scss'
+        }
+      }
+    },
+
+    // Autoprefix CSS
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 version', 'ie 8', 'ie 9']
+      },
+      // if you have specified only the `src` param, the destination will be set automatically,
+      // so source files will be overwritten
+      // The Sass pplugin will compile to tmp/ so look there.
+      no_dest: {
+        expand: true,
+        flatten: true,
+        src: '<%= settings.dir.tmp %>/css/styles.css' // globbing is also possible here
+      }
+    },
+
+    // Minify CSS
+    // Looks for css that has been compiled into tmp/ and minifies it into the css/
+    cssmin: {
+      combine: {
+        files: {
+          '<%= settings.dir.dist %>/css/styles.css': '<%= settings.dir.tmp %>/css/styles.css'
+        }
+      }
+    },
+
+    // Create a file that contains only CSS that is used on the home page.
+    // The generated file can then be used for above-the-fold inline css
+    // @TODO: Remove dev task after testing. It's not needed during development
+    // @TODO: Look into using a sitemap as the source so we can create a version for the entire site
+
+    /*
+    // Try this if your other set up is not working
+    uncss: {
+            dist: {
+                files: {
+                    'main.css': ['index.html']
+                }
+            }
+        },
+    */
+
+    uncss: {
+      src: 'index.html',
+      dest: '<%= settings.dir.dist %>/css/styles-cleaned.css'
+    },
+
+    /*
+    shell : {
+      "clear-theme-registry" : {
+        command : 'drush cache-clear theme-registry'
+      },
+      "package" : {
+        command : 'tar -zcf <%= pkg.buildPath %>/<%= pkg.archive %> <%= pkg.exclude %> *'
+      }
+    },
+    */
+
+    /*
+    sftp : {
+      deploy : {
+        "./" : "<%= pkg.buildPath %>/<%= pkg.archive %>"
+      },
+      options : {
+        path : '<%= pkg.remote.basePath %>',
+        host : '<%= pkg.remote.host %>',
+        username : '<%= pkg.remote.username %>',
+        password : '<%= pkg.remote.password %>',
+        srcBasePath : '<%= pkg.buildPath %>'
+      }
+    },
+    */
+
+    /*
+    sshexec : {
+      deploy : {
+        command : "tar -zx -C <%= pkg.remote.basePath %>/<%= pkg.remote.path %> -f <%= pkg.remote.basePath %>/<%= pkg.archive %>;rm <%= pkg.remote.basePath %>/<%= pkg.archive %>;cd <%= pkg.remote.basePath %>/<%= pkg.remote.path %>; drush cache-clear all",
+        options : {
+          host : '<%= pkg.remote.host %>',
+          username : '<%= pkg.remote.username %>',
+          password : '<%= pkg.remote.password %>'
+        }
+      }
+    },
+    */
+
+
+    // Watch for changes
+    watch: {
+      uglify: {
+        //files: ['<%= uglify:dev.files %>'],
+        files: ['<%= settings.dir.src %>/js/**.js'],
+        tasks: 'uglify:dev',
+        options: {
+          livereload: true
+        }
       },
       sass: {
-        files: ['scss/**/*.scss', 'doc/assets/**/*.scss'],
-        tasks: ['sass'],
-        options: {livereload:true}
-      },
-      js: {
-        files: ['js/**/*.js', 'doc/assets/js/**/*.js'],
-        tasks: ['copy', 'concat', 'uglify'],
-        options: {livereload:true}
-      },
-      assemble_all: {
-        files: ['doc/{includes,layouts}/**/*.html'],
-        tasks: ['assemble'],
-        options: {livereload:true}
-      },
-      assemble_pages: {
-        files: ['doc/pages/**/*.html'],
-        tasks: ['newer:assemble'],
-        options: {livereload:true}
-      },
-      assets: {
-        options: {cwd: 'doc/assets/', livereload: true},
-        files: ['**/*','!{scss,js}/**/*'],
-        tasks: ['copy']
-      }
-    },
-
-    rsync: {
-      dist: {
+        //files: ['<%= sass:dev.files %>'],
+        files: ['<%= settings.dir.src %>/css/**.scss'],
+        tasks: ['sass:dev'],
         options: {
-          args: ["--verbose"],
-          src: "./dist/docs/",
-          recursive: true,
-          dest: "/home/deployer/sites/foundation-docs/current",
-          host: "deployer@foundation5.zurb.com"
+          livereload: true
         }
       }
     }
+
   });
 
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  // Load tasks here
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-rsync');
-  grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('grunt-newer');
 
-  grunt.task.renameTask('watch', 'watch_start');
-  grunt.task.registerTask('watch', ['karma:dev_watch:start', 'watch_start']);
+  // grunt - Enables the watcher
+  grunt.registerTask('default', ['watch']);
 
-  grunt.registerTask('build:assets', ['clean', 'sass', 'concat', 'uglify', 'copy']);
-  grunt.registerTask('build', ['build:assets', 'assemble']);
-  grunt.registerTask('travis', ['build', 'karma:continuous']);
-  grunt.registerTask('deploy', ['build', 'rsync:dist']);
-  grunt.registerTask('default', ['build', 'watch']);
+  // grunt uncss - Removes unused CSS for development
+  grunt.registerTask('uncss', ['uncss']);
+
+  // grunt dev - Runs tasks for development
+  grunt.registerTask('dev', ['sass:dev', 'autoprefixer', 'uglify:dev', 'clean']);
+
+  // grunt build - Runs full suite of tasks to ready files for production
+  grunt.registerTask('build', ['sass:dist', 'cssmin', 'autoprefixer', 'uglify:dist', 'clean']);
+
+  // grunt deploy - Runs build and deploys it to the defined remote server.
+  //grunt.registerTask('deploy', ['build', 'shell:package', 'sftp:deploy', 'sshexec:deploy']);
+
 };
