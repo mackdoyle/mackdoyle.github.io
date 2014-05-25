@@ -87,23 +87,23 @@ module.exports = function(grunt) {
     },
 
     // Compile Sass files to CSS
-    // This will compile Sass to Css into the tmp/ directory. Other plugins
+    // The dist seting will compile Sass to Css into the tmp/ directory. Other plugins
     // will then take the css and further optimize it into the css/ directory
     sass: {
       dev: {
         options: {
           // cssmin will minify later
-          style: 'expanded',
+          style: 'nested',
           cacheLocation: '<%= settings.dir.src %>/scss/.sass-cache'
         },
         files: {
-          '<%= settings.dir.tmp %>/css/styles.css': '<%= settings.dir.src %>/scss/**/*.scss'
+          '<%= settings.dir.dist %>/css/styles.css': '<%= settings.dir.src %>/scss/styles.scss'
         }
       },
       dist: {
         options: {
           // cssmin will minify later
-          style: 'expanded',
+          style: 'compact',
           cacheLocation: '<%= settings.dir.src %>/scss/.sass-cache'
         },
         files: {
@@ -210,7 +210,7 @@ module.exports = function(grunt) {
       },
       sass: {
         //files: ['<%= sass:dev.files %>'],
-        files: ['<%= settings.dir.src %>/css/**.scss'],
+        files: ['<%= settings.dir.src %>/scss/*.scss'],
         tasks: ['sass:dev'],
         options: {
           livereload: true

@@ -15,9 +15,9 @@
   top: 0;
   left: 0;
   width:100%;
+  height: 44px;
   z-index: 3;
   background: $header-color;
-  height: 44px;
   padding: 0 $gutter-size !important;
   .title{
     float: left;
@@ -27,24 +27,6 @@
       color: $body-headline-color;
       @include font-rhythm(1.3);
       line-height: 44px;
-    }
-    // Top bar's drop shadow
-    &:after {
-      content: "";
-      position: fixed;
-      top: 42px;
-      left: 0;
-      width: 100%;
-      height: 14px;
-      z-index: -1;
-      //@include vendor-prefix("radial-gradient","(gray 10%, transparent 65%)","background");
-      background: radial-gradient(rgba(0,0,0,0.5), transparent 65%);
-      background: -webkit-radial-gradient(rgba(0,0,0,0.5), transparent 65%);
-      background: -moz-radial-gradient(rgba(0,0,0,0.5), transparent 65%);
-      background-position: center top;
-      background-origin: content-box;
-      background-size: 100% 70%;
-      background-repeat: no-repeat;
     }
   }
 
@@ -69,6 +51,25 @@
         }
       }
     }
+  }
+
+  // Top bar's drop shadow
+  &:after {
+    content: "";
+    position: fixed;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    z-index: -1;
+    //@include vendor-prefix("radial-gradient","(gray 10%, transparent 65%)","background");
+    background: radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background: -webkit-radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background: -moz-radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background-position: center top;
+    background-origin: content-box;
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
   }
 }
 
