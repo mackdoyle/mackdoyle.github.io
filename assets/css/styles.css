@@ -21,11 +21,14 @@
  * Reset.css - meyerweb.com/eric/tools/css/reset/
  * Normalize.css - git.io/normalize
  */
-@import url("http://fonts.googleapis.com/css?family=Playfair+Display|Gilda+Display|Lora|PT+Serif|Droid+Serif|Old+Standard+TT");
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -10780,6 +10783,7 @@ Another option is to use this trick:
 body {
   font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 100%;
+  font-weight: 200;
   color: #202020;
   font-size: 16px !important;
   line-height: 24px;
@@ -10789,7 +10793,7 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 h1, h2, h3, h4, h5, h6, h1 a {
-  font-family: "Playfair Display", "Gilda Display", "Lora", "PT Serif", "Droid Serif", "Old Standard TT", "Bitter", serif;
+  font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
   margin: 0; }
 
@@ -10885,7 +10889,7 @@ p {
   margin-bottom: 0rem; }
 
 a {
-  color: #87c6dc;
+  color: #cfd6dd;
   text-decoration: none;
   -webkit-transition: color 0.1s linear 0.2s linear;
   -moz-transition: color 0.1s linear 0.2s linear;
@@ -10893,9 +10897,9 @@ a {
   -ms-transition: color 0.1s linear 0.2s linear;
   transition: color 0.1s linear 0.2s linear; }
   a:hover {
-    color: #c2e2ed; }
+    color: #fcfcfd; }
   a:active, a:focus {
-    color: #c2e2ed;
+    color: #fcfcfd;
     outline: none; }
 
 abbr, acronym {
@@ -10925,13 +10929,12 @@ cite {
   cite:before {
     content: '\2014 \00A0'; }
 
-article, section, p img {
+section, p img {
   margin-bottom: 2.25rem; }
 
 footer {
   margin-top: 2.25rem;
-  line-height: 2.25rem;
-  margin-bottom: 4.5rem; }
+  line-height: 2.25rem; }
 
 /* Styles from a really nice stylesheet found on
 ----------------------------------------------------------------------------------------------- */
@@ -13638,6 +13641,21 @@ h1 + hr {
       font-weight: bold; }
 
 /* global/content/teasers */
+article.light {
+  background: white; }
+  article.light p {
+    color: #202020; }
+
+article.dark-blue {
+  background: #27292b; }
+  article.dark-blue p {
+    color: #dfdfdf; }
+
+article.dark-gray {
+  background: #202020; }
+  article.dark-gray p {
+    color: #dfdfdf; }
+
 .teaser header {
   position: relative;
   width: 100%;
@@ -13682,6 +13700,8 @@ h1 + hr {
       content: ""; }
     .teaser header .meta:after {
       content: ""; }
+.teaser .article-teaser-content {
+  padding: 15px; }
 .teaser footer {
   display: table;
   vertical-align: middle;
@@ -13694,8 +13714,8 @@ h1 + hr {
     position: relative;
     text-decoration: none;
     white-space: nowrap;
-    background: #87c6dc;
-    color: #344b52;
+    background: #cfd6dd;
+    color: #27292b;
     text-align: center;
     text-transform: uppercase;
     max-width: 125px;
@@ -13708,13 +13728,13 @@ h1 + hr {
     -ms-transition: all 0.25s ease-in-out 0.2s linear;
     transition: all 0.25s ease-in-out 0.2s linear; }
     .teaser .more a:hover {
-      background: #aed9e8; }
+      background: #edf0f2; }
 .teaser .category-list-container .categories {
   font-size: 12px;
   line-height: 16px;
   vertical-align: middle; }
   .teaser .category-list-container .categories li:not(.first) a {
-    background: #46545f;
+    background: #37414b;
     color: #fdfdff;
     text-align: center;
     vertical-align: middle;
@@ -13728,7 +13748,7 @@ h1 + hr {
     -ms-transition: all 0.25s ease-in-out 0.2s linear;
     transition: all 0.25s ease-in-out 0.2s linear; }
     .teaser .category-list-container .categories li:not(.first) a:hover {
-      background: #303a42; }
+      background: #21272e; }
 
 .highlight {
   margin: 2.25rem auto;

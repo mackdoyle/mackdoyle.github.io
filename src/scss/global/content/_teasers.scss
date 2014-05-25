@@ -4,7 +4,29 @@
 // ----------------------------------------------
 // Article/Post Teasers
 // ----------------------------------------------
-.teaser {
+
+article.light{
+ background: $body-color;
+ p{
+   color: $body-font-color;
+ }
+}
+
+article.dark-blue{
+  background: $dark-blue;
+  p{
+   color: invert($body-font-color);
+  }
+}
+
+article.dark-gray{
+  background: $dark-gray;
+  p{
+   color: invert($body-font-color);
+  }
+}
+
+.teaser{
   header{
     position: relative;
     width: 100%;
@@ -59,10 +81,10 @@
         content: "";
       }
     }
+  }
 
-    p{
-
-    }
+  .article-teaser-content{
+    padding: $gutter-size;
   }
 
   footer{

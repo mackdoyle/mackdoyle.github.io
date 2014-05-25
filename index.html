@@ -5,7 +5,7 @@ title: Jason Doyle
 
 
 {% for post in site.posts %}
-  <article class="teaser">
+  <article class="teaser {{post.theme}}">
     <header style="background-image:url('{{post.image}}');">
       <div class="title">
         <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>

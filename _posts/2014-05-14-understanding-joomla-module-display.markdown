@@ -6,6 +6,7 @@ date:   2014-05-14 20:00:00
 author: Jason Doyle
 image: /assets/images/articles/water-web.jpg
 categories: joomla, cms, php
+theme: light
 ---
 
 
