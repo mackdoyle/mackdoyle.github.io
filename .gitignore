@@ -3,3 +3,5 @@ _site
 .sass-cache
 .UlyssesRoot
 .Ulysses-Group.plist
+.sublime-project
+.sublime-workspace
