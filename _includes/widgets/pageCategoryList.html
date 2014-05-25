@@ -11,7 +11,7 @@
 
 {% if page.categories.size > 0 %}
 	<div class="category-list-container">
-		<ul class="inline-list categories">
+		<ul class="inline categories">
       <li class="first">Posted in</li>
 			{% for category in page.categories %}
 				<li><a href="categories.html#{{ category | cgi_escape }}">{{ category }}</a>

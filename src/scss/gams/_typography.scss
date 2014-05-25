@@ -35,7 +35,6 @@ h1, h2, h3, h4, h5, h6, h1 a {
 h1 {
   font-weight: 200;
   @include font-rhythm($baseline-height * 1.5, $baseline-height * 1.5, 0);
-  line-height: 150%; //overriding font-rhythm line height for now
   @include breakpoint(I---I){
     line-height: 120%;
   }

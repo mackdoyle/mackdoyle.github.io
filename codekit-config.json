@@ -2110,15 +2110,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/scss\/foundation\/components\/_inline-lists.scss" : {
+    "\/assets\/scss\/foundation\/components\/_inlines.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/scss\/foundation\/components\/_inline-lists.scss",
+      "inputAbbreviatedPath" : "\/assets\/scss\/foundation\/components\/_inlines.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/assets\/scss\/foundation\/css\/_inline-lists.css",
+      "outputAbbreviatedPath" : "\/assets\/scss\/foundation\/css\/_inlines.css",
       "fileType" : 4,
       "debugStyle" : 0
     },

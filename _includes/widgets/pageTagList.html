@@ -12,7 +12,7 @@
 {% if page.tags.size > 0 %}
 	<div class="tag-list-container">
 	  Tagged with:
-		<ul class="inline-list tags">
+		<ul class="inline tags">
 		{% for tag in page.tags %}
 			<li><a href="tags.html#{{tag | cgi_encode}}">{{ tag }}</a>
 			{% unless forloop.last %},{% endunless %}

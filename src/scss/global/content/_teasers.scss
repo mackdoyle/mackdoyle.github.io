@@ -7,15 +7,19 @@
 
 article.light{
  background: $body-color;
- p{
-   color: $body-font-color;
+ .article-content{
+   p{
+     color: $body-font-color;
+   }
  }
 }
 
 article.dark-blue{
   background: $dark-blue;
-  p{
-   color: invert($body-font-color);
+  .article-content{
+    p{
+     color: invert($body-font-color);
+    }
   }
 }
 
