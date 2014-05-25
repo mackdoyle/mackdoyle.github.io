@@ -57,7 +57,6 @@ module.exports = function(grunt) {
     },
 
     // error check javascript
-
     //jshint : {
       //options : {
         //jshintrc : '.jshintrc'
@@ -98,7 +97,7 @@ module.exports = function(grunt) {
           cacheLocation: '<%= settings.dir.src %>/scss/.sass-cache'
         },
         files: {
-          '<%= settings.dir.tmp %>/css/styles.css': '<%= settings.dir.src %>/scss/styles.scss'
+          '<%= settings.dir.tmp %>/css/styles.css': '<%= settings.dir.src %>/scss/**/*.scss'
         }
       },
       dist: {
