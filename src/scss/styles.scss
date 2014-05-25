@@ -12,10 +12,9 @@
     "base/deopinionate";
 
 // Vendor Dependencies
-@import
+//@import
 	//"bourbon",
-	//"foundation/foundation",
-	"stackicons/stackicons-social-minimal";
+	//"foundation/foundation";
 
 // Authored Dependencies
 @import
@@ -24,7 +23,6 @@
 // Sections
 @import
 	"global/layout",
-	"global/base",
 	"global/content/content",
   "global/header/top-bar";
 

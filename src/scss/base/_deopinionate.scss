@@ -55,6 +55,13 @@ audio:not([controls]){
 	display:none
 }
 
+/* Default images to fluid widths */
+img {
+  margin: 0;
+  width:100%;
+  max-width: 100%;
+}
+
 script{
 	display:none !important
 }

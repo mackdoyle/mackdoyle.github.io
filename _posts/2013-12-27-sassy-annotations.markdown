@@ -5,7 +5,7 @@ date:   2013-12-27 20:04:14
 author: Jason Doyle
 image: /assets/images/articles/annotations.png
 categories: scss
-theme: dark-blue
+theme: light
 ---
 
 
