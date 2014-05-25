@@ -5287,7 +5287,6 @@ h1 + hr {
   .top-bar .pull-tab {
     left: -44px;
     position: absolute;
-    background: #101010;
     width: 44px;
     height: 44px;
     float: left; }
@@ -5299,7 +5298,9 @@ h1 + hr {
       width: 44px;
       height: 44px;
       line-height: 44px;
-      padding-left: 34px; }
+      margin-left: 34px;
+      padding-left: 4px;
+      background: #101010; }
   .top-bar .title {
     float: left; }
     .top-bar .title .name {
@@ -5322,10 +5323,12 @@ h1 + hr {
     line-height: 100%;
     box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5); }
   .top-bar .links {
-    float: right; }
+    float: right;
+    margin-right: 44px; }
     .top-bar .links li {
       display: inline-block;
-      line-height: 44px; }
+      line-height: 44px;
+      margin-right: 11px; }
       .top-bar .links li a:before {
         color: #cfd6dd; }
       .top-bar .links li a:hover:before {

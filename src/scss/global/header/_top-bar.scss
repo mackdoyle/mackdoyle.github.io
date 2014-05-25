@@ -25,7 +25,7 @@ $top-bar-height: 44px;
   .pull-tab{
     left: -44px;
     position: absolute;
-    background: $header-color;;
+
     width: $top-bar-height;
     height: $top-bar-height;
     float: left;
@@ -37,7 +37,9 @@ $top-bar-height: 44px;
       width: 44px;
       height: 44px;
       line-height: 44px;
-      padding-left: 34px;
+      margin-left: 34px;
+      padding-left: 4px;
+      background: $header-color;
     }
   }
 
@@ -64,9 +66,11 @@ $top-bar-height: 44px;
 
   .links {
     float: right;
+    margin-right: $top-bar-height;
     li{
       display: inline-block;
       line-height: $top-bar-height;
+      margin-right: $top-bar-height / 4;
       a{
         &:before{
           color: $link-color;
