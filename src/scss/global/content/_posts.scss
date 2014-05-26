@@ -97,6 +97,8 @@
     padding-top:44px;
     background-color: white;
     z-index: 1;
+    overflow-y: scroll; //intertia scrolling on iOS
+    -webkit-overflow-scrolling: touch;
     //Slanted Crop
     /*
     &:before{

@@ -5030,6 +5030,8 @@ h1 + hr {
     padding-top: 44px;
     background-color: white;
     z-index: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     /*
     &:before{
       content: "";
