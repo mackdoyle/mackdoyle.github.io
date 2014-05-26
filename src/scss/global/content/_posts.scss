@@ -17,6 +17,10 @@
 
 // Posts
 .post{
+  @include breakpoint(I---I){
+    overflow-y: scroll; //intertia scrolling on iOS
+    -webkit-overflow-scrolling: touch;
+  }
   height: 100%;
   header{
     position: relative;
@@ -97,8 +101,6 @@
     padding-top:44px;
     background-color: $body-color;
     z-index: 1;
-    overflow-y: scroll; //intertia scrolling on iOS
-    -webkit-overflow-scrolling: touch;
     //Slanted Crop
     /*
     &:before{
