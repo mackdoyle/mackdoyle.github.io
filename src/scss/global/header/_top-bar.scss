@@ -34,10 +34,10 @@ $top-bar-height: 44px;
       position: absolute;
       font-family: FontAwesome;
       color: white;
-      width: $top-bar-height;;
-      height: $top-bar-height;;
-      left: $top-bar-height;;
-      line-height: $top-bar-height;;
+      width: $top-bar-height;
+      height: $top-bar-height;
+      left: $top-bar-height;
+      line-height: $top-bar-height;
       margin-left: 34px;
       padding-left: 4px;
       background: $header-color;
@@ -56,12 +56,12 @@ $top-bar-height: 44px;
   }
 
   .avatar{
-    display: none;
     overflow: hidden;
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
     border-radius: 100%;
     line-height: 100%;
+    vertical-align: middle;
     box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
   }
 
@@ -73,6 +73,8 @@ $top-bar-height: 44px;
       line-height: $top-bar-height;
       margin-right: $top-bar-height / 4;
       a{
+        font-size: 24px;
+        line-height: $top-bar-height;
         &:before{
           color: $link-color;
         }

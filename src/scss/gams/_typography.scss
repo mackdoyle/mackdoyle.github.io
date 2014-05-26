@@ -93,9 +93,10 @@ p {
 a {
   color: $link-color;
   text-decoration: none;
-  @include transition(color 0.1s linear);
+  @include transition(all .25s ease-in-out);
   &:hover {
     color: $link-color-hover;
+    @include transition(all .25s ease-in-out);
   }
   &:active, &:focus {
     color: $link-color-hover;

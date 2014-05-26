@@ -1,14 +1,10 @@
-// Short Form
-@mixin transition($argument){
-	@include vendor-prefix(transition, $argument);
-}
 // Long Form
-@mixin transition($property,$delay:.2s,$easing:linear) {
-	-webkit-transition:$property $delay $easing;
-	-moz-transition:$property $delay $easing;
-	-o-transition:$property $delay $easing;
-	-ms-transition:$property $delay $easing;
-	transition:$property $delay $easing;
+@mixin transition($properties: all .25s ease-in) {
+	-webkit-transition: $properties;
+	-moz-transition: $properties;
+	-o-transition: $properties;
+	-ms-transition: $properties;
+	transition: $properties;
 }
 
 // Usage -----

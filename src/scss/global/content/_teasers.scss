@@ -68,7 +68,6 @@ article.dark-gray{
     h1, h2{
       text-shadow: 0px 0px 12px  rgba(invert($body-headline-color), 0.5);
       a{
-        @include transition(all .25s ease-in-out);
         &:hover{
           text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
         }
@@ -129,7 +128,7 @@ article.dark-gray{
 
   // Tag List
   .tag-list-container{
-    .inline-list tags{
+    .inline tags{
 
     }
   }
