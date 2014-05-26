@@ -19,7 +19,7 @@ $top-bar-height: 44px;
   width:105%;
   height: $top-bar-height;
   z-index: 3;
-  background: $header-color;
+  //background: $header-color;
   padding: 0 $gutter-size !important;
 
   .pull-tab{
@@ -40,7 +40,7 @@ $top-bar-height: 44px;
       line-height: $top-bar-height;
       margin-left: 34px;
       padding-left: 4px;
-      background: $header-color;
+      //background: $header-color;
     }
   }
 
@@ -86,6 +86,7 @@ $top-bar-height: 44px;
   }
 
   // Top bar's drop shadow
+  /*
   &:after {
     content: "";
     position: fixed;
@@ -103,6 +104,7 @@ $top-bar-height: 44px;
     background-size: 100% 70%;
     background-repeat: no-repeat;
   }
+  */
 }
 
 
