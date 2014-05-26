@@ -2336,14 +2336,14 @@ a {
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
   a:hover {
-    color: #fcfcfd;
+    color: #a2b0bd;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out; }
   a:active, a:focus {
-    color: #fcfcfd;
+    color: #a2b0bd;
     outline: none; }
 
 abbr, acronym {
@@ -3624,11 +3624,12 @@ h1 + hr {
       margin-right: 11px; }
       .top-bar .links li a {
         font-size: 24px;
-        line-height: 44px; }
+        line-height: 44px;
+        vertical-align: middle; }
         .top-bar .links li a:before {
           color: #cfd6dd; }
         .top-bar .links li a:hover:before {
-          color: white; }
+          color: #a2b0bd; }
 
 /**
  *

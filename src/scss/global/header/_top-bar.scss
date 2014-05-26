@@ -75,11 +75,12 @@ $top-bar-height: 44px;
       a{
         font-size: 24px;
         line-height: $top-bar-height;
+        vertical-align: middle;
         &:before{
           color: $link-color;
         }
         &:hover:before{
-          color: lighten($header-font-color, 20%);
+          color: $link-color-hover;
         }
       }
     }

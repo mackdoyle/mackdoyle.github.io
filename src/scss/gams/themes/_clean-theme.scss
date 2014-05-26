@@ -56,7 +56,7 @@
 // Text Link Colors
 // -------------------------- *
   $link-color: $lightest-blue;
-  $link-color-hover: lighten($link-color, 15);
+  $link-color-hover: darken($link-color, 15);
   $aside-link-color: $lightest-blue;
   $aside-link-color-hover: lighten($aside-link-color, 15);
 
