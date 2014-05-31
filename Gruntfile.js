@@ -11,7 +11,18 @@
  *
  * @Todo:
  * 1. Convert to coffescript at some point
- *
+ * 
+ * Possible packages to add...
+ * grunt-responsive-images - For generating multi-resolution images at predefined widths. For use with srcset or a responsive imaging strategy like Imager.js
+ * grunt-autoshot - For generating screenshots of your site at different viewport sizes
+ * grunt-modernizr - For generating lean Modernizr builds based on the feature detects you actually use
+ * grunt-svgmin - For minmizing your SVG files
+ * grunt-contrib-imagemin - For keeping your image files optimized. With the size of the average page being 1.5MB, most of it being images, keeping your image filesizes down is super-important.
+ * grunt-open - For launching a browser window with BrowserStack using specific device/browser settings. We found this to be more usable than grunt-browserstack in practice.
+ * grunt-webp - For encoding images as WebP
+ * grunt-concurrent - For concurrently running tasks to shorten down build times
+ * grunt-notify  - For desktop notifications when Grunt has errors
+ * grunt-wiredep - For managing 3rd party libraries installed by Bower
  */
 
 
