@@ -45,4 +45,15 @@ github:
 # -------------------------->
 
 
+# Files/Directories to ignore
+# -----------------------------------------------------------------
+exclude: ['**/*.log']
+exclude: ['tmp']
+exclude: ['src']
+exclude: ['node_modules']
+exclude: ['Gruntfile.js']
+exclude: ['package.json']
+exclude: ['codekit-config.json']
+exclude: ['jmd.sublime-project']
+exclude: ['jmd.sublime-workplace']
 

@@ -9,26 +9,21 @@ categories: joomla
 theme: light
 ---
 
-Starting with the introduction of the Access Control List (ACL) implementation in Joomla 1.6, categories, articles some components create a record in the assets table to store properties associated with the ACL. When they do a foreign key relationship is created. Sometimes this relationship can break, causing your site to not behave properly. This is especially true when trying to upgrade from a version of Joomla pre-ACL.
+  Starting with the introduction of the Access Control List (ACL) implementation in Joomla 1.6, categories, articles some components create a record in the assets table to store properties associated with the ACL. When they do a foreign key relationship is created. Sometimes this relationship can break, causing your site to not behave properly. This is especially true when trying to upgrade from a version of Joomla pre-ACL.
+  In addition to problems with the foreign key relationships, the assets table stores hierarchal data using the [Adjacency List Model]. This article will not go into graph theory but to put simply, each record in the asset table has a relationship to another record. This relationship can also become corrupted and difficult to resolve due to its complexity.
+  There are a few guides and tools that can help resolve these issues but unless you are dealing with a small dataset, it is unlikely you will be able to resolve all your issues with just one of them. This article will will pull several resources together with some additional suggestions to create a comprehensive guide on resolving all issues associated to the ACL's assets table.
+  I should warn you before proceeding that the following steps were recorded as I was working through this issue myself. They have not been validated in any way, so proceed with caution. Also, you must have access to your website's database and have a decent understanding of mySQL. Some of these steps suggest direct manipulation of data through queries so take a backup before you start. And never attempt to run SQL statements directly on a production server.
+  This article will focus on articles and categories but the same approaches can be applied to all items that contain a relationship to Joomla's assets table, articles, categories, banners, weblinks, etc.
+  OK, so let's get started…
 
-In addition to problems with the foreign key relationships, the assets table stores hierarchal data using the [Adjacency List Model]. This article will not go into graph theory but to put simply, each record in the asset table has a relationship to another record. This relationship can also become corrupted and difficult to resolve due to its complexity.
-
-There are a few guides and tools that can help resolve these issues but unless you are dealing with a small dataset, it is unlikely you will be able to resolve all your issues with just one of them. This article will will pull several resources together with some additional suggestions to create a comprehensive guide on resolving all issues associated to the ACL's assets table.
-
-I should warn you before proceeding that the following steps were recorded as I was working through this issue myself. They have not been validated in any way, so proceed with caution. Also, you must have access to your website's database and have a decent understanding of mySQL. Some of these steps suggest direct manipulation of data through queries so take a backup before you start. And never attempt to run SQL statements directly on a production server.
-
-This article will focus on articles and categories but the same approaches can be applied to all items that contain a relationship to Joomla's assets table, articles, categories, banners, weblinks, etc.
-
-OK, so let's get started…
-
-### Gather diagnostics
-Before doing anything, you should gather as much information as you can to understand the source of the issue. Download Elin Warig's [Asset Table Diagnostics] tool and run it. This will generate a report showing any problems related to the assets table. If the report is clean, you might have another issue. If it is not, keep it open as we will go back to it several times during this process.
+### Gather diagnostics ###
+  Before doing anything, you should gather as much information as you can to understand the source of the issue. Download Elin Warig's [Asset Table Diagnostics] tool and run it. This will generate a report showing any problems related to the assets table. If the report is clean, you might have another issue. If it is not, keep it open as we will go back to it several times during this process.
 
 ### Get some context on the issue ###
-Head over to this [article][3] on Joomla docs. This will give you a bit of background along with a few suggestions. At this point you are likely to go all ADD and start trying some of the suggestions the document suggests, but do not do it, stay focused, and come back here. We will walk through those steps later with some sample code.
+  Head over to this [article][3] on Joomla docs. This will give you a bit of background along with a few suggestions. At this point you are likely to go all ADD and start trying some of the suggestions the document suggests, but do not do it, stay focused, and come back here. We will walk through those steps later with some sample code.
 
 ### Fix a missing root level category ###
-Take a look at your `#_categories` table. The first record should be ROOT. If it is not, try creating it.
+  Take a look at your `#_categories` table. The first record should be ROOT. If it is not, try creating it.
 
   	{% highlight mysql %}
   	INSERT INTO whm_categories(id, asset_id, parent_id, lft, rgt, level, path, extension, title, alias, note, description, published, checked_out, checked_out_time, access, params, metadesc, metakey, metadata, created_user_id, created_time, modified_user_id, modified_time, hits, language, version) VALUES
@@ -47,14 +42,15 @@ OK, at this point you have verified you have an asset table issue and gained a l
   	ORDER BY count(*) DESC
   	{% endhighlight %}
 
-This query will simply return a count of duplicate alias names. You might have multiple articles with the same title or legitimate duplicates of articles, so you will need to look at each one to determine if you need it.
 
-Before you go any further, log into the Joomla admin and create a new category named 'Temp' and take note of its id. Keep this around as you will find yourself using it to group items for processing.
+  This query will simply return a count of duplicate alias names. You might have multiple articles with the same title or legitimate duplicates of articles, so you will need to look at each one to determine if you need it.
 
-Follow these steps to remove duplicate articles without breaking any foreign-key relationships. Then repeat the process for categories.
+  Before you go any further, log into the Joomla admin and create a new category named 'Temp' and take note of its id. Keep this around as you will find yourself using it to group items for processing.
+
+  Follow these steps to remove duplicate articles without breaking any foreign-key relationships. Then repeat the process for categories.
 
 #### Step 1 ####
-Copy the result set of the duplicate count query to a text editor. Use Find a Replace to build a `SELECT` statement that returns all of the duplicated articles by alias. You should end up with something like this:
+  Copy the result set of the duplicate count query to a text editor. Use Find a Replace to build a `SELECT` statement that returns all of the duplicated articles by alias. You should end up with something like this:
 
   	{% highlight mysql %}
   	SELECT *

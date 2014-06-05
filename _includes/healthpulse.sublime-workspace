@@ -140,6 +140,9 @@
 	},
 	"file_history":
 	[
+		"/Users/jdoyle/Sites/superhappy/healthpulse/bootstrap/index.html",
+		"/Users/jdoyle/Sites/superhappy/healthpulse/app/index.html",
+		"/Users/jdoyle/Sites/superhappy/healthpulse/README.md",
 		"/Users/jdoyle/Sites/jmd/_includes/topbar.html",
 		"/Users/jdoyle/Sites/jmd/Gruntfile.js",
 		"/Users/jdoyle/Sites/jmd/node_modules/grunt-autoprefixer/node_modules/autoprefixer/node_modules/fs-extra/lib/remove.js",
@@ -264,10 +267,7 @@
 		"/Users/jdoyle/sites/jason/_layouts/draft.html",
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Github Flavored).sublime-settings",
-		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/knockdown/Markdown (Github Flavored).sublime-settings",
-		"/Users/jdoyle/sites/jason/assets/css/normalize.css",
-		"/Users/jdoyle/sites/jason/_posts/2013-12-27-html-canvas-getimagedata.markdown",
-		"/Users/jdoyle/sites/jason/scss/gams/mixins/css3/_transition.scss"
+		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/knockdown/Markdown (Github Flavored).sublime-settings"
 	],
 	"find":
 	{
@@ -436,7 +436,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 37.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -485,7 +485,7 @@
 	{
 		"height": 300.0
 	},
-	"project": "jmd.sublime-project",
+	"project": "healthpulse.sublime-project",
 	"replace":
 	{
 		"height": 54.0
@@ -541,7 +541,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 257.0,
 	"status_bar_visible": true,
 	"template_settings":
