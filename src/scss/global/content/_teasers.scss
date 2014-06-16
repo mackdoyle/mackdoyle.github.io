@@ -35,8 +35,8 @@
   -webkit-animation-iteration-count:1; 
 }
 
-@mixin color-shift-frames ($color-a, $color-b, $color-c, $color-d, $color-e) {
-  @keyframes color-shift {
+@mixin color-shift-frames ($name, $color-a, $color-b, $color-c, $color-d, $color-e) {
+  @keyframes $name {
     0% {background-color: white;} 
     20% {background-color: $color-a;} 
     40% {background-color: inverse($color-b);} 
@@ -45,7 +45,7 @@
     100% {background-color: $color-e;} 
   } 
 
-  @-webkit-keyframes color-shift { 
+  @-webkit-keyframes $name { 
     0% {background-color: white;} 
     20% {background-color: $color-a;} 
     40% {background-color: inverse($color-b);} 

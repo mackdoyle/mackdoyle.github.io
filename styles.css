@@ -3437,8 +3437,8 @@ h1 + hr {
     background-color: "rgba(255,13,255,1)"; } }
 article.swatch-a {
   background: #ff530d;
-  -webkit-animation-name: color-shift;
-  animation-name: color-shift;
+  -webkit-animation-name: "color-shift";
+  animation-name: "color-shift";
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
   -webkit-animation-fill-mode: forwards;
@@ -3447,7 +3447,7 @@ article.swatch-a {
   animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-name: color-shift;
+  -webkit-animation-name: "color-shift";
   -webkit-animation-timing-function: ease-in;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-duration: 3s;
@@ -3457,8 +3457,8 @@ article.swatch-a {
 
 article.swatch-b {
   background: #e82c0c;
-  -webkit-animation-name: color-shift;
-  animation-name: color-shift;
+  -webkit-animation-name: "color-shift";
+  animation-name: "color-shift";
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
   -webkit-animation-fill-mode: forwards;
@@ -3467,7 +3467,7 @@ article.swatch-b {
   animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-name: color-shift;
+  -webkit-animation-name: "color-shift";
   -webkit-animation-timing-function: ease-in;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-duration: 3s;
@@ -3638,27 +3638,27 @@ article.swatch-e {
 
 .hero {
   background: rgba(0, 0, 0, 0.9);
-  height: 10%; }
+  height: 25%;
+  margin: 0 auto; }
   .hero .avatar-container {
-    margin-top: -60px;
-    margin-bottom: 20px;
-    display: inline-block;
+    margin: 0 auto;
     width: 120px;
     height: 120px;
-    border: 3px solid white;
-    z-index: 500;
-    border-radius: 100%;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+    border: 5px solid white;
+    z-index: 10;
+    -o-border-radius: "100%";
+    border-radius: "100%";
+    -ms-box-shadow: "0 1px 1px rgba(0, 0, 0, .3, inset 0 1px 1px rgba(0, 0, 0, .3";
+    -o-box-shadow: "0 1px 1px rgba(0, 0, 0, .3, inset 0 1px 1px rgba(0, 0, 0, .3";
+    box-shadow: "0 1px 1px rgba(0, 0, 0, .3, inset 0 1px 1px rgba(0, 0, 0, .3"; }
   .hero .avatar {
     display: block;
-    background-position: center;
     margin: 0 auto;
     overflow: hidden;
-    width: 65px;
-    height: 65px;
-    line-height: 0;
-    background-size: cover;
-    border-radius: 100%; }
+    -ms-background-size: "cover";
+    background-size: "cover";
+    -o-border-radius: "100%";
+    border-radius: "100%"; }
 
 /**
  *
