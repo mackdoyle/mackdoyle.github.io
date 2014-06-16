@@ -1,0 +1,23 @@
+//
+// Keyframe mixin to make using CSS animations more manageable
+//
+// @Example:
+// @include keyframes(move-the-object) {
+//   0%   { left: 100px; }
+//   100% { left: 200px; }
+// }
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content; 
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}

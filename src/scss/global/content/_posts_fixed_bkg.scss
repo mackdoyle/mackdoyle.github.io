@@ -1,0 +1,142 @@
+/* global/content/posts */
+
+
+// ----------------------------------------------
+// Articles/Posts
+// ----------------------------------------------
+
+// Headline, Subtitle and Cover
+// ----------------------------------------------
+// A background image is added to the header tag inline. You can set its properties here.
+//
+// Try playing with 2 stacked bkgs where the upper one fades and scrolls, to a
+// reveal a static bkg beneath it.
+// Example:
+// background-image: url("img1.png"), url("img2.png");
+// background-attachment: scroll, fixed;
+
+// Posts
+.post{
+  @include breakpoint(I---I){
+    overflow-y: scroll; //intertia scrolling on iOS
+    -webkit-overflow-scrolling: touch;
+  }
+  height: 100%;
+  header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    //Vingette
+    &:after{
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background: radial-gradient(rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.7));
+      background-blend-mode: screen, overlay;
+    }
+
+    // Wrapper for positioning head and sub-head, since <header> is use for bkg
+    .title {
+      position: fixed;
+      max-width: 768px;
+      //margin: 15% auto 0 auto; //without slant
+      margin: 10% auto 0 auto; //with slant
+      text-align: left;
+      padding: $gutter-size;
+    }
+
+    h1, h2{
+      text-shadow: 0px 0px 12px  rgba(invert($body-headline-color), 0.5);
+      @include breakpoint(I-----I){
+        font-size: 2rem !important;
+      }
+      a{
+        &:hover{
+          text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+        }
+      }
+    }
+    p {
+       @include breakpoint(I-----I){
+        font-size: 1.2rem !important;
+      }
+    }
+    .meta{
+      font-family: $body-font;
+      font-size: .8rem !important;
+      font-weight: normal;
+
+      &:before{
+        content: "";
+      }
+      &:after{
+        content: "";
+      }
+    }
+
+    p{
+
+    }
+  }
+
+  // Main Content
+  .article-content{
+    position: relative;
+    width: 100%;
+    height:100%;
+    padding-top:44px;
+    background-color: $body-color;
+    z-index: 1;
+    //Slanted Crop
+    /*
+    &:before{
+      content: "";
+      position: absolute;
+      width: 130%;
+      height: 50%;
+      background: white;
+      right: -6,5em;
+      top: -6.5em;
+      z-index: -1;
+      -webkit-transform: rotate(-8deg);
+      -moz-transform: rotate(-8deg);
+      -ms-transform: rotate(-8deg);
+      -o-transform: rotate(-8deg);
+      transform: rotate(-8deg);
+      //@include breakpoint(I---I){
+        //top: -3.8em;
+      //}
+    }
+    */
+    .paragraph-measure{
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    p {
+      letter-spacing: .013rem;
+      a{
+        font-weight: bold;
+      }
+    }
+  }
+
+  footer {
+    position: relative;
+    background: $body-color;
+  }
+}

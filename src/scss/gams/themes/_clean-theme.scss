@@ -24,7 +24,7 @@
   $alert: #FBE3E4;
   $notice: #FFF6BF;
   $success: #E6EFC2;
-  $lightest-blue: #CFD6DD;
+  $lightest-blue: rgb(222, 226, 230);
   $light-blue: #7D8B99;
   $medium-blue: #37414B;
   $dark-blue: #27292B;
@@ -48,7 +48,7 @@
   $aside-font-color: $light-gray;
   $header-font-color: #efefef;
   $block-font-color: $medium-blue;
-  $body-headline-color: white;
+  $body-headline-color: darkest-gray;
   $aside-headline-color: $light-gray;
   $block-headline-color: $light-gray;
   $accent-color: $medium-gray;

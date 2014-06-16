@@ -1,0 +1,18 @@
+{
+  "name": "jmd",
+  "version": "0.0.1",
+  "authors": [
+    "Jason Doyle <jason@jmd.io>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "packery": "~1.2.3"
+  }
+}

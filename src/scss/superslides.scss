@@ -7,7 +7,7 @@
     display: none;
   }
   .scrollable {
-    @include pie-clearfix;
+    //@include pie-clearfix;
     position: relative;
     top: 0;
     left: 0;
@@ -46,7 +46,7 @@
     border-radius: 15px;
     width: 10px;
     height: 10px;
-    @include inline-block;
+    //@include inline-block;
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=');
     margin: 2px;
     overflow: hidden;

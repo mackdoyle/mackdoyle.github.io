@@ -8,15 +8,18 @@
  * Force reload of iframe to update size
  *(Kickstarter iframe embed content does static sizing on load that breaks fitvids during resize)
  */
+ /*
 function resizeKickstarterVideo() {
   var iframeSrc = $('#kickstarter-video').attr('src');
   $('#kickstarter-video').attr('src', iframeSrc);
 }
+*/
 
 
 /**
  * Set height of the projects on homepage
  */
+ /*
 function fillHeight(elem) {
   var windowH = $(window).height();
   var wrapperH = $(elem).height();
@@ -27,6 +30,7 @@ function fillHeight(elem) {
     });
   }
 }
+
 
 
 $(document).ready(function () {
@@ -157,4 +161,4 @@ $(window).resize(function () {
   _debounceResizeTimer = setTimeout(resizeKickstarterVideo, 250);
 });
 
-
+*/

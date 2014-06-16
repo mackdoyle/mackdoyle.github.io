@@ -1,0 +1,24 @@
+//
+// Animation mixin to make it easier to work wiht CSS animations
+//
+// @Example:
+// @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
+//
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+      }
+    }
+
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: animations;
+  animation: $animations;
+}
