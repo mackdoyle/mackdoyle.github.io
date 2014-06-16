@@ -2,7 +2,7 @@
  // global/content/teasers
  //
  // @Idea: play with slowly wiggling headline text when displayed over a full screen image.
- // Something so slight the viewer isn't quite aware of it. I think this might trick the eye to
+ // Something so slight the viewer isn"t quite aware of it. I think this might trick the eye to
  // see a floating parallax effect like on iOS.
  //
 
@@ -81,13 +81,13 @@
 }
 
 // Define Keyframes for color fade in
-@include color-shift-frames('color-shift', rgba(255,83,13,1)', 'rgba(232,44,12,1)', 'rgba(255,0,0,1)', 'rgba(232,12,122,1)', 'rgba(255,13,255,1)');
+@include color-shift-frames("color-shift", "rgba(255,83,13,1)", "rgba(232,44,12,1)", "rgba(255,0,0,1)", "rgba(232,12,122,1)", "rgba(255,13,255,1)");
 
 //Background Variants
 //Start teaser as a solid color and fade into another while fading in title
 article.swatch-a {
   background: rgba(255,83,13,1);
-  @include color-shift('color-shift', rgba(255,83,13,1)', 'rgba(232,44,12,1)', 'rgba(255,0,0,1)', 'rgba(232,12,122,1)', 'rgba(255,13,255,1)');
+  @include color-shift("color-shift", "rgba(255,83,13,1)", "rgba(232,44,12,1)", "rgba(255,0,0,1)", "rgba(232,12,122,1)", "rgba(255,13,255,1)");
 
   .article-content {
     p {
@@ -98,7 +98,7 @@ article.swatch-a {
 
 article.swatch-b {
   background: rgba(232,44,12,1);
-  @include color-shift('rgba(232,44,12,1)', 'rgba(255,0,0,1)', 'rgba(232,12,122,1)', 'rgba(255,13,255,1)', 'rgba(255,83,13,1)');
+  @include color-shift("color-shift", "rgba(232,44,12,1)", "rgba(255,0,0,1)", "rgba(232,12,122,1)", "rgba(255,13,255,1)", "rgba(255,83,13,1)");
   
   .article-content {
     p{
@@ -163,7 +163,7 @@ article.swatch-e {
           position: relative;
           text-decoration: none;
           white-space: nowrap;
-          @include gams-button($button-color, 'default', $button-font-color);
+          @include gams-button($button-color, "default", $button-font-color);
         }
       }
       .meta {
@@ -195,7 +195,7 @@ article.swatch-e {
       vertical-align: middle;
       li:not(.first) {
         a {
-          @include gams-pillbox($tag-color, 'default', $tag-font-color);
+          @include gams-pillbox($tag-color, "default", $tag-font-color);
         }
       }
     }
