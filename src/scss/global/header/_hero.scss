@@ -15,7 +15,7 @@
     z-index: 10;
     @include abs-center();
     @include vendor-prefix(border-radius, 100%);
-    @include vendor-prefix(box-shadow, 0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3));
+    @include vendor-prefix(box-shadow, "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)");
   }
 
   .avatar {

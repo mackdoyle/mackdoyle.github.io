@@ -42,32 +42,25 @@ h1 {
 
 h2 {
   font-weight: 300;
-  @include font-rhythm($baseline-height, $baseline-height, 0);
+  @include font-rhythm(($baseline-height * .85), $baseline-height, ($baseline-height * .25));
 }
 
 h3 {
-  font-weight: 600;
-  @include font-size(1.5);
+  font-weight: 500;
+  @include font-rhythm(($baseline-height * .75), $baseline-height, ($baseline-height * .25));
 }
 
-h4 {
-  @include font-size(1.25);
+h4, h5, h6 {
+  @include font-rhythm(($baseline-height * .5), $baseline-height, ($baseline-height * .25));
 }
 
-h5 {
-  @include font-size(1); // 1 * 16 = 16px
-}
-
-h6 {
-  @include font-size(1);
-}
 
 // Sub-headline
 header p {
   font-family: $sub-headline-font;
   font-weight: 300;
   color: $body-headline-color;
-  @include font-rhythm($baseline-height * .75, $baseline-height * .75, 0);
+  @include font-rhythm(($baseline-height * .75), ($baseline-height * .75), 0);
 }
 
 .meta {
@@ -87,7 +80,7 @@ p {
 }
 
 .box p {
-  @include font-rhythm(1.125, $baseline-height, 0);
+  @include font-rhythm(1.125, $baseline-height, ($baseline-height * .75));
 }
 
 a {

@@ -47,15 +47,5 @@ github:
 
 # Files/Directories to ignore
 # -----------------------------------------------------------------
-exclude: ['**/*.log']
-exclude: ['tmp']
-exclude: ['src']
-exclude: ['node_modules']
-exclude: ['Gruntfile.js']
-exclude: ['package.json']
-exclude: ['bower.json']
-exclude: ['bower_components']
-exclude: ['codekit-config.json']
-exclude: ['jmd.sublime-project']
-exclude: ['jmd.sublime-workplace']
+exclude: ['**/*.log', 'tmp', 'src', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json', 'bower_components', 'codekit-config.json', 'jmd.sublime-project', 'jmd.sublime-workplace']
 
