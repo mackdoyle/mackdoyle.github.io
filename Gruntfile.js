@@ -365,7 +365,7 @@ module.exports = function(grunt) {
      * ----------------------------------------------
      * Concurrent
      * Runs tasks on multiple CPU processes concurrently.
-     * While not in doxumented examples, this is needed to run both grunt-watch and grunt-jekyll server together
+     * While not in documented examples, this is needed to run both grunt-watch and grunt-jekyll server together
      * ----------------------------------------------
      */
     concurrent: {

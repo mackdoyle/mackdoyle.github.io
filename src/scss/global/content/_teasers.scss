@@ -17,41 +17,42 @@
 // ----------------------------------------------
 // Article/Post Teasers
 // ----------------------------------------------
-
+$num-swatches: 6;
+$base-color: rgba(255,83,13,1);
 
 
 
 @mixin color-shift ($name, $color-a, $color-b, $color-c, $color-d, $color-e, $delay: 0) {
-  animation-name: $name; 
-  animation-timing-function: ease-in; 
+  animation-name: $name;
+  animation-timing-function: ease-in;
   animation-fill-mode: forwards;
-  animation-duration:3s;  
-  animation-iteration-count:1; 
+  animation-duration:3s;
+  animation-iteration-count:1;
 
   -webkit-animation-name: $name;
-  -webkit-animation-timing-function: ease-in; 
-  -webkit-animation-fill-mode: forwards; 
-  -webkit-animation-duration:3s;  
-  -webkit-animation-iteration-count:1; 
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-duration:3s;
+  -webkit-animation-iteration-count:1;
 }
 
 @mixin color-shift-frames ($name, $color-a, $color-b, $color-c, $color-d, $color-e) {
   @keyframes $name {
-    0% {background-color: white;} 
-    20% {background-color: $color-a;} 
-    40% {background-color: inverse($color-b);} 
-    60% {background-color: $color-c;} 
-    80% {background-color: $color-d;} 
-    100% {background-color: $color-e;} 
-  } 
+    0% {background-color: white;}
+    20% {background-color: $color-a;}
+    40% {background-color: inverse($color-b);}
+    60% {background-color: $color-c;}
+    80% {background-color: $color-d;}
+    100% {background-color: $color-e;}
+  }
 
-  @-webkit-keyframes $name { 
-    0% {background-color: white;} 
-    20% {background-color: $color-a;} 
-    40% {background-color: inverse($color-b);} 
-    60% {background-color: $color-c;} 
-    80% {background-color: $color-d;} 
-    100% {background-color: $color-e;} 
+  @-webkit-keyframes $name {
+    0% {background-color: white;}
+    20% {background-color: $color-a;}
+    40% {background-color: inverse($color-b);}
+    60% {background-color: $color-c;}
+    80% {background-color: $color-d;}
+    100% {background-color: $color-e;}
   }
 }
 
@@ -82,7 +83,7 @@
 
 // Define Keyframes for color fade in
 @include color-shift-frames("color-shift", "rgba(255,83,13,1)", "rgba(232,44,12,1)", "rgba(255,0,0,1)", "rgba(232,12,122,1)", "rgba(255,13,255,1)");
-
+@include analogous-colors('.teaser',$base-color, $num-swatches, 10, 'reverse');
 //Background Variants
 //Start teaser as a solid color and fade into another while fading in title
 article.swatch-a {
@@ -99,7 +100,7 @@ article.swatch-a {
 article.swatch-b {
   background: rgba(232,44,12,1);
   @include color-shift("color-shift", "rgba(232,44,12,1)", "rgba(255,0,0,1)", "rgba(232,12,122,1)", "rgba(255,13,255,1)", "rgba(255,83,13,1)");
-  
+
   .article-content {
     p{
       color: $body-font-color;
@@ -109,7 +110,7 @@ article.swatch-b {
 
 article.swatch-c {
   background: rgba(255,0,0,1);
-  
+
   .article-content {
     p{
       color: $body-font-color;
@@ -119,7 +120,7 @@ article.swatch-c {
 
 article.swatch-d {
   background: rgba(232,12,122,1);
-  
+
   .article-content {
     p {
       color: $body-font-color;
@@ -129,7 +130,7 @@ article.swatch-d {
 
 article.swatch-e {
   background: rgba(255,13,255,1);
-  
+
   .article-content {
     p {
       color: $body-font-color;
@@ -140,7 +141,7 @@ article.swatch-e {
 // Teaser block styles
 // -----------------------------------
 .teaser {
- 
+
   header {
     position: relative;
     width: 100%;
@@ -149,7 +150,7 @@ article.swatch-e {
     .title {
       text-align: center;
       padding: $gutter-size;
-      h1, 
+      h1,
       h2 {
         a {
           &:hover {

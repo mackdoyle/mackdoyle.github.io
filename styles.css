@@ -3430,6 +3430,24 @@ h1 + hr {
 
   100% {
     background-color: "rgba(255,13,255,1)"; } }
+.teaser:nth-child(1) {
+  background: #ff2b0d; }
+
+.teaser:nth-child(2) {
+  background: #ff0d18; }
+
+.teaser:nth-child(3) {
+  background: #ff0d40; }
+
+.teaser:nth-child(4) {
+  background: #ff0d68; }
+
+.teaser:nth-child(5) {
+  background: #ff0d91; }
+
+.teaser:nth-child(6) {
+  background: #ff0db9; }
+
 article.swatch-a {
   background: #ff530d;
   -webkit-animation-name: "color-shift";

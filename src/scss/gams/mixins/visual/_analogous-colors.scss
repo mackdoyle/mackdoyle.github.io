@@ -1,0 +1,19 @@
+// Creates a defined number of analogous colors, incremented by a defined number
+// $dir not working so hard coding for now
+@mixin analogous-colors($selector, $base-color, $num-swatches: 3, $increment: 10, $direction:'forward') {
+
+  @if $direction != 'forward' {
+   $direction: '-'
+  } @else {
+    $direction: '+';
+  }
+
+  @for $i from 1 through $num-swatches {
+
+    #{$selector}:nth-child(#{$i}){
+      //background: analogous($base-color, 0deg);
+      background: adjust-hue($base-color, -($i * $increment));
+    }
+  }
+
+}
