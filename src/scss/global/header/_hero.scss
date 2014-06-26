@@ -6,7 +6,8 @@
 .hero {
   position: relative;
   background: rgba(0,0,0,.9);
-  height: 25%;
+  height: 150px;
+  padding: $gutter-size;
   margin: 0 auto;
   .avatar-container {
     width: 120px;

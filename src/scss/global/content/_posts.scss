@@ -31,7 +31,7 @@
     // Wrapper for positioning head and sub-head, since <header> is used for bkg
     .title {
       max-width: 768px;
-      margin: 44px auto 0 auto;
+      margin: 44px auto 18px auto;
       text-align: center;
       padding: $gutter-size;
     }
@@ -70,9 +70,6 @@
 
     p {
       letter-spacing: .013rem;
-      a {
-        font-weight: bold;
-      }
     }
   }
 

@@ -11,11 +11,7 @@ pre {
 
 p code {
   font-family: $monospace-font;
-  font-color: #008abc;
-  border: 1px solid #008abc;
-  background-color: #151617;
-  padding: 0 .2em;
-  @include vendor-prefix(border-radius, 3px);
+  font-size: 90%;
 }
 
 pre code {

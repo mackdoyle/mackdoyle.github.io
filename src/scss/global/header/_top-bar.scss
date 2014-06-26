@@ -16,35 +16,11 @@ $top-bar-height: 44px;
   position: fixed;
   top: 0;
   left: 0;
-  //width:105%;
   height: $top-bar-height;
   z-index: 3;
-  //background: $header-color;
   padding: 0 $gutter-size !important;
 
-  .pull-tab{
-    left: -44px;
-    position: absolute;
-
-    width: $top-bar-height;
-    height: $top-bar-height;
-    float: left;
-    &:before{
-      content: $fa-var-ellipsis-v;
-      position: absolute;
-      font-family: FontAwesome;
-      color: white;
-      width: $top-bar-height;
-      height: $top-bar-height;
-      left: $top-bar-height;
-      line-height: $top-bar-height;
-      margin-left: 34px;
-      padding-left: 4px;
-      //background: $header-color;
-    }
-  }
-
-  .title{
+  .title {
     float: left;
     .name {
       font-weight: normal;

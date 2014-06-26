@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, h1 a {
 
 h1 {
   font-weight: 200;
-  @include font-rhythm($baseline-height * 1.5, $baseline-height * 1.5, 0);
+  @include font-rhythm(($baseline-height * 1.5), ($baseline-height * 1.5), 0);
   @include breakpoint(I---I){
     line-height: 120%;
   }
@@ -42,16 +42,16 @@ h1 {
 
 h2 {
   font-weight: 300;
-  @include font-rhythm(($baseline-height * .85), $baseline-height, ($baseline-height * .25));
+  @include font-rhythm(($baseline-height * .85), $baseline-height);
 }
 
 h3 {
   font-weight: 500;
-  @include font-rhythm(($baseline-height * .75), $baseline-height, ($baseline-height * .25));
+  @include font-rhythm(($baseline-height * .75), $baseline-height);
 }
 
 h4, h5, h6 {
-  @include font-rhythm(($baseline-height * .5), $baseline-height, ($baseline-height * .25));
+  @include font-rhythm(($baseline-height * .5), $baseline-height);
 }
 
 
@@ -63,24 +63,9 @@ header p {
   @include font-rhythm(($baseline-height * .75), ($baseline-height * .75), 0);
 }
 
-.meta {
-  //display: none;
-  color: $body-headline-color;
-  @include font-rhythm(.75, $baseline-height, 0);
-}
-
-.box header .meta {
-  //display: none;
-  @include font-rhythm(.75, $baseline-height, 0);
-}
-
 p {
-  @include font-rhythm(1.125, $baseline-height, $baseline-height);
+  @include font-rhythm(1.125, $baseline-height, 2);
 
-}
-
-.box p {
-  @include font-rhythm(1.125, $baseline-height, ($baseline-height * .75));
 }
 
 a {

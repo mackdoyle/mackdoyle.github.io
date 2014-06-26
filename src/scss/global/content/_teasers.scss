@@ -20,122 +20,12 @@
 $num-swatches: 5;
 
 
-
-
-@mixin color-shift ($name, $color-a, $color-b, $color-c, $color-d, $color-e, $delay: 0) {
-  animation-name: $name;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-  animation-duration:3s;
-  animation-iteration-count:1;
-
-  -webkit-animation-name: $name;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-duration:3s;
-  -webkit-animation-iteration-count:1;
-}
-
-@mixin color-shift-frames ($name, $color-a, $color-b, $color-c, $color-d, $color-e) {
-  @keyframes $name {
-    0% {background-color: white;}
-    20% {background-color: $color-a;}
-    40% {background-color: inverse($color-b);}
-    60% {background-color: $color-c;}
-    80% {background-color: $color-d;}
-    100% {background-color: $color-e;}
-  }
-
-  @-webkit-keyframes $name {
-    0% {background-color: white;}
-    20% {background-color: $color-a;}
-    40% {background-color: inverse($color-b);}
-    60% {background-color: $color-c;}
-    80% {background-color: $color-d;}
-    100% {background-color: $color-e;}
-  }
-}
-
-@-webkit-keyframes pulsate {
-    0% {background: black}
-    20% {background: red}
-    40% {background: blue}
-    60% {background: orange}
-    80% {background: green}
-    100% {background: black}
-}
-@-moz-keyframes pulsate {
-    0% {background: black}
-    20% {background: red}
-    40% {background: blue}
-    60% {background: orange}
-    80% {background: green}
-    100% {background: black}
-}
-@keyframes pulsate {
-    0% {background: black}
-    20% {background: red}
-    40% {background: blue}
-    60% {background: orange}
-    80% {background: green}
-    100% {background: black}
-}
-
-// Define Keyframes for color fade in
-@include color-shift-frames("color-shift", "rgba(255,83,13,1)", "rgba(232,44,12,1)", "rgba(255,0,0,1)", "rgba(232,12,122,1)", "rgba(255,13,255,1)");
-@include analogous-colors('.teaser',$base-color, $num-swatches, 10, 'reverse');
 //Background Variants
+@include analogous-colors('.teaser', $base-color, $num-swatches, 10, 'reverse'); //class name, property name. starting color, iteration count, color shift amount, direction
+
 //Start teaser as a solid color and fade into another while fading in title
-article.swatch-a {
-  background: rgba(255,83,13,1);
-  @include color-shift("color-shift", "rgba(255,83,13,1)", "rgba(232,44,12,1)", "rgba(255,0,0,1)", "rgba(232,12,122,1)", "rgba(255,13,255,1)");
+article.swatch-* {
 
-  .article-content {
-    p {
-      color: $body-font-color;
-    }
-  }
-}
-
-article.swatch-b {
-  background: rgba(232,44,12,1);
-  @include color-shift("color-shift", "rgba(232,44,12,1)", "rgba(255,0,0,1)", "rgba(232,12,122,1)", "rgba(255,13,255,1)", "rgba(255,83,13,1)");
-
-  .article-content {
-    p{
-      color: $body-font-color;
-    }
-  }
-}
-
-article.swatch-c {
-  background: rgba(255,0,0,1);
-
-  .article-content {
-    p{
-      color: $body-font-color;
-    }
-  }
-}
-
-article.swatch-d {
-  background: rgba(232,12,122,1);
-
-  .article-content {
-    p {
-      color: $body-font-color;
-    }
-  }
-}
-
-article.swatch-e {
-  background: rgba(255,13,255,1);
-
-  .article-content {
-    p {
-      color: $body-font-color;
-    }
-  }
 }
 
 // Teaser block styles
@@ -152,12 +42,16 @@ article.swatch-e {
       padding: $gutter-size;
       h1,
       h2 {
+      @include breakpoint(I---I){
+        font-size: 75%;
+      }
         a {
           &:hover {
 
           }
         }
       }
+
       .more {
         text-align: right;
         a {
@@ -167,6 +61,7 @@ article.swatch-e {
           @include gams-button($button-color, "default", $button-font-color);
         }
       }
+
       .meta {
         font-family: $body-font;
         font-weight: normal;
