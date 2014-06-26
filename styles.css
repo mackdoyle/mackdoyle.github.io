@@ -3296,6 +3296,9 @@ h1 + hr {
       .teaser header .title h1,
       .teaser header .title h2 {
         font-size: 75%; } }
+    .teaser header .title h1 a,
+    .teaser header .title h2 a {
+      color: white; }
     .teaser header .title .more {
       text-align: right; }
       .teaser header .title .more a {
