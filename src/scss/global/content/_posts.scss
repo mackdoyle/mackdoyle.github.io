@@ -16,6 +16,7 @@
 // background-attachment: scroll, fixed;
 
 // Posts
+  // --------------------------------------------
 .post {
   height: 100%;
 
@@ -24,8 +25,10 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  // Header
+  // ------------------------------------------
   header {
-    // Wrapper for positioning head and sub-head, since <header> is use for bkg
+    // Wrapper for positioning head and sub-head, since <header> is used for bkg
     .title {
       max-width: 768px;
       margin: 44px auto 0 auto;
@@ -55,11 +58,10 @@
   }
 
   // Main Content
+  // ------------------------------------------
   .article-content {
     position: relative;
-    background: $body-color;
     width: 100%;
-    padding-top: 44px;
 
     .paragraph-measure {
       max-width: 768px;
@@ -74,8 +76,9 @@
     }
   }
 
+  // Footer
+  // ------------------------------------------
   footer {
     position: relative;
-    background: $body-color;
   }
 }

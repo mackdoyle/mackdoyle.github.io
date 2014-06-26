@@ -1,21 +1,21 @@
-/**
- * Typography
- *
- * Baseline Quick Reference (for 36px headline):
- * PX  |  REM  | Height | Bottom
- * ---------------------------
- * 36  | 2.250 |  1.2   |   0.0
- * 18  | 1.125 |  2.0   |   0.0
- * 12  | 0.750 |  4.0   |   0.0
- *
- * font-rhythm mixin usage:
- * font-size = [num], line-height = font-size * [num], margin-bottom = font-size * [num]
- */
+////
+ // Typography
+ //
+ // Baseline Quick Reference (for 36px headline):
+ // PX  |  REM  | Height | Bottom
+ // ---------------------------
+ // 36  | 2.250 |  1.2   |   0.0
+ // 18  | 1.125 |  2.0   |   0.0
+ // 12  | 0.750 |  4.0   |   0.0
+ //
+ // font-rhythm mixin usage:
+ // font-size = [num], line-height = font-size * [num], margin-bottom = font-size * [num]
+ ////
 
-//@import url("http://fonts.googleapis.com/css?family=Playfair+Display|Gilda+Display|Lora|PT+Serif|Droid+Serif|Old+Standard+TT");
+// @import url("http://fonts.googleapis.com/css?family=Playfair+Display|Gilda+Display|Lora|PT+Serif|Droid+Serif|Old+Standard+TT");
 
 // The baseline grid height to fit text to
-$baseline-height: 2;
+$baseline-height: 2.1;
 
 body {
   font-family: $body-font;
@@ -104,7 +104,7 @@ abbr, acronym {
 
 address {
   display: block;
-  margin: 0 0 ($line-height / 2);
+  margin: 0 0 ($baseline-height / 2);
 }
 
 hgroup {
@@ -118,8 +118,8 @@ del {
 blockquote {
   border-left: 2px solid $border-color;
   color: lighten($body-font-color, 15);
-  margin: $line-height 0;
-  padding-left: $line-height / 2;
+  margin: $baseline-height 0;
+  padding-left: $baseline-height / 2;
 }
 
 cite {

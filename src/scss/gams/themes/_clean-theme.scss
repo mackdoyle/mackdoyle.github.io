@@ -20,7 +20,8 @@
 
 // Colors
 // --------------------------------------------------------------------------------- *
-// Base Colors
+  $base-color: rgba(255,83,13,1); // All theme colors derive from this color
+
   $alert: #FBE3E4;
   $notice: #FFF6BF;
   $success: #E6EFC2;
@@ -48,16 +49,16 @@
   $aside-font-color: $light-gray;
   $header-font-color: #efefef;
   $block-font-color: $medium-blue;
-  $body-headline-color: darkest-gray;
+  $body-headline-color: $darkest-gray;
   $aside-headline-color: $light-gray;
   $block-headline-color: $light-gray;
   $accent-color: $medium-gray;
 
 // Text Link Colors
 // -------------------------- *
-  $link-color: $lightest-blue;
+  $link-color: $base-color;
   $link-color-hover: darken($link-color, 15);
-  $aside-link-color: $lightest-blue;
+  $aside-link-color: $base-color;
   $aside-link-color-hover: lighten($aside-link-color, 15);
 
 // Border color
@@ -66,10 +67,10 @@
 
 // Button colors
 // -------------------------- *
-  $button-color: $lightest-blue;
-  $button-font-color: $dark-blue;
-  $tag-color: $medium-blue;
-  $tag-font-color: $lightest-gray;
+  $button-color: $base-color;
+  $button-font-color: darken($base-color, 30);
+  $tag-color: $base-color;
+  $tag-font-color: darken($base-color, 30);
 
 
 // Flash Colors

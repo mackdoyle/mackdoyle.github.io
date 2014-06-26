@@ -6,21 +6,6 @@
  * is not meant to define any styles itself. (Unless you are reading this from the compiled css)
  *
  */
-/**
- * De-Opninionate unifies Eric Meyer's Reset.css and some styles from Nicolas
- * Gallagher/Jonathan Neal's Normalize.css with other styles to create a single file
- * of the most common styles that are dropped into every project.
- *
- * This file adds additional layout concepts like border-box: padding-box.
- *
- * Why not just include reset.css and normalize.css as seperate files?
- * 1. Combining them reduces the number total style declarations
- * 2. Not all of normalize is always needed
- * 3. File mgt is easier with a single file to move from project to project
- *
- * Reset.css - meyerweb.com/eric/tools/css/reset/
- * Normalize.css - git.io/normalize
- */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -45,11 +30,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Correct `inline-block` display not defined in IE 8/9. */
 audio, canvas, progress, video {
   display: inline-block; }
-
-/* Prevent modern browsers from displaying `audio` without controls. * Remove excess height in iOS 5 devices. */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
 
 /* Address `[hidden]` styling not present in IE 8/9. * Hide the `template` element in IE, Safari, and Firefox < 22. */
 [hidden], template {
@@ -129,19 +109,6 @@ table {
     .slides-pagination a.current {
       background: #222; }
 
-/**
- * Gams
- * Updated: 12-27-2013
- * @author Jason Doyle
- * @version 0.1
-
- * Gams is a boilerplate Scss library extended from Bitters. It is meant to be dropped
- * into a new project and give you a nice starting point.
- * By design, Gams only effects standard tags. So no class definitions need to be added to use it.
-
- * Learn more about Bitters (bitters.bourbon.io)
- * Requires Bourbon (bourbon.io)
- */
 /* FONT PATH
  * -------------------------- */
 @font-face {
@@ -2223,19 +2190,6 @@ Another option is to use this trick:
   src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-/**
- * Typography
- *
- * Baseline Quick Reference (for 36px headline):
- * PX  |  REM  | Height | Bottom
- * ---------------------------
- * 36  | 2.250 |  1.2   |   0.0
- * 18  | 1.125 |  2.0   |   0.0
- * 12  | 0.750 |  4.0   |   0.0
- *
- * font-rhythm mixin usage:
- * font-size = [num], line-height = font-size * [num], margin-bottom = font-size * [num]
- */
 body {
   font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 100%;
@@ -2250,16 +2204,16 @@ body {
 
 h1, h2, h3, h4, h5, h6, h1 a {
   font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
-  color: darkest-gray;
+  color: #101010;
   margin: 0; }
 
 h1 {
   font-weight: 200;
-  font-size: 48px !important;
-  line-height: 48px;
+  font-size: 50.4px !important;
+  line-height: 50.4px;
   margin-bottom: 0px;
-  font-size: 3rem !important;
-  line-height: 3rem;
+  font-size: 3.15rem !important;
+  line-height: 3.15rem;
   margin-bottom: 0rem; }
   @media (max-width: 600px) {
     h1 {
@@ -2267,85 +2221,85 @@ h1 {
 
 h2 {
   font-weight: 300;
-  font-size: 27.2px !important;
-  line-height: 32px;
-  margin-bottom: 8px;
-  font-size: 1.7rem !important;
-  line-height: 2rem;
-  margin-bottom: 0.5rem; }
+  font-size: 28.56px !important;
+  line-height: 33.6px;
+  margin-bottom: 8.4px;
+  font-size: 1.785rem !important;
+  line-height: 2.1rem;
+  margin-bottom: 0.525rem; }
 
 h3 {
   font-weight: 500;
-  font-size: 24px !important;
-  line-height: 32px;
-  margin-bottom: 8px;
-  font-size: 1.5rem !important;
-  line-height: 2rem;
-  margin-bottom: 0.5rem; }
+  font-size: 25.2px !important;
+  line-height: 33.6px;
+  margin-bottom: 8.4px;
+  font-size: 1.575rem !important;
+  line-height: 2.1rem;
+  margin-bottom: 0.525rem; }
 
 h4, h5, h6 {
-  font-size: 16px !important;
-  line-height: 32px;
-  margin-bottom: 8px;
-  font-size: 1rem !important;
-  line-height: 2rem;
-  margin-bottom: 0.5rem; }
+  font-size: 16.8px !important;
+  line-height: 33.6px;
+  margin-bottom: 8.4px;
+  font-size: 1.05rem !important;
+  line-height: 2.1rem;
+  margin-bottom: 0.525rem; }
 
 header p {
   font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
-  color: darkest-gray;
-  font-size: 24px !important;
-  line-height: 24px;
+  color: #101010;
+  font-size: 25.2px !important;
+  line-height: 25.2px;
   margin-bottom: 0px;
-  font-size: 1.5rem !important;
-  line-height: 1.5rem;
+  font-size: 1.575rem !important;
+  line-height: 1.575rem;
   margin-bottom: 0rem; }
 
 .meta {
-  color: darkest-gray;
+  color: #101010;
   font-size: 12px !important;
-  line-height: 32px;
+  line-height: 33.6px;
   margin-bottom: 0px;
   font-size: 0.75rem !important;
-  line-height: 2rem;
+  line-height: 2.1rem;
   margin-bottom: 0rem; }
 
 .box header .meta {
   font-size: 12px !important;
-  line-height: 32px;
+  line-height: 33.6px;
   margin-bottom: 0px;
   font-size: 0.75rem !important;
-  line-height: 2rem;
+  line-height: 2.1rem;
   margin-bottom: 0rem; }
 
 p {
   font-size: 18px !important;
-  line-height: 32px;
-  margin-bottom: 32px;
+  line-height: 33.6px;
+  margin-bottom: 33.6px;
   font-size: 1.125rem !important;
-  line-height: 2rem;
-  margin-bottom: 2rem; }
+  line-height: 2.1rem;
+  margin-bottom: 2.1rem; }
 
 .box p {
   font-size: 18px !important;
-  line-height: 32px;
-  margin-bottom: 24px;
+  line-height: 33.6px;
+  margin-bottom: 25.2px;
   font-size: 1.125rem !important;
-  line-height: 2rem;
-  margin-bottom: 1.5rem; }
+  line-height: 2.1rem;
+  margin-bottom: 1.575rem; }
 
 a {
-  color: #dee2e6;
+  color: #ff530d;
   text-decoration: none;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
   a:hover {
-    color: #b2bcc5;
+    color: #c03700;
     -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out; }
   a:active, a:focus {
-    color: #b2bcc5;
+    color: #c03700;
     outline: none; }
 
 abbr, acronym {
@@ -2354,7 +2308,7 @@ abbr, acronym {
 
 address {
   display: block;
-  margin: 0 0 18px; }
+  margin: 0 0 1.05; }
 
 hgroup {
   margin-bottom: 24px;
@@ -2366,8 +2320,8 @@ del {
 blockquote {
   border-left: 2px solid #c3ced2;
   color: #464646;
-  margin: 36px 0;
-  padding-left: 18px; }
+  margin: 2.1 0;
+  padding-left: 1.05; }
 
 cite {
   color: #606060;
@@ -2376,7 +2330,7 @@ cite {
     content: '\2014 \00A0'; }
 
 section, p img {
-  margin-bottom: 2rem; }
+  margin-bottom: 2.1rem; }
 
 fieldset {
   background: #e0e6e8;
@@ -3204,7 +3158,7 @@ section {
 
 /* global/content/content */
 .highlight {
-  margin: 2rem auto;
+  margin: 2.1rem auto;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
 
 .inline {
@@ -3284,27 +3238,6 @@ h1 + hr {
     border: 2px dashed #4b034b;
     box-shadow: 0 0 0 2px #890471; }
 
-.darken-a {
-  background: #fafafa; }
-
-.darken-b {
-  background: whitesmoke; }
-
-.darken-c {
-  background: #f0f0f0; }
-
-.darken-d {
-  background: #ebebeb; }
-
-.darken-e {
-  background: #e6e6e6; }
-
-.darken-f {
-  background: #e0e0e0; }
-
-.darken-g {
-  background: #dbdbdb; }
-
 /**
  *
  * Site Specific Modal Style
@@ -3330,7 +3263,7 @@ h1 + hr {
     padding: 15px; }
   .post header h1,
   .post header h2 {
-    color: darkest-gray; }
+    color: #101010; }
     @media (max-width: 768px) {
       .post header h1,
       .post header h2 {
@@ -3344,9 +3277,7 @@ h1 + hr {
     font-weight: normal; }
   .post .article-content {
     position: relative;
-    background: white;
-    width: 100%;
-    padding-top: 44px; }
+    width: 100%; }
     .post .article-content .paragraph-measure {
       max-width: 768px;
       margin: 0 auto; }
@@ -3355,8 +3286,7 @@ h1 + hr {
       .post .article-content p a {
         font-weight: bold; }
   .post footer {
-    position: relative;
-    background: white; }
+    position: relative; }
 
 @-webkit-keyframes pulsate {
   0% {
@@ -3445,9 +3375,6 @@ h1 + hr {
 .teaser:nth-child(5) {
   background: #ff0d91; }
 
-.teaser:nth-child(6) {
-  background: #ff0db9; }
-
 article.swatch-a {
   background: #ff530d;
   -webkit-animation-name: "color-shift";
@@ -3509,17 +3436,14 @@ article.swatch-e {
   .teaser header .title {
     text-align: center;
     padding: 15px; }
-    .teaser header .title h1 a:hover,
-    .teaser header .title h2 a:hover {
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
     .teaser header .title .more {
       text-align: right; }
       .teaser header .title .more a {
         position: relative;
         text-decoration: none;
         white-space: nowrap;
-        background: #dee2e6;
-        color: #27292b;
+        background: #ff530d;
+        color: #732100;
         text-align: center;
         text-transform: uppercase;
         max-width: 125px;
@@ -3529,7 +3453,7 @@ article.swatch-e {
         -webkit-transition: all 0.25s ease-in-out;
         transition: all 0.25s ease-in-out; }
         .teaser header .title .more a:hover {
-          background: #fbfbfc; }
+          background: #ff7740; }
     .teaser header .title .meta {
       font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
       font-weight: normal; }
@@ -3546,8 +3470,8 @@ article.swatch-e {
   line-height: 16px;
   vertical-align: middle; }
   .teaser .category-list-container .categories li:not(.first) a {
-    background: #37414b;
-    color: #fdfdff;
+    background: #ff530d;
+    color: #732100;
     text-align: center;
     vertical-align: middle;
     padding: 3px 12px;
@@ -3557,7 +3481,7 @@ article.swatch-e {
     -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out; }
     .teaser .category-list-container .categories li:not(.first) a:hover {
-      background: #21272e; }
+      background: #d93f00; }
 
 /**
  * global/header/top-bar
@@ -3617,7 +3541,7 @@ article.swatch-e {
     .top-bar .title .name {
       font-weight: normal;
       font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
-      color: darkest-gray;
+      color: #101010;
       font-size: 20.8px !important;
       line-height: 24px;
       margin-bottom: 0px;
@@ -3645,9 +3569,9 @@ article.swatch-e {
         line-height: 44px;
         vertical-align: middle; }
         .top-bar .links li a:before {
-          color: #dee2e6; }
+          color: #ff530d; }
         .top-bar .links li a:hover:before {
-          color: #b2bcc5; }
+          color: #c03700; }
 
 .hero {
   position: relative;
