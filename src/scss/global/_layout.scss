@@ -9,11 +9,7 @@
 
   margin: 0 auto;
   padding: 0;
-  @include breakpoint(I---I) {
-    height:100%;
-    overflow-y: scroll; //intertia scrolling on iOS
-    -webkit-overflow-scrolling: touch;
-  }
+
 }
 
 .sidebar-container {
