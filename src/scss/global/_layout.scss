@@ -6,9 +6,11 @@
 .container {
   position: relative;
   width: 100%;
+
   margin: 0 auto;
   padding: 0;
   @include breakpoint(I---I) {
+    height:100%;
     overflow-y: scroll; //intertia scrolling on iOS
     -webkit-overflow-scrolling: touch;
   }
@@ -41,6 +43,7 @@
     margin-left: 0;
     width: 100%;
     max-width: 100%;
+    height:100%;
   }
 
   .article-content,

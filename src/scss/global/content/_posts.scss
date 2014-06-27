@@ -20,10 +20,12 @@
 .post {
   height: 100%;
 
+/*
   @include breakpoint(I---I) {
     overflow-y: scroll; //intertia scrolling on iOS
     -webkit-overflow-scrolling: touch;
   }
+*/
 
   // Header
   // ------------------------------------------
