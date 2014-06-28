@@ -16,9 +16,9 @@ $top-bar-height: 44px;
   position: fixed;
   top: 0;
   left: 0;
-  height: $top-bar-height;
+  //height: $top-bar-height;
   z-index: 3;
-  padding: 0 $gutter-size !important;
+  //padding: 0 $gutter-size !important;
 
   .title {
     float: left;
@@ -42,12 +42,13 @@ $top-bar-height: 44px;
   }
 
   .links {
-    float: right;
-    margin-right: $top-bar-height;
+    text-align:center;
+    //@include vendor-prefix("radial-gradient","(gray 10%, transparent 65%)","background");
+    background: $body-color;
     li{
-      display: inline-block;
       line-height: $top-bar-height;
-      margin-right: $top-bar-height / 4;
+      width: $top-bar-height;
+      //margin-right: $top-bar-height / 4;
       a{
         font-size: 24px;
         line-height: $top-bar-height;

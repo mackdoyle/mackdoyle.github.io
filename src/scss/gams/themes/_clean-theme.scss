@@ -69,7 +69,7 @@
 // -------------------------- *
   $button-color: $base-color;
   $button-font-color: darken($base-color, 30);
-  $tag-color: $base-color;
+  $tag-color: lighten($base-color, 30);
   $tag-font-color: darken($base-color, 30);
 
 

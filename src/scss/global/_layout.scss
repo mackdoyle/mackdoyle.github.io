@@ -6,10 +6,12 @@
 .container {
   position: relative;
   width: 100%;
-
   margin: 0 auto;
   padding: 0;
-
+  // CAREFUL - This will cause document.scroll to not work. Scroll on body.scroll instead
+  overflow-y: scroll; //intertia scrolling on iOS
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
 }
 
 .sidebar-container {

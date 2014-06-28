@@ -1,0 +1,41 @@
+// Creates a 3-d extrusion with shadow
+
+@mizin shady() {
+
+$stroke-color: rgba(255,255,255,0.5);
+$thickness-color: rgb(180, 180, 180);
+$shadow-color: rgba(0,0,0,0.4);
+
+  text-shadow:
+   /**
+   * Faking a stroke wth text-shadows is helpful on fonts
+   * with overlapping letters since the text-stroke property
+   * will overlap the strokes.
+   */
+    -1px -1px 0 $stroke-color,
+    0 -2px 0 $stroke-color,
+    1px -1px 0 $stroke-color,
+    2px 0 0 $stroke-color,
+    1px 1px 0 $stroke-color,
+    0 2px 0 $stroke-color,
+    -1px 1px 0 $stroke-color,
+    -1px 0 0 $stroke-color,
+
+   // Extrusion
+    .00rem 2px 0px $thickness-color,
+    .02rem 4px 0px $thickness-color,
+    .04rem 6px 0px $thickness-color,
+    .06rem 8px 0px $thickness-color,
+    .08rem 10px 0px $thickness-color,
+    .1rem 12px 0px $thickness-color,
+
+
+    // Actual shadow
+    2px 13px 2px darken($shadow-color, 100%),
+    4px 12px 4px $shadow-color,
+    10px 12px 6px $shadow-color;
+
+  perspective: 50em;
+  -webkit-transform: scaleY(-1.6);
+  -webkit-transform: skewX(-10deg);
+}

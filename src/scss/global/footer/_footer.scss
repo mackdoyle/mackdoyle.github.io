@@ -1,0 +1,36 @@
+//
+// ----------------------------------------------
+// Footer Styles
+// ----------------------------------------------
+
+footer{
+  padding: $gutter-size;
+
+  .paging{
+    text-align: center;
+
+    .footer-col {
+      display: inline-block;
+      margin: $gutter-size;
+    }
+  }
+
+  // Category List
+  .category-list-container {
+    .categories {
+      font-size: 12px;
+      line-height: 16px;
+      vertical-align: middle;
+      li {
+        display: inline-block;
+        margin-left: $gutter-size;
+      }
+      li:not(.first) {
+        a {
+          @include gams-pillbox($tag-color, "default", $tag-font-color);
+        }
+      }
+    }
+  }
+
+}

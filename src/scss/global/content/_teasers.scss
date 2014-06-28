@@ -73,29 +73,5 @@ article.swatch-* {
   .article-teaser-content {
     padding: $gutter-size;
   }
-
-  footer {
-    display: table;
-    vertical-align: middle;
-    width:100%;
-    .footer-col {
-      display: table-cell;
-    }
-  }
-
-
-  // Category List
-  .category-list-container {
-    .categories {
-      font-size: 12px;
-      line-height: 16px;
-      vertical-align: middle;
-      li:not(.first) {
-        a {
-          @include gams-pillbox($tag-color, "default", $tag-font-color);
-        }
-      }
-    }
-  }
 }
 

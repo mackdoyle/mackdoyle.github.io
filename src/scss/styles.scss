@@ -9,7 +9,7 @@
 // Base Files (Styles that are dropped into most projects)
 // -------------------------- *
 @import
-    "base/deopinionate";
+  "base/deopinionate";
 
 // Vendor Dependencies
 @import
@@ -24,7 +24,8 @@
 	"global/layout",
 	"global/content/content",
   "global/header/top-bar",
-  "global/header/hero";
+  "global/header/hero",
+  "global/footer/footer";
 
 // Overrides - Load Last
 @import

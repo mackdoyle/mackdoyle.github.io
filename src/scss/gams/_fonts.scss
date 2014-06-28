@@ -1,7 +1,7 @@
 
 // Font Declarations
 // -------------------------- *
-$font-path: "../fonts";
+$font-path: "/assets/fonts";
 
 /* Serif */
 /*
@@ -223,7 +223,7 @@ $font-path: "../fonts";
     }
 	}
 
-/* Icons */
+/* Icons
   @font-face {
     font-family: "FontAwesome";
     src:  url("#{$font-path}/fontawesome/fontawesome-webfont.eot?v=4.1.0");
@@ -234,3 +234,4 @@ $font-path: "../fonts";
     font-weight: normal;
     font-style: normal;
   }
+  */

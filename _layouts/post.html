@@ -16,26 +16,31 @@ layout: default
     </div>
   </header>
 
-  <div class="article-content">
+  <div id="article-content" class="article-content">
+    <span id="wrapped" style="float:left"></span>
     <div class="paragraph-measure">
       {{ content }}
     </div>
   </div>
 
   <footer>
-  	{% if page.previous %}
-	    <div class="footer-col"><a rel=prev href="{{ page.previous.url }}">&larr; Prev Article</a></div>
-	  {% endif %}
-	  {% if page.next %}
-	    <div class="footer-col"><a rel=next href="{{ page.next.url }}">&rarr; Next Article</a></div>
-	  {% endif %}
+    <div class="paging">
+    	{% if page.previous %}
+  	    <div class="footer-col"><a rel=prev href="{{ page.previous.url }}">&larr; Prev Post</a></div>
+  	  {% endif %}
+  	  {% if page.next %}
+  	    <div class="footer-col"><a rel=next href="{{ page.next.url }}">Next Post &rarr;</a></div>
+  	  {% endif %}
+    </div>
 
-	  {% if page.categories.size > 0 %}
-	    <div class="footer-col">{% include widgets/pageCategoryList.html %}</div>
-	  {% endif %}
-    {% if page.tags.size > 0 %}
-      <div class="footer-col">{% include widgets/pageTagList.html %}</div>
-    {% endif %}
+    <div class="tags">
+  	  {% if page.categories.size > 0 %}
+  	    <div class="footer-col">{% include widgets/pageCategoryList.html %}</div>
+  	  {% endif %}
+      {% if page.tags.size > 0 %}
+        <div class="footer-col">{% include widgets/pageTagList.html %}</div>
+      {% endif %}
+    </div>
   </footer>
 </article>
 
