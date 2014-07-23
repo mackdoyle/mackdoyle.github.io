@@ -53,8 +53,8 @@
   }
 }
 
-.content-container.draft {
-  @include baseline-it(36, 240, 190, 190, 15, 1); //Baseline Grid for type testing
+.content-container .baseline {
+  @include baseline-it(34, 100, 100, 100, 22, 0); //Baseline Grid for type testing
 }
 
 .contain-to-grid {

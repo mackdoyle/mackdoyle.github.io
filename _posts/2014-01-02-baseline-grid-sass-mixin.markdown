@@ -1,10 +1,9 @@
 ---
-layout: post
+layout: baseline
 title:  "Baseline Grid Sass Mixin"
 date:   2014-01-02 20:00:00
 author: Jason Doyle
 categories: css
-theme: swatch-d
 ---
 
 

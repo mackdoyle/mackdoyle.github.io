@@ -11,6 +11,7 @@
  *
  * @Todo:
  * 1. Convert to coffescript at some point
+ * 2. Modularize grunt file with load-grunt-config - http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/
  *
  * Possible packages to add...
  * grunt-responsive-images - For generating multi-resolution images at predefined widths. For use with srcset or a responsive imaging strategy like Imager.js
@@ -209,13 +210,6 @@ module.exports = function(grunt) {
      * As a last step, break the final css file into two if it's too big for IE.
      * The second file is included in the first so no need to muck with the header include
      */
-
-/*
-    files: [{
-      src: ['*.css', '!*.min.css'], dest: 'resources/front/css/'
-    }]
-*/
-
 
     bless: {
       css: {

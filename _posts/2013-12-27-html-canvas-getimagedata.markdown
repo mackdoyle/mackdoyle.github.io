@@ -9,7 +9,9 @@ theme: swatch-b
 
 For my Sassy Annotations mixin, I wanted to color them the inverse of the image they sat upon. To accomplish this I would need to find a way to access the pixel data of the image, get the average color value and set the annotations to the inverse of that value.
 
-I knew to start looking at the HTML5 Canvas for the solution but I had a chance to play with it. So here is what I came up with. It demonstrates how to use the getImageData() method for obtaining image information as well as how to deal with support for remotely hosted images using CORS.
+I knew to start looking at the HTML5 Canvas for the solution but hadn't had a chance to play with it.
+So here is what I came up with. It demonstrates how to use the getImageData() method for obtaining image
+information as well as how to deal with support for remotely hosted images using CORS.
 
 	{% highlight javascript %}
 

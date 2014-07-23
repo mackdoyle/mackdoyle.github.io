@@ -7,7 +7,6 @@
  *
  */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -2271,11 +2270,9 @@ p {
 a {
   color: #ff530d;
   text-decoration: none;
-  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
   a:hover {
     color: #c03700;
-    -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out; }
   a:active, a:focus {
     color: #c03700;
@@ -2453,7 +2450,6 @@ pre.terminal code {
   bottom: 0;
   left: 0;
   z-index: 1;
-  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7));
   background: radial-gradient(rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7)); }
 
 /**
@@ -2502,11 +2498,11 @@ pre.terminal code {
     .content-container footer {
       padding: 0 15px; } }
 
-.content-container.draft {
-  background-image: url("http://basehold.it/i/36/240/190/190");
-  background-position-y: 15px; }
-  .content-container.draft:active {
-    background-image: inherit; }
+.content-container .baseline {
+  background-image: inherit; }
+  .content-container .baseline:active {
+    background-image: url("http://basehold.it/i/34/100/100/100");
+    background-position-y: 22px; }
 
 .contain-to-grid {
   background: #101010; }
@@ -3085,7 +3081,6 @@ section {
     color: rgba(0, 0, 0, 0.6);
     z-index: 10;
     box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
-    -webkit-transition: box-shadow .2s;
     transition: box-shadow .2s; }
   section .annotation-two {
     position: relative;
@@ -3101,7 +3096,6 @@ section {
     color: rgba(0, 0, 0, 0.6);
     z-index: 10;
     box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
-    -webkit-transition: box-shadow .2s;
     transition: box-shadow .2s; }
   section .annotation-three {
     position: relative;
@@ -3117,7 +3111,6 @@ section {
     color: rgba(0, 0, 0, 0.6);
     z-index: 10;
     box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
-    -webkit-transition: box-shadow .2s;
     transition: box-shadow .2s; }
   section .annotation-four {
     position: relative;
@@ -3133,10 +3126,8 @@ section {
     color: rgba(0, 0, 0, 0.6);
     z-index: 10;
     box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
-    -webkit-transition: box-shadow .2s;
     transition: box-shadow .2s; }
 
-/* global/content/content */
 .meta {
   color: #101010;
   font-size: 12px !important;
@@ -3192,7 +3183,7 @@ h1 + hr {
   position: fixed;
   overflow: hidden;
   top: 5%;
-  left: 1050px;
+  left: 1080px;
   height: 100px;
   line-height: 100px;
   padding: 0 1.5% 0 1%;
@@ -3215,21 +3206,21 @@ h1 + hr {
     top: 0px;
     left: -20px;
     z-index: 5;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4); }
   .post-note:after {
     width: 98%;
     height: 50%;
-    background: #890471;
+    background: #238dbb;
     position: absolute;
     content: "";
     left: 0;
     top: 25%;
     z-index: -1;
     border-radius: 0 16px 16px 0;
-    border: 2px dashed #4b034b;
-    box-shadow: 0 0 0 2px #890471; }
+    border: 2px dashed #0f3c4f;
+    box-shadow: 0 0 0 2px #238dbb; }
 
 /**
  *
@@ -3309,6 +3300,8 @@ h1 + hr {
     .teaser header .title h1 a,
     .teaser header .title h2 a {
       color: white; }
+    .teaser header .title p {
+      color: white; }
     .teaser header .title .more {
       text-align: right; }
       .teaser header .title .more a {
@@ -3323,7 +3316,6 @@ h1 + hr {
         font-size: .8rem;
         display: inline-block;
         padding: 0 1.5rem;
-        -webkit-transition: all 0.25s ease-in-out;
         transition: all 0.25s ease-in-out; }
         .teaser header .title .more a:hover {
           background: #ff7740; }
@@ -3343,6 +3335,12 @@ h1 + hr {
 .mobile-menu {
   display: none; }
 
+/* Not in use
+.navbar-fixed {
+  position: fixed;
+  top: -44px;
+}
+*/
 .top-bar {
   position: fixed;
   top: 0;
@@ -3455,7 +3453,6 @@ footer {
       border-radius: 3px;
       font-size: 12px;
       line-height: 16px;
-      -webkit-transition: all 0.25s ease-in-out;
       transition: all 0.25s ease-in-out; }
       footer .category-list-container .categories li:not(.first) a:hover {
         background: #ff9b73; }
