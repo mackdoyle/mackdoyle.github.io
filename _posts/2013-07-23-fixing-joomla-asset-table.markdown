@@ -3,7 +3,7 @@ layout: post
 title:  "Fixing Joomla Asset Table Issues"
 sub-title: "Those finally getting around to upgrading from the ancient Joomla 1.6 platform may be scratching their heads in confusion. This article take a deep dive into the problem and, hopefully, offer some solutions"
 author: Jason Doyle
-date:   2013-12-14 20:04:14
+date:   2013-06-12 20:04:14
 categories: joomla
 theme: swatch-a
 ---

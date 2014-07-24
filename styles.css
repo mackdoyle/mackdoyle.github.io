@@ -3287,6 +3287,18 @@ h1 + hr {
 .teaser:nth-child(5) {
   background: #ff0d91; }
 
+.teaser:nth-child(6) {
+  background: #ff0db9; }
+
+.teaser:nth-child(7) {
+  background: #ff0de1; }
+
+.teaser:nth-child(8) {
+  background: #f40dff; }
+
+.teaser:nth-child(9) {
+  background: #cc0dff; }
+
 .teaser header {
   position: relative;
   width: 100%; }
