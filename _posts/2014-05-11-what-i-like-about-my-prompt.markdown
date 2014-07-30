@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What I like about my prompt setup (iTerm2/z-shell)"
+title:  "What I like about my prompt setup (iTerm2/Z-Shell)"
 date:   2014-5-11 20:00:00
 author: Jason Doyle
 categories: terminal, workflow

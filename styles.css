@@ -1636,7 +1636,7 @@ table {
  * Apply this mixin to the parent
  */
 /**
- * Another option is to use the verticall-center mixin
+ * Another option is to use the vertical-center mixin
  */
 /**
  * Vertically Center Element Mixin
@@ -3272,6 +3272,49 @@ h1 + hr {
   .post footer {
     position: relative; }
 
+#tile-container {
+  font-size: 0;
+  background: #fafafa;
+  padding: 40px 40px 40px 80px; }
+
+.tile {
+  font-size: initial;
+  position: relative;
+  background: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  vertical-align: top;
+  width: 23.5%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  transition: all 0.25s ease-in; }
+  .tile:nth-child(4n) {
+    margin-right: 0; }
+  .tile img {
+    width: 100%;
+    max-width: 100%; }
+  .tile:after {
+    background: transparant;
+    transition: all 0.25s ease-in; }
+  .tile:hover {
+    background: transparant;
+    transition: all 0.25s ease-in; }
+  .tile:hover:after {
+    content: attr(data-text);
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 300px;
+    padding: 0 15px;
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.25s ease-in; }
+
 .teaser:nth-child(1) {
   background: #ff2b0d; }
 
@@ -3399,8 +3442,7 @@ h1 + hr {
     vertical-align: middle;
     box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5); }
   .top-bar .links {
-    text-align: center;
-    background: white; }
+    text-align: center; }
     .top-bar .links li {
       line-height: 44px;
       width: 44px; }

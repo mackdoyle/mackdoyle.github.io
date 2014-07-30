@@ -1,5 +1,4 @@
-# Standard Jekyll Configuration
-# -----------------------------------------------------------------
+# -- Standard Jekyll Configuration
 name: "Home of Jason Doyle"
 permalink: /articles/:title
 encoding: UTF-8
@@ -7,26 +6,37 @@ lsi: TRUE
 highlighter: pygments
 pygments: true
 timezone: America/New_York
-exclude: ['scss', 'CNAME', '.git','.gitignore', '.DS_Store', 'codekit-config.json', '.sublime-project', '.sublime-workspace', '.UlyssesRoot', '.Ulysses-Group.plist', 'Gruntfile.js']
 markdown: rdiscount
+relative_permalinks: false
 
-# Configuration required for some pages
-# -----------------------------------------------------------------
+
+# -- Configuration required for some pages
 domain: jmd.io
 title: Jason Doyle
 author: Jason Doyle
 email: jason@jmd.io
 
-# Social handles
+
+# -- Social handles
 social:
   github: mackdoyle
   twitter: mackdoyle1
   codepen: mackdoyle
 
-# Github Specific Settings
-# -----------------------------------------------------------------
+
+# -- Github Specific Settings
 github:
     username: mackdoyle/mackdoyle.github.io
+
+
+# -- Google Analytics
+account: UA-52530016-1
+
+
+# Files/Directories to ignore
+# -----------------------------------------------------------------
+exclude: ['**/*.log', 'tmp', 'src', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json', 'bower_components', 'codekit-config.json', 'jmd.sublime-project', 'jmd.sublime-workplace','scss', 'CNAME', '.git','.gitignore', '.DS_Store', 'codekit-config.json', '.sublime-project', '.sublime-workspace', '.UlyssesRoot', '.Ulysses-Group.plist', 'Gruntfile.js']
+
 
 # Configuration for enhancements, uncomment to enable
 # -----------------------------------------------------------------
@@ -40,18 +50,4 @@ github:
 # redcarpet allows you to replace {% highlight javascript %} with ```javascript
 # -------------------------->
 
-# <--------------------------
-# feedburner:
-#   id: feedburnerid
-# -------------------------->
-
-# <--------------------------
-# google_analytics:
-#   account: UA-XXXXX-X
-# -------------------------->
-
-
-# Files/Directories to ignore
-# -----------------------------------------------------------------
-exclude: ['**/*.log', 'tmp', 'src', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json', 'bower_components', 'codekit-config.json', 'jmd.sublime-project', 'jmd.sublime-workplace']
 

@@ -1,0 +1,44 @@
+////
+ // global/content/teasers
+ //
+
+// ----------------------------------------------
+// Tiles
+// ----------------------------------------------
+#tile-container {
+  font-size: 0; //removes extra white-space on children inlined elements
+  background: rgba(250,250,250,1);
+  padding: 40px 40px 40px 80px;
+}
+
+.tile {
+  font-size: initial; //resets font size
+  position: relative;
+  background: white;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  @include tiler(4, 2%);
+  @include transition();
+  &:after {
+    background: transparant;
+    @include transition();
+  }
+  &:hover {
+    background: transparant;
+    @include transition();
+  }
+  &:hover{
+    &:after {
+      content: attr(data-text);
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 300px;
+      padding: 0 15px;
+      color: rgba(255,255,255,0.7);
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      background: rgba(0,0,0,0.6);
+      @include transition();
+    }
+  }
+}

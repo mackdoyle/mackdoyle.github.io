@@ -5,7 +5,6 @@ subtitle:  "Understanding the Display of Joomla Modules"
 date:   2014-05-14 20:00:00
 author: Jason Doyle
 categories: joomla, cms, php
-theme: swatch-e
 ---
 
 
@@ -20,6 +19,6 @@ It’s a hack, and it leaves a little distaste in your mouth, but it does work w
 The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to ~/search?q=odds&Itemid=435~. Take note of the ItemID and head over to the Menu Manager for the menu that contain the reference to your home page.  Look in the ID column of the home page menu item and you will see it matches the ItemID.
 
 
-Manually settings the ItemID on the search.
+Manually setting the ItemID on the search.
 
 
