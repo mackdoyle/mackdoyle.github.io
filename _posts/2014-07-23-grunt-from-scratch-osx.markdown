@@ -16,32 +16,32 @@ Node Packet Manager (NPM) is package manger used by Node.js and is used to insta
 ###Install Homebrew.
 First check to see if Homebrew is already installed.
 {% highlight python %}
-  # -- Check is brew is installed
+  # Check is brew is installed
 	type -a brew
 {% endhighlight %}
 
 If it is not, install it using the following commands:
 {% highlight python %}
-	# -- Install the xCode command line tools
+	# Install the xCode command line tools
 	xcode-select --install
-	# -- Now install Homebrew
+	# Now install Homebrew
 	ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 {% endhighlight %}
 
 ###Install Node.js and Node Packet Manager.
 First check to see if NPM is already installed.
 {% highlight python %}
-	#-- Check if Node Packat Manager is installed
+	#Check if Node Packat Manager is installed
 	type -a npm
 {% endhighlight %}
 
 If NPM is not found, we assume node.js is also not installed and install it using the following commands:
 {% highlight python %}
-	# -- Install Node (and npm)
+	# Install Node (and npm)
 	brew install node
-	# -- Test that NPM is now installed
+	# Test that NPM is now installed
 	npm -v
-	# -- Note when installing packages using NPM that it has the concept of both local and global installations. Global installations are saved into the /usr folder for use anywhere. Local installations are saved to the current directory for use with specific projects. When installing a package, pass the -g argument to install a package globally.
+	# Note when installing packages using NPM that it has the concept of both local and global installations. Global installations are saved into the /usr folder for use anywhere. Local installations are saved to the current directory for use with specific projects. When installing a package, pass the -g argument to install a package globally.
 {% endhighlight %}
 
 
@@ -55,15 +55,15 @@ Install the Grunt Command Line Interface globally. (don’t forget the -g)
 Verify that the package.json and Grunt.js files have been pulled out of Git into the root of the project on your local dev environment.
 The package.json is configured to tell NPM to install Grunt and the project’s Grunt dependencies. So simply run NPM install from the project root to use it.
 {% highlight python %}
-  cd `/[site_path]/wheretraveler
+  cd /[site_path]/
 	sudo npm install
 {% endhighlight %}
 
-###Run Grunt
+Run Grunt
 {% highlight python %}
-	# -- Change to the project root directory if not alreay there
-	cd `/[site_path]/wheretraveler
-	# -- Run Grunt from the project root to execute the contrib processes used in the project
+	# Change to the project root directory if not alreay there
+	cd /[site_path]
+	# Run Grunt from the project root to execute the contrib processes used in the project
 	grunt
 {% endhighlight %}
 

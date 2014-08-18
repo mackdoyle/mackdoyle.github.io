@@ -1,6 +1,5 @@
 /**
  * global/header/top-bar
- * Site specific overrides of the default Foundation Top Bar styles
  * Theme variables compiled in Gams
  *
  * Mobile Inspiration: http://getrefe.tumblr.com/
@@ -38,7 +37,7 @@ $top-bar-height: 44px;
     }
   }
 
-  .avatar{
+  .avatar {
     overflow: hidden;
     width: 24px;
     height: 24px;

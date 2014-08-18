@@ -1,14 +1,18 @@
 ---
 layout: post
 title:  "Fixing Joomla Permission Issues"
-date:   2014-7-23 20:00:00
+date:   2014-1-17 20:00:00
 author: Jason Doyle
 categories: joomla
 ---
 These are a collection of suggestions found on fairly credible sites. That doesn't mean they are correct.
 
 ##Notes on Apache
-For Apache to see the file, the user that Apache runs as (probably www or _www) must have access to these users' Sites directories. Having read/execute access to the contents of ~ /Sites` is not enough, because it has to be allowed to traverse from / down the path to `/Sites`. So make sure /, /Users/, /Users/myusername/, and /Users/myusername/Sites/ all have at least "a+x" permission (`the eXecute bit on directories allows that user class to traverse the directory, even if Read access is not allowed`).
+For Apache to see a file, the user that Apache runs as (probably www or _www) must have the proper access
+to the site's directories. Having read/execute access to the contents of the site root is not
+enough, because it has to be allowed to traverse from / down the path to the location of the site root.
+When on a mac, make sure /, /Users/, /Users/myusername/, and /Users/myusername/Sites/ all have at least "a+x"
+permission (the eXecute permission on directories allows that user class to traverse the directory, even if Read access is not allowed).
 
 	`ls -lde / /Users/ /Users/myusername/ /Users/myusername/Sites`
 
@@ -16,24 +20,24 @@ If any of those directories doesn't show the last "x" set (the one for "others")
 If the ACL for any of those directories shows that user www has been specifically denied access, then use the appropriate arguments to chmod to fix the ACLs
 
 ##General File Permission Settings
-####With FTP Layer
+###With FTP Layer
 If a joomla installation is hosted on apache with `mod_php`, then all virtual hosts on that server run in the same context as your joomla code. If the files are owned by some other user than 'nobody' or 'wwwrun', the safest permissions are those which prevent changes to the joomla code, unless via an authorized channel (e.g. FTP):
 *DocumentRoot directory: 750 (e.g. `public_html`)
 *Files: 644
 *Directories: 755 (711 if you are paranoid, but not for directories which need to be listed) (owner: some user)
 With these permissions set, you will need to use FTP to update your Joomla installation. Not all modules support this. Remove modules which do not support FTP upgrades.
-Other processes running under `mod_php`can read your configuration.php. You can frustrate automated hacks by renaming this file.
+Other processes running under `mod_php` can read your configuration.php. You can frustrate automated hacks by renaming this file.
 
-####With Fast CGI/suPHP
-* DocumentRoot directory: 750 (e.g. `public_html`)
-* PHP files: 600 (400 if you are truly paranoid)
-* HTML and image files: 644 (444 if you are truly paranoid)
-* Directories: 755 (711 if you are paranoid, but not for directories which need to be listed)
+###With Fast CGI/suPHP
++ DocumentRoot directory: 750 (e.g. `public_html`)
++ PHP files: 600 (400 if you are truly paranoid)
++ HTML and image files: 644 (444 if you are truly paranoid)
++ Directories: 755 (711 if you are paranoid, but not for directories which need to be listed)
 
 ##Set `open_basedir`
 `open_basedir`is not set in php.ini on our servers but should be. It limits the files that can be accessed by PHP to the specified directory. Also, fopen() uses the path to check the location of the file its opening. Also, some permission issues can be resolved by setting the tmp directory on the property as well. Multiple subdirectories can be added, separated by a colon.
 Example:
-`open_basedir=/home/site_name/public_html:/tmp`(must have trailing slash)
+`open_basedir=/home/site_name/public_html:/tmp` (must have trailing slash)
 ##Protect directories and files
 Ensure that all configurable paths to writable or uploadable directories (document repositories, image galleries, caches) are outside of `public_html`.
 

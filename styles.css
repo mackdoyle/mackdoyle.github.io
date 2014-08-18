@@ -2268,14 +2268,14 @@ p {
   margin-bottom: 2rem; }
 
 a {
-  color: #ff530d;
+  color: #ff5385;
   text-decoration: none;
   transition: all 0.25s ease-in-out; }
   a:hover {
-    color: #c03700;
+    color: #ff064f;
     transition: all 0.25s ease-in-out; }
   a:active, a:focus {
-    color: #c03700;
+    color: #ff064f;
     outline: none; }
 
 abbr, acronym {
@@ -2454,7 +2454,6 @@ pre.terminal code {
 
 /**
   * global/layout
-  * Mobile Inspiration: http://getrefe.tumblr.com/
 */
 .container {
   position: relative;
@@ -2465,38 +2464,19 @@ pre.terminal code {
   -webkit-overflow-scrolling: touch;
   height: 100%; }
 
-.sidebar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 275px;
-  height: 100%;
-  padding: 2rem;
-  margin: 0 auto;
-  text-align: center; }
-  @media (max-width: 720px) {
-    .sidebar-container {
-      position: relative;
-      padding: 10px;
-      width: 100%;
-      height: 80px; } }
-
 .content-container {
   position: relative;
   width: 100%;
   margin: 0 auto; }
   @media (max-width: 720px) {
     .content-container {
-      padding: 15px 0;
-      margin-left: 0;
       width: 100%;
       max-width: 100%;
       height: 100%; } }
-  @media (max-width: 720px) {
-    .content-container .article-content,
-    .content-container .article-teaser-content,
-    .content-container footer {
-      padding: 0 15px; } }
+  .content-container .article-content,
+  .content-container .article-teaser-content,
+  .content-container footer {
+    padding: 0 15px 0 40px; }
 
 .content-container .baseline {
   background-image: inherit; }
@@ -3342,6 +3322,13 @@ h1 + hr {
 .teaser:nth-child(9) {
   background: #cc0dff; }
 
+@media (max-width: 1024px) {
+  article.teaser {
+    padding-left: 120px; } }
+@media (max-width: 600px) {
+  article.teaser {
+    padding-left: 60px; } }
+
 .teaser header {
   position: relative;
   width: 100%; }
@@ -3352,17 +3339,20 @@ h1 + hr {
     .teaser header .title h2 {
       font-size: 32px;
       font-size: 2rem; }
-      @media (max-width: 600px) {
-        .teaser header .title h1,
-        .teaser header .title h2 {
-          font-size: 75%; } }
       .teaser header .title h1 a,
       .teaser header .title h2 a {
         color: white; }
+      @media (max-width: 600px) {
+        .teaser header .title h1,
+        .teaser header .title h2 {
+          font-size: 90%; } }
     .teaser header .title p {
       color: white;
       font-size: 22px;
       font-size: 1.5rem; }
+      @media (max-width: 600px) {
+        .teaser header .title p {
+          font-size: 85%; } }
     .teaser header .title .more {
       text-align: right; }
       .teaser header .title .more a {
@@ -3388,7 +3378,6 @@ h1 + hr {
 
 /**
  * global/header/top-bar
- * Site specific overrides of the default Foundation Top Bar styles
  * Theme variables compiled in Gams
  *
  * Mobile Inspiration: http://getrefe.tumblr.com/
@@ -3470,6 +3459,10 @@ h1 + hr {
   -ms-box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)";
   -o-box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)";
   box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)"; }
+  @media (max-width: 600px) {
+    .hero .avatar-container {
+      width: 60px;
+      height: 60px; } }
 .hero .avatar {
   display: block;
   margin: 0 auto;
@@ -3477,9 +3470,6 @@ h1 + hr {
   -o-border-radius: 100%;
   border-radius: 100%; }
 
-@media (max-width: 1024px) {
-  article.teaser {
-    padding-left: 120px; } }
 footer {
   padding: 15px; }
   footer .paging {
