@@ -2,7 +2,7 @@
 layout: post
 title:  "Joomla Module Beatdown"
 subtitle:  "Understanding the Display of Joomla Modules"
-date:   2014-05-14 20:00:00
+date:   2014-01-14 20:00:00
 author: Jason Doyle
 categories: joomla, cms, php
 ---

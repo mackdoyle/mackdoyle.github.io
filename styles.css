@@ -3349,14 +3349,16 @@ h1 + hr {
       @media (max-width: 600px) {
         .teaser header .title h1,
         .teaser header .title h2 {
-          font-size: 1.5rem; } }
+          font-size: 1.5rem;
+          text-align: right; } }
     .teaser header .title p {
       color: white;
       font-size: 22px;
       font-size: 1.5rem; }
       @media (max-width: 600px) {
         .teaser header .title p {
-          font-size: 1.1rem; } }
+          font-size: 1rem;
+          text-align: right; } }
     .teaser header .title .more {
       text-align: right; }
       .teaser header .title .more a {
