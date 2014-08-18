@@ -11,7 +11,7 @@ p code {
 
 pre {
   overflow: auto;
-  padding: 2.25rem .4rem;
+  padding: 2.25rem .8rem;
   @include breakpoint(I---I){
     font-size: 80%;
     line-height: 1rem;

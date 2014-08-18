@@ -41,7 +41,9 @@ If NPM is not found, we assume node.js is also not installed and install it usin
 	brew install node
 	# Test that NPM is now installed
 	npm -v
-	# Note when installing packages using NPM that it has the concept of both local and global installations. Global installations are saved into the /usr folder for use anywhere. Local installations are saved to the current directory for use with specific projects. When installing a package, pass the -g argument to install a package globally.
+	# Note when installing packages using NPM that it has the concept of both local and global installations.
+	# Global installations are saved into the /usr folder for use anywhere. Local installations are saved to the current directory for use with specific projects.
+	# When installing a package, pass the -g argument to install a package globally.
 {% endhighlight %}
 
 

@@ -9,7 +9,7 @@
   padding: 0;
   // CAREFUL - This will cause document.scroll to not work. Scroll on body.scroll instead
   overflow-y: scroll; //intertia scrolling on iOS
-  -webkit-overflow-scrolling: touch;
+  //-webkit-overflow-scrolling: touch;
   height: 100%;
 }
 
@@ -24,9 +24,7 @@
     height:100%;
   }
 
-  .article-content,
-  .article-teaser-content,
-  footer {
+  .post {
     padding: 0 $gutter-size 0 40px;
   }
 }

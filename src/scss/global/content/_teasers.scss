@@ -64,7 +64,7 @@ article.teaser {
         }
 
         @include breakpoint(I---I){
-          font-size: 90%;
+          font-size: 1.5rem;
         }
       }
 
@@ -73,7 +73,7 @@ article.teaser {
         font-size: 22px;
         font-size: 1.5rem;
         @include breakpoint(I---I){
-          font-size: 85%;
+          font-size: 1.1rem;
         }
       }
 

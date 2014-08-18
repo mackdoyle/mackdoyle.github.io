@@ -17,19 +17,26 @@
   background: white;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   @include tiler(4, 2%);
+  @include breakpoint(I-----I){
+    width: 48%;
+	}
+	@include breakpoint(I---I){
+    width: 100%;
+	}
   @include transition();
   &:after {
     background: transparant;
     @include transition();
   }
   &:hover {
-    background: transparant;
+    background: rgba(0,0,0,0);
+    cursor: hand;
     @include transition();
   }
   &:hover{
     &:after {
       content: attr(data-text);
-      font-size: 28px;
+      font-size: 14px;
       font-weight: 700;
       text-align: center;
       line-height: 300px;
@@ -37,7 +44,7 @@
       color: rgba(255,255,255,0.7);
       position: absolute;
       top: 0; bottom: 0; left: 0; right: 0;
-      background: rgba(0,0,0,0.6);
+      background: rgba(133,86,103,0.3);
       @include transition();
     }
   }
