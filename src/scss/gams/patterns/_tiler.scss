@@ -1,6 +1,7 @@
 //==========================================================================
 // Tiles
 // Renders tiles on a grid. It also manages which tiles should and shouldn't have a margin.
+// Based off Cris Coyier's http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
 //
 // 1. Pass the number of tiles you want per row.
 // 2. Pass in the amount of space between the tiles.

@@ -18,10 +18,10 @@
  */
 
 @mixin font-rhythm($size: 1, $line-height: 1.5, $margin-bottom: 0){
-  font-size     : ($size * 16) * 1px !important;
+  font-size     : ($size * 16) * 1px;
   line-height   : ($line-height * 16) * 1px;
   margin-bottom : ($margin-bottom * 16) * 1px;
-  font-size     : $size * 1rem !important;
+  font-size     : $size * 1rem;
   line-height   : $line-height * 1rem;
   margin-bottom : $margin-bottom * 1rem;
 }

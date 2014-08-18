@@ -13,7 +13,7 @@ some of the pain points you will encounter when working with popular Grunt tasks
 ##Part 1. Installing Node Package Manager (NPM)
 Node Packet Manager (NPM) is package manger used by Node.js and is used to install Grunt, among other things. If you do not have NPM installed, follow these instructions. Otherwise, skip to Part 2.
 *NPM is now bundled with node.js and the best way to get it is by using Homebrew.*
-1. Install Homebrew.
+###Install Homebrew.
 First check to see if Homebrew is already installed.
 {% highlight python %}
   # -- Check is brew is installed
@@ -28,7 +28,7 @@ If it is not, install it using the following commands:
 	ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 {% endhighlight %}
 
-2. Install Node.js and Node Packet Manager.
+###Install Node.js and Node Packet Manager.
 First check to see if NPM is already installed.
 {% highlight python %}
 	#-- Check if Node Packat Manager is installed
@@ -47,19 +47,19 @@ If NPM is not found, we assume node.js is also not installed and install it usin
 
 ##Part 2. Installing Grunt
 You will first need to peform a one-time install of the Grunt Command Line Interface.
-1. Install the Grunt Command Line Interface globally. (don’t forget the -g)
+Install the Grunt Command Line Interface globally. (don’t forget the -g)
 {% highlight python %}
 	sudo npm install -g grunt-cli
 {% endhighlight %}
 
-2. Verify that the package.json and Grunt.js files have been pulled out of Git into the root of the project on your local dev environment.
-3. The package.json is configured to tell NPM to install Grunt and the project’s Grunt dependencies. So simply run NPM install from the project root to use it.
+Verify that the package.json and Grunt.js files have been pulled out of Git into the root of the project on your local dev environment.
+The package.json is configured to tell NPM to install Grunt and the project’s Grunt dependencies. So simply run NPM install from the project root to use it.
 {% highlight python %}
   cd `/[site_path]/wheretraveler
 	sudo npm install
 {% endhighlight %}
 
-4. Run Grunt
+###Run Grunt
 {% highlight python %}
 	# -- Change to the project root directory if not alreay there
 	cd `/[site_path]/wheretraveler

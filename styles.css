@@ -10,6 +10,7 @@
   box-sizing: border-box; }
 
 html, body {
+  font-size: 16px;
   overflow-x: hidden;
   max-width: 100%; }
 
@@ -2195,7 +2196,6 @@ Another option is to use this trick:
   */
 body {
   font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 100%;
   font-weight: 200;
   color: #202020;
   font-size: 16px !important;
@@ -2212,10 +2212,10 @@ h1, h2, h3, h4, h5, h6, h1 a {
 
 h1 {
   font-weight: 200;
-  font-size: 50.4px !important;
+  font-size: 50.4px;
   line-height: 50.4px;
   margin-bottom: 0px;
-  font-size: 3.15rem !important;
+  font-size: 3.15rem;
   line-height: 3.15rem;
   margin-bottom: 0rem; }
   @media (max-width: 600px) {
@@ -2224,27 +2224,27 @@ h1 {
 
 h2 {
   font-weight: 300;
-  font-size: 28.56px !important;
+  font-size: 28.56px;
   line-height: 33.6px;
   margin-bottom: 0px;
-  font-size: 1.785rem !important;
+  font-size: 1.785rem;
   line-height: 2.1rem;
   margin-bottom: 0rem; }
 
 h3 {
   font-weight: 500;
-  font-size: 25.2px !important;
+  font-size: 25.2px;
   line-height: 33.6px;
   margin-bottom: 0px;
-  font-size: 1.575rem !important;
+  font-size: 1.575rem;
   line-height: 2.1rem;
   margin-bottom: 0rem; }
 
 h4, h5, h6 {
-  font-size: 16.8px !important;
+  font-size: 16.8px;
   line-height: 33.6px;
   margin-bottom: 0px;
-  font-size: 1.05rem !important;
+  font-size: 1.05rem;
   line-height: 2.1rem;
   margin-bottom: 0rem; }
 
@@ -2252,18 +2252,18 @@ header p {
   font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   color: #101010;
-  font-size: 25.2px !important;
+  font-size: 25.2px;
   line-height: 25.2px;
   margin-bottom: 0px;
-  font-size: 1.575rem !important;
+  font-size: 1.575rem;
   line-height: 1.575rem;
   margin-bottom: 0rem; }
 
 p {
-  font-size: 18px !important;
+  font-size: 18px;
   line-height: 33.6px;
   margin-bottom: 32px;
-  font-size: 1.125rem !important;
+  font-size: 1.125rem;
   line-height: 2.1rem;
   margin-bottom: 2rem; }
 
@@ -3130,18 +3130,18 @@ section {
 
 .meta {
   color: #101010;
-  font-size: 12px !important;
+  font-size: 12px;
   line-height: 33.6px;
   margin-bottom: 0px;
-  font-size: 0.75rem !important;
+  font-size: 0.75rem;
   line-height: 2.1rem;
   margin-bottom: 0rem; }
 
 .box header .meta {
-  font-size: 12px !important;
+  font-size: 12px;
   line-height: 33.6px;
   margin-bottom: 0px;
-  font-size: 0.75rem !important;
+  font-size: 0.75rem;
   line-height: 2.1rem;
   margin-bottom: 0rem; }
 
@@ -3193,7 +3193,7 @@ h1 + hr {
   color: white;
   text-shadow: -1px -1px 0px #210000;
   border-radius: 0 6 6 0; }
-  @media (max-width: 1400px) {
+  @media (max-width: 1280px) {
     .post-note {
       display: none; } }
   .post-note i {
@@ -3348,15 +3348,21 @@ h1 + hr {
   .teaser header .title {
     text-align: center;
     padding: 15px; }
-    @media (max-width: 600px) {
-      .teaser header .title h1,
-      .teaser header .title h2 {
-        font-size: 75%; } }
-    .teaser header .title h1 a,
-    .teaser header .title h2 a {
-      color: white; }
+    .teaser header .title h1,
+    .teaser header .title h2 {
+      font-size: 32px;
+      font-size: 2rem; }
+      @media (max-width: 600px) {
+        .teaser header .title h1,
+        .teaser header .title h2 {
+          font-size: 75%; } }
+      .teaser header .title h1 a,
+      .teaser header .title h2 a {
+        color: white; }
     .teaser header .title p {
-      color: white; }
+      color: white;
+      font-size: 22px;
+      font-size: 1.5rem; }
     .teaser header .title .more {
       text-align: right; }
       .teaser header .title .more a {
@@ -3426,10 +3432,10 @@ h1 + hr {
       font-weight: normal;
       font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
       color: #101010;
-      font-size: 20.8px !important;
+      font-size: 20.8px;
       line-height: 24px;
       margin-bottom: 0px;
-      font-size: 1.3rem !important;
+      font-size: 1.3rem;
       line-height: 1.5rem;
       margin-bottom: 0rem;
       line-height: 44px; }
@@ -3450,40 +3456,30 @@ h1 + hr {
         font-size: 24px;
         line-height: 44px;
         vertical-align: middle; }
-        .top-bar .links li a:before {
-          color: #ff530d; }
-        .top-bar .links li a:hover:before {
-          color: #c03700; }
 
-.hero {
-  position: relative;
-  background: rgba(0, 0, 0, 0.9);
-  height: 150px;
-  padding: 15px;
-  margin: 0 auto; }
-  .hero .avatar-container {
-    width: 120px;
-    height: 120px;
-    border: 5px solid white;
-    z-index: 10;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    -o-border-radius: 100%;
-    border-radius: 100%;
-    -ms-box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)";
-    -o-box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)";
-    box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)"; }
-  .hero .avatar {
-    display: block;
-    margin: 0 auto;
-    overflow: hidden;
-    -o-border-radius: 100%;
-    border-radius: 100%; }
+.hero .avatar-container {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  width: 120px;
+  height: 120px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -ms-box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)";
+  -o-box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)";
+  box-shadow: "0 1px 1px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(0, 0, 0, .3)"; }
+.hero .avatar {
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  -o-border-radius: 100%;
+  border-radius: 100%; }
 
+@media (max-width: 1024px) {
+  article.teaser {
+    padding-left: 120px; } }
 footer {
   padding: 15px; }
   footer .paging {

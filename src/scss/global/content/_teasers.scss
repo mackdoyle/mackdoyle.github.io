@@ -42,6 +42,9 @@ article.swatch-* {
       padding: $gutter-size;
       h1,
       h2 {
+      font-size: 32px;
+      font-size: 2rem;
+
       @include breakpoint(I---I){
         font-size: 75%;
       }
@@ -55,6 +58,8 @@ article.swatch-* {
 
       p {
         color: white;
+        font-size: 22px;
+        font-size: 1.5rem;
       }
 
       .more {
