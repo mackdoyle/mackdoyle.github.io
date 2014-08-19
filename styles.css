@@ -2452,6 +2452,9 @@ pre.terminal code {
   z-index: 1;
   background: radial-gradient(rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7)); }
 
+body {
+  background: #9402f7; }
+
 /**
   * global/layout
 */
@@ -3261,11 +3264,11 @@ h1 + hr {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   display: inline-block;
   vertical-align: top;
-  width: 23.5%;
+  width: 32%;
   margin-right: 2%;
   margin-bottom: 2%;
   transition: all 0.25s ease-in; }
-  .tile:nth-child(4n) {
+  .tile:nth-child(3n) {
     margin-right: 0; }
   .tile img {
     width: 100%;
@@ -3342,7 +3345,9 @@ h1 + hr {
     .teaser header .title h1,
     .teaser header .title h2 {
       font-size: 32px;
-      font-size: 2rem; }
+      font-size: 2rem;
+      font-weight: 400;
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7); }
       .teaser header .title h1 a,
       .teaser header .title h2 a {
         color: white; }
@@ -3469,6 +3474,8 @@ h1 + hr {
     .hero .avatar-container {
       width: 60px;
       height: 60px; } }
+  .hero .avatar-container a:hover {
+    background: url("/assets/images/jd-erratic.gif"); }
 .hero .avatar {
   display: block;
   margin: 0 auto;

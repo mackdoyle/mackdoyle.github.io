@@ -12,7 +12,8 @@ some of the pain points you will encounter when working with popular Grunt tasks
 
 ##Part 1. Installing Node Package Manager (NPM)
 Node Packet Manager (NPM) is package manger used by Node.js and is used to install Grunt, among other things. If you do not have NPM installed, follow these instructions. Otherwise, skip to Part 2.
-*NPM is now bundled with node.js and the best way to get it is by using Homebrew.*
+*NPM is now bundled with Node.js and the best way to get it is by using Homebrew.
+
 ###Install Homebrew.
 First check to see if Homebrew is already installed.
 {% highlight python %}
@@ -22,7 +23,7 @@ First check to see if Homebrew is already installed.
 
 If it is not, install it using the following commands:
 {% highlight python %}
-	# Install the xCode command line tools
+# Install the xCode command line tools
 	xcode-select --install
 	# Now install Homebrew
 	ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
@@ -31,13 +32,13 @@ If it is not, install it using the following commands:
 ###Install Node.js and Node Packet Manager.
 First check to see if NPM is already installed.
 {% highlight python %}
-	#Check if Node Packat Manager is installed
+# Check if Node Packet Manager is installed
 	type -a npm
 {% endhighlight %}
 
 If NPM is not found, we assume node.js is also not installed and install it using the following commands:
 {% highlight python %}
-	# Install Node (and npm)
+# Install Node (and npm)
 	brew install node
 	# Test that NPM is now installed
 	npm -v
@@ -48,14 +49,16 @@ If NPM is not found, we assume node.js is also not installed and install it usin
 
 
 ##Part 2. Installing Grunt
-You will first need to peform a one-time install of the Grunt Command Line Interface.
+You will first need to perform a one-time install of the Grunt Command Line Interface.
 Install the Grunt Command Line Interface globally. (don’t forget the -g)
 {% highlight python %}
 	sudo npm install -g grunt-cli
 {% endhighlight %}
 
-Verify that the package.json and Grunt.js files have been pulled out of Git into the root of the project on your local dev environment.
-The package.json is configured to tell NPM to install Grunt and the project’s Grunt dependencies. So simply run NPM install from the project root to use it.
+Downlaod this Gruntfile into your projects root: https://gist.github.com/mackdoyle/1cfffdb1ac7ab59be9e6.
+And this package.json: https://gist.github.com/mackdoyle/f646a27f7fbacc91766e.
+Now simply run NPM install from the project root to use it.
+The package.json is configured to tell NPM to install Grunt and the project’s Grunt dependencies.
 {% highlight python %}
   cd /[site_path]/
 	sudo npm install
@@ -63,7 +66,7 @@ The package.json is configured to tell NPM to install Grunt and the project’s 
 
 Run Grunt
 {% highlight python %}
-	# Change to the project root directory if not alreay there
+# Change to the project root directory if not alreay there
 	cd /[site_path]
 	# Run Grunt from the project root to execute the contrib processes used in the project
 	grunt

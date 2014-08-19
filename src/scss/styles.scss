@@ -21,8 +21,9 @@
 
 // Sections
 @import
+  "global/default",
 	"global/layout",
-	"global/content/content",
+	"global/content/base",
   "global/header/top-bar",
   "global/header/hero",
   "global/footer/footer";
