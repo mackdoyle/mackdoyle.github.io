@@ -59,6 +59,8 @@ module.exports = function(grunt) {
      * Project Settings
      */
 
+    /*
+    // EX: <%= path.assets %>
     settings: {
       // Set common directories to variables for easy upating
       dir: {
@@ -68,7 +70,14 @@ module.exports = function(grunt) {
         'tmp': './tmp'
       }
     },
+    */
 
+    path: {
+      'base': './',
+      'src': './src',
+      'dist': './assets',
+      'tmp': './tmp'
+    },
 
     /**
      * JSHint
@@ -87,7 +96,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          src: ['assets/js/**/*.js']
+          src: ['<%= path.assets %>/js/**/*.js']
         }
       },
       dist: {
@@ -101,7 +110,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          src: ['assets/js/**/*.js']
+          src: ['<%= path.assets %>/js/**/*.js']
         }
       }
     },
@@ -121,16 +130,16 @@ module.exports = function(grunt) {
           compress : false,
           beautify : true
         },
-        src: ['<%= settings.dir.src %>/js/vendor/custom.modernizr.js','<%= settings.dir.src %>/js/vendor/jquery-2.1.1.min.js', '<%= settings.dir.src %>/js/vendor/packery.pkgd.min.js', '<%= settings.dir.src %>/js/base.js'],
-        dest: '<%= settings.dir.dist %>/js/base.min.js'
+        src: ['<%= path.src %>/js/vendor/custom.modernizr.js','<%= path.src %>/js/vendor/jquery-2.1.1.min.js', '<%= path.src %>/js/vendor/packery.pkgd.min.js', '<%= path.src %>/js/base.js'],
+        dest: '<%= path.dist %>/js/base.min.js'
       },
       dist: {
         options : {
           mangle : true,
           compress : true
         },
-        src: ['<%= settings.dir.src %>/js/vendor/custom.modernizr.js','<%= settings.dir.src %>/js/vendor/jquery-2.1.1.min.js', '<%= settings.dir.src %>/js/vendor/packery.pkgd.min.js', '<%= settings.dir.src %>/js/base.js'],
-        dest: '<%= settings.dir.dist %>/js/base.min.js'
+        src: ['<%= path.src %>/js/vendor/custom.modernizr.js','<%= path.src %>/js/vendor/jquery-2.1.1.min.js', '<%= path.src %>/js/vendor/packery.pkgd.min.js', '<%= path.src %>/js/base.js'],
+        dest: '<%= path.dist %>/js/base.min.js'
       }
     },
 
@@ -149,21 +158,23 @@ module.exports = function(grunt) {
         options: {
           // cssmin will minify later
           style: 'nested',
-          cacheLocation: '<%= settings.dir.src %>/scss/.sass-cache'
+          cacheLocation: '<%= path.src %>/scss/.sass-cache'
         },
-        files: {
-          '<%= settings.dir.tmp %>/css/styles.css': '<%= settings.dir.src %>/scss/styles.scss'
-        }
+        files: [{
+          src: '<%= path.src %>/scss/styles.scss',
+          dest: '<%= path.tmp %>/css/styles.css',
+        }]
       },
       dist: {
         options: {
           // cssmin will minify later
           style: 'nested',
-          cacheLocation: '<%= settings.dir.src %>/scss/.sass-cache'
+          cacheLocation: '<%= path.src %>/scss/.sass-cache'
         },
-        files: {
-          '<%= settings.dir.tmp %>/css/styles.css': '<%= settings.dir.src %>/scss/styles.scss'
-        }
+        files: [{
+          src: '<%= path.src %>/scss/styles.scss',
+          dest: '<%= path.tmp %>/css/styles.css',
+        }]
       }
     },
 
@@ -178,13 +189,12 @@ module.exports = function(grunt) {
       options: {
         browsers: ['last 2 version', 'ie 8', 'ie 9']
       },
-      // if you have specified only the `src` param, the destination will be set automatically,
-      // so source files will be overwritten
-      // The Sass pplugin will compile to tmp/ so look there.
-      no_dest: {
-        expand: true,
-        flatten: true,
-        src: '<%= settings.dir.tmp %>/css/styles.css' // globbing is also possible here
+      single_file: {
+        options: {
+          // Target-specific options go here.
+        },
+        src: '<%= path.tmp %>/css/styles.css',
+        dest: '<%= path.tmp %>/css/styles.css'
       }
     },
 
@@ -201,8 +211,8 @@ module.exports = function(grunt) {
       minify: {
         expand: true,
         files: [{
-          src: ['<%= settings.dir.tmp %>/css/*.css', '!*.min.css'],
-          dest: '<%= settings.dir.dist %>/css/styles.min.css'
+          src: ['<%= path.tmp %>/css/**/*.css', '!*.min.css'],
+          dest: '<%= path.dist %>/css/styles.min.css'
         }]
       }
     },
@@ -220,9 +230,10 @@ module.exports = function(grunt) {
           cacheBuster: false,
           compress: true
         },
-        files: {
-          '<%= settings.dir.dist %>/css/styles-blessed.min.css': '<%= settings.dir.dist %>/css/styles.min.css'
-        }
+        files: [{
+          src: '<%= path.dist %>/css/styles.min.css',
+          dest: '<%= path.dist %>/css/styles-blessed.min.css'
+        }]
       }
     },
 
@@ -263,7 +274,7 @@ module.exports = function(grunt) {
 
     clean: {
       after: [
-        '<%= settings.dir.tmp %>/'
+        '<%= path.tmp %>/'
       ]
     },
 
@@ -308,8 +319,8 @@ module.exports = function(grunt) {
           compress: true
         },
         files: [{
-          src: '<%= settings.dir.base %>/index.html',
-          dest: '<%= settings.dir.dist %>/css/styles-cleaned.min.css'
+          src: '<%= path.base %>/index.html',
+          dest: '<%= path.dist %>/css/styles-cleaned.min.css'
         }]
       }
     },
@@ -331,17 +342,17 @@ module.exports = function(grunt) {
       },
       js: {
         //files: ['<%= uglify:dev.files %>'],
-        files: ['<%= settings.dir.src %>/js/**/*.js'],
+        files: ['<%= path.src %>/js/**/*.js'],
         tasks: ['uglify:dev', 'processhtml:js']
       },
       sass: {
         //files: ['<%= sass:dev.files %>'],
-        files: ['<%= settings.dir.src %>/scss/**/*.scss', '<%= settings.dir.src %>/scss/!.sass-cache/**'],
+        files: ['<%= path.src %>/scss/**/*.scss', '<%= path.src %>/scss/!.sass-cache/**'],
         tasks: ['sass:dev', 'autoprefixer', 'cssmin:minify', 'bless', 'clean', 'processhtml:css']
       },
       jekyll: {
         //files: ['<%= jekyll:dev.files %>'],
-				files: ['**/*.*', '!_site/**.*','!<%= settings.dir.src %>/**', '!node_modules/**', '!.sass-cache/**', '!Gruntfile.js', '!package.json', '!.git/**'],
+				files: ['**/*.*', '!_site/**.*','!<%= path.src %>/**', '!node_modules/**', '!.sass-cache/**', '!Gruntfile.js', '!package.json', '!.git/**'],
 				tasks: ['jekyll:dev']
 			}
     },
