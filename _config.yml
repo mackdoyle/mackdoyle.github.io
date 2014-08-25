@@ -1,5 +1,5 @@
 # -- Standard Jekyll Configuration
-name: "Home of Jason Doyle"
+name: Home of Jason Doyle
 permalink: /articles/:title
 encoding: UTF-8
 lsi: TRUE
@@ -35,7 +35,7 @@ account: UA-52530016-1
 
 # Files/Directories to ignore
 # -----------------------------------------------------------------
-exclude: ['**/*.log', 'tmp', 'src', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json', 'bower_components', 'codekit-config.json', 'jmd.sublime-project', 'jmd.sublime-workplace','scss', 'CNAME', '.git','.gitignore', '.DS_Store', 'codekit-config.json', '.sublime-project', '.sublime-workspace', '.UlyssesRoot', '.Ulysses-Group.plist', 'Gruntfile.js']
+exclude: ['**/*.log', 'tmp', 'src', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json', 'bower_components', 'codekit-config.json', 'jmd.sublime-project', 'jmd.sublime-workplace','scss', 'CNAME', '.git','.gitignore', '**.DS_Store', 'codekit-config.json', '**.sublime-project', '**.sublime-workspace', '**.UlyssesRoot', '**.Ulysses-Group.plist', 'Gruntfile.js']
 
 
 # Configuration for enhancements, uncomment to enable

@@ -49,6 +49,9 @@ module.exports = function(grunt) {
 
   'use strict';
 
+  // Show elapsed time after tasks run
+  require('time-grunt')(grunt);
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -322,7 +325,7 @@ module.exports = function(grunt) {
       options: {
         livereload: true,
         dateFormat: function(time) {
-          grunt.log.writeln('The watch finished in ' + time + 'ms at' + (new Date()).toString());
+          grunt.log.writeln('The watch finished in <strong>' + time + 'ms</strong> at' + (new Date()).toString());
           grunt.log.writeln('Waiting for more changes...');
         }
       },

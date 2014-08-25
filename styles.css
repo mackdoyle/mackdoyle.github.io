@@ -2452,9 +2452,6 @@ pre.terminal code {
   z-index: 1;
   background: radial-gradient(rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7)); }
 
-body {
-  background: #9402f7; }
-
 /**
   * global/layout
 */
@@ -3474,7 +3471,7 @@ h1 + hr {
     .hero .avatar-container {
       width: 60px;
       height: 60px; } }
-  .hero .avatar-container a:hover {
+  .hero .avatar-container:hover {
     background: url("/assets/images/jd-erratic.gif"); }
 .hero .avatar {
   display: block;
