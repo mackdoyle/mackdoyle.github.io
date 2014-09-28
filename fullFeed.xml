@@ -6,7 +6,7 @@
 		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
 		<language>en</language>
 		<copyright><![CDATA[&copy; 2014 . All rights reserved.]]></copyright>
-		<pubDate>2014-09-27T12:45:33-04:00</pubDate>
+		<pubDate>2014-09-28T14:28:54-04:00</pubDate>
 		
 	<item>
 		<title><![CDATA[Getting Grunt Up and Running in Your Local Dev (OS X)]]></title>
@@ -155,12 +155,12 @@ command is executed, nmp uses this file to determine which Grunt contribs to ins
 
 
 
-<h2>About Grunt.js</h2>
+<h2>About Gruntfile.js</h2>
 
 
 
 
-<p>The Grunt.js file is master configuration file for Grunt. It is where the settings for each individual contrib package is stored.
+<p>The Gruntfile.js file is the master configuration file for Grunt. It is where the settings for each individual contrib package is stored.
 For example, if the project uses Uglify, it will first be defined in package.json as a devDependency so the contrib is installed locally.
 There will then need to be an uglify section in Grunt.js that defines which .js files it should minify and in what order.</p>
 
