@@ -1,0 +1,97 @@
+//
+// global/content/teasers
+//
+// @Idea: play with slowly wiggling headline text when displayed over a full screen image.
+// Something so slight the viewer isn"t quite aware of it. I think this might trick the eye to
+// see a floating parallax effect like on iOS.
+//
+
+
+// ----------------------------------------------
+// Article/Post Teasers
+// ----------------------------------------------
+
+
+
+// Teaser block styles
+// -----------------------------------
+.teaser {
+
+  header {
+    position: relative;
+    width: 100%;
+
+    // Wrapper for positioning head and sub-head, since <header> is use for bkg
+    .title {
+      text-align: center;
+      padding: $gutter-size;
+      h1,
+      h2 {
+      font-size: 32px;
+      font-size: 2rem;
+      font-weight: 400;
+      text-shadow: 0px 0px 5px rgba(0,0,0,.7);
+        a {
+          color: white;
+          font-weight: 600;
+          // Faking a stroke wth text-shadows is helpful on fonts with overlapping letters since the text-stroke property will overlap the strokes.
+          text-shadow:
+            -1px -1px 0 #222,
+            0 -2px 0 #222,
+            1px -1px 0 #222,
+            2px 0 0 #222,
+            1px 1px 0 #222,
+            0 2px 0 #222,
+            -1px 1px 0 #222,
+            -1px 0 0 #222;
+          &:hover {
+            text-shadow:
+            -1px -1px 0 #ff0a6c,
+            0 -2px 0 #ff0a6c,
+            1px -1px 0 #222,
+            2px 0 0 #ff0a6c,
+            1px 1px 0 #ff0a6c,
+            0 2px 0 #ff0a6c,
+            -1px 1px 0 #ff0a6c,
+            -1px 0 0 #ff0a6c;
+          }
+        }
+
+        @include breakpoint(I---I){
+          font-size: 1.5rem;
+          text-align: right;
+        }
+      }
+
+      p {
+        color: white;
+        font-size: 22px;
+        font-size: 1.5rem;
+        @include breakpoint(I---I){
+          font-size: 1rem;
+          text-align: right;
+        }
+      }
+
+      .more {
+        text-align: right;
+        a {
+          position: relative;
+          text-decoration: none;
+          white-space: nowrap;
+          @include gams-button($button-color, "default", $button-font-color);
+        }
+      }
+
+      .meta {
+        font-family: $body-font;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .article-teaser-content {
+    padding: $gutter-size;
+  }
+}
+

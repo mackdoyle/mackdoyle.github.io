@@ -1,0 +1,12 @@
+// Short Form
+@mixin box-shadow($argument) {
+  box-shadow: $argument;
+}
+// Long Form
+@mixin box-shadow($first, $second:null) {
+   @if $second != null {
+      box-shadow:$first, $second;
+   } @else {
+      box-shadow:$first;
+   }
+}

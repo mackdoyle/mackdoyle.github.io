@@ -1,0 +1,24 @@
+// Cullaz
+// Color swatch pattern
+// --------------------------------------------------------------------
+
+$num-swatches: 48;
+$base-color: rgba(255,10,100,1);
+
+
+// Build swatch styles
+.cullaz{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+@include analogous-colors('.swatch',$base-color, $num-swatches, 2, 'reverse');
+
+div[class*=swatch] {
+  display: table-cell;
+  width: 100%/$num-swatches; height: 100%;
+}
+
+
+

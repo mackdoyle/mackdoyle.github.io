@@ -1,0 +1,122 @@
+/**
+ * global/header/top-bar
+ * Site specific overrides of the default Foundation Top Bar styles
+ * Theme variables compiled in Gams
+ *
+ * Mobile Inspiration: http://getrefe.tumblr.com/
+*/
+
+$top-bar-height: 48px;
+$top-bar-link: #666666;
+
+//Compensate for fixed topbar area
+.container {
+  margin-top: $top-bar-height;
+}
+
+.mobile-menu {
+	display: none;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:105%;
+  height: $top-bar-height;
+  z-index: 3;
+  background: #333333;
+  background: -webkit-linear-gradient(#434343,#333232);
+  background: linear-gradient(#434343,#333232);
+  padding: 0 $gutter-size !important;
+  border-bottom: 1px solid black;
+
+  #logo {
+    float: left;
+    font-family: $logo-font;
+    font-weight: 400;
+    color: white;
+    @include font-rhythm(1.3);
+    line-height: $top-bar-height;
+  }
+
+  .internal-links {
+    position: absolute;
+    left: 134px;
+    li{
+      display: inline-block;
+      line-height: $top-bar-height;
+      margin: 0 $top-bar-height / 4;
+      a{
+        position: relative;
+        display: block;
+        font-size: 14px;
+        color: lighten($top-bar-link, 20%);
+        line-height: $top-bar-height;
+        vertical-align: middle;
+        &:hover{
+          color: lighten($top-bar-link, 40%);
+        }
+
+        &.active {
+          color: white;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 2px solid #dfdfdf;
+          }
+        }
+      }
+    }
+  }
+
+  .external-links {
+    position: absolute;
+    right: 94px;
+    li{
+      display: inline-block;
+      line-height: $top-bar-height;
+      margin-right: $top-bar-height / 4;
+      a{
+        font-size: 24px;
+        line-height: $top-bar-height;
+        vertical-align: middle;
+        &:before{
+          color: $top-bar-link;
+          text-shadow: 0 0 1px #222222;
+        }
+        &:hover:before{
+          color: #333333;
+          text-shadow: 0 0 1px lighten($top-bar-link, 80%), 0 0 12px lighten($top-bar-link, 40%);
+        }
+      }
+    }
+  }
+
+  // Top bar's drop shadow
+  /*
+  &:after {
+    content: "";
+    position: fixed;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    z-index: -1;
+    //@include vendor-prefix("radial-gradient","(gray 10%, transparent 65%)","background");
+    background: radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background: -webkit-radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background: -moz-radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background-position: center top;
+    background-origin: content-box;
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+  }
+  */
+}
+
+
+

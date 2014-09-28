@@ -1,22 +1,110 @@
----
-layout: feed
----
-{% for post in site.posts limit:5 %}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title><![CDATA[Jason Doyle]]></title>
+		<link><![CDATA[]]></link>
+		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
+		<language>en</language>
+		<copyright><![CDATA[&copy; 2014 . All rights reserved.]]></copyright>
+		<pubDate>2014-09-27T12:45:33-04:00</pubDate>
+		
 	<item>
-		<title><![CDATA[{{ post.title }}]]></title>
+		<title><![CDATA[Getting Grunt Up and Running in Your Local Dev (OS X)]]></title>
 		<description>
 			<![CDATA[
-				{{ post.excerpt | markdownify }}
-				{% if post.categories.size > 0 %}						
-					<p>Posted in: {{ post.categories | array_to_sentence_string }}</p>
-				{% endif %}		
-				{% if post.tags.size > 0 %}
-					<p>Tagged with: {{ post.tags | array_to_sentence_string }}</p>
-				{% endif %}		
+				<p>There are a ton of getting started tutorials for Grunt but I want to document the steps that work for me. In future posts, i will be explaining and providing solutions for
+some of the pain points you will encounter when working with popular Grunt tasks and this will serve as a good start to those as well.</p>
+
+
+										
+					<p>Posted in: workflow</p>
+						
+						
 			]]>
 		</description>
-		<link><![CDATA[{{site.url}}{{ post.url }}]]></link>
-		<author><![CDATA[{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}]]></author>
-		<guid><![CDATA[{{ post.url }}]]></guid>
+		<link><![CDATA[/articles/grunt-from-scratch-osx]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/grunt-from-scratch-osx]]></guid>
 	</item>
-{% endfor %}
+
+	<item>
+		<title><![CDATA[Regular Expressions for Cleaning Markup]]></title>
+		<description>
+			<![CDATA[
+				<p>Every web developer finds themselves having to clean up and manipulate tags and Search and Replace can only take you
+so far. Here are a few I use that save me hours.</p>
+
+
+										
+					<p>Posted in: workflow</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/regular-expressions-for-tag-cleaning]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/regular-expressions-for-tag-cleaning]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[Baseline Grid Sass Mixin]]></title>
+		<description>
+			<![CDATA[
+				<p>Using a baseline grid to set type is a must if you want to achieve vertical rhythm. Dan Eden &amp; Michael Wright created <a href="http://basehold.it">basehold.it</a>, a dead simple solution that adds a baseline grid to an element's background. All you need to do is add a background-image property and point it to their URL.</p>
+
+
+										
+					<p>Posted in: css</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/baseline-grid-sass-mixin]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/baseline-grid-sass-mixin]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[What I like about my prompt setup (iTerm2/Z-Shell)]]></title>
+		<description>
+			<![CDATA[
+				<ol>
+<li>More control over command prompt. (Although I had a fairly pimped out bash prompt)</li>
+<li>Syntax highlighting of ~$man~ pages, ~$sh~ commands, etc. And if your into ~vi, vim, nano~, they call all have language specific coloring.</li>
+</ol>
+
+
+
+
+										
+					<p>Posted in: terminal, and workflow</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/what-i-like-about-my-prompt]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/what-i-like-about-my-prompt]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[Fixing Joomla Permission Issues]]></title>
+		<description>
+			<![CDATA[
+				<p>These are a collection of suggestions found on fairly credible sites. That doesn't mean they are correct.</p>
+
+
+										
+					<p>Posted in: joomla</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/fixing-joomla-permission-issues]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/fixing-joomla-permission-issues]]></guid>
+	</item>
+
+
+	</channel>
+</rss>

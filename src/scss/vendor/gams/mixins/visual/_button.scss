@@ -1,0 +1,61 @@
+/**
+ *
+ * @param $color: button background color
+ * @param $size: micro, wide
+ * @param $fontColor: font color
+ *
+ */
+
+@mixin gams-button($color, $size: default, $fontColor: white){
+  background: $color;
+	color: $fontColor;
+	text-align: center;
+	text-transform: uppercase;
+	max-width:125px;
+
+	@if $size == "micro"{
+    font-size: 10px;
+		padding: 0 20px;
+		width: auto;
+	} @else if $size == "wide" {
+    font-size: 14px;
+		max-width: 250px;
+    margin: .75em auto;
+		padding: 0 20px;
+		width: auto;
+	} @else {
+		font-size: .8rem;
+		display: inline-block;
+		padding: 0 1.5rem;
+	}
+	@include transition(all .25s ease-in-out);
+	&:hover{
+		background: lighten($color,10);
+	}
+
+	@include breakpoint(narrow){
+		padding: 12px 24px; // Bigger click areas for mobile
+	}
+}
+
+@mixin submit-button($color, $size: default, $fontColor: white){
+    @include button($color, $size, $fontColor);
+    -webkit-appearance: none;
+    -webkit-background-clip: padding;
+    outline: 0;
+    cursor: pointer;
+    background-clip: padding-box;
+    border: inherit;
+    text-shadow: inherit;
+    font: inherit;
+    border-radius: 3px;
+    &:hover{
+		background: lighten($color,10);
+		@include transition(all .25s ease-in-out);
+	}
+}
+
+//	USAGE
+//  @include gams-button($blue); (by Color Variable)
+//  @include gams-button(#c00); (by Hex Code)
+//  @include gams-button(red); (by Color Name)

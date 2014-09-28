@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+           _             _            _          _            _            _
+          /\ \     _    /\ \         /\ \       /\ \         /\ \         /\ \
+         /  \ \   /\_\ /  \ \       /  \ \     /  \ \__     /  \ \       /  \ \
+        / /\ \ \_/ / // /\ \ \     / /\ \ \   / /\ \___\   / /\ \ \     / /\ \ \
+       / / /\ \___/ // / /\ \_\   / / /\ \_\ / / /\/___ \ / / /\ \_\   / / /\ \_\
+      / / /  \/____// /_/_ \/_/  / / /_/ / // / /   / / // /_/_ \/_/  / /_/_ \/_/
+     / / /    / / // /____/\    / / /__\/ // / /   / / // /____/\    / /____/\
+    / / /    / / // /\____\/   / / /_____// / /   / / // /\____\/   / /\____\/
+   / / /    / / // / /______  / / /\ \ \  \ \ \__/ / // / /______  / / /______
+  / / /    / / // / /_______\/ / /  \ \ \  \ \___\/ // / /_______\/ / /_______\
+  \/_/     \/_/ \/__________/\/_/    \_\/   \/_____/ \/__________/\/__________/
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>What I like about my prompt setup (iTerm2/Z-Shell)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- JS -->
+        <script src="/assets/js/vendor/jquery-2.1.1.min.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/styles.min.css">
+        <link href="/assets/css/print.css" media="print" rel="stylesheet" type="text/css" />
+        <!-- @TODO: Need to add above-the-fold css inline for faster loading -->
+    </head>
+    <body>
+
+    <div class="container">
+
+  
+
+
+<nav class="top-bar" id="top-bar">
+  <!--<div class="pull-tab"></div>-->
+
+  <ul class="links">
+    <li><a href="/" title="Home" class="fa fa-home"></a></li>
+    <li><a href="/projects.html" title="Projects" class="fa fa-briefcase"></a></li>
+    <li><a href="https://github.com/mackdoyle" target="_blank" title="Jason on Github" class="fa fa-github"></a></li>
+    <li><a href="https://codepen.com/mackdoyle" target="_blank" title="Jason on Codepen" class="fa fa-codepen"></a></li>
+  </ul>
+</nav>
+
+
+
+  <section class="content-container">
+    <article class="post">
+  <!--<div class="article-hero">
+    <img style="margin-bottom:26px" src="">
+  </div>-->
+
+  <header style="background-image:url('');">
+    <div class="title">
+      <h1>What I like about my prompt setup (iTerm2/Z-Shell)</h1>
+      
+      <p class="meta"><i class="fa fa-clock-o">&nbsp;</i> <time datetime="May 11, 2014" title="May 11, 2014">May 11, 2014</time></p>
+    </div>
+  </header>
+
+  <div id="article-content" class="article-content">
+    <span id="wrapped" style="float:left"></span>
+    <div class="paragraph-measure">
+      <ol>
+<li>More control over command prompt. (Although I had a fairly pimped out bash prompt)</li>
+<li><p>Syntax highlighting of ~$man~ pages, ~$sh~ commands, etc. And if your into ~vi, vim, nano~, they call all have language specific coloring.</p></li>
+<li><p>Beyond tab completion, zsh has command suggestion. So you type ~$sudo taol -n 100 /var/log/mysql/error.log~ and it asks, ~"Did you mean $tail?"~. Hit ~"Y"~ and the command runs w/o having to retype it. AND this works for all installed packages. So install node.js, fat finger a~$node lirst~ command, and it corrects it.</p></li>
+<li><p>Plugins!!! You have to install Oh My Zsh to make zsh really stand out over bash. take look at all the prebuilt plugins you can add to it. Good stuff there: [https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins]
+ Some simple examples are ~$jump~ that you can use to book mark directories and say ~$jump utilities~ and it takes you to ~/Applications/Utilities~. Or more advanced plugins that contain powerful Git scripts. Ruby, Python, Heroku, Django, it all there.</p>
+
+<p> A plugin for AWS was committed with positive feedback to expect it to be in the next release but there are several on GitHub you can add manually now. ex. grebburek / awe-scripts</p></li>
+<li><p>User profiles in iTerm. With iTerm you can create multiple profiles define how they open when you launch your prompt. For example, I have one that loads into a web project and shows some Git stats, and another that loads in a subdued color scheme and fires off a $tail on some error logs.</p></li>
+</ol>
+
+
+<h2>Configuration</h2>
+
+<ol>
+<li>Install iTerm</li>
+<li>Install zsh
+
+<ol>
+<li>CD to your user directory</li>
+<li>Get autoconf if you don't have it: $git clone git://git.sv.gnu.org/autoconf</li>
+<li>Get zsh:  $git clone git://git.code.sf.net/p/zsh/code zsh</li>
+<li>Run <code>$~/zsh/Ultil/preconfig</code></li>
+<li>Open up Users and Group, unlock it and ctrl-click on your profile to get to the Advance Options.</li>
+<li>Set your Login Shell to: <code>exec zsh</code></li>
+<li>If you hate it, set it back to: <code>exec bash</code></li>
+</ol>
+</li>
+</ol>
+
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="paging">
+    	
+  	    <div class="footer-col"><a rel=prev href="/articles/fixing-joomla-permission-issues">&larr; Prev Post</a></div>
+  	  
+  	  
+  	    <div class="footer-col"><a rel=next href="/articles/baseline-grid-sass-mixin">Next Post &rarr;</a></div>
+  	  
+    </div>
+
+    <div class="tags">
+  	  
+  	    <div class="footer-col">
+
+
+	<div class="category-list-container">
+		<ul class="inline categories">
+      <li class="first">Posted in</li>
+			
+				<li><a href="categories.html#terminal%2C">terminal,</a>
+      ,
+				</li>
+			
+				<li><a href="categories.html#workflow">workflow</a>
+      
+				</li>
+			
+		</ul>
+	</div>
+
+</div>
+  	  
+      
+    </div>
+  </footer>
+</article>
+
+
+
+  </section>
+
+      </div> <!-- /container -->
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52530016-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    </body>
+</html>

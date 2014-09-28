@@ -1,0 +1,41 @@
+////
+ // Gams
+ // Updated: 6-27-2014
+ // @author Jason Doyle
+ // @version 0.8
+ //
+ // Gams is a boilerplate Scss library. It is meant to be dropped into a new project
+ // and give you a nice starting point.
+ ////
+
+// Immport only what you need...
+
+// Vendor Dependencies
+// -------------------------- *
+@import
+    "icons/icons";
+
+// Authored Dependencies
+// -------------------------- *
+@import
+  "mixins/mixins",
+  "themes/clean-theme",
+  "syntax",
+  "fonts",
+  "typography";
+
+// Authored Patterns
+// -------------------------- *
+@import
+  "patterns/forms",
+  "patterns/tables",
+  "patterns/lists",
+  "patterns/code",
+  "patterns/baseline-it",
+  "patterns/cullaz",
+  "patterns/tiler";
+
+// Authored Effects
+// -------------------------- *
+@import
+  "images";

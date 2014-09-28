@@ -1,0 +1,89 @@
+/**
+ * global/sidebar/side-bar
+ * Theme variables compiled in Gams
+ *
+ * Mobile Inspiration: http://getrefe.tumblr.com/
+*/
+
+$side-bar-height: 44px;
+
+.mobile-menu {
+	display: none;
+}
+
+/* Not in use
+.navbar-fixed {
+  position: fixed;
+  top: -44px;
+}
+*/
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  //height: $side-bar-height;
+  z-index: 3;
+  //padding: 0 $gutter-size !important;
+
+  .title {
+    float: left;
+    .name {
+      font-weight: normal;
+      font-family: $sub-headline-font;
+      color: $body-headline-color;
+      @include font-rhythm(1.3);
+      line-height: $side-bar-height;
+    }
+  }
+
+  .avatar {
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+    box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .links {
+    text-align:center;
+    //@include vendor-prefix("radial-gradient","(gray 10%, transparent 65%)","background");
+    //background: $body-color;
+    li{
+      line-height: $side-bar-height;
+      width: $side-bar-height;
+      //margin-right: $side-bar-height / 4;
+      a{
+        font-size: 24px;
+        line-height: $side-bar-height;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  // Top bar's drop shadow
+  /*
+  &:after {
+    content: "";
+    position: fixed;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    z-index: -1;
+    //@include vendor-prefix("radial-gradient","(gray 10%, transparent 65%)","background");
+    background: radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background: -webkit-radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background: -moz-radial-gradient(rgba(0,0,0,0.5), transparent 65%);
+    background-position: center top;
+    background-origin: content-box;
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+  }
+  */
+}
+
+
+

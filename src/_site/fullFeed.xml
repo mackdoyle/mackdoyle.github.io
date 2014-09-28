@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title><![CDATA[Jason Doyle]]></title>
+		<link><![CDATA[]]></link>
+		<description><![CDATA[]]></description>
+		<language>en</language>
+		<copyright><![CDATA[&copy; 2014 . All rights reserved.]]></copyright>
+		<pubDate>2014-08-25T08:52:25-04:00</pubDate>
+		
+	<item>
+		<title><![CDATA[Getting Grunt Up and Running in Your Local Dev (OS X)]]></title>
+		<description>
+			<![CDATA[
+				<p>There are a ton of getting started tutorials for Grunt but I want to document the steps that work for me. In future posts, i will be explaining and providing solutions for
+some of the pain points you will encounter when working with popular Grunt tasks and this will serve as a good start to those as well.</p>
+
+
+				<p>There are a ton of getting started tutorials for Grunt but I want to document the steps that work for me. In future posts, i will be explaining and providing solutions for
+some of the pain points you will encounter when working with popular Grunt tasks and this will serve as a good start to those as well.</p>
+
+
+
+
+<h2>Part 1. Installing Node Package Manager (NPM)</h2>
+
+
+
+
+<p>Node Packet Manager (NPM) is package manger used by Node.js and is used to install Grunt, among other things. If you do not have NPM installed, follow these instructions. Otherwise, skip to Part 2.
+*NPM is now bundled with Node.js and the best way to get it is by using Homebrew.</p>
+
+
+
+
+<h3>Install Homebrew.</h3>
+
+
+
+
+<p>First check to see if Homebrew is already installed.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Check is brew is installed</span>
+    <span class="nb">type</span> <span class="o">-</span><span class="n">a</span> <span class="n">brew</span></code></pre></div>
+
+
+
+
+<p>If it is not, install it using the following commands:</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Install the xCode command line tools</span>
+    <span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">install</span>
+    <span class="c"># Now install Homebrew</span>
+    <span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s">&quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</span></code></pre></div>
+
+
+
+
+<h3>Install Node.js and Node Packet Manager.</h3>
+
+
+
+
+<p>First check to see if NPM is already installed.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Check if Node Packet Manager is installed</span>
+    <span class="nb">type</span> <span class="o">-</span><span class="n">a</span> <span class="n">npm</span></code></pre></div>
+
+
+
+
+<p>If NPM is not found, we assume node.js is also not installed and install it using the following commands:</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Install Node (and npm)</span>
+    <span class="n">brew</span> <span class="n">install</span> <span class="n">node</span>
+    <span class="c"># Test that NPM is now installed</span>
+    <span class="n">npm</span> <span class="o">-</span><span class="n">v</span>
+    <span class="c"># Note when installing packages using NPM that it has the concept of both local and global installations.</span>
+    <span class="c"># Global installations are saved into the /usr folder for use anywhere. Local installations are saved to the current directory for use with specific projects.</span>
+    <span class="c"># When installing a package, pass the -g argument to install a package globally.</span></code></pre></div>
+
+
+
+
+<h2>Part 2. Installing Grunt</h2>
+
+
+
+
+<p>You will first need to perform a one-time install of the Grunt Command Line Interface.
+Install the Grunt Command Line Interface globally. (don’t forget the -g)</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sudo</span> <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">grunt</span><span class="o">-</span><span class="n">cli</span></code></pre></div>
+
+
+
+
+<p>Downlaod this Gruntfile into your projects root: https://gist.github.com/mackdoyle/1cfffdb1ac7ab59be9e6.
+And this package.json: https://gist.github.com/mackdoyle/f646a27f7fbacc91766e.
+Now simply run NPM install from the project root to use it.
+The package.json is configured to tell NPM to install Grunt and the project’s Grunt dependencies.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">cd</span> <span class="o">/</span><span class="p">[</span><span class="n">site_path</span><span class="p">]</span><span class="o">/</span>
+    <span class="n">sudo</span> <span class="n">npm</span> <span class="n">install</span></code></pre></div>
+
+
+
+
+<p>Run Grunt</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Change to the project root directory if not alreay there</span>
+    <span class="n">cd</span> <span class="o">/</span><span class="p">[</span><span class="n">site_path</span><span class="p">]</span>
+    <span class="c"># Run Grunt from the project root to execute the contrib processes used in the project</span>
+    <span class="n">grunt</span></code></pre></div>
+
+
+
+
+<h2>About package.json</h2>
+
+
+
+
+<p>The package.json file defines the set of Grunt plugins (known as contribs) that are used in a project. When the <code>nmp install grunt --save-dev</code>
+command is executed, nmp uses this file to determine which Grunt contribs to install locally in the <code>/node_modules</code>directory.</p>
+
+
+
+
+<h2>About Grunt.js</h2>
+
+
+
+
+<p>The Grunt.js file is master configuration file for Grunt. It is where the settings for each individual contrib package is stored.
+For example, if the project uses Uglify, it will first be defined in package.json as a devDependency so the contrib is installed locally.
+There will then need to be an uglify section in Grunt.js that defines which .js files it should minify and in what order.</p>
+
+
+										
+					<p>Posted in: workflow</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/grunt-from-scratch-osx]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/grunt-from-scratch-osx]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[Regular Expressions for Cleaning Markup]]></title>
+		<description>
+			<![CDATA[
+				<p>Every web developer finds themselves having to clean up and manipulate tags and Search and Replace can only take you
+so far. Here are a few I use that save me hours.</p>
+
+
+				<p>Every web developer finds themselves having to clean up and manipulate tags and Search and Replace can only take you
+so far. Here are a few I use that save me hours.</p>
+
+
+
+
+<p>Nothing beats BBEdit/Text Wrangler for tasks like this. So save these in the reg-ex library if you use those tools.
+Coda and Sublime fans can save these as snippets.</p>
+
+
+
+
+<ol>
+<li>Replace tag attributes.
+Usage: When you want to strip out the attributes for a certain tag but said tags have
+different attributes. This is also useful when you need to strip out tags with various attributes.</li>
+</ol>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Find</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="p">([</span><span class="o">^&gt;</span><span class="p">]</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span>
+
+<span class="c"># Replace</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span></code></pre></div>
+
+
+
+
+<ol>
+<li>Repalce open and closing tags</li>
+</ol>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Find</span>
+<span class="o">&lt;</span><span class="p">(</span><span class="o">/</span><span class="err">?</span><span class="p">)</span><span class="n">b</span><span class="o">&gt;</span>
+
+<span class="c"># Replace</span>
+<span class="o">&lt;</span>\<span class="mi">1</span><span class="n">strong</span><span class="o">&gt;</span></code></pre></div>
+
+
+
+
+<ol>
+<li>Match all instances of a tag regardless of each tag's attributes</li>
+</ol>
+
+
+
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Find</span>
+\<span class="o">&lt;</span><span class="n">img</span><span class="p">(</span><span class="o">.*</span><span class="p">)</span>\<span class="o">&gt;</span></code></pre></div>
+
+
+
+
+										
+					<p>Posted in: workflow</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/regular-expressions-for-tag-cleaning]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/regular-expressions-for-tag-cleaning]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[Baseline Grid Sass Mixin]]></title>
+		<description>
+			<![CDATA[
+				<p>Using a baseline grid to set type is a must if you want to achieve vertical rhythm. Dan Eden &amp; Michael Wright created <a href="http://basehold.it">basehold.it</a>, a dead simple solution that adds a baseline grid to an element's background. All you need to do is add a background-image property and point it to their URL.</p>
+
+
+				<p>Using a baseline grid to set type is a must if you want to achieve vertical rhythm. Dan Eden &amp; Michael Wright created <a href="http://basehold.it">basehold.it</a>, a dead simple solution that adds a baseline grid to an element's background. All you need to do is add a background-image property and point it to their URL.</p>
+
+
+
+
+<p>I wanted to additionally control the background-position so I created a little mixin. The <a href="http://basehold.it">basehold.it</a> website has a very nifty feature that hides the grid by clicking anywhere within the element. It's such a simple and useful feature that I peed my pants a little the first time I used it. So that's in here as well.</p>
+
+
+
+
+<p>Nothing groundbreaking, but something everyone needs to have in their library. So here you go. Or grab the gist with extended features <a href="https://gist.github.com/mackdoyle/8277070" target="_blank">here</a>.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// _baseline-it.scss</span>
+    <span class="k">@mixin</span><span class="nf"> baseline-it</span><span class="p">(</span><span class="nv">$height</span><span class="o">:</span><span class="mi">24</span><span class="o">,</span> <span class="nv">$red</span><span class="o">:</span><span class="mi">0</span><span class="o">,</span> <span class="nv">$green</span><span class="o">:</span><span class="mi">0</span><span class="o">,</span> <span class="nv">$blue</span><span class="o">:</span><span class="mi">0</span><span class="o">,</span> <span class="nv">$offset</span><span class="o">:</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(&#39;http://basehold.it/i/&#39;+$height+&#39;/&#39;+$red+&#39;/&#39;+$green+&#39;/&#39;+$blue+&#39;&#39;)</span><span class="p">;</span>
+        <span class="na">background-position-y</span><span class="o">:</span> <span class="nv">$offset</span> <span class="o">*</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">&amp;</span><span class="nd">:active</span><span class="p">{</span>
+            <span class="na">background-image</span><span class="o">:</span> <span class="no">inherit</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></div>
+
+
+
+
+<p>Don't forget to import the mixin partial</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">//global.scss</span>
+    <span class="k">@import</span> <span class="s2">&quot;baseline-it&quot;</span><span class="p">;</span></code></pre></div>
+
+
+
+
+<p>Now include the mixin in your selector:</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">//layout.scss</span>
+    <span class="nc">.container</span><span class="p">{</span>
+        <span class="k">@include</span><span class="nd"> baseline-it</span><span class="p">(</span><span class="mi">36</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">15</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></div>
+
+
+
+
+<div class="post-note"><i class="icon-entypo-circled-info">&nbsp;</i>Click and hold anywhere on the page</div>
+
+
+
+
+										
+					<p>Posted in: css</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/baseline-grid-sass-mixin]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/baseline-grid-sass-mixin]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[What I like about my prompt setup (iTerm2/Z-Shell)]]></title>
+		<description>
+			<![CDATA[
+				<ol>
+<li>More control over command prompt. (Although I had a fairly pimped out bash prompt)</li>
+<li>Syntax highlighting of ~$man~ pages, ~$sh~ commands, etc. And if your into ~vi, vim, nano~, they call all have language specific coloring.</li>
+</ol>
+
+
+
+
+				<ol>
+<li>More control over command prompt. (Although I had a fairly pimped out bash prompt)</li>
+<li><p>Syntax highlighting of ~$man~ pages, ~$sh~ commands, etc. And if your into ~vi, vim, nano~, they call all have language specific coloring.</p></li>
+<li><p>Beyond tab completion, zsh has command suggestion. So you type ~$sudo taol -n 100 /var/log/mysql/error.log~ and it asks, ~"Did you mean $tail?"~. Hit ~"Y"~ and the command runs w/o having to retype it. AND this works for all installed packages. So install node.js, fat finger a~$node lirst~ command, and it corrects it.</p></li>
+<li><p>Plugins!!! You have to install Oh My Zsh to make zsh really stand out over bash. take look at all the prebuilt plugins you can add to it. Good stuff there: [https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins]
+ Some simple examples are ~$jump~ that you can use to book mark directories and say ~$jump utilities~ and it takes you to ~/Applications/Utilities~. Or more advanced plugins that contain powerful Git scripts. Ruby, Python, Heroku, Django, it all there.</p>
+
+<p> A plugin for AWS was committed with positive feedback to expect it to be in the next release but there are several on GitHub you can add manually now. ex. grebburek / awe-scripts</p></li>
+<li><p>User profiles in iTerm. With iTerm you can create multiple profiles define how they open when you launch your prompt. For example, I have one that loads into a web project and shows some Git stats, and another that loads in a subdued color scheme and fires off a $tail on some error logs.</p></li>
+</ol>
+
+
+
+
+<h2>Configuration</h2>
+
+
+
+
+<ol>
+<li>Install iTerm</li>
+<li>Install zsh
+
+<ol>
+<li>CD to your user directory</li>
+<li>Get autoconf if you don't have it: $git clone git://git.sv.gnu.org/autoconf</li>
+<li>Get zsh:  $git clone git://git.code.sf.net/p/zsh/code zsh</li>
+<li>Run <code>$~/zsh/Ultil/preconfig</code></li>
+<li>Open up Users and Group, unlock it and ctrl-click on your profile to get to the Advance Options.</li>
+<li>Set your Login Shell to: <code>exec zsh</code></li>
+<li>If you hate it, set it back to: <code>exec bash</code></li>
+</ol>
+</li>
+</ol>
+
+
+
+
+										
+					<p>Posted in: terminal, and workflow</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/what-i-like-about-my-prompt]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/what-i-like-about-my-prompt]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[Fixing Joomla Permission Issues]]></title>
+		<description>
+			<![CDATA[
+				<p>These are a collection of suggestions found on fairly credible sites. That doesn't mean they are correct.</p>
+
+
+				<p>These are a collection of suggestions found on fairly credible sites. That doesn't mean they are correct.</p>
+
+
+
+
+<h2>Notes on Apache</h2>
+
+
+
+
+<p>For Apache to see a file, the user that Apache runs as (probably www or _www) must have the proper access
+to the site's directories. Having read/execute access to the contents of the site root is not
+enough, because it has to be allowed to traverse from / down the path to the location of the site root.
+When on a mac, make sure /, /Users/, /Users/myusername/, and /Users/myusername/Sites/ all have at least "a+x"
+permission (the eXecute permission on directories allows that user class to traverse the directory, even if Read access is not allowed).</p>
+
+
+
+
+<pre><code>`ls -lde / /Users/ /Users/myusername/ /Users/myusername/Sites`
+</code></pre>
+
+
+
+
+<p>If any of those directories doesn't show the last "x" set (the one for "others"), then use something like chmod a+x ... to set it for that directory.
+If the ACL for any of those directories shows that user www has been specifically denied access, then use the appropriate arguments to chmod to fix the ACLs</p>
+
+
+
+
+<h2>General File Permission Settings</h2>
+
+
+
+
+<h3>With FTP Layer</h3>
+
+
+
+
+<p>If a joomla installation is hosted on apache with <code>mod_php</code>, then all virtual hosts on that server run in the same context as your joomla code. If the files are owned by some other user than 'nobody' or 'wwwrun', the safest permissions are those which prevent changes to the joomla code, unless via an authorized channel (e.g. FTP):
+<em>DocumentRoot directory: 750 (e.g. <code>public_html</code>)
+</em>Files: 644
+*Directories: 755 (711 if you are paranoid, but not for directories which need to be listed) (owner: some user)
+With these permissions set, you will need to use FTP to update your Joomla installation. Not all modules support this. Remove modules which do not support FTP upgrades.
+Other processes running under <code>mod_php</code> can read your configuration.php. You can frustrate automated hacks by renaming this file.</p>
+
+
+
+
+<h3>With Fast CGI/suPHP</h3>
+
+
+
+
+<ul>
+<li>DocumentRoot directory: 750 (e.g. <code>public_html</code>)</li>
+<li>PHP files: 600 (400 if you are truly paranoid)</li>
+<li>HTML and image files: 644 (444 if you are truly paranoid)</li>
+<li>Directories: 755 (711 if you are paranoid, but not for directories which need to be listed)</li>
+</ul>
+
+
+
+
+<h2>Set <code>open_basedir</code></h2>
+
+
+
+
+<p><code>open_basedir</code>is not set in php.ini on our servers but should be. It limits the files that can be accessed by PHP to the specified directory. Also, fopen() uses the path to check the location of the file its opening. Also, some permission issues can be resolved by setting the tmp directory on the property as well. Multiple subdirectories can be added, separated by a colon.
+Example:
+<code>open_basedir=/home/site_name/public_html:/tmp</code> (must have trailing slash)</p>
+
+
+
+
+<h2>Protect directories and files</h2>
+
+
+
+
+<p>Ensure that all configurable paths to writable or uploadable directories (document repositories, image galleries, caches) are outside of <code>public_html</code>.</p>
+
+
+
+
+<p>Change the log path.
+Some extensions use the built in JLog class. This will, by default write logs to http://yousite/logs. Change this to a place that a casual browser cannot find (and don't pick /tmp/), or lock it down with http authentication.</p>
+
+
+
+
+<p>Change the temp folder path.
+If the log and temp paths are changed and PHP <code>open_basedir</code> configuration directive is set, make sure that the new paths fall within the scope of <code>open_basedir</code>.</p>
+
+
+
+
+<p>There is currently no easy way to move the Joomla! /image and /media directories. This is because thousands of third party extensions expect to find these important directories at the current location. The best plan is to make sure <code>open_basedir</code> is properly set for all the user accounts on your server.</p>
+
+
+
+
+<h2>Tmp and session paths</h2>
+
+
+
+
+<p>One common problem with remote hosts is that they sometimes move sites to different folders on the host server. In general, this does not cause obvious problems in Joomla!. However, when you install an extension, you need to be able to write to the "tmp" directory.
+In this case, you might get the error message: "<code>JFolder::create: Could not create directory" and "Warning! Failed to move file.</code>" If you have the Joomla! FTP layer enabled, you might get the message "<code>JFTP::mkdir: Bad response, JFTP::chmod: Bad response, JFTP::store: Bad response, Warning! Failed to move file.</code>"</p>
+
+
+
+
+<p>tmp directory:
+An incorrect tmp directory can cause this problem. To check this, look in your configuration.php file for the var <code>$tmp_path</code> value and make certain it matches your actual path. This must be writable to Joomla!.</p>
+
+
+
+
+<p>Session path:
+The <code>session.save_path</code> directive in your php.ini file must be writable. To verify, use the Forum Post Assistant. If it reports <code>save.session_path: Not Writable then there is a problem</code>. Look at your php.ini directives and verify the location and the permissions of the <code>session.save_path</code> value. It must be a valid location and it must be writable for Joomla!. You may require the assistance of your Web host for this, depending on your Web hosting situation.</p>
+
+
+
+
+<p>php.ini: You could also check your php.ini file, main file is generally under <code>/etc directory</code>. If you can edit this file, you can set <code>open_basedir</code> to include the temp directory: <code>open_basedir</code> = <code>/tmp</code>. If you have another path included, as suggested by security settings for Joomla!, you can add additional paths by adding :/path. An example: <code>open_basedir = /var/www/html:/tmp</code>.</p>
+
+
+
+
+<h2>File ownership advice from ianmac</h2>
+
+
+
+
+<p>At the heart of the issue is file ownership. There are generally two main server users that end up owning your files - the FTP user, and the Apache/PHP user. Obviously, when you upload files using FTP, the FTP user ends up owning them. Therefore, if you give a file 755 permissions, then ONLY the FTP user can write to that file.</p>
+
+
+
+
+<p>If you install Joomla! without the FTP layer, then the files it creates are owned by the Apache/PHP user. If you give the file 755 permissions, then ONLY the Apache/PHP user can write to that file.
+Just to emphasize, the fact that these username and passwords happen to be the same has no effect whatsoever on anything. They are different subsystems and are unrelated. It may be convenient, but will not solve your permission issues.
+So there are generally two approaches to take:
+    1. upload all the files via cpanel. This will generally result in all of the files being owned by the Apache/PHP user. Ensure that the root directory that all of your Joomla! files are installed in is writable, so that the installer can create the configuration.php file. Then, install Joomla! WITHOUT the FTP layer.
+    2. upload all the files using FTP. This will generally result in all of the files being owned by the FTP user. Make sure that your Joomla! root directory is writable, again, so that the installer can create the configuration.php file. Then install Joomla! WITH the FTP layer.</p>
+
+
+
+
+<p>Ensure that your cache folders are owned by the Apache/PHP user, because these files are written by PHP. (cache because writing using the PHP user is much faster than via FTP.
+If you apply these principles - and choose either the first or the second approach, you should get better results and extension installation should work properly via the admin interface. Mixing the two approaches will cause you no end of grief.</p>
+
+
+
+
+<p>A good way to check that everything is in order is to browse to the Administrator section of your site and browse to Help->System Info from the menu. Click on directory permissions.
+If you don't have the FTP layer enabled, it is important that everything show up as Writable. If you do have the FTP layer enabled, then it is important that your two Cache directories show up as writable. It is most likely okay that the rest show up as unwritable, because Joomla! can likely write these files using the stored FTP settings.</p>
+
+
+
+
+<h2>File ownership advice from srgb</h2>
+
+
+
+
+<p>I was stuck with the same issue and found a cool solution. You may use the FTP to upload files and Apache/PHP user for Joomla, you just need to do some preparation:
+Right after the extraction of Joomla_install_xxx.zip file into your website's root dir, change file permissions recursively to 4770 (suid bit lets Joomla pretend it's a directory creator):
+chmod -R 4770 /path/to/root/htdocs/dir
+Later, change Joomla script a bit to create all new dirs with the same perms (in libraries/joomla/filesystem/folder.php):
+function create($path = '', $mode = 4770)
+That's all, enjoy your Joomla!</p>
+
+
+
+
+<h2>Should Apache own some folders? What about relative vs abs patching?</h2>
+
+
+
+
+<h3>Achache owning Files</h3>
+
+
+
+
+<p>Site that mention setting Apache as the owner of the <code>/cache and /temp</code> directories:
+[http://david-latham.blogspot.co.at/2008/08/allow-httpd-apache-to-write-to-files.html]</p>
+
+
+
+
+<h3>Full Path Suggestions</h3>
+
+
+
+
+<p>[http://www.inmotionhosting.com/support/edu/joomla-3/server-settings/change-path-to-temp-folder]</p>
+
+
+										
+					<p>Posted in: joomla</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/fixing-joomla-permission-issues]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/fixing-joomla-permission-issues]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[Joomla Module Beatdown]]></title>
+		<description>
+			<![CDATA[
+				<p>One of the quirks of Joomla that can really cause you to tear your hair out, is the seemingly random display (or refusal to display) of modules on certain pages. One of the more common places this can occur is on search results pages. To avoid the problem, you must first understand the central roll menus, and their underlying ItemID, play in defining context for Joomla pages.</p>
+
+
+				<p>One of the quirks of Joomla that can really cause you to tear your hair out, is the seemingly random display (or refusal to display) of modules on certain pages. One of the more common places this can occur is on search results pages. To avoid the problem, you must first understand the central roll menus, and their underlying ItemID, play in defining context for Joomla pages.</p>
+
+
+
+
+<p>When a menu item is created, it is assigned an ID. This ID is appended, as the ItemID, to any page accessed via the menu item and is used by Joomla to persist the menu item’s settings to those pages. When you set the visibility of a module from within the module settings, you are basically saying, “show this module for the following ItemIDs.”</p>
+
+
+
+
+<p>This is an efficient approach to managing an <em>n</em> number of modules on an <em>n</em> number of pages but it can also cause problems that are difficult to troubleshoot. Almost every website will have pages that are not directly linked from a menu. Articles linked only from other articles or linked images in custom modules are examples of these. Since the pages are not associated with a menu item, they have no ItemID, and no way for Joomla to properly manage what modules are visible or hidden for it. Going back to the early days of Joomla, the official solution has been to create a seperate menu for managing these pages. The idea is to create a menu that you never actually show on the front end. Then add a menu item for any page that needs an ItemID.  You can then control the display of modules in the Modules Assignments tab like normal.</p>
+
+
+
+
+<p>It’s a hack, and it leaves a little distaste in your mouth, but it does work well. That is for everything except search results pages…</p>
+
+
+
+
+<p>The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to ~/search?q=odds&amp;Itemid=435~. Take note of the ItemID and head over to the Menu Manager for the menu that contain the reference to your home page.  Look in the ID column of the home page menu item and you will see it matches the ItemID.</p>
+
+
+
+
+<p>Manually setting the ItemID on the search.</p>
+
+
+										
+					<p>Posted in: joomla,, cms,, and php</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/joomla-module-beatdown]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/joomla-module-beatdown]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[Sassy Annotations]]></title>
+		<description>
+			<![CDATA[
+				<p>A custom mixin for displaying annotations with line pointers.
+<a href="#" data-reveal-id="annotationModal" class="modal-link">View Demo</a></p>
+
+
+				<p>A custom mixin for displaying annotations with line pointers.
+<a href="#" data-reveal-id="annotationModal" class="modal-link">View Demo</a></p>
+
+
+
+
+<p>Ever since we learned how to <a href="http://css-tricks.com/animation-css-triangles-work/" target="_blank">draw a triangle with CSS</a>, designers have relied upon it for creating tooltips
+to <span data-tooltip data-options="disable_for_touch:true" class="has-tip [tip-bottom]" title="Tooltips are awesome, you should totally use them!">annotate content</span>. This was a great discovery and has its place but, but isn't applicable to all situations.
+The problem appears when tooltips need to stay out of the way of the content they are annotating. Standard speech-bubble-style
+tooltips need to be nestled next to what they are annotating to maintain context. Moving them out a bit means replacing the beloved css triangle
+pointer with a line.</p>
+
+
+
+
+<p>At first glance, doing this sounds simple enough but in practice things can get complicated fast. For example, a typical use
+case for this typically involves the need to add annotations on top of their context rather than adjacent to. This means the typical approach of
+relative positioning has to be replaced with more verbose x,y positioning.</p>
+
+
+
+
+<p>In an attempt to provide a solution for these less-than-edge-cases, I created Sassy Annotations. As the name implies, they require Sass (Scss) but
+that's it. They do use the :before and :after pseudo elements which means they will work in IE 8+.</p>
+
+
+
+
+<p>To deploy a Sassy Annotation, you only need to add two HTML elements and small amount of CSS to position it.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;annotation-one down-right&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;endpoint&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Annotations are created by simply calling the @annotation mixin within a selector and defining the pointer orientation.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+
+
+<div id="annotationModal" class="reveal-modal" data-reveal>
+  <p data-height="1200" data-theme-id="0" data-slug-hash="dayFB" data-user="mackdoyle" data-default-tab="result" class='codepen'>
+    See the Pen <a href='http://codepen.io/mackdoyle/pen/dayFB'>Annotations</a> by mackdoyle (<a href='http://codepen.io/mackdoyle'>@mackdoyle</a>) on <a href='http://codepen.io'>CodePen</a>
+  </p>
+  <script src="//codepen.io/assets/embed/ei.js"></script>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+
+
+										
+					<p>Posted in: scss</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/sassy-annotations]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/sassy-annotations]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[HTML Canvas getImageData()]]></title>
+		<description>
+			<![CDATA[
+				<p>For my Sassy Annotations mixin, I wanted to color them the inverse of the image they sat upon. To accomplish this I would need to find a way to access the pixel data of the image, get the average color value and set the annotations to the inverse of that value.</p>
+
+
+				<p>For my Sassy Annotations mixin, I wanted to color them the inverse of the image they sat upon. To accomplish this I would need to find a way to access the pixel data of the image, get the average color value and set the annotations to the inverse of that value.</p>
+
+
+
+
+<p>I knew to start looking at the HTML5 Canvas for the solution but hadn't had a chance to play with it.
+So here is what I came up with. It demonstrates how to use the getImageData() method for obtaining image
+information as well as how to deal with support for remotely hosted images using CORS.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">jQuery</span><span class="p">,</span> <span class="nb">document</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+
+            <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">);</span>
+            <span class="nx">img</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">context</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">();</span> <span class="c1">// Succeeds. Canvas won&#39;t be dirty.</span>
+        <span class="p">};</span>
+
+        <span class="nx">img</span><span class="p">.</span><span class="nx">crossOrigin</span> <span class="o">=</span> <span class="s1">&#39;anonymous&#39;</span><span class="p">;</span>
+        <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://diveintohtml5.info/i/openclipart.org_media_files_johnny_automatic_1360.png&#39;</span><span class="p">;</span>
+        <span class="p">})(</span><span class="nx">jQuery</span><span class="p">,</span> <span class="nb">document</span><span class="p">);</span></code></pre></div>
+
+
+
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;target&quot;</span> <span class="na">width=</span><span class="s">&quot;1024&quot;</span> <span class="na">height=</span><span class="s">&quot;880&quot;</span><span class="nt">&gt;</span>You&#39;re missing the rodeo. Get a modern browser.<span class="nt">&lt;/canvas&gt;</span></code></pre></div>
+
+
+
+
+										
+					<p>Posted in: css and javascript</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/html-canvas-getimagedata]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/html-canvas-getimagedata]]></guid>
+	</item>
+
+	<item>
+		<title><![CDATA[Fixing Joomla Asset Table Issues]]></title>
+		<description>
+			<![CDATA[
+				<p>  Starting with the introduction of the Access Control List (ACL) implementation in Joomla 1.6, categories, articles some components create a record in the assets table to store properties associated with the ACL. When they do a foreign key relationship is created. Sometimes this relationship can break, causing your site to not behave properly. This is especially true when trying to upgrade from a version of Joomla pre-ACL.
+  In addition to problems with the foreign key relationships, the assets table stores hierarchal data using the [Adjacency List Model]. This article will not go into graph theory but to put simply, each record in the asset table has a relationship to another record. This relationship can also become corrupted and difficult to resolve due to its complexity.
+  There are a few guides and tools that can help resolve these issues but unless you are dealing with a small dataset, it is unlikely you will be able to resolve all your issues with just one of them. This article will will pull several resources together with some additional suggestions to create a comprehensive guide on resolving all issues associated to the ACL's assets table.
+  I should warn you before proceeding that the following steps were recorded as I was working through this issue myself. They have not been validated in any way, so proceed with caution. Also, you must have access to your website's database and have a decent understanding of mySQL. Some of these steps suggest direct manipulation of data through queries so take a backup before you start. And never attempt to run SQL statements directly on a production server.
+  This article will focus on articles and categories but the same approaches can be applied to all items that contain a relationship to Joomla's assets table, articles, categories, banners, weblinks, etc.
+  OK, so let's get started...</p>
+
+
+				<p>  Starting with the introduction of the Access Control List (ACL) implementation in Joomla 1.6, categories, articles some components create a record in the assets table to store properties associated with the ACL. When they do a foreign key relationship is created. Sometimes this relationship can break, causing your site to not behave properly. This is especially true when trying to upgrade from a version of Joomla pre-ACL.
+  In addition to problems with the foreign key relationships, the assets table stores hierarchal data using the [Adjacency List Model]. This article will not go into graph theory but to put simply, each record in the asset table has a relationship to another record. This relationship can also become corrupted and difficult to resolve due to its complexity.
+  There are a few guides and tools that can help resolve these issues but unless you are dealing with a small dataset, it is unlikely you will be able to resolve all your issues with just one of them. This article will will pull several resources together with some additional suggestions to create a comprehensive guide on resolving all issues associated to the ACL's assets table.
+  I should warn you before proceeding that the following steps were recorded as I was working through this issue myself. They have not been validated in any way, so proceed with caution. Also, you must have access to your website's database and have a decent understanding of mySQL. Some of these steps suggest direct manipulation of data through queries so take a backup before you start. And never attempt to run SQL statements directly on a production server.
+  This article will focus on articles and categories but the same approaches can be applied to all items that contain a relationship to Joomla's assets table, articles, categories, banners, weblinks, etc.
+  OK, so let's get started...</p>
+
+
+
+
+<h3>Gather diagnostics</h3>
+
+
+
+
+<p>  Before doing anything, you should gather as much information as you can to understand the source of the issue. Download Elin Warig's [Asset Table Diagnostics] tool and run it. This will generate a report showing any problems related to the assets table. If the report is clean, you might have another issue. If it is not, keep it open as we will go back to it several times during this process.</p>
+
+
+
+
+<h3>Get some context on the issue</h3>
+
+
+
+
+<p>  Head over to this <a href="http://docs.joomla.org/Fixing_the_assets_table">article</a> on Joomla docs. This will give you a bit of background along with a few suggestions. At this point you are likely to go all ADD and start trying some of the suggestions the document suggests, but do not do it, stay focused, and come back here. We will walk through those steps later with some sample code.</p>
+
+
+
+
+<h3>Fix a missing root level category</h3>
+
+
+
+
+<p>  Take a look at your <code>#_categories</code> table. The first record should be ROOT. If it is not, try creating it.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">whm_categories</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">asset_id</span><span class="p">,</span> <span class="n">parent_id</span><span class="p">,</span> <span class="n">lft</span><span class="p">,</span> <span class="n">rgt</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">extension</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">alias</span><span class="p">,</span> <span class="n">note</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">published</span><span class="p">,</span> <span class="n">checked_out</span><span class="p">,</span> <span class="n">checked_out_time</span><span class="p">,</span> <span class="n">access</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">metadesc</span><span class="p">,</span> <span class="n">metakey</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">created_user_id</span><span class="p">,</span> <span class="n">created_time</span><span class="p">,</span> <span class="n">modified_user_id</span><span class="p">,</span> <span class="n">modified_time</span><span class="p">,</span> <span class="n">hits</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span> <span class="k">VALUES</span>
+    <span class="o">`</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">331</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;system&#39;</span><span class="p">,</span> <span class="s1">&#39;ROOT&#39;</span><span class="p">,</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;{}&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></code></pre></div>
+
+
+
+
+<p>After you successfully execute this query, you will need to head over to you categories in the Joomla admin and click on the Rebuild button</p>
+
+
+
+
+<h3>Remove duplicate records</h3>
+
+
+
+
+<p>OK, at this point you have verified you have an asset table issue and gained a little insight into what parts of the data structure are affected. So let's get started and check off an easy one. If you are coming from an upgrade, it's likely you have some duplicate content. To find out, run this on the content table.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="n">alias</span>
+    <span class="k">FROM</span><span class="c1">#_content</span>
+    <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">alias</span>
+    <span class="k">HAVING</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span>
+    <span class="k">ORDER</span> <span class="k">BY</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span></code></pre></div>
+
+
+
+
+<p>  This query will simply return a count of duplicate alias names. You might have multiple articles with the same title or legitimate duplicates of articles, so you will need to look at each one to determine if you need it.</p>
+
+
+
+
+<p>  Before you go any further, log into the Joomla admin and create a new category named 'Temp' and take note of its id. Keep this around as you will find yourself using it to group items for processing.</p>
+
+
+
+
+<p>  Follow these steps to remove duplicate articles without breaking any foreign-key relationships. Then repeat the process for categories.</p>
+
+
+
+
+<h4>Step 1</h4>
+
+
+
+
+<p>  Copy the result set of the duplicate count query to a text editor. Use Find a Replace to build a <code>SELECT</code> statement that returns all of the duplicated articles by alias. You should end up with something like this:</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="o">*</span>
+    <span class="k">FROM</span> <span class="c1">#_content</span>
+    <span class="k">WHERE</span> <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-1&#39;</span> <span class="k">OR</span>
+         <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-2&#39;</span> <span class="k">OR</span>
+         <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-3&#39;</span></code></pre></div>
+
+
+
+
+<h4>Step 2</h4>
+
+
+
+
+<p>Look through the results and try to find something that differentiates the original record from its duplicates. In my data, the duplicates had a <code>modifed_by</code> value of 0 while the original had a user id. This allowed me to differentiate them from the original.</p>
+
+
+
+
+<h4>Step 3</h4>
+
+
+
+
+<p>Modify the <code>SELECT</code> statement into an <code>UPDATE</code> that keys off the <code>modified_by</code> field. Use this to move the duplicate records into the Temp category using the <code>catid</code> field. The query should look similar to this:</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="k">UPDATE</span> <span class="c1">#_content</span>
+    <span class="kt">SET</span> <span class="n">catid</span> <span class="o">=</span> <span class="mi">158</span>
+    <span class="k">WHERE</span> <span class="n">modified_by</span> <span class="o">&lt;</span> <span class="mi">1</span>
+    <span class="k">AND</span>
+    <span class="p">(</span>
+    <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-1&#39;</span> <span class="k">OR</span>
+    <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-2&#39;</span> <span class="k">OR</span>
+    <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-3&#39;</span>
+    <span class="p">)</span></code></pre></div>
+
+
+
+
+<h4>Step 4</h4>
+
+
+
+
+<p>Now head back to the Joomla admin and filter your articles by the Temp category. Now you have a collection of all the duplicate items that you can trash and delete. This process allows Joomla to remove the items and perform any necessary clean-up that you would have missed by performing a manual <code>DELETE</code> statement in the database.</p>
+
+
+
+
+<h3>Run the Asset Fix script</h3>
+
+
+
+
+<p>Elin has written another great script to get you closer to resolution. So go download her <a href="https://github.com/elinw/AssetFix">Asset Fix</a> tool and run it. Then run the Diagnostics tool again to see what was fixed and what wasn't.</p>
+
+
+
+
+<h3>Restore asset table relationships</h3>
+
+
+
+
+<p>TODO: Rework to update all relationships, not just ones with an asset id of 0.
+If you have noticed records with an <code>asset_id</code> of 0, there are likely asset records that exist for them and we need to restore that relationship. To do so, run this on the categories table.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="k">UPDATE</span>
+          <span class="c1">#_categories cats</span>
+        <span class="kt">SET</span>
+            <span class="n">cats</span><span class="p">.</span><span class="n">asset_id</span> <span class="o">=</span>
+                <span class="p">(</span>
+                    <span class="k">SELECT</span> <span class="n">assets</span><span class="p">.</span><span class="n">id</span>
+                    <span class="k">FROM</span> <span class="c1">#_assets assets</span>
+                    <span class="k">WHERE</span> <span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">assets</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;com_content.category.&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">cats</span><span class="p">.</span><span class="n">id</span>
+                <span class="p">)</span>
+        <span class="k">WHERE</span>
+            <span class="n">cats</span><span class="p">.</span><span class="n">asset_id</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span></code></pre></div>
+
+
+
+
+<p>Then modify it to run on the content table. The broken relationships for articles and categories should now be restored.</p>
+
+
+
+
+<h3>Create new asset table relationships</h3>
+
+
+
+
+<p>After restoring broken relationships, you will likely be left with items that have no asset relationship and they need one. Opening an item in the Joomla admin and saving it will create a relationship and this is the best approach if you have a few items to fix. If you too many for that solution to be feasible, follow these steps:
+  1. Create a new category named Temp and note it ID.
+  2. Log into the database an browse to the <code>#_content</code> table.
+  3. Find all of the articles without asset id <code>SELECT FROM #_content WHERE asset_id &lt; 1</code>
+  4. Now add those articles to the Temp category by updating their records with the Temp categories id <code>UPDATE #_content SET catid = 158 WHERE asset_id &lt; 1</code>. Remember to back up your database before running any queries.
+  5. Head back to the Joomla admin. All of the broken articles now have something in common, a category, and that means you can perform a bulk operation on them. So filter the articles by the Temp category, select all of them and perform a bulk operation to move them into the Uncategorised category or another category of your choice.
+  6. Repeat these step for broken categories as well.
+  Now all your articles and categories will have an <code>asset_id</code>.</p>
+
+
+
+
+<h3>Fix broken table relationships</h3>
+
+
+
+
+<p>The Joomla doc tells us what to do for this but not how to do it. Here is what I came up with…</p>
+
+
+
+
+<p>For categories, the Joomla doc say, "Categories can be nested, but your top level categories should have a <code>parent_id</code> that matches the <code>asset_id</code> of the component they are part of. They should have a level of 2.</p>
+
+
+
+
+<p>Subcategories should have their parent categories as parents and have a level of 3,4,5 or whatever value makes sense for your category structure.</p>
+
+
+
+
+<p>If you have a category with a level of less than 2 (0,1) then you have a broken asset table"</p>
+
+
+
+
+<h3>Component parent IDs.</h3>
+
+
+
+
+<p>The Joomla doc also states that, "Components should have <code>parent_id</code> of 1 (the root is their parent) and level of 1."</p>
+
+
+
+
+<h3>Category parent IDs.</h3>
+
+
+
+
+<p>The Joomla doc mentioned that, "…top level categories should have a <code>parent_id</code> that matches the <code>asset_id</code> of the component they are part of."</p>
+
+
+
+
+<h3>Validate the data</h3>
+
+
+
+
+<p>As a last step, you should run queries on all of the effected tables to ensure the data is now valid.</p>
+
+
+
+
+<h3>Fix Article and Category permissions</h3>
+
+
+
+
+<p>So far we have removed bad data, added missing asset records, fixed broken records and repaired bad ACL levels. One more thing we need to do is fix missing permissions. If you look in the assets table you might notice that some records for articles (<code>com_content.article</code>) do not have a value in the Rules column. Let's fix that.</p>
+
+
+
+
+<p>The update statements found in this <a href="http://forum.joomla.org/viewtopic.php?p=2650344">post</a> do a decent job of fixing permissions for items that have an asset record and have a valid relationship to it (The item's <code>asset_id</code> links to the correct asset record). Notice what is being set here as a rule. The <code>{"5":1}</code> you see for <code>core.create</code> is the Adjacency List Model we briefly touched on earlier. You need to understand how these work before you run these statements. DO NOT copy these and run them on your database as is. You need to know what levels are needed for your system.</p>
+
+
+
+
+<p>Take another look at the <em><a href="http://docs.joomla.org/Fixing_the_assets_table">Fixing the asset table</a></em> article again.
+Read this: <a href="http://docs.joomla.org/ACL_Technique_in_Joomla!">http://docs.joomla.org/ACL_Technique_in_Joomla!</a>
+And this: <a href="http://docs.joomla.org/Developing_a_Model-View-Controller_Component/2.5/Adding_ACL">http://docs.joomla.org/Developing_a_Model-View-Controller_Component/2.5/Adding_ACL</a></p>
+
+
+
+
+<p>Also, try adding the default rule properties first and see if that works. For example set all the rules below to <code>rules= {"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}</code></p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="cm">/* Fix Categories */</span>
+    <span class="k">UPDATE</span> <span class="c1">#_assets SET rules=&#39;{&quot;core.create&quot;:{&quot;5&quot;:1},&quot;core.delete&quot;:{&quot;5&quot;:1},&quot;core.edit&quot;:{&quot;4&quot;:1,&quot;5&quot;:1},&quot;core.edit.state&quot;:{&quot;5&quot;:1},&quot;core.edit.own&quot;:{&quot;5&quot;:1}}&#39;</span>
+    <span class="k">WHERE</span> <span class="n">name</span> <span class="k">LIKE</span> <span class="s1">&#39;%com_content.category%&#39;</span></code></pre></div>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="cm">/* Fix Articles */</span>
+    <span class="k">UPDATE</span> <span class="c1">#_assets SET rules=&#39;{&quot;core.delete&quot;:{&quot;6&quot;:1,&quot;5&quot;:1},&quot;core.edit&quot;:{&quot;6&quot;:1,&quot;4&quot;:1,&quot;5&quot;:1},&quot;core.edit.state&quot;:{&quot;6&quot;:1,&quot;5&quot;:1}}&#39;</span>
+    <span class="k">WHERE</span> <span class="n">name</span> <span class="k">LIKE</span> <span class="s1">&#39;%com_content.article%&#39;</span>
+
+    <span class="k">DELETE</span>
+        <span class="err">{</span>
+            <span class="s2">&quot;core.create&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
+            <span class="s2">&quot;core.delete&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
+            <span class="s2">&quot;core.edit&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
+            <span class="s2">&quot;core.edit.state&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
+            <span class="s2">&quot;core.edit.own&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;6&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;8&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span>
+        <span class="err">}</span>
+
+        <span class="err">{</span>
+            <span class="s2">&quot;core.create&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
+            <span class="s2">&quot;core.delete&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
+            <span class="s2">&quot;core.edit&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;4&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
+            <span class="s2">&quot;core.edit.state&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
+            <span class="s2">&quot;core.edit.own&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span>
+        <span class="err">}</span></code></pre></div>
+
+
+
+
+<h4>Validate Assets</h4>
+
+
+
+
+<p>Check for records with duplicate item references in the <code>name</code> field.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="cm">/* Duplicates for &#39;Uncategorised&#39; is expected behavior */</span>
+    <span class="k">SELECT</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="n">name</span>
+    <span class="k">FROM</span>  <span class="n">whm_assets</span>
+    <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">name</span>
+    <span class="k">HAVING</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span>
+    <span class="k">ORDER</span> <span class="k">BY</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span></code></pre></div>
+
+
+
+
+<h4>Validate Categories</h4>
+
+
+
+
+<p>Check the total number of categories and compare it to the number of category assets. The count should be the same.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="c1">#_categories</span>
+
+    <span class="k">SELECT</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="c1">#_assets</span>
+    <span class="k">WHERE</span> <span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;com_content.category.&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></code></pre></div>
+
+
+
+
+<h4>Validate Articles</h4>
+
+
+
+
+<p>Check for broken references by locating an existing asset record for an item that has a different ID than the item's <code>asset_id</code>.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-mysql" data-lang="mysql"><span class="cm">/* This should return 0 results if there are no broken relationships */</span>
+    <span class="k">SELECT</span> <span class="n">cont</span><span class="p">.</span><span class="n">asset_id</span><span class="p">,</span> <span class="n">assets</span><span class="p">.</span><span class="n">id</span>
+    <span class="k">FROM</span> <span class="n">whm_content</span> <span class="n">cont</span><span class="p">,</span> <span class="n">whm_assets</span>  <span class="n">assets</span>
+    <span class="k">WHERE</span> <span class="p">(</span><span class="n">cont</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">assets</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;com_content.article.&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="k">AND</span>   <span class="p">(</span><span class="n">cont</span><span class="p">.</span><span class="n">asset_id</span>  <span class="o">&lt;&gt;</span> <span class="n">assets</span><span class="p">.</span><span class="n">id</span> <span class="p">)</span></code></pre></div>
+
+
+
+
+										
+					<p>Posted in: joomla</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/fixing-joomla-asset-table]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/fixing-joomla-asset-table]]></guid>
+	</item>
+
+
+	</channel>
+</rss>

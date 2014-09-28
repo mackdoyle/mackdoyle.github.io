@@ -1,7 +1,84 @@
-_site
-.DS_Store
-.sass-cache
-.UlyssesRoot
-.Ulysses-Group.plist
-.sublime-project
-.sublime-workspace
+# Exclude configuration files that may contain sensitive information.
+# ---------------------------------------------
+# GENERAL
+  .htaccess
+  phpinfo.php
+  info.php
+
+# DRUPAL
+ sites/*/settings*.php
+ sites/*/files
+ sites/*/private
+
+# JOOMLA
+  configuration.php
+  /logs/**/*.*
+  /tmp/**/*.*
+  /cache/**/*.*
+
+# WORDPRESS
+
+
+
+# Exclude hidden OS files.
+# ---------------------------------------------
+  .DS_Store
+  .DS_Store?
+  ._*
+  Thumbs.db
+  _vti_*
+  *.LCK
+  *.TMP
+  *~
+
+# Exclude other VCS tracking files.
+# ---------------------------------------------
+  .#*
+  .svn
+  .bzr
+
+
+# Exclude IDE management files.
+# ---------------------------------------------
+  # CODA
+
+  # ECLIPSE
+  .settings
+  .buildpath
+
+  # NETBEANS
+  netbeans
+  /nbproject/private/
+  /nbproject
+
+  # PHP/WEB STORM
+  .idea
+
+  # SUBLIME TEXT
+  .sublime-project
+  .sublime-workspace
+
+  # GENERAL
+  WS_FTP.LOG
+
+
+# Exclude Workflow Resources
+# ---------------------------------------------
+  .codekit
+  codekit.json
+  .sass-cache
+  **/_bower_components
+  /dist
+  /node_modules
+  .tmp
+
+
+# Exclude Local only files.
+# ---------------------------------------------
+  _notes
+  *.md
+  *.markdown
+  .UlyssesRoot
+  .Ulysses-Group.plist
+
+

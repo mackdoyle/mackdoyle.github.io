@@ -1,0 +1,26 @@
+{% comment %}
+	Thin top bar
+	@reference: http://foundation.zurb.com/docs/components/topbar.html
+{% endcomment %}
+
+{% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
+
+<nav class="top-bar">
+
+  <div id="logo">JASONDOYLE</div>
+
+  <ul class="internal-links">
+    <li>
+      <a {% if location == 'index.html' %}class="active"{% endif %} href="/index.html" title="Articles">Articles</a>
+    </li>
+    <li>
+      <a {% if location == 'projects.html' %}class="active"{% endif %} href="/projects.html" title="Projects">Projects</a>
+    </li>
+  </ul>
+
+  <ul class="external-links">
+    <li><a href="https://github.com/mackdoyle" target="_blank" title="Github" class="fa fa-github"></a></li>
+    <li><a href="https://codepen.io/mackdoyle" target="_blank" title="Codepen" class="fa fa-codepen"></a></li>
+  </ul>
+</nav>
+

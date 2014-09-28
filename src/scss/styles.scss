@@ -11,24 +11,10 @@
 @import
   "base/deopinionate";
 
-// Vendor Dependencies
-@import
-  "superslides";
-
 // Authored Dependencies
 @import
-	"gams/gams";
+	"vendor/base";
 
 // Sections
 @import
-  "global/default",
-	"global/layout",
-	"global/content/base",
-  "global/header/top-bar",
-  "global/header/hero",
-  "global/footer/footer";
-
-// Overrides - Load Last
-@import
-  "overrides";
-
+  "partials/base";

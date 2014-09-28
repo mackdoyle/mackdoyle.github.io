@@ -1,0 +1,29 @@
+/**
+ * Sass retina image mixin
+ * $context: The name of the sub-folder inside assets/images directory
+ * $context + '/' can be removed if you don't have image sub directories
+ * $file: Filename without extension
+ * $type: extension (png, jpg, etc..)
+ * $width, $height: pixel width/height of the normal image (not the 2x version)
+ *
+ * Usage
+ * @include retina-image(home, logo, png, 143px, 40px);
+ */
+
+@mixin retina-image($context, $file, $type, $width, $height) {
+    background-image: url((asset-path($context + '/' + $file + '.' + $type)));
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (-moz-min-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx){
+        & {
+          background-image: url((asset-path($context + '/' + $file + '@2x.' + $type)));
+          -webkit-background-size: $width $height;
+          -moz-background-size: $width $height;
+          -o-background-size: $width $height;
+          background-size: $width $height;
+    }
+  }
+}
