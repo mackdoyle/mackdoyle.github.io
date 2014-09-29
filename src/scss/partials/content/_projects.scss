@@ -16,7 +16,10 @@
   height: 100%;
   font-size: 0; //removes extra white-space on children inlined elements
   background: rgba(20,20,20,0.9);
-  padding: 40px 40px 40px 80px;
+  padding: $gutter-size * 2;
+  @include breakpoint(I-----I){
+    padding: $gutter-size;
+  }
 }
 
 .panel-container {

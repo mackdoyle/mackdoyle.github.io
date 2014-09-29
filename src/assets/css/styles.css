@@ -2563,7 +2563,6 @@ div[class*=swatch] {
   height: 100%;
   margin: 0 auto;
   padding: 0;
-  overflow-y: scroll;
   height: 100%; }
 
 .content-container {
@@ -3281,7 +3280,10 @@ h1 + hr {
   height: 100%;
   font-size: 0;
   background: rgba(20, 20, 20, 0.9);
-  padding: 40px 40px 40px 80px; }
+  padding: 30px; }
+  @media (max-width: 768px) {
+    .panels-container {
+      padding: 15px; } }
 
 .panel-container {
   float: left;
