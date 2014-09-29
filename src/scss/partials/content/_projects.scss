@@ -21,6 +21,10 @@
 
 .panel-container {
   @include tiler(2, 2%);
+  @include breakpoint(I-----I){
+    float: none;
+    width:100%;
+  };
 }
 
 .panel {

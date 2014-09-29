@@ -25,7 +25,7 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: ['<%= path.src %>/scss/**/*.{scss,sass}'],
-        tasks: ['sass:serve','cssmin',  'notify:watch']
+        tasks: ['sass:serve','cssmin','notify:watch']
       },
       jekyll: {
         files: [
@@ -503,11 +503,6 @@ module.exports = function (grunt) {
       'jekyll:serve',
       'watch'
     ]);
-  });
-
-  grunt.registerTask('server', function () {
-    grunt.log.warn('The `server` task has been deprecated. Using `grunt serve` instead.');
-    grunt.task.run(['serve']);
   });
 
   // Grunt Build

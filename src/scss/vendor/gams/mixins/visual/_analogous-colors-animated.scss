@@ -1,0 +1,19 @@
+// Works in conjuntion with the analogous-colors mixin.
+// Creates a color fade animation for each swatch.
+@mixin analogous-colors-animated($base-color, $num-swatches, $increment: 10) {
+
+  $attr: background; //want to pass this in but throws an error. Sass bug?
+  $step: 100/$num-swatches;
+
+  @keyframes pulsate {
+    @for $i from 1 through $num-swatches {
+      #{$step}% {#{$attr}: adjust-hue($base-color, -($i * $increment))}
+      $step: $step + (100/$num-swatches);
+    }
+  }
+
+}
+
+
+
+

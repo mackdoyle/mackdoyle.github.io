@@ -28,15 +28,6 @@ article.swatch-* {
 
 }
 
-// Nudge the content when avatar is floated left
-article.teaser {
-  @include breakpoint(I-------I){
-    padding-left:120px;
-  }
-  @include breakpoint(I---I){
-    padding-left:60px;
-  }
-}
 
 
 // Teaser block styles

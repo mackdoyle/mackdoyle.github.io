@@ -4,6 +4,7 @@
 
 $num-swatches: 48;
 $base-color: rgba(255,10,100,1);
+$increment: 1.3;
 
 
 // Build swatch styles
@@ -13,11 +14,17 @@ $base-color: rgba(255,10,100,1);
   height: 100%;
 }
 
-@include analogous-colors('.swatch',$base-color, $num-swatches, 2, 'reverse');
+// Animation Not working yet
+//@include analogous-colors-animated($base-color, $num-swatches, $increment);
+
+@include analogous-colors('.swatch',$base-color, $num-swatches, $increment, 'reverse');
 
 div[class*=swatch] {
   display: table-cell;
   width: 100%/$num-swatches; height: 100%;
+  -moz-animation: pulsate 20s linear infinite;
+  -webkit-animation: pulsate 20s linear infinite;
+  animation: pulsate 20s linear infinite;
 }
 
 

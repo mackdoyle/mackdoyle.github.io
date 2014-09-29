@@ -17,7 +17,9 @@ html, body {
   overflow-x: hidden;
   max-width: 100%;
   margin: 0 auto;
-  height: 100%; }
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -2018,56 +2020,6 @@ Another option is to use this trick:
   color: #ae81ff; }
 
 /* Literal.Number.Integer.Long */
-/* Serif */
-/*
-@font-face {
-    font-family: 'Droid Serif';
-    src: url($font-path + '/droidserif-webfont.eot');
-    src: url($font-path + '/droidserif-webfont.eot?#iefix') format('embedded-opentype'),
-         url($font-path + '/droidserif-webfont.woff') format('woff'),
-         url($font-path + '/droidserif-webfont.ttf') format('truetype'),
-         url($font-path + '/droidserif-webfont.svg#droid_serifregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'Droid Serif';
-    src: url($font-path + '/droidserif-bold-webfont.eot');
-    src: url($font-path + '/droidserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url($font-path + '/droidserif-bold-webfont.woff') format('woff'),
-         url($font-path + '/droidserif-bold-webfont.ttf') format('truetype'),
-         url($font-path + '/droidserif-bold-webfont.svg#droid_serifbold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'Droid Serif';
-    src: url($font-path + '/droidserif-italic-webfont.eot');
-    src: url($font-path + '/droidserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url($font-path + '/droidserif-italic-webfont.woff') format('woff'),
-         url($font-path + '/droidserif-italic-webfont.ttf') format('truetype'),
-         url($font-path + '/droidserif-italic-webfont.svg#droid_serifitalic') format('svg');
-    font-weight: normal;
-    font-style: italic;
-
-}
-
-@font-face {
-    font-family: 'Droid Serif';
-    src: url($font-path + '/droidserif-bolditalic-webfont.eot');
-    src: url($font-path + '/droidserif-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url($font-path + '/droidserif-bolditalic-webfont.woff') format('woff'),
-         url($font-path + '/droidserif-bolditalic-webfont.ttf') format('truetype'),
-         url($font-path + '/droidserif-bolditalic-webfont.svg#droid_serifbold_italic') format('svg');
-    font-weight: bold;
-    font-style: italic;
-
-}
-*/
 /* Sans Serif */
 /* Proxima Nova */
 @font-face {
@@ -2430,153 +2382,156 @@ pre.terminal code {
   height: 100%; }
 
 .swatch:nth-child(1) {
-  background: #ff0a6c; }
+  background: #ff0a69; }
 
 .swatch:nth-child(2) {
-  background: #ff0a74; }
+  background: #ff0a6f; }
 
 .swatch:nth-child(3) {
-  background: #ff0a7c; }
+  background: #ff0a74; }
 
 .swatch:nth-child(4) {
-  background: #ff0a85; }
+  background: #ff0a79; }
 
 .swatch:nth-child(5) {
-  background: #ff0a8d; }
+  background: #ff0a7f; }
 
 .swatch:nth-child(6) {
-  background: #ff0a95; }
+  background: #ff0a84; }
 
 .swatch:nth-child(7) {
-  background: #ff0a9d; }
+  background: #ff0a89; }
 
 .swatch:nth-child(8) {
-  background: #ff0aa5; }
+  background: #ff0a8e; }
 
 .swatch:nth-child(9) {
-  background: #ff0aae; }
+  background: #ff0a94; }
 
 .swatch:nth-child(10) {
-  background: #ff0ab6; }
+  background: #ff0a99; }
 
 .swatch:nth-child(11) {
-  background: #ff0abe; }
+  background: #ff0a9e; }
 
 .swatch:nth-child(12) {
-  background: #ff0ac6; }
+  background: #ff0aa4; }
 
 .swatch:nth-child(13) {
-  background: #ff0ace; }
+  background: #ff0aa9; }
 
 .swatch:nth-child(14) {
-  background: #ff0ad6; }
+  background: #ff0aae; }
 
 .swatch:nth-child(15) {
-  background: #ff0ade; }
+  background: #ff0ab4; }
 
 .swatch:nth-child(16) {
-  background: #ff0ae7; }
+  background: #ff0ab9; }
 
 .swatch:nth-child(17) {
-  background: #ff0aef; }
+  background: #ff0abe; }
 
 .swatch:nth-child(18) {
-  background: #ff0af7; }
+  background: #ff0ac4; }
 
 .swatch:nth-child(19) {
-  background: #ff0aff; }
+  background: #ff0ac9; }
 
 .swatch:nth-child(20) {
-  background: #f70aff; }
+  background: #ff0ace; }
 
 .swatch:nth-child(21) {
-  background: #ef0aff; }
+  background: #ff0ad3; }
 
 .swatch:nth-child(22) {
-  background: #e60aff; }
+  background: #ff0ad9; }
 
 .swatch:nth-child(23) {
-  background: #de0aff; }
+  background: #ff0ade; }
 
 .swatch:nth-child(24) {
-  background: #d60aff; }
+  background: #ff0ae3; }
 
 .swatch:nth-child(25) {
-  background: #ce0aff; }
+  background: #ff0ae9; }
 
 .swatch:nth-child(26) {
-  background: #c60aff; }
+  background: #ff0aee; }
 
 .swatch:nth-child(27) {
-  background: #bd0aff; }
+  background: #ff0af3; }
 
 .swatch:nth-child(28) {
-  background: #b50aff; }
+  background: #ff0af9; }
 
 .swatch:nth-child(29) {
-  background: #ad0aff; }
+  background: #ff0afe; }
 
 .swatch:nth-child(30) {
-  background: #a50aff; }
+  background: #fb0aff; }
 
 .swatch:nth-child(31) {
-  background: #9d0aff; }
+  background: #f50aff; }
 
 .swatch:nth-child(32) {
-  background: #950aff; }
+  background: #f00aff; }
 
 .swatch:nth-child(33) {
-  background: #8d0aff; }
+  background: #eb0aff; }
 
 .swatch:nth-child(34) {
-  background: #840aff; }
+  background: #e60aff; }
 
 .swatch:nth-child(35) {
-  background: #7c0aff; }
+  background: #e00aff; }
 
 .swatch:nth-child(36) {
-  background: #740aff; }
+  background: #db0aff; }
 
 .swatch:nth-child(37) {
-  background: #6c0aff; }
+  background: #d60aff; }
 
 .swatch:nth-child(38) {
-  background: #640aff; }
+  background: #d00aff; }
 
 .swatch:nth-child(39) {
-  background: #5b0aff; }
+  background: #cb0aff; }
 
 .swatch:nth-child(40) {
-  background: #530aff; }
+  background: #c60aff; }
 
 .swatch:nth-child(41) {
-  background: #4b0aff; }
+  background: #c00aff; }
 
 .swatch:nth-child(42) {
-  background: #430aff; }
+  background: #bb0aff; }
 
 .swatch:nth-child(43) {
-  background: #3b0aff; }
+  background: #b60aff; }
 
 .swatch:nth-child(44) {
-  background: #330aff; }
+  background: #b00aff; }
 
 .swatch:nth-child(45) {
-  background: #2b0aff; }
+  background: #ab0aff; }
 
 .swatch:nth-child(46) {
-  background: #220aff; }
+  background: #a60aff; }
 
 .swatch:nth-child(47) {
-  background: #1a0aff; }
+  background: #a10aff; }
 
 .swatch:nth-child(48) {
-  background: #120aff; }
+  background: #9b0aff; }
 
 div[class*=swatch] {
   display: table-cell;
   width: 2.08333%;
-  height: 100%; }
+  height: 100%;
+  -moz-animation: pulsate 20s linear infinite;
+  -webkit-animation: pulsate 20s linear infinite;
+  animation: pulsate 20s linear infinite; }
 
 /**
  * Image Effects
@@ -2621,7 +2576,7 @@ div[class*=swatch] {
     .content-container {
       max-width: 100%; } }
   .content-container .post {
-    padding: 0 15px 0 40px; }
+    padding: 0 15px 0 15px; }
 
 .content-container .baseline {
   background-image: inherit; }
@@ -3339,6 +3294,10 @@ h1 + hr {
   .panel-container img {
     width: 100%;
     max-width: 100%; }
+  @media (max-width: 768px) {
+    .panel-container {
+      float: none;
+      width: 100%; } }
 
 .panel {
   display: table;
@@ -3521,13 +3480,6 @@ h1 + hr {
   overflow: hidden;
   border-radius: 100%; }
 
-/**
- * global/header/top-bar
- * Site specific overrides of the default Foundation Top Bar styles
- * Theme variables compiled in Gams
- *
- * Mobile Inspiration: http://getrefe.tumblr.com/
-*/
 .container {
   margin-top: 48px; }
 
@@ -3605,6 +3557,9 @@ h1 + hr {
   .top-bar .external-links {
     position: absolute;
     right: 94px; }
+    @media (max-width: 320px) {
+      .top-bar .external-links {
+        display: none; } }
     .top-bar .external-links li {
       display: inline-block;
       line-height: 48px;

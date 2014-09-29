@@ -1,10 +1,10 @@
-/**
- * global/header/top-bar
- * Site specific overrides of the default Foundation Top Bar styles
- * Theme variables compiled in Gams
- *
- * Mobile Inspiration: http://getrefe.tumblr.com/
-*/
+///
+ // global/header/top-bar
+ // Site specific overrides of the default Foundation Top Bar styles
+ // Theme variables compiled in Gams
+ //
+ // Mobile Inspiration: http://getrefe.tumblr.com/
+ ///
 
 $top-bar-height: 48px;
 $top-bar-link: #666666;
@@ -76,6 +76,10 @@ $top-bar-link: #666666;
   .external-links {
     position: absolute;
     right: 94px;
+    @include breakpoint(I-I){
+      display: none;
+    }
+
     li{
       display: inline-block;
       line-height: $top-bar-height;

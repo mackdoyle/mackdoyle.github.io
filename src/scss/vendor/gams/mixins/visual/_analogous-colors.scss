@@ -1,5 +1,5 @@
 // Creates a defined number of analogous colors, incremented by a defined number
-// $dir not working so hard coding for now
+// $direction not working so hard coding for now
 @mixin analogous-colors($selector, $base-color, $num-swatches: 3, $increment: 10, $direction:'forward') {
 
 $attr: background; //want to pass this in but throws an error. Sass bug?

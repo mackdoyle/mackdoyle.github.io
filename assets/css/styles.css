@@ -2018,56 +2018,6 @@ Another option is to use this trick:
   color: #ae81ff; }
 
 /* Literal.Number.Integer.Long */
-/* Serif */
-/*
-@font-face {
-    font-family: 'Droid Serif';
-    src: url($font-path + '/droidserif-webfont.eot');
-    src: url($font-path + '/droidserif-webfont.eot?#iefix') format('embedded-opentype'),
-         url($font-path + '/droidserif-webfont.woff') format('woff'),
-         url($font-path + '/droidserif-webfont.ttf') format('truetype'),
-         url($font-path + '/droidserif-webfont.svg#droid_serifregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'Droid Serif';
-    src: url($font-path + '/droidserif-bold-webfont.eot');
-    src: url($font-path + '/droidserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url($font-path + '/droidserif-bold-webfont.woff') format('woff'),
-         url($font-path + '/droidserif-bold-webfont.ttf') format('truetype'),
-         url($font-path + '/droidserif-bold-webfont.svg#droid_serifbold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'Droid Serif';
-    src: url($font-path + '/droidserif-italic-webfont.eot');
-    src: url($font-path + '/droidserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url($font-path + '/droidserif-italic-webfont.woff') format('woff'),
-         url($font-path + '/droidserif-italic-webfont.ttf') format('truetype'),
-         url($font-path + '/droidserif-italic-webfont.svg#droid_serifitalic') format('svg');
-    font-weight: normal;
-    font-style: italic;
-
-}
-
-@font-face {
-    font-family: 'Droid Serif';
-    src: url($font-path + '/droidserif-bolditalic-webfont.eot');
-    src: url($font-path + '/droidserif-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url($font-path + '/droidserif-bolditalic-webfont.woff') format('woff'),
-         url($font-path + '/droidserif-bolditalic-webfont.ttf') format('truetype'),
-         url($font-path + '/droidserif-bolditalic-webfont.svg#droid_serifbold_italic') format('svg');
-    font-weight: bold;
-    font-style: italic;
-
-}
-*/
 /* Sans Serif */
 /* Proxima Nova */
 @font-face {
@@ -2429,6 +2379,103 @@ pre.terminal code {
   width: 100%;
   height: 100%; }
 
+@keyframes pulsate {
+  2.08333% {
+    background: #ff0a6c; }
+  4.16667% {
+    background: #ff0a74; }
+  6.25% {
+    background: #ff0a7c; }
+  8.33333% {
+    background: #ff0a85; }
+  10.41667% {
+    background: #ff0a8d; }
+  12.5% {
+    background: #ff0a95; }
+  14.58333% {
+    background: #ff0a9d; }
+  16.66667% {
+    background: #ff0aa5; }
+  18.75% {
+    background: #ff0aae; }
+  20.83333% {
+    background: #ff0ab6; }
+  22.91667% {
+    background: #ff0abe; }
+  25.0% {
+    background: #ff0ac6; }
+  27.08333% {
+    background: #ff0ace; }
+  29.16667% {
+    background: #ff0ad6; }
+  31.25% {
+    background: #ff0ade; }
+  33.33333% {
+    background: #ff0ae7; }
+  35.41667% {
+    background: #ff0aef; }
+  37.5% {
+    background: #ff0af7; }
+  39.58333% {
+    background: #ff0aff; }
+  41.66667% {
+    background: #f70aff; }
+  43.75% {
+    background: #ef0aff; }
+  45.83333% {
+    background: #e60aff; }
+  47.91667% {
+    background: #de0aff; }
+  50.0% {
+    background: #d60aff; }
+  52.08333% {
+    background: #ce0aff; }
+  54.16667% {
+    background: #c60aff; }
+  56.25% {
+    background: #bd0aff; }
+  58.33333% {
+    background: #b50aff; }
+  60.41667% {
+    background: #ad0aff; }
+  62.5% {
+    background: #a50aff; }
+  64.58333% {
+    background: #9d0aff; }
+  66.66667% {
+    background: #950aff; }
+  68.75% {
+    background: #8d0aff; }
+  70.83333% {
+    background: #840aff; }
+  72.91667% {
+    background: #7c0aff; }
+  75% {
+    background: #740aff; }
+  77.08333% {
+    background: #6c0aff; }
+  79.16667% {
+    background: #640aff; }
+  81.25% {
+    background: #5b0aff; }
+  83.33333% {
+    background: #530aff; }
+  85.41667% {
+    background: #4b0aff; }
+  87.5% {
+    background: #430aff; }
+  89.58333% {
+    background: #3b0aff; }
+  91.66667% {
+    background: #330aff; }
+  93.75% {
+    background: #2b0aff; }
+  95.83333% {
+    background: #220aff; }
+  97.91667% {
+    background: #1a0aff; }
+  100.0% {
+    background: #120aff; } }
 .swatch:nth-child(1) {
   background: #ff0a6c; }
 
@@ -2576,7 +2623,10 @@ pre.terminal code {
 div[class*=swatch] {
   display: table-cell;
   width: 2.08333%;
-  height: 100%; }
+  height: 100%;
+  -moz-animation: pulsate 20s linear infinite;
+  -webkit-animation: pulsate 20s linear infinite;
+  animation: pulsate 20s linear infinite; }
 
 /**
  * Image Effects
@@ -3339,6 +3389,10 @@ h1 + hr {
   .panel-container img {
     width: 100%;
     max-width: 100%; }
+  @media (max-width: 768px) {
+    .panel-container {
+      float: none;
+      width: 100%; } }
 
 .panel {
   display: table;
