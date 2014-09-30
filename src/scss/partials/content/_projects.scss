@@ -26,7 +26,7 @@
 
   //@include tiler(2, 2%);
   @include breakpoint(I-----I){
-    width:100%;
+    width:96%;
   };
 }
 
@@ -36,14 +36,18 @@
   background: rgba(10,10,10, 0.9);
   border-radius: 2px;
   font-size: 0;
-  padding: 20px;
   width: 100%;
 
   .specs {
     display: table-cell;
     letter-spacing: .025rem;
     vertical-align: top;
+    padding: 20px 0 20px 20px;
     max-width: 360px;
+    @include breakpoint(I-----I){
+      display: inherit;
+      max-width:100%;
+    }
 
     header {
       font-size: 1.4rem;
@@ -69,6 +73,12 @@
   .plate {
     display: table-cell;
     vertical-align: top;
+    padding: 20px;
     max-width: 640px;
+    @include breakpoint(I-----I){
+      display: inherit;
+      width:100%;
+      max-width:100%;
+    }
   }
 }
