@@ -12,20 +12,20 @@
 // gumgum.com/gallery#in-image
 
 .panels-container {
-  position: absolute;
-  height: 100%;
+  //position: absolute;
+  //height: 100%;
   font-size: 0; //removes extra white-space on children inlined elements
   background: rgba(20,20,20,0.9);
-  padding: $gutter-size * 2;
-  @include breakpoint(I-----I){
-    padding: $gutter-size;
-  }
+  padding:2% 0 2% 2%;
 }
 
 .panel-container {
-  @include tiler(2, 2%);
+  width:47%;
+  margin-bottom:2%;
+	margin-right:2%;
+
+  //@include tiler(2, 2%);
   @include breakpoint(I-----I){
-    float: none;
     width:100%;
   };
 }

@@ -30,7 +30,8 @@ module.exports = function (grunt) {
       jekyll: {
         files: [
           '<%= path.src %>/**/*.{html,yml,md,mkd,markdown}',
-          '!<%= path.src %>/_bower_components/**/*'
+          '!<%= path.src %>/bower_components/**/*',
+          '!<%= path.src %>/**/*/.tmp/**/*'
         ],
         tasks: 'jekyll:serve'
       },
@@ -41,7 +42,6 @@ module.exports = function (grunt) {
         files: [
           '_site/**/*.html',
           '.tmp/assets/css/**/*.css',
-          '<%= path.src %>/assets/.tmp/js/**/*.js',
           '<%= path.src %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
       }
@@ -225,7 +225,7 @@ module.exports = function (grunt) {
     concat: {
       js: {
         file: [{
-            src: [ '<%= path.src %>/assets/js/custos.js', '<%= path.src %>/assets/js/jquery.backstretch.min.js' ],
+            src: [ '<%= path.src %>/bower_components/jquery/dist/jquery.min.js', '<%= path.src %>/bower_components/imagesloaded/imagesloaded.pkgd.min.js', '<%= path.src %>/bower_components/isotope/dist/isotope.pkgd.min.js', '<%= path.src %>/assets/js/main.js' ],
             dest:  '<%= path.src %>/assets/.tmp/js/optifying.js'
           }
         ]
@@ -237,13 +237,13 @@ module.exports = function (grunt) {
      * -------------------------------------------------
      */
     uglify: {
-      dist: {
+      serve: {
         file: {
           src:  '<%= path.src %>/assets/.tmp/js/optifying.js',
-          dest: '<%= path.dist %>/assets/js/optified.js'
+          dest: '<%= path.srv %>/assets/js/optified.js'
         }
       },
-      serve: {
+      dist: {
         file: {
           src:  '<%= path.src %>/assets/.tmp/js/optifying.js',
           dest: '<%= path.srv %>/assets/js/optified.js'
@@ -324,7 +324,7 @@ module.exports = function (grunt) {
      */
     clean: {
       serve: [
-        '<%= path.src %>/assets/.tmp',
+        '<%= path.src %>/assets/.tmp/**/*',
         '<%= path.srv %>'
       ],
       dist: {
@@ -332,7 +332,7 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '<%= path.dist %>/*',
-            '<%= path.src %>/assets/.tmp',
+            '<%= path.src %>/assets/.tmp/**/*',
             // Running Jekyll also cleans the target directory.  Exclude any
             // non-standard `keep_files` here (e.g., the generated files
             // directory from Jekyll Picture Tag).
@@ -373,7 +373,7 @@ module.exports = function (grunt) {
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/*}',
             // Explicitly add any files your site needs for distribution here.
-            //'_bower_components/jquery/jquery.js',
+            //'bower_components/jquery/jquery.js',
             'favicon.ico',
             'apple-touch*.png'
           ],

@@ -3276,29 +3276,16 @@ h1 + hr {
     position: relative; }
 
 .panels-container {
-  position: absolute;
-  height: 100%;
   font-size: 0;
   background: rgba(20, 20, 20, 0.9);
-  padding: 30px; }
-  @media (max-width: 768px) {
-    .panels-container {
-      padding: 15px; } }
+  padding: 2% 0 2% 2%; }
 
 .panel-container {
-  float: left;
-  vertical-align: top;
-  width: 49%;
-  margin-right: 2%;
-  margin-bottom: 2%; }
-  .panel-container:nth-child(2n) {
-    margin-right: 0; }
-  .panel-container img {
-    width: 100%;
-    max-width: 100%; }
+  width: 47%;
+  margin-bottom: 2%;
+  margin-right: 2%; }
   @media (max-width: 768px) {
     .panel-container {
-      float: none;
       width: 100%; } }
 
 .panel {
