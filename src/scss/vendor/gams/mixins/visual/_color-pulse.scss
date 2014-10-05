@@ -1,0 +1,34 @@
+////
+ // Color Pulsate
+ // fades from one color to the next across the color wheel
+ //
+ // USAGE:
+ // @include color-pulse();
+ ///
+
+@mixin color-pulse($red: red, $yellow: yellow, $green: green, $blue: blue ) {
+  @-webkit-keyframes pulsate {
+    0% {background: black}
+    20% {background: $red}
+    40% {background: $yellow}
+    60% {background: $green}
+    80% {background: $blue}
+    100% {background: black}
+  }
+  @-moz-keyframes pulsate {
+    0% {background: black}
+    20% {background: $red}
+    40% {background: $yellow}
+    60% {background: $green}
+    80% {background: $blue}
+    100% {background: black}
+  }
+  @keyframes pulsate {
+    0% {background: black}
+    20% {background: $red}
+    40% {background: $yellow}
+    60% {background: $green}
+    80% {background: $blue}
+    100% {background: black}
+  }
+}

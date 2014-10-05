@@ -4,6 +4,7 @@ title:  "Getting Grunt Up and Running in Your Local Dev (OS X)"
 date:   2014-7-23 20:00:00
 author: Jason Doyle
 categories: workflow
+image: assets/images/bkgs/sm/caraf.jpg
 ---
 
 

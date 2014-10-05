@@ -4,6 +4,7 @@ title:  "Baseline Grid Sass Mixin"
 date:   2014-06-02 20:00:00
 author: Jason Doyle
 categories: css
+image: assets/images/bkgs/sm/blurred-head.jpg
 ---
 
 

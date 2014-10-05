@@ -5,6 +5,7 @@ subtitle:  "Understanding the Display of Joomla Modules"
 date:   2014-01-14 20:00:00
 author: Jason Doyle
 categories: joomla, cms, php
+image: assets/images/bkgs/sm/phone.jpg
 ---
 
 

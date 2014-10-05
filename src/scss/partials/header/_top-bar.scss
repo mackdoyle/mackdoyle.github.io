@@ -22,9 +22,10 @@ $top-bar-link: #666666;
   position: fixed;
   top: 0;
   left: 0;
-  width:105%;
+  right: 0;
+  width:100%;
   height: $top-bar-height;
-  z-index: 3;
+  z-index: 999;
   background: #333333;
   background: -webkit-linear-gradient(#434343,#333232);
   background: linear-gradient(#434343,#333232);
@@ -38,6 +39,9 @@ $top-bar-link: #666666;
     color: white;
     @include font-rhythm(1.3);
     line-height: $top-bar-height;
+    a{
+      color: white;
+    }
   }
 
   .internal-links {

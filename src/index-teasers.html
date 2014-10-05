@@ -1,0 +1,42 @@
+---
+layout: landing
+title: Jason Doyle
+permalink: /index.html
+---
+
+{% comment %}
+  Play with making the analogous colored titles, tiles instead of stacks
+{% endcomment %}
+
+{% for post in site.posts %}
+  <article class="teaser {{post.theme}}">
+    <header style="background-image:url('{{post.image}}');">
+      <div class="title">
+        <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
+        {% if post.subtitle %}
+          <p>{{ post.subtitle }}</p>
+        {% endif %}
+      </div>
+    </header>
+   {% comment %}
+   <!--
+    <div class="article-teaser-content">
+      {{ post.excerpt | markdownify }}
+    </div>
+
+    <footer>
+      {% comment %}
+		  {% if post.categories.size > 0 %}
+		    <div class="footer-col">{% include widgets/postCategoryList.html %}</div>
+		  {% endif %}
+      {% if post.tags.size > 0 %}
+        <div class="footer-col">{% include widgets/postTagList.html %}</div>
+      {% endif %}
+      {% endcomment %}
+      <div class="footer-col"><div class="more"><a href="{{ post.url }}#more" title="Read more about '{{ post.title }}'">Read More</a></div></div>
+    </footer>
+    -->
+    {% endcomment %}
+	</article>
+
+{% endfor %}

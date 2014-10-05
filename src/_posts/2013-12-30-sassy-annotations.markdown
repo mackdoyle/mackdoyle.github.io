@@ -4,7 +4,7 @@ title:  "Sassy Annotations"
 date:   2013-12-27 20:04:14
 author: Jason Doyle
 categories: scss
-theme: swatch-c
+image: assets/images/bkgs/sm/desktop.jpg
 ---
 
 

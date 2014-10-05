@@ -12,30 +12,33 @@
   / / /    / / // / /_______\/ / /  \ \ \  \ \___\/ // / /_______\/ / /_______\
   \/_/     \/_/ \/__________/\/_/    \_\/   \/_____/ \/__________/\/__________/
 -->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Jason Doyle</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html class="desktop" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Jason Doyle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="/assets/css/styles.min.css">
-        <link href="/assets/css/print.css" media="print" rel="stylesheet" type="text/css" />
-        <!-- @TODO: Need to add above-the-fold css inline for faster loading -->
+    <!-- meta robots -->
+    
 
-        <!-- JS -->
-        <script src="/assets/js/vendor/jquery-2.1.1.min.js"></script>
-    </head>
-    <body>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
+    <link href="/assets/css/print.css" media="print" rel="stylesheet" type="text/css" />
+    <!-- @TODO: Need to add above-the-fold css inline for faster loading -->
 
+    <!-- JS -->
+    <script src="/assets/js/vendor/jquery-2.1.1.min.js"></script>
+  </head>
+
+  <body>
     
 
 
 
 <nav class="top-bar">
 
-  <div id="logo">JASONDOYLE</div>
+  <div id="logo"><a href="/index.html" title="Home">JASONDOYLE</a></div>
 
   <ul class="internal-links">
     <li>
@@ -51,19 +54,14 @@
     <li><a href="https://codepen.io/mackdoyle" target="_blank" title="Codepen" class="fa fa-codepen"></a></li>
   </ul>
 </nav>
+<script type="text/javascript">
+    mixpanel.track_links(".top-bar ul li a", "Top nav link click", {
+        "referrer": document.referrer
+    });
+</script>
 
 
     <div class="container">
-
-  <!-- 
-
-<div class="hero">
- <div class="avatar-container">
-   <a href="/projects.html" alt="View Projects"><img class="avatar" src="/assets/images/headshot.png" border="0"></a>
- </div>
-</div>
-
- -->
 
 <div class="cullaz">
   <div class="swatch"></div>
@@ -121,7 +119,10 @@
 
 
   <article class="teaser ">
-    <header style="background-image:url('');">
+    <header>
+      <a href="/articles/grunt-from-scratch-osx">
+        <img src="assets/images/bkgs/sm/caraf.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/grunt-from-scratch-osx" title="Read more about 'Getting Grunt Up and Running in Your Local Dev (OS X)'">Getting Grunt Up and Running in Your Local Dev (OS X)</a></h1>
         
@@ -132,7 +133,10 @@
 
 
   <article class="teaser ">
-    <header style="background-image:url('');">
+    <header>
+      <a href="/articles/regular-expressions-for-tag-cleaning">
+        <img src="assets/images/bkgs/sm/blurred-head.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/regular-expressions-for-tag-cleaning" title="Read more about 'Regular Expressions for Cleaning Markup'">Regular Expressions for Cleaning Markup</a></h1>
         
@@ -143,7 +147,10 @@
 
 
   <article class="teaser ">
-    <header style="background-image:url('');">
+    <header>
+      <a href="/articles/baseline-grid-sass-mixin">
+        <img src="assets/images/bkgs/sm/blurred-head.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/baseline-grid-sass-mixin" title="Read more about 'Baseline Grid Sass Mixin'">Baseline Grid Sass Mixin</a></h1>
         
@@ -154,7 +161,10 @@
 
 
   <article class="teaser ">
-    <header style="background-image:url('');">
+    <header>
+      <a href="/articles/what-i-like-about-my-prompt">
+        <img src="assets/images/bkgs/sm/writing.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/what-i-like-about-my-prompt" title="Read more about 'What I like about my prompt setup (iTerm2/Z-Shell)'">What I like about my prompt setup (iTerm2/Z-Shell)</a></h1>
         
@@ -165,7 +175,10 @@
 
 
   <article class="teaser ">
-    <header style="background-image:url('');">
+    <header>
+      <a href="/articles/fixing-joomla-permission-issues">
+        <img src="assets/images/bkgs/sm/browsing.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/fixing-joomla-permission-issues" title="Read more about 'Fixing Joomla Permission Issues'">Fixing Joomla Permission Issues</a></h1>
         
@@ -176,7 +189,10 @@
 
 
   <article class="teaser ">
-    <header style="background-image:url('');">
+    <header>
+      <a href="/articles/joomla-module-beatdown">
+        <img src="assets/images/bkgs/sm/phone.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/joomla-module-beatdown" title="Read more about 'Joomla Module Beatdown'">Joomla Module Beatdown</a></h1>
         
@@ -188,8 +204,11 @@
 	</article>
 
 
-  <article class="teaser swatch-c">
-    <header style="background-image:url('');">
+  <article class="teaser ">
+    <header>
+      <a href="/articles/sassy-annotations">
+        <img src="assets/images/bkgs/sm/desktop.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/sassy-annotations" title="Read more about 'Sassy Annotations'">Sassy Annotations</a></h1>
         
@@ -199,8 +218,11 @@
 	</article>
 
 
-  <article class="teaser swatch-b">
-    <header style="background-image:url('');">
+  <article class="teaser ">
+    <header>
+      <a href="/articles/html-canvas-getimagedata">
+        <img src="assets/images/bkgs/sm/desk.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/html-canvas-getimagedata" title="Read more about 'HTML Canvas getImageData()'">HTML Canvas getImageData()</a></h1>
         
@@ -211,7 +233,10 @@
 
 
   <article class="teaser ">
-    <header style="background-image:url('');">
+    <header>
+      <a href="/articles/fixing-joomla-asset-table">
+        <img src="assets/images/bkgs/sm/click-click.jpg" border="0" />
+      </a>
       <div class="title">
         <h1><a href="/articles/fixing-joomla-asset-table" title="Read more about 'Fixing Joomla Asset Table Issues'">Fixing Joomla Asset Table Issues</a></h1>
         
@@ -222,6 +247,13 @@
 
 
 
+<script type="text/javascript">
+  // Track article clicks
+  mixpanel.track_links(".teaser", "Article Teaser Click", {
+   "referrer": document.referrer
+  });
+</script>
+
   </section>
 
       </div> <!-- /container -->
@@ -230,6 +262,13 @@
       <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
       <script src="/assets/js/main.js"></script>
 
+      <!-- Start Mixpanel -->
+      <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+        mixpanel.init("52ee3c92d35412d6eca35f61740cbe6c");
+      </script>
+
+      <!-- Start GA -->
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

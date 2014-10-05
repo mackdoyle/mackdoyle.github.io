@@ -10,7 +10,10 @@ permalink: /index.html
 
 {% for post in site.posts %}
   <article class="teaser {{post.theme}}">
-    <header style="background-image:url('{{post.image}}');">
+    <header>
+      <a href="{{post.url}}">
+        <img src="{{post.image}}" border="0" />
+      </a>
       <div class="title">
         <h1><a href="{{post.url}}" title="Read more about '{{ post.title }}'">{{ post.title }}</a></h1>
         {% if post.subtitle %}
@@ -40,3 +43,10 @@ permalink: /index.html
 	</article>
 
 {% endfor %}
+
+<script type="text/javascript">
+  // Track article clicks
+  mixpanel.track_links(".teaser", "Article Teaser Click", {
+   "referrer": document.referrer
+  });
+</script>

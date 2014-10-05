@@ -1,0 +1,89 @@
+////
+ // global/content/teaser-panels
+ ///
+
+
+// Teaser Panel Styles
+// Used for styling teasers as Pinterest style panels using Isotope.
+// -----------------------------------
+
+.teaser {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+  width: 23%;
+  margin-bottom: 2%;
+	overflow: auto;
+  @include breakpoint(I-----I){
+    width:100%;
+    border-radius: 0;
+  };
+
+  header {
+    position: relative;
+    width: 100%;
+    img {
+      border-radius: 5px;
+      @include breakpoint(I-----I){
+        border-radius: 0;
+        };
+    }
+    // Wrapper for positioning head and sub-head, since <header> is use for bkg
+    .title {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(255,255,255,1);
+      border-radius: 0px 0px 5px 5px;
+      text-align: center;
+      padding: $gutter-size;
+
+      h1,
+      h2 {
+        font-size: 18px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.4;
+        a {
+          color: #333;
+          &:hover {
+
+          }
+        }
+
+        @include breakpoint(I---I){
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        font-size: .9rem;
+        @include breakpoint(I---I){
+          font-size: 1rem;
+          text-align: right;
+        }
+      }
+
+      .more {
+        text-align: right;
+        a {
+          position: relative;
+          text-decoration: none;
+          white-space: nowrap;
+          @include gams-button($button-color, "default", $button-font-color);
+        }
+      }
+
+      .meta {
+        font-family: $body-font;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .article-teaser-content {
+    padding: $gutter-size;
+  }
+}
+
+

@@ -12,14 +12,17 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  overflow-y: scroll; }
+
 html, body {
   font-size: 16px;
   overflow-x: hidden;
   max-width: 100%;
-  margin: 0 auto;
-  height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; }
+  margin: 0 auto; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -2377,6 +2380,11 @@ pre.terminal code {
   background-color: #151617; }
 
 .cullaz {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: table;
   width: 100%;
   height: 100%; }
@@ -2566,14 +2574,13 @@ div[class*=swatch] {
   height: 100%; }
 
 .content-container {
-  position: absolute;
-  top: 0;
   width: 100%;
   height: 100%;
-  margin: 0 auto; }
+  margin: 78px 2% 2% 2%; }
   @media (max-width: 720px) {
     .content-container {
-      max-width: 100%; } }
+      max-width: 100%;
+      margin: 0; } }
   .content-container .post {
     padding: 0 15px 0 15px; }
 
@@ -3327,65 +3334,80 @@ h1 + hr {
         width: 100%;
         max-width: 100%; } }
 
-.teaser header {
-  position: relative;
-  width: 100%; }
-  .teaser header .title {
-    text-align: center;
-    padding: 15px; }
-    .teaser header .title h1,
-    .teaser header .title h2 {
-      font-size: 32px;
-      font-size: 2rem;
-      font-weight: 400;
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7); }
-      .teaser header .title h1 a,
-      .teaser header .title h2 a {
-        color: white;
+.teaser {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  width: 23%;
+  margin-bottom: 2%;
+  overflow: auto; }
+  @media (max-width: 768px) {
+    .teaser {
+      width: 100%;
+      border-radius: 0; } }
+  .teaser header {
+    position: relative;
+    width: 100%; }
+    .teaser header img {
+      border-radius: 5px; }
+      @media (max-width: 768px) {
+        .teaser header img {
+          border-radius: 0; } }
+    .teaser header .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-radius: 0px 0px 5px 5px;
+      text-align: center;
+      padding: 15px; }
+      .teaser header .title h1,
+      .teaser header .title h2 {
+        font-size: 18px;
+        font-size: 1.1rem;
         font-weight: 600;
-        text-shadow: -1px -1px 0 #222, 0 -2px 0 #222, 1px -1px 0 #222, 2px 0 0 #222, 1px 1px 0 #222, 0 2px 0 #222, -1px 1px 0 #222, -1px 0 0 #222; }
-        .teaser header .title h1 a:hover,
-        .teaser header .title h2 a:hover {
-          text-shadow: -1px -1px 0 #ff0a6c, 0 -2px 0 #ff0a6c, 1px -1px 0 #222, 2px 0 0 #ff0a6c, 1px 1px 0 #ff0a6c, 0 2px 0 #ff0a6c, -1px 1px 0 #ff0a6c, -1px 0 0 #ff0a6c; }
-      @media (max-width: 600px) {
-        .teaser header .title h1,
-        .teaser header .title h2 {
-          font-size: 1.5rem;
-          text-align: right; } }
-    .teaser header .title p {
-      color: white;
-      font-size: 22px;
-      font-size: 1.5rem; }
-      @media (max-width: 600px) {
-        .teaser header .title p {
-          font-size: 1rem;
-          text-align: right; } }
-    .teaser header .title .more {
-      text-align: right; }
-      .teaser header .title .more a {
-        position: relative;
-        text-decoration: none;
-        white-space: nowrap;
-        background: #ff530d;
-        color: #732100;
-        text-align: center;
-        text-transform: uppercase;
-        max-width: 125px;
-        font-size: .8rem;
-        display: inline-block;
-        padding: 0 1.5rem;
-        -webkit-transition: all 0.25s ease-in-out;
-        -moz-transition: all 0.25s ease-in-out;
-        -o-transition: all 0.25s ease-in-out;
-        -ms-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out; }
-        .teaser header .title .more a:hover {
-          background: #ff7740; }
-    .teaser header .title .meta {
-      font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
-      font-weight: normal; }
-.teaser .article-teaser-content {
-  padding: 15px; }
+        line-height: 1.4; }
+        .teaser header .title h1 a,
+        .teaser header .title h2 a {
+          color: #333; }
+        @media (max-width: 600px) {
+          .teaser header .title h1,
+          .teaser header .title h2 {
+            font-size: 1.5rem; } }
+      .teaser header .title p {
+        font-size: 14px;
+        font-size: .9rem; }
+        @media (max-width: 600px) {
+          .teaser header .title p {
+            font-size: 1rem;
+            text-align: right; } }
+      .teaser header .title .more {
+        text-align: right; }
+        .teaser header .title .more a {
+          position: relative;
+          text-decoration: none;
+          white-space: nowrap;
+          background: #ff530d;
+          color: #732100;
+          text-align: center;
+          text-transform: uppercase;
+          max-width: 125px;
+          font-size: .8rem;
+          display: inline-block;
+          padding: 0 1.5rem;
+          -webkit-transition: all 0.25s ease-in-out;
+          -moz-transition: all 0.25s ease-in-out;
+          -o-transition: all 0.25s ease-in-out;
+          -ms-transition: all 0.25s ease-in-out;
+          transition: all 0.25s ease-in-out; }
+          .teaser header .title .more a:hover {
+            background: #ff7740; }
+      .teaser header .title .meta {
+        font-family: "Proxima Nova", "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: normal; }
+  .teaser .article-teaser-content {
+    padding: 15px; }
 
 /**
  * global/sidebar/side-bar
@@ -3489,9 +3511,10 @@ h1 + hr {
   position: fixed;
   top: 0;
   left: 0;
-  width: 105%;
+  right: 0;
+  width: 100%;
   height: 48px;
-  z-index: 3;
+  z-index: 999;
   background: #333333;
   background: -webkit-linear-gradient(#434343, #333232);
   background: linear-gradient(#434343, #333232);
@@ -3528,6 +3551,8 @@ h1 + hr {
     line-height: 1.5rem;
     margin-bottom: 0rem;
     line-height: 48px; }
+    .top-bar #logo a {
+      color: white; }
   .top-bar .internal-links {
     position: absolute;
     left: 134px; }

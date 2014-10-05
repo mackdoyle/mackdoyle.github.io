@@ -17,136 +17,11 @@ module.exports = function (grunt) {
       dist: 'dist',
       srv: '_site',
       src: 'src',
-      tmp: '.tmp'
-    },
-
-
-    // Watch
-    watch: {
-      sass: {
-        files: ['<%= path.src %>/scss/**/*.{scss,sass}'],
-        tasks: ['sass:serve','cssmin','notify:watch']
-      },
-      jekyll: {
-        files: [
-          '<%= path.src %>/**/*.{html,yml,md,mkd,markdown}',
-          '!<%= path.src %>/bower_components/**/*',
-          '!<%= path.src %>/**/*/.tmp/**/*'
-        ],
-        tasks: 'jekyll:serve'
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '_site/**/*.html',
-          '.tmp/assets/css/**/*.css',
-          '<%= path.src %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
-        ]
-      }
+      tmp: 'src/.tmp'
     },
 
 
 
-    /*
-     * Concurrent
-     * -------------------------------------------------
-     */
-    concurrent: {
-      serve: [
-        'sass:serve',
-        'jekyll:serve',
-        'copy:dist'
-      ],
-      dist: [
-        'sass:dist',
-        'copy:dist'
-      ]
-    },
-
-
-    /*
-     * Connect
-     * -------------------------------------------------
-     */
-    connect: {
-      options: {
-        port: 9000,
-        livereload: 35729,
-        // change this to localhost if not working
-        hostname: '0.0.0.0'
-      },
-
-
-    /*
-     * Livereload
-     * -------------------------------------------------
-     */
-      livereload: {
-        options: {
-          open: true,
-          base: [
-            '<%= path.src %>/assets',
-            '<%= path.srv %>'
-          ]
-        }
-      },
-      serve: {
-        options: {
-          open: true,
-          base: [
-            '<%= path.src %>/assets',
-            '<%= path.srv %>'
-          ]
-        }
-      },
-      dist: {
-        options: {
-          open: true,
-          base: [
-            '<%= path.dist %>'
-          ]
-        }
-      },
-      test: {
-        options: {
-          base: [
-            '<%= path.src %>/assets',
-            '<%= path.srv %>',
-            'test'
-          ]
-        }
-      }
-    },
-
-    /*
-     * Jekyll
-     * -------------------------------------------------
-     */
-    jekyll: {
-      options: {
-        bundleExec: true,
-        config: '_config.yml',
-        src: '<%= path.src %>'
-      },
-      dist: {
-        options: {
-          dest: '<%= path.srv %>'
-        }
-      },
-      serve: {
-        options: {
-          config: '_config.yml',
-          dest: '<%= path.srv %>'
-        }
-      },
-      check: {
-        options: {
-          doctor: true
-        }
-      }
-    },
 
     /*
      * ================================================
@@ -226,7 +101,7 @@ module.exports = function (grunt) {
       js: {
         file: [{
             src: [ '<%= path.src %>/bower_components/jquery/dist/jquery.min.js', '<%= path.src %>/bower_components/imagesloaded/imagesloaded.pkgd.min.js', '<%= path.src %>/bower_components/isotope/dist/isotope.pkgd.min.js', '<%= path.src %>/assets/js/main.js' ],
-            dest:  '<%= path.src %>/assets/.tmp/js/optifying.js'
+            dest:  '<%= path.tmp %>/optifying.js'
           }
         ]
       }
@@ -239,13 +114,13 @@ module.exports = function (grunt) {
     uglify: {
       serve: {
         file: {
-          src:  '<%= path.src %>/assets/.tmp/js/optifying.js',
+          src:  '<%= path.tmp %>/optifying.js',
           dest: '<%= path.srv %>/assets/js/optified.js'
         }
       },
       dist: {
         file: {
-          src:  '<%= path.src %>/assets/.tmp/js/optifying.js',
+          src:  '<%= path.tmp %>/optifying.js',
           dest: '<%= path.srv %>/assets/js/optified.js'
         }
       }
@@ -256,9 +131,9 @@ module.exports = function (grunt) {
      * -------------------------------------------------
      */
     useminPrepare: {
-      html: '<%= path.dist %>/index.html',
+      html: '<%= path.srv %>/index.html',
       options: {
-        dest: '<%= path.dist %>'
+        dest: '<%= path.srv %>'
       }
     },
 
@@ -266,10 +141,10 @@ module.exports = function (grunt) {
     // Moves CSS and javascript inside of Usemin blocks.
     usemin: {
       options: {
-        assetsDirs: ['<%= path.dist %>/assets', '<%= path.dist %>/images']
+        assetsDirs: '<%= path.srv %>/assets'
       },
-      html: '<%= path.dist %>/**/*.html',
-      css: '<%= path.dist %>/assets/css/**/*.css'
+      html: '<%= path.srv %>/**/*.html',
+      css: '<%= path.srv %>/assets/css/**/*.css'
     },
 
     // HTML Prepare
@@ -283,9 +158,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= path.dist %>',
+          cwd: '<%= path.srv %>',
           src: '**/*.html',
-          dest: '<%= path.dist %>'
+          dest: '<%= path.srv %>'
         }]
       }
     },
@@ -298,9 +173,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= path.dist %>',
+          cwd: '<%= path.srv %>',
           src: '**/*.{jpg,jpeg,png}',
-          dest: '<%= path.dist %>'
+          dest: '<%= path.srv %>'
         }]
       }
     },
@@ -310,9 +185,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= path.dist %>',
+          cwd: '<%= path.srv %>',
           src: '**/*.svg',
-          dest: '<%= path.dist %>'
+          dest: '<%= path.srv %>'
         }]
       }
     },
@@ -331,12 +206,12 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-            '<%= path.dist %>/*',
+            '<%= path.srv %>/*',
             '<%= path.src %>/assets/.tmp/**/*',
             // Running Jekyll also cleans the target directory.  Exclude any
             // non-standard `keep_files` here (e.g., the generated files
             // directory from Jekyll Picture Tag).
-            '!<%= path.dist %>/.git*'
+            '!<%= path.srv %>/.git*'
           ]
         }]
       }
@@ -377,7 +252,7 @@ module.exports = function (grunt) {
             'favicon.ico',
             'apple-touch*.png'
           ],
-          dest: '<%= path.dist %>'
+          dest: '<%= path.srv %>'
         }]
       },
 
@@ -474,6 +349,153 @@ module.exports = function (grunt) {
           title: 'Task Complete',  // optional
           message: 'CSS and JS Compiled Successfully' //required
         }
+      },
+      concat: {
+        options: {
+          title: 'Concat',  // optional
+          message: 'Combined to: <%= path.tmp %>/optifying.js' //required
+        }
+      },
+      uglify: {
+        options: {
+          title: 'Uglify',  // optional
+          message: 'Uglifies to: <%= path.srv %>/assets/js/optified.js' //required
+        }
+      }
+    },
+
+
+    /*
+     * Jekyll
+     * -------------------------------------------------
+     */
+    jekyll: {
+      options: {
+        bundleExec: true,
+        config: '_config.yml',
+        src: '<%= path.src %>'
+      },
+      serve: {
+        options: {
+          config: '_config.yml',
+          dest: '<%= path.srv %>'
+        }
+      },
+      dist: {
+        options: {
+          config: '_config.yml',
+          dest: '<%= path.srv %>'
+        }
+      },
+      check: {
+        options: {
+          doctor: true
+        }
+      }
+    },
+
+
+    /*
+     * Watch
+     * -------------------------------------------------
+     */
+    watch: {
+      sass: {
+        files: ['<%= path.src %>/scss/**/*.{scss,sass}'],
+        tasks: ['sass:serve','cssmin','notify:watch']
+      },
+      concat: {
+        files: ['<%= path.src %>/assets/js/**/*.js'],
+        tasks: ['concat:serve','uglify:serve', 'notify:uglify']
+      },
+      jekyll: {
+        files: [
+          '<%= path.src %>/**/*.{html,yml,md,mkd,markdown}',
+          '!<%= path.src %>/bower_components/**/*'
+        ],
+        tasks: 'jekyll:serve'
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        },
+        files: [
+          '_site/**/*.html',
+          '<%= path.src %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+        ]
+      }
+    },
+
+
+
+    /*
+     * Concurrent
+     * -------------------------------------------------
+     */
+    concurrent: {
+      serve: [
+        'sass:serve',
+        'jekyll:serve',
+        'copy:dist'
+      ],
+      dist: [
+        'sass:dist',
+        'copy:dist'
+      ]
+    },
+
+
+    /*
+     * Connect
+     * -------------------------------------------------
+     */
+    connect: {
+      options: {
+        port: 9000,
+        livereload: 35729,
+        // change this to localhost if not working
+        hostname: '0.0.0.0'
+      },
+
+
+    /*
+     * Livereload
+     * -------------------------------------------------
+     */
+      livereload: {
+        options: {
+          open: true,
+          base: [
+            '<%= path.src %>/assets',
+            '<%= path.srv %>'
+          ]
+        }
+      },
+      serve: {
+        options: {
+          open: true,
+          base: [
+            '<%= path.src %>/assets',
+            '<%= path.srv %>'
+          ]
+        }
+      },
+      dist: {
+        options: {
+          open: true,
+          base: [
+            '<%= path.dist %>'
+          ]
+        }
+      },
+      test: {
+        options: {
+          base: [
+            '<%= path.src %>/assets',
+            '<%= path.srv %>',
+            'test'
+          ]
+        }
       }
     }
 
@@ -495,10 +517,12 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:serve',
       'concurrent:serve',
+      'useminPrepare',
       'sass:serve',
       'cssmin',
       'concat',
       'uglify:serve',
+      'usemin',
       'connect:livereload',
       'jekyll:serve',
       'watch'
@@ -510,9 +534,9 @@ module.exports = function (grunt) {
     'clean', // Jekyll cleans files from the target directory, so must run first
     'concurrent:dist',
     'useminPrepare',
-    'concat',
     'sass:dist',
     'cssmin',
+    'concat',
     'uglify:dist',
     'imagemin',
     'svgmin',

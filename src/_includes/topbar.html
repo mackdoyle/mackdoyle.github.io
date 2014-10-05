@@ -7,7 +7,7 @@
 
 <nav class="top-bar">
 
-  <div id="logo">JASONDOYLE</div>
+  <div id="logo"><a href="/index.html" title="Home">JASONDOYLE</a></div>
 
   <ul class="internal-links">
     <li>
@@ -23,4 +23,9 @@
     <li><a href="https://codepen.io/mackdoyle" target="_blank" title="Codepen" class="fa fa-codepen"></a></li>
   </ul>
 </nav>
+<script type="text/javascript">
+    mixpanel.track_links(".top-bar ul li a", "Top nav link click", {
+        "referrer": document.referrer
+    });
+</script>
 

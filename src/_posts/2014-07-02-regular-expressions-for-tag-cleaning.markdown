@@ -4,6 +4,7 @@ title:  "Regular Expressions for Cleaning Markup"
 date:   2014-07-02 20:00:00
 author: Jason Doyle
 categories: workflow
+image: assets/images/bkgs/sm/blurred-head.jpg
 ---
 
 
