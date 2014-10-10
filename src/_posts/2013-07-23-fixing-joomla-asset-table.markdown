@@ -5,7 +5,7 @@ sub-title: "Those finally getting around to upgrading from the ancient Joomla 1.
 author: Jason Doyle
 date:   2013-06-12 20:04:14
 categories: joomla
-image: assets/images/bkgs/sm/click-click.jpg
+image: assets/images/articles/mountains-green-night.png
 ---
 
   Starting with the introduction of the Access Control List (ACL) implementation in Joomla 1.6, categories, articles some components create a record in the assets table to store properties associated with the ACL. When they do a foreign key relationship is created. Sometimes this relationship can break, causing your site to not behave properly. This is especially true when trying to upgrade from a version of Joomla pre-ACL.
