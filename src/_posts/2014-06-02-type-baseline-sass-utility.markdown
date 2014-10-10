@@ -1,14 +1,14 @@
 ---
 layout: baseline
-title:  "Baseline Grid Sass Mixin"
+title:  "Type Baseline Sass Utility"
 date:   2014-06-02 20:00:00
 author: Jason Doyle
 categories: css
-image: assets/images/bkgs/sm/blurred-head.jpg
+image: assets/images/articles/baseline.png
 ---
 
 
-Using a baseline grid to set type is a must if you want to achieve vertical rhythm. Dan Eden & Michael Wright created [basehold.it][1], a dead simple solution that adds a baseline grid to an element's background. All you need to do is add a background-image property and point it to their URL.
+Using a baseline to set type is a must if you want to achieve vertical rhythm. Dan Eden & Michael Wright created [basehold.it][1], a dead simple solution that adds a baseline to an element's background. All you need to do is add a background-image property and point it to their URL.
 
 I wanted to additionally control the background-position so I created a little mixin. The [basehold.it][1] website has a very nifty feature that hides the grid by clicking anywhere within the element. It's such a simple and useful feature that I peed my pants a little the first time I used it. So that's in here as well.
 

@@ -6,7 +6,7 @@
 		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
 		<language>en</language>
 		<copyright><![CDATA[&copy; 2014 . All rights reserved.]]></copyright>
-		<pubDate>2014-10-04T13:28:05-04:00</pubDate>
+		<pubDate>2014-10-06T08:59:43-04:00</pubDate>
 		
 	<item>
 		<title><![CDATA[Getting Grunt Up and Running in Your Local Dev (OS X)]]></title>
@@ -47,10 +47,10 @@ so far. Here are a few I use that save me hours.</p>
 	</item>
 
 	<item>
-		<title><![CDATA[Baseline Grid Sass Mixin]]></title>
+		<title><![CDATA[Type Baseline Sass Utility]]></title>
 		<description>
 			<![CDATA[
-				<p>Using a baseline grid to set type is a must if you want to achieve vertical rhythm. Dan Eden &amp; Michael Wright created <a href="http://basehold.it">basehold.it</a>, a dead simple solution that adds a baseline grid to an element's background. All you need to do is add a background-image property and point it to their URL.</p>
+				<p>Using a baseline to set type is a must if you want to achieve vertical rhythm. Dan Eden &amp; Michael Wright created <a href="http://basehold.it">basehold.it</a>, a dead simple solution that adds a baseline to an element's background. All you need to do is add a background-image property and point it to their URL.</p>
 
 
 										
@@ -59,9 +59,9 @@ so far. Here are a few I use that save me hours.</p>
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/baseline-grid-sass-mixin]]></link>
+		<link><![CDATA[/articles/type-baseline-sass-utility]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/baseline-grid-sass-mixin]]></guid>
+		<guid><![CDATA[/articles/type-baseline-sass-utility]]></guid>
 	</item>
 
 	<item>

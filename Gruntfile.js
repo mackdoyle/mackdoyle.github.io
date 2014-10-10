@@ -186,7 +186,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= path.srv %>',
-          src: '**/*.svg',
+          src: ['**/*.svg', '!<%= path.srv %>/fonts/**/*.svg'],
           dest: '<%= path.srv %>'
         }]
       }
@@ -278,10 +278,10 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           src: [
-            '<%= path.dist %>/assets/js/**/*.js',
-            '<%= path.dist %>/assets/css/**/*.css',
-            '<%= path.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= path.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
+            '<%= path.srv %>/assets/js/**/*.js',
+            '<%= path.srv %>/assets/css/**/*.css',
+            '<%= path.srv %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
+            '<%= path.srv %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
           ]
         }]
       }

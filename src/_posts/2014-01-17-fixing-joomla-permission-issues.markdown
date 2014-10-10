@@ -4,7 +4,7 @@ title:  "Fixing Joomla Permission Issues"
 date:   2014-1-17 20:00:00
 author: Jason Doyle
 categories: joomla
-image: assets/images/bkgs/sm/browsing.jpg
+image: assets/images/articles/jomla.png
 ---
 These are a collection of suggestions found on fairly credible sites. That doesn't mean they are correct.
 
