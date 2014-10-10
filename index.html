@@ -19,7 +19,7 @@
     <title>Jason Doyle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- meta robots -->
+
     
 
     <!-- CSS -->
@@ -29,6 +29,12 @@
 
     <!-- JS -->
     <script src="/assets/js/vendor/jquery-2.1.1.min.js"></script>
+
+    <!-- Start Mixpanel -->
+    <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+      for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+      mixpanel.init("52ee3c92d35412d6eca35f61740cbe6c");
+    </script>
   </head>
 
   <body>
@@ -54,10 +60,14 @@
     <li><a href="https://codepen.io/mackdoyle" target="_blank" title="Codepen" class="fa fa-codepen"></a></li>
   </ul>
 </nav>
+
 <script type="text/javascript">
+  // Track menu click events
+  (function(window) {
     mixpanel.track_links(".top-bar ul li a", "Top nav link click", {
         "referrer": document.referrer
     });
+  })(window);
 </script>
 
 
@@ -121,7 +131,7 @@
   <article class="teaser ">
     <header>
       <a href="/articles/grunt-from-scratch-osx">
-        <img src="assets/images/bkgs/sm/caraf.jpg" border="0" />
+        <img src="assets/images/articles/grunt.png" border="0" />
       </a>
       <div class="title">
         <h1><a href="/articles/grunt-from-scratch-osx" title="Read more about 'Getting Grunt Up and Running in Your Local Dev (OS X)'">Getting Grunt Up and Running in Your Local Dev (OS X)</a></h1>
@@ -135,7 +145,7 @@
   <article class="teaser ">
     <header>
       <a href="/articles/regular-expressions-for-tag-cleaning">
-        <img src="assets/images/bkgs/sm/blurred-head.jpg" border="0" />
+        <img src="assets/images/articles/regex.png" border="0" />
       </a>
       <div class="title">
         <h1><a href="/articles/regular-expressions-for-tag-cleaning" title="Read more about 'Regular Expressions for Cleaning Markup'">Regular Expressions for Cleaning Markup</a></h1>
@@ -148,11 +158,11 @@
 
   <article class="teaser ">
     <header>
-      <a href="/articles/baseline-grid-sass-mixin">
-        <img src="assets/images/bkgs/sm/blurred-head.jpg" border="0" />
+      <a href="/articles/type-baseline-sass-utility">
+        <img src="assets/images/articles/baseline.png" border="0" />
       </a>
       <div class="title">
-        <h1><a href="/articles/baseline-grid-sass-mixin" title="Read more about 'Baseline Grid Sass Mixin'">Baseline Grid Sass Mixin</a></h1>
+        <h1><a href="/articles/type-baseline-sass-utility" title="Read more about 'Type Baseline Sass Utility'">Type Baseline Sass Utility</a></h1>
         
       </div>
     </header>
@@ -177,7 +187,7 @@
   <article class="teaser ">
     <header>
       <a href="/articles/fixing-joomla-permission-issues">
-        <img src="assets/images/bkgs/sm/browsing.jpg" border="0" />
+        <img src="assets/images/articles/joomla.png" border="0" />
       </a>
       <div class="title">
         <h1><a href="/articles/fixing-joomla-permission-issues" title="Read more about 'Fixing Joomla Permission Issues'">Fixing Joomla Permission Issues</a></h1>
@@ -191,7 +201,7 @@
   <article class="teaser ">
     <header>
       <a href="/articles/joomla-module-beatdown">
-        <img src="assets/images/bkgs/sm/phone.jpg" border="0" />
+        <img src="assets/images/articles/mountains-snow.png" border="0" />
       </a>
       <div class="title">
         <h1><a href="/articles/joomla-module-beatdown" title="Read more about 'Joomla Module Beatdown'">Joomla Module Beatdown</a></h1>
@@ -207,7 +217,7 @@
   <article class="teaser ">
     <header>
       <a href="/articles/sassy-annotations">
-        <img src="assets/images/bkgs/sm/desktop.jpg" border="0" />
+        <img src="assets/images/articles/annotated.png" border="0" />
       </a>
       <div class="title">
         <h1><a href="/articles/sassy-annotations" title="Read more about 'Sassy Annotations'">Sassy Annotations</a></h1>
@@ -235,7 +245,7 @@
   <article class="teaser ">
     <header>
       <a href="/articles/fixing-joomla-asset-table">
-        <img src="assets/images/bkgs/sm/click-click.jpg" border="0" />
+        <img src="assets/images/articles/mountains-green-night.png" border="0" />
       </a>
       <div class="title">
         <h1><a href="/articles/fixing-joomla-asset-table" title="Read more about 'Fixing Joomla Asset Table Issues'">Fixing Joomla Asset Table Issues</a></h1>
@@ -261,12 +271,6 @@
       <script src="/assets/js/vendor/imagesloaded.pkgd.min.js"></script>
       <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
       <script src="/assets/js/main.js"></script>
-
-      <!-- Start Mixpanel -->
-      <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-        mixpanel.init("52ee3c92d35412d6eca35f61740cbe6c");
-      </script>
 
       <!-- Start GA -->
       <script>
