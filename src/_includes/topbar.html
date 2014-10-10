@@ -23,9 +23,13 @@
     <li><a href="https://codepen.io/mackdoyle" target="_blank" title="Codepen" class="fa fa-codepen"></a></li>
   </ul>
 </nav>
+
 <script type="text/javascript">
+  // Track menu click events
+  (function(window) {
     mixpanel.track_links(".top-bar ul li a", "Top nav link click", {
         "referrer": document.referrer
     });
+  })(window);
 </script>
 
