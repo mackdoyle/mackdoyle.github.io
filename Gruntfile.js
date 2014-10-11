@@ -21,8 +21,6 @@ module.exports = function (grunt) {
     },
 
 
-
-
     /*
      * ================================================
      * CSS Scpecific
@@ -112,17 +110,9 @@ module.exports = function (grunt) {
      * -------------------------------------------------
      */
     uglify: {
-      serve: {
-        file: {
-          src:  '<%= path.tmp %>/optifying.js',
-          dest: '<%= path.srv %>/assets/js/optified.js'
-        }
-      },
-      dist: {
-        file: {
-          src:  '<%= path.tmp %>/optifying.js',
-          dest: '<%= path.srv %>/assets/js/optified.js'
-        }
+      file: {
+        src:  '<%= path.tmp %>/optifying.js',
+        dest: '<%= path.srv %>/assets/js/optified.js'
       }
     },
 
@@ -406,7 +396,7 @@ module.exports = function (grunt) {
       },
       concat: {
         files: ['<%= path.src %>/assets/js/**/*.js'],
-        tasks: ['concat:serve','uglify:serve', 'notify:uglify']
+        tasks: ['concat','uglify', 'notify:uglify']
       },
       jekyll: {
         files: [
@@ -521,7 +511,7 @@ module.exports = function (grunt) {
       'sass:serve',
       'cssmin',
       'concat',
-      'uglify:serve',
+      'uglify',
       'usemin',
       'connect:livereload',
       'jekyll:serve',
@@ -537,7 +527,7 @@ module.exports = function (grunt) {
     'sass:dist',
     'cssmin',
     'concat',
-    'uglify:dist',
+    'uglify',
     'imagemin',
     'svgmin',
     'usemin',
