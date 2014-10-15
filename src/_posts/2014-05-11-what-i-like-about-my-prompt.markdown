@@ -4,7 +4,7 @@ title:  "What I like about my prompt setup (iTerm2/Z-Shell)"
 date:   2014-5-11 20:00:00
 author: Jason Doyle
 categories: terminal, workflow
-image: assets/images/bkgs/sm/writing.jpg
+image: assets/images/articles/prompt.png
 ---
 
 1. More control over command prompt. (Although I had a fairly pimped out bash prompt)
