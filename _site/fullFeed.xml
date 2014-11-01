@@ -6,7 +6,7 @@
 		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
 		<language>en</language>
 		<copyright><![CDATA[&copy; 2014 . All rights reserved.]]></copyright>
-		<pubDate>2014-10-11T03:27:28-04:00</pubDate>
+		<pubDate>2014-11-01T04:01:21-04:00</pubDate>
 		
 	<item>
 		<title><![CDATA[Getting Grunt Up and Running in Your Local Dev (OS X)]]></title>
@@ -171,9 +171,9 @@ There will then need to be an uglify section in Grunt.js that defines which .js 
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/grunt-from-scratch-osx]]></link>
+		<link><![CDATA[/articles/grunt-from-scratch-osx/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/grunt-from-scratch-osx]]></guid>
+		<guid><![CDATA[/articles/grunt-from-scratch-osx/]]></guid>
 	</item>
 
 	<item>
@@ -252,9 +252,9 @@ different attributes. This is also useful when you need to strip out tags with v
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/regular-expressions-for-tag-cleaning]]></link>
+		<link><![CDATA[/articles/regular-expressions-for-tag-cleaning/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/regular-expressions-for-tag-cleaning]]></guid>
+		<guid><![CDATA[/articles/regular-expressions-for-tag-cleaning/]]></guid>
 	</item>
 
 	<item>
@@ -329,9 +329,9 @@ different attributes. This is also useful when you need to strip out tags with v
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/type-baseline-sass-utility]]></link>
+		<link><![CDATA[/articles/type-baseline-sass-utility/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/type-baseline-sass-utility]]></guid>
+		<guid><![CDATA[/articles/type-baseline-sass-utility/]]></guid>
 	</item>
 
 	<item>
@@ -390,9 +390,9 @@ different attributes. This is also useful when you need to strip out tags with v
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/what-i-like-about-my-prompt]]></link>
+		<link><![CDATA[/articles/what-i-like-about-my-prompt/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/what-i-like-about-my-prompt]]></guid>
+		<guid><![CDATA[/articles/what-i-like-about-my-prompt/]]></guid>
 	</item>
 
 	<item>
@@ -611,9 +611,9 @@ That's all, enjoy your Joomla!</p>
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/fixing-joomla-permission-issues]]></link>
+		<link><![CDATA[/articles/fixing-joomla-permission-issues/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/fixing-joomla-permission-issues]]></guid>
+		<guid><![CDATA[/articles/fixing-joomla-permission-issues/]]></guid>
 	</item>
 
 	<item>
@@ -643,12 +643,71 @@ That's all, enjoy your Joomla!</p>
 
 
 
-<p>The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to ~/search?q=odds&amp;Itemid=435~. Take note of the ItemID and head over to the Menu Manager for the menu that contain the reference to your home page.  Look in the ID column of the home page menu item and you will see it matches the ItemID.</p>
+<p>The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to <code>/search?q=odds&amp;Itemid=435</code>. Take note of the ItemID and head over to the Menu Manager for the menu that contain the reference to your home page.  Look in the ID column of the home page menu item and you will see it matches the ItemID.</p>
 
 
 
 
 <p>Manually setting the ItemID on the search.</p>
+
+
+
+
+<p>One of the quirks of Joomla that can really cause you to tear your hair out, is the seemingly random display (or refusal to display) of modules on certain pages. One of the more common places this can occur is on search results pages. To avoid the problem, you must first understand the central roll menus, and their underlying ItemID play in defining context for Joomla pages.</p>
+
+
+
+
+<p>When a menu item is created, it is assigned an ID. This ID is appended, as the ItemID, to any page accessed via the menu item and is used by Joomla to persist the menu item’s settings to those pages. When you set the visibility of a module from within the module settings, you are basically saying, “show this module for the following ItemIDs.” You can see this for yourself by taking note of the ItemID for you home page.</p>
+
+
+
+
+<div class="highlight"><pre><code class="html">  joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=1<span class="err">&amp;</span>itemid=100
+</code></pre></div>
+
+
+
+
+<p>Now browse to another page that has a different module arrangement. Replace the ItemID in the URL on that page with the one for your home page.</p>
+
+
+
+
+<div class="highlight"><pre><code class="html">  //Original Path
+  joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=999<span class="err">&amp;</span>itemid=500
+
+  //Path updated with the home page&#39;s itemid
+  joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=999<span class="err">&amp;</span>itemid=100
+</code></pre></div>
+
+
+
+
+<p>Refresh that page and you should see that the page now has the module layout of your home page. (Note: This will only work if you are not using any type of URL rewriting). To learn more about the ItemID, take a look at this old but still relevant article: [http://documentation.hwdmediashare.co.uk/wiki/The_Joomla_Itemid_Explained]. Another good read can be found here: [http://www.itoctopus.com/what-is-itemid-in-a-joomla-url-and-why-it-is-important-to-have-it]</p>
+
+
+
+
+<p>This is an efficient approach to managing an n number of modules on an n number of pages but it can also cause problems that are difficult to troubleshoot. Almost every website will have pages that are not directly linked from a menu. Articles linked only from other articles or static images in custom modules are examples of these. Since the pages are not associated with a menu item, they have no ItemID, and no way for Joomla to properly manage what modules are visible or hidden for it. Going back to the early days of Joomla, the official solution has been to create a seperate menu for managing these pages. The idea is to create a menu that you never actually show on the front end. Then add a menu item for any page that needs an ItemID.  You can then control the display of modules in the Modules Assignments tab like normal.</p>
+
+
+
+
+<p>It’s a hack, and it leaves a little distaste in your mouth, but it does work well. That is for everything except search results pages…</p>
+
+
+
+
+<p>The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to <code>/search?q=odds&amp;Itemid=435</code>. Take note of the ItemID and head over to the Menu Manager for the menu that contain the reference to your home page.  Look in the ID column of the home page menu item and you will see it matches the ItemID.
+<img src="/assets/images/articles/joomla-menu-itemid.png.jpg" alt="Joomla ItemID" /></p>
+
+
+
+
+<p>Manually settings the ItemID on the search.
+<img src="/assets/images/articles/joomla-itemid.png.jpg" alt="Joomla ItemID" />
+Joomla 2.5-3x</p>
 
 
 										
@@ -657,9 +716,9 @@ That's all, enjoy your Joomla!</p>
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/joomla-module-beatdown]]></link>
+		<link><![CDATA[/articles/joomla-module-beatdown/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/joomla-module-beatdown]]></guid>
+		<guid><![CDATA[/articles/joomla-module-beatdown/]]></guid>
 	</item>
 
 	<item>
@@ -729,9 +788,9 @@ that's it. They do use the :before and :after pseudo elements which means they w
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/sassy-annotations]]></link>
+		<link><![CDATA[/articles/sassy-annotations/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/sassy-annotations]]></guid>
+		<guid><![CDATA[/articles/sassy-annotations/]]></guid>
 	</item>
 
 	<item>
@@ -786,9 +845,9 @@ information as well as how to deal with support for remotely hosted images using
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/html-canvas-getimagedata]]></link>
+		<link><![CDATA[/articles/html-canvas-getimagedata/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/html-canvas-getimagedata]]></guid>
+		<guid><![CDATA[/articles/html-canvas-getimagedata/]]></guid>
 	</item>
 
 	<item>
@@ -1203,9 +1262,9 @@ And this: <a href="http://docs.joomla.org/Developing_a_Model-View-Controller_Com
 						
 			]]>
 		</description>
-		<link><![CDATA[/articles/fixing-joomla-asset-table]]></link>
+		<link><![CDATA[/articles/fixing-joomla-asset-table/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/fixing-joomla-asset-table]]></guid>
+		<guid><![CDATA[/articles/fixing-joomla-asset-table/]]></guid>
 	</item>
 
 

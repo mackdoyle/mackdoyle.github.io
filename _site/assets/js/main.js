@@ -60,7 +60,7 @@
       }
     );
 */
-    //SCROLL FUNCTIONS
+    //Sticky topbar Scoll Funtions
     var nav = $('.top-bar'),
         navHeight = nav.height(),
         scrollPosition = 0;

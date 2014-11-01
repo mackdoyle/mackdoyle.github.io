@@ -17,9 +17,9 @@ markdown: rdiscount
 
 # -- Path Config
 include: ['_pages']
-permalink: /articles/:title
+permalink: 'articles/:title/'
 relative_permalinks: false
-paginate_path: '/articles:num/'
+paginate_path: 'articles:num/'
 
 
 # -- Configuration required for some pages
