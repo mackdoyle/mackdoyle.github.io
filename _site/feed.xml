@@ -6,7 +6,7 @@
 		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
 		<language>en</language>
 		<copyright><![CDATA[&copy; 2014 . All rights reserved.]]></copyright>
-		<pubDate>2014-11-02T09:02:05-05:00</pubDate>
+		<pubDate>2014-11-02T11:16:03-05:00</pubDate>
 		
 	<item>
 		<title><![CDATA[Getting Grunt Up and Running in Your Local Dev (OS X)]]></title>
@@ -65,15 +65,12 @@ so far. Here are a few I use that save me hours.</p>
 	</item>
 
 	<item>
-		<title><![CDATA[What I like about my prompt setup (iTerm2/Z-Shell)]]></title>
+		<title><![CDATA[What I like about my prompt]]></title>
 		<description>
 			<![CDATA[
-				<ol>
-<li>More control over command prompt. (Although I had a fairly pimped out bash prompt)</li>
-<li>Syntax highlighting of ~$man~ pages, ~$sh~ commands, etc. And if your into ~vi, vim, nano~, they call all have language specific coloring.</li>
-</ol>
-
-
+				<p>I have a little bit of an addiction to pimping out my development environment and nothing allows me to feed that addiction more than my terminal.
+The brilliant minds that are part of the open source community are constantly creating great new solutions and refining old ones. It's a place that
+offers endless possibilities for modification.</p>
 
 
 										
