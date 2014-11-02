@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "HTML Canvas getImageData()"
+title:  "HTML Canvas' getImageData()"
 date:   2013-12-27 20:04:14
 author: Jason Doyle
 categories: [css, javascript]

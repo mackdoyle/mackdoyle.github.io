@@ -2379,168 +2379,6 @@ pre.terminal {
 pre.terminal code {
   background-color: #151617; }
 
-.cullaz {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: table;
-  width: 100%;
-  height: 100%; }
-
-.swatch:nth-child(1) {
-  background: #ff0a69; }
-
-.swatch:nth-child(2) {
-  background: #ff0a6f; }
-
-.swatch:nth-child(3) {
-  background: #ff0a74; }
-
-.swatch:nth-child(4) {
-  background: #ff0a79; }
-
-.swatch:nth-child(5) {
-  background: #ff0a7f; }
-
-.swatch:nth-child(6) {
-  background: #ff0a84; }
-
-.swatch:nth-child(7) {
-  background: #ff0a89; }
-
-.swatch:nth-child(8) {
-  background: #ff0a8e; }
-
-.swatch:nth-child(9) {
-  background: #ff0a94; }
-
-.swatch:nth-child(10) {
-  background: #ff0a99; }
-
-.swatch:nth-child(11) {
-  background: #ff0a9e; }
-
-.swatch:nth-child(12) {
-  background: #ff0aa4; }
-
-.swatch:nth-child(13) {
-  background: #ff0aa9; }
-
-.swatch:nth-child(14) {
-  background: #ff0aae; }
-
-.swatch:nth-child(15) {
-  background: #ff0ab4; }
-
-.swatch:nth-child(16) {
-  background: #ff0ab9; }
-
-.swatch:nth-child(17) {
-  background: #ff0abe; }
-
-.swatch:nth-child(18) {
-  background: #ff0ac4; }
-
-.swatch:nth-child(19) {
-  background: #ff0ac9; }
-
-.swatch:nth-child(20) {
-  background: #ff0ace; }
-
-.swatch:nth-child(21) {
-  background: #ff0ad3; }
-
-.swatch:nth-child(22) {
-  background: #ff0ad9; }
-
-.swatch:nth-child(23) {
-  background: #ff0ade; }
-
-.swatch:nth-child(24) {
-  background: #ff0ae3; }
-
-.swatch:nth-child(25) {
-  background: #ff0ae9; }
-
-.swatch:nth-child(26) {
-  background: #ff0aee; }
-
-.swatch:nth-child(27) {
-  background: #ff0af3; }
-
-.swatch:nth-child(28) {
-  background: #ff0af9; }
-
-.swatch:nth-child(29) {
-  background: #ff0afe; }
-
-.swatch:nth-child(30) {
-  background: #fb0aff; }
-
-.swatch:nth-child(31) {
-  background: #f50aff; }
-
-.swatch:nth-child(32) {
-  background: #f00aff; }
-
-.swatch:nth-child(33) {
-  background: #eb0aff; }
-
-.swatch:nth-child(34) {
-  background: #e60aff; }
-
-.swatch:nth-child(35) {
-  background: #e00aff; }
-
-.swatch:nth-child(36) {
-  background: #db0aff; }
-
-.swatch:nth-child(37) {
-  background: #d60aff; }
-
-.swatch:nth-child(38) {
-  background: #d00aff; }
-
-.swatch:nth-child(39) {
-  background: #cb0aff; }
-
-.swatch:nth-child(40) {
-  background: #c60aff; }
-
-.swatch:nth-child(41) {
-  background: #c00aff; }
-
-.swatch:nth-child(42) {
-  background: #bb0aff; }
-
-.swatch:nth-child(43) {
-  background: #b60aff; }
-
-.swatch:nth-child(44) {
-  background: #b00aff; }
-
-.swatch:nth-child(45) {
-  background: #ab0aff; }
-
-.swatch:nth-child(46) {
-  background: #a60aff; }
-
-.swatch:nth-child(47) {
-  background: #a10aff; }
-
-.swatch:nth-child(48) {
-  background: #9b0aff; }
-
-div[class*=swatch] {
-  display: table-cell;
-  width: 2.08333%;
-  height: 100%;
-  -moz-animation: pulsate 20s linear infinite;
-  -webkit-animation: pulsate 20s linear infinite;
-  animation: pulsate 20s linear infinite; }
-
 /**
  * Image Effects
  * Image effects come in the form of class declations so they can be defined on individual elements.
@@ -3192,10 +3030,10 @@ h1 + hr {
 .post-note {
   position: fixed;
   overflow: hidden;
-  top: 5%;
-  left: 1080px;
+  top: 10%;
+  left: 1200px;
   height: 100px;
-  line-height: 100px;
+  line-height: 97px;
   padding: 0 1.5% 0 1%;
   font-family: "Helvetica Neue", sans-serif;
   font-size: .8rem;
@@ -3218,7 +3056,7 @@ h1 + hr {
     z-index: 5;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4); }
   .post-note:after {
     width: 98%;
     height: 50%;
@@ -3228,9 +3066,8 @@ h1 + hr {
     left: 0;
     top: 25%;
     z-index: -1;
-    border-radius: 0 16px 16px 0;
-    border: 2px dashed #0f3c4f;
-    box-shadow: 0 0 0 2px #238dbb; }
+    border-radius: 0 6px 6px 0;
+    box-shadow: inset 0 0 40px 0px #38718A; }
 
 /**
  *
@@ -3336,30 +3173,25 @@ h1 + hr {
 
 .teaser {
   background: white;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   width: 23%;
   margin-bottom: 2%;
   overflow: auto; }
   @media (max-width: 768px) {
     .teaser {
-      width: 100%;
-      border-radius: 0; } }
+      width: 100%; } }
   .teaser header {
     position: relative;
     width: 100%; }
-    .teaser header img {
-      border-radius: 5px; }
-      @media (max-width: 768px) {
-        .teaser header img {
-          border-radius: 0; } }
+    @media (max-width: 768px) {
+      .teaser header img {
+        border-radius: 0; } }
     .teaser header .title {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       background: #343434;
-      border-radius: 0px 0px 5px 5px;
       text-align: center;
       padding: 15px; }
       .teaser header .title h1,

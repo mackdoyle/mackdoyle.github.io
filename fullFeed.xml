@@ -6,7 +6,7 @@
 		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
 		<language>en</language>
 		<copyright><![CDATA[&copy; 2014 . All rights reserved.]]></copyright>
-		<pubDate>2014-11-01T13:41:01-04:00</pubDate>
+		<pubDate>2014-11-02T09:02:05-05:00</pubDate>
 		
 	<item>
 		<title><![CDATA[Getting Grunt Up and Running in Your Local Dev (OS X)]]></title>
@@ -794,7 +794,7 @@ that's it. They do use the :before and :after pseudo elements which means they w
 	</item>
 
 	<item>
-		<title><![CDATA[HTML Canvas getImageData()]]></title>
+		<title><![CDATA[HTML Canvas' getImageData()]]></title>
 		<description>
 			<![CDATA[
 				<p>For my Sassy Annotations mixin, I wanted to color them the inverse of the image they sat upon. To accomplish this I would need to find a way to access the pixel data of the image, get the average color value and set the annotations to the inverse of that value.</p>

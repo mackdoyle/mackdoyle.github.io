@@ -30,22 +30,11 @@
     <!-- JS -->
     <script src="/assets/js/vendor/jquery-2.1.1.min.js"></script>
 
-    <!-- Start Mixpanel -->
-    <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-      for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-      mixpanel.init("52ee3c92d35412d6eca35f61740cbe6c");
-    </script>
   </head>
-  
-  <!-- Takana Live CSS Editor -->
-  <! -- Run: $takana [path to project] -->
-<script type="text/javascript" src="http://localhost:48626/takana.js"></script>
-<script type="text/javascript">
-  takanaClient.run({host: 'localhost:48626'});
-</script>
 
 
   <body>
+
     
 
 
@@ -69,14 +58,7 @@
   </ul>
 </nav>
 
-<script type="text/javascript">
-  // Track menu click events
-  (function(window) {
-    mixpanel.track_links(".top-bar ul li a", "Top nav link click", {
-        "referrer": document.referrer
-    });
-  })(window);
-</script>
+
 
 
     <div class="container">
@@ -152,7 +134,7 @@
     
       <article class="box">
         <header>
-          <h1><a href="/articles/html-canvas-getimagedata/" title="HTML Canvas getImageData()">HTML Canvas getImageData()</a></h1>
+          <h1><a href="/articles/html-canvas-getimagedata/" title="HTML Canvas' getImageData()">HTML Canvas' getImageData()</a></h1>
           <p class="meta"><i class="icon-entypo-user lighten">&nbsp;</i> Jason Doyle &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="December 27, 2013" title="December 27, 2013">December 27, 2013</time></p>
         </header>
 		    <p>For my Sassy Annotations mixin, I wanted to color them the inverse of the image they sat upon. To accomplish this I would need to find a way to access the pixel data of the image, get the average color value and set the annotations to the inverse of that value.</p>
@@ -179,7 +161,7 @@
     
       <article class="box">
         <header>
-          <h1><a href="/articles/html-canvas-getimagedata/" title="HTML Canvas getImageData()">HTML Canvas getImageData()</a></h1>
+          <h1><a href="/articles/html-canvas-getimagedata/" title="HTML Canvas' getImageData()">HTML Canvas' getImageData()</a></h1>
           <p class="meta"><i class="icon-entypo-user lighten">&nbsp;</i> Jason Doyle &nbsp;&nbsp;<i class="icon-entypo-clock">&nbsp;</i> <time datetime="December 27, 2013" title="December 27, 2013">December 27, 2013</time></p>
         </header>
 		    <p>For my Sassy Annotations mixin, I wanted to color them the inverse of the image they sat upon. To accomplish this I would need to find a way to access the pixel data of the image, get the average color value and set the annotations to the inverse of that value.</p>
@@ -404,5 +386,7 @@ so far. Here are a few I use that save me hours.</p>
         ga('create', 'UA-52530016-1', 'auto');
         ga('send', 'pageview');
       </script>
+
+
     </body>
 </html>
