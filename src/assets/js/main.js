@@ -12,7 +12,16 @@
             });
         });
     }
+
     // Init Isotope on Teasers Page
+    //If styling affect sizing, set styles for animations after isotope inits so they do not affect its calculations.
+    $('.teaser').css({
+        'opacity': 0.0
+    });
+    $('.teaser').animate({
+        'opacity': 1.0
+    }, 800);
+
     if ($(".teaser").length) {
         //init isotope
         var $teasersContainer = $('.content-container').imagesLoaded(function() {
@@ -25,14 +34,19 @@
                 }
             });
         });
-        //set styles for animations after isotope inits so they do not affect its calculations.
-        $('.teaser').css({
-            'opacity': 0.0
-        });
-        $('.teaser').animate({
-            'opacity': 1.0
-        }, 400);
+
     }
+
+    //Init masrony on teasers using Stalactite
+/*
+    if ($(".teaser").length) {
+      $('.content-container').stalactite();
+        updateLoader(function() {
+        $('.content-container').fadeIn();
+      });
+    }
+*/
+
     //Fade top bar on scroll
     // -------------------------------------------------
 /*

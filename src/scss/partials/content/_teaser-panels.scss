@@ -24,9 +24,9 @@
     width: 100%;
     img {
       //border-radius: 5px;
-      @include breakpoint(I-----I){
-        border-radius: 0;
-        };
+      //@include breakpoint(I-----I){
+        //border-radius: 0;
+      //};
     }
     // Wrapper for positioning head and sub-head, since <header> is use for bkg
     .title {

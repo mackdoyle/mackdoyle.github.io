@@ -27,8 +27,8 @@ $top-bar-link: #666666;
   height: $top-bar-height;
   z-index: 999;
   background: #333333;
-  background: -webkit-linear-gradient(#434343,#333232);
-  background: linear-gradient(#434343,#333232);
+  //background: -webkit-linear-gradient(#434343,#333232);
+  //background: linear-gradient(#434343,#333232);
   padding: 0 $gutter-size !important;
   border-bottom: 1px solid black;
 
