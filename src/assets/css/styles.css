@@ -2401,40 +2401,6 @@ pre.terminal code {
  * Default site specific styling
  */
 /**
-  * global/layout
-*/
-body {
-  background: #efefef; }
-
-.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
-  height: 100%; }
-
-.content-container {
-  width: 100%;
-  height: 100%;
-  margin: 78px 2% 2% 2%; }
-  @media (max-width: 720px) {
-    .content-container {
-      max-width: 100%;
-      margin: 0; } }
-  .content-container .post {
-    padding: 0 15px 0 15px; }
-
-.content-container .baseline {
-  background-image: inherit; }
-  .content-container .baseline:active {
-    background-image: url("http://basehold.it/i/34/100/100/100");
-    background-position-y: 22px; }
-
-.contain-to-grid {
-  background: #101010; }
-
-/**
  * Content Sass Pckage.
  */
 /* global/content/instruction */
@@ -3464,5 +3430,42 @@ footer {
       transition: all 0.25s ease-in-out; }
       footer .category-list-container .categories li:not(.first) a:hover {
         background: #ff9b73; }
+
+/*
+ * Theme Loader
+ */
+/**
+  * global/layout
+*/
+body {
+  background: #efefef; }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%; }
+
+.content-container {
+  width: 100%;
+  height: 100%;
+  margin: 78px 2% 2% 2%; }
+  @media (max-width: 720px) {
+    .content-container {
+      max-width: 100%;
+      margin: 0; } }
+  .content-container .post {
+    padding: 0 15px 0 15px; }
+
+.content-container .baseline {
+  background-image: inherit; }
+  .content-container .baseline:active {
+    background-image: url("http://basehold.it/i/34/100/100/100");
+    background-position-y: 22px; }
+
+.contain-to-grid {
+  background: #101010; }
 
 /*# sourceMappingURL=styles.css.map */

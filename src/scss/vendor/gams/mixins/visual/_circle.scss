@@ -1,0 +1,13 @@
+/**
+ * Little helper to create a circle
+ * @group control-points
+ * @access private
+ * @param {Number} $size - Circle size
+ * @output Dimensions, margin and border-radius
+ */
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  margin: -($size/2);
+  border-radius: 50%;
+}

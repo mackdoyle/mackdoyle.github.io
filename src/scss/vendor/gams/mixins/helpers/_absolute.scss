@@ -1,0 +1,15 @@
+/**
+ * Helper to position an item in absolute context
+ * @param {Number} $top (null) - Top offset
+ * @param {Number} $right (null) - Right offset
+ * @param {Number} $bottom (null) - Bottom offset
+ * @param {Number} $left (null) - Left offset
+ * @output `position: absolute` and offsets
+ */
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

@@ -101,7 +101,7 @@
                 }
             } else if (!nav.is(':animated')) {
                 //scrolling down
-                nav.stop(true, true).fadeOut(300);
+                nav.stop(true, true).slideUp(300);
             }
         }
         scrollPosition = newScrollPosition;

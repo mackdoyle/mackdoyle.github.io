@@ -29,7 +29,7 @@ module Jekyll
 
     def debug(obj, stdout=false)
       puts obj.pretty_inspect if stdout
-      "<pre>#{obj.class}\n#{obj.pretty_inspect}</pre>"
+      "<div style='position:absolute; margin:5% auto; border:3px solid blue; box-shadow:1px 1px 6px rgbs(0,0,0,.5);'><pre>#{obj.class}\n#{obj.pretty_inspect}</pre></div>"
     end
 
   end # DebugFilter

@@ -13,7 +13,10 @@ encoding: UTF-8
 lsi: TRUE
 highlighter: pygments
 pygments: true
-markdown: rdiscount
+#markdown: rdiscount
+markdown: kramdown
+kramdown:
+  input: GFM
 
 # -- Path Config
 include: ['_pages']
