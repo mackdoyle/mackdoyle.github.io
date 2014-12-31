@@ -77,43 +77,24 @@
 
 <p>It’s a hack, and it leaves a little distaste in your mouth, but it does work well. That is for everything except search results pages…</p>
 
-<p>The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to <code>/search?q=odds&amp;Itemid=435</code>. Take note of the ItemID and head over to the Menu Manager for the menu that contains your home page menu item. Look in the ID column of the home page menu item and you will see it matches the ItemID used on the search results page.</p>
+<p>The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to <code>/search/?searchphrase=all&amp;Itemid=122</code>. Take note of the ItemID and head over to the Menu Manager for the menu that contains your home page menu item. Look in the ID column of the home page menu item and you will see it matches the ItemID used on the search results page.</p>
 
-<div class="highlight">
-  <pre>
-    <code class="html">
-    <span class="k">joomla.org/index.php?option=com_content&amp;view=article&amp;id=1&amp;itemid=100</span>
-    </code>
-  </pre>
-</div>
-
+<img src="/assets/images/articles/joomla-itemid-compare.png" alt="Joomla ItemID" /></p>
 
 <p>Now browse to another page that has a different module arrangement. Replace the ItemID in the URL on that page with the one for your home page.</p>
 
-<div class="highlight">
-  <pre>
-    <code class="html">
-  <span class="c">//Original Path</span>
-  <span class="k">joomla.org/index.php?option=com_content&amp;view=article&amp;id=999&amp;itemid=500</span>
+<p>
+  Refresh that page and you should see that the page now has the module layout of your home page. (Note: This will only work if you are not using any type of
+  URL rewriting). To learn more about the ItemID, take a look at this old but still relevant article:
+  <a href="http://documentation.hwdmediashare.co.uk/wiki/The_Joomla_Itemid_Explained">The Joomla Itemid Explained</a>. Another good read can be found here:
+  <a href="http://www.itoctopus.com/what-is-itemid-in-a-joomla-url-and-why-it-is-important-to-have-it">What is Itemid in a Joomla URL and Why it is Important to Have It</a></p>
 
-  <span class="c">//Path updated with the home page&#39;s itemid</span>
-  <span class="k">joomla.org/index.php?option=com_content&amp;view=article&amp;id=999&amp;itemid=485</span>
-    </code>
-  </pre>
-</div>
-
-
-<p>Refresh that page and you should see that the page now has the module layout of your home page. (Note: This will only work if you are not using any type of URL rewriting). To learn more about the ItemID, take a look at this old but still relevant article: [http://documentation.hwdmediashare.co.uk/wiki/The_Joomla_Itemid_Explained]. Another good read can be found here: [http://www.itoctopus.com/what-is-itemid-in-a-joomla-url-and-why-it-is-important-to-have-it]</p>
-
-<img src="/assets/images/articles/joomla-menu-itemid.png" alt="Joomla ItemID" /></p>
-
-<h3>Manually setting the ItemID on the search</h3>
-<p><img src="/assets/images/articles/joomla-itemid.png" alt="Joomla ItemID" />(Joomla 2.5-3.x)</p>
-
-<h4>####Update:</h4>
+<h3>Update:</h3>
 <p>Since the writing of this article, a similar one has shown up on Joomla.org that provides some additional information. take a look here:
 <a href="https://docs.joomla.org/How_to_control_module_display_when_linking_to_an_article_with_no_menu_item" target="_blank">https://docs.joomla.org/How_to_control_module_display_when_linking_to_an_article_with_no_menu_item</a>
 </p>
+
+<p>Relevant to: Joomla 2.5-3x</p>
 
 
     </div>

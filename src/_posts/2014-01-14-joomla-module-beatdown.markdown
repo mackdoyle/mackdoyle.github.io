@@ -17,34 +17,24 @@ This is an efficient approach to managing an _n_ number of modules on an _n_ num
 
 It’s a hack, and it leaves a little distaste in your mouth, but it does work well. That is for everything except search results pages…
 
-The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to `/search?q=odds&Itemid=435`. Take note of the ItemID and head over to the Menu Manager for the menu that contains your home page menu item. Look in the ID column of the home page menu item and you will see it matches the ItemID used on the search results page.
+The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to `/search/?searchphrase=all&Itemid=122`. Take note of the ItemID and head over to the Menu Manager for the menu that contains your home page menu item. Look in the ID column of the home page menu item and you will see it matches the ItemID used on the search results page.
 
-
-Manually setting the ItemID on the search.
-
-{% highlight html %}
-  joomla.org/index.php?option=com_content&view=article&d=1&itemid=100
-{% endhighlight %}
+[Joomla ItemID]({{ site.url }}/assets/images/articles/joomla-menu-itemid.png)
 
 Now browse to another page that has a different module arrangement. Replace the ItemID in the URL on that page with the one for your home page.
 
 {% highlight html %}
   //Original Path
-  joomla.org/index.php?option=com_content&view=article&d=999&itemid=500
+  joomla.org/component/search/?searchword=module%20display&amp;searchphrase=all&amp;itemid=500
 
   //Path updated with the home page's itemid
-  joomla.org/index.php?option=com_content&view=article&d=999&itemid=100
+  joomla.org/component/search/?searchword=module%20display&amp;searchphrase=all&amp;itemid=122
 {% endhighlight %}
 
 Refresh that page and you should see that the page now has the module layout of your home page. (Note: This will only work if you are not using any type of URL rewriting). To learn more about the ItemID, take a look at this old but still relevant article: [http://documentation.hwdmediashare.co.uk/wiki/The\_Joomla\_Itemid\_Explained]. Another good read can be found here: [http://www.itoctopus.com/what-is-itemid-in-a-joomla-url-and-why-it-is-important-to-have-it]
 
-
-![Joomla ItemID]({{ site.url }}/assets/images/articles/joomla-menu-itemid.png)
-
-###Manually settings the ItemID on the search.###
-![Joomla ItemID]({{ site.url }}/assets/images/articles/joomla-itemid.png)
-Joomla 2.5-3x
+Relevant to: Joomla 2.5-3x
 
 ####Update:####
 Since the writing of this article, a similar one has shown up on Joomla.org that provides some additional information. take a look here:
-![https://docs.joomla.org/How_to_control_module_display_when_linking_to_an_article_with_no_menu_item](https://docs.joomla.org/How_to_control_module_display_when_linking_to_an_article_with_no_menu_item)
+[https://docs.joomla.org/How_to_control_module_display_when_linking_to_an_article_with_no_menu_item](https://docs.joomla.org/How_to_control_module_display_when_linking_to_an_article_with_no_menu_item)
