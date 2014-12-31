@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    
+
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/styles.min.css">
@@ -35,7 +35,7 @@
 
   <body>
 
-    
+
 
 
 
@@ -72,9 +72,9 @@
   <header style="background-image:url('assets/images/articles/cubism.png');">
     <div class="title">
       <h1>Joomla Module Beatdown</h1>
-      
+
         <p>Understanding the Display of Joomla Modules</p>
-      
+
       <p class="meta"><i class="fa fa-clock-o">&nbsp;</i> <time datetime="January 14, 2014" title="January 14, 2014">January 14, 2014</time></p>
     </div>
   </header>
@@ -104,7 +104,9 @@
 
 <p>Now browse to another page that has a different module arrangement. Replace the ItemID in the URL on that page with the one for your home page.</p>
 
-<div class="highlight"><pre><code class="html">  //Original Path
+<div class="highlight">
+  <pre><code class="html">
+  //Original Path
   joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=999<span class="err">&amp;</span>itemid=500
 
   //Path updated with the home page&#39;s itemid
@@ -118,11 +120,11 @@
 
 <p>It’s a hack, and it leaves a little distaste in your mouth, but it does work well. That is for everything except search results pages…</p>
 
-<p>The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to <code>/search?q=odds&amp;Itemid=435</code>. Take note of the ItemID and head over to the Menu Manager for the menu that contain the reference to your home page.  Look in the ID column of the home page menu item and you will see it matches the ItemID.
-<img src="/assets/images/articles/joomla-menu-itemid.png.jpg" alt="Joomla ItemID" /></p>
+<p>The search results page is a bit of a special case in that, if it has no ItemID of its own, it assumes the ItemID of the page that referred it. This generally goes unnoticed until a search is performed from a page that contains modules you do not want on the search results page. The home page is a good example, which may contain a slider module and other single page use modules. You can see this yourself by looking at the URL after performing a search from your home page. You will see something similar to <code>/search?q=odds&amp;Itemid=435</code>. Take note of the ItemID and head over to the Menu Manager for the menu that contains the menu item to your home page.  Look in the ID column of the home page menu item and you will see it matches the ItemID.
+<img src="/assets/images/articles/joomla-menu-itemid.png" alt="Joomla ItemID" /></p>
 
-<p>Manually settings the ItemID on the search.
-<img src="/assets/images/articles/joomla-itemid.png.jpg" alt="Joomla ItemID" />
+<h3>Manually settings the ItemID on the search</h3>
+<p><img src="/assets/images/articles/joomla-itemid.png" alt="Joomla ItemID" />
 Joomla 2.5-3x</p>
 
     </div>
@@ -130,41 +132,27 @@ Joomla 2.5-3x</p>
 
   <footer>
     <div class="paging">
-    	
   	    <div class="footer-col"><a rel=prev href="/articles/sassy-annotations/">&larr; Prev Post</a></div>
-  	  
-  	  
   	    <div class="footer-col"><a rel=next href="/articles/fixing-joomla-permission-issues/">Next Post &rarr;</a></div>
-  	  
     </div>
 
     <div class="tags">
-  	  
   	    <div class="footer-col">
-
-
 	<div class="category-list-container">
 		<ul class="inline categories">
       <li class="first">Posted in</li>
-			
 				<li><a href="categories.html#joomla%2C">joomla,</a>
-      ,
 				</li>
-			
 				<li><a href="categories.html#cms%2C">cms,</a>
-      ,
 				</li>
-			
 				<li><a href="categories.html#php">php</a>
-      
 				</li>
-			
 		</ul>
 	</div>
 
 </div>
-  	  
-      
+
+
     </div>
   </footer>
 </article>
