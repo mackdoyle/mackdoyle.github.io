@@ -22,12 +22,6 @@ The search results page is a bit of a special case in that, if it has no ItemID 
 
 Manually setting the ItemID on the search.
 
-
-
-One of the quirks of Joomla that can really cause you to tear your hair out, is the seemingly random display (or refusal to display) of modules on certain pages. One of the more common places this can occur is on search results pages. To avoid the problem, you must first understand the central roll menus, and their underlying ItemID play in defining context for Joomla pages.
-
-When a menu item is created, it is assigned an ID. This ID is appended, as the ItemID, to any page accessed via the menu item and is used by Joomla to persist the menu item’s settings to those pages. When you set the visibility of a module from within the module settings, you are basically saying, “show this module for the following ItemIDs.” You can see this for yourself by taking note of the ItemID for you home page.
-
 {% highlight html %}
   joomla.org/index.php?option=com_content&view=article&d=1&itemid=100
 {% endhighlight %}
@@ -54,3 +48,7 @@ The search results page is a bit of a special case in that, if it has no ItemID 
 ###Manually settings the ItemID on the search.###
 ![Joomla ItemID]({{ site.url }}/assets/images/articles/joomla-itemid.png)
 Joomla 2.5-3x
+
+####Update:####
+Since the writing of this article, a similar one has shown up on Joomla.org that provides some additional information. take a look here:
+![https://docs.joomla.org/How_to_control_module_display_when_linking_to_an_article_with_no_menu_item](https://docs.joomla.org/How_to_control_module_display_when_linking_to_an_article_with_no_menu_item)
