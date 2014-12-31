@@ -19,9 +19,6 @@
     <title>Joomla Module Beatdown</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/styles.min.css">
     <link href="/assets/css/print.css" media="print" rel="stylesheet" type="text/css" />
@@ -31,18 +28,10 @@
     <script src="/assets/js/vendor/jquery-2.1.1.min.js"></script>
 
   </head>
-
-
   <body>
 
-
-
-
-
 <nav class="top-bar">
-
   <div id="logo"><a href="/index.html" title="Home">JASONDOYLE</a></div>
-
   <ul class="internal-links">
     <li>
       <a  href="/index.html" title="Articles">Articles</a>
@@ -59,9 +48,7 @@
 </nav>
 
 
-
-
-    <div class="container">
+<div class="container">
 
   <section class="content-container">
     <article class="post">
@@ -98,20 +85,28 @@
 
 <p>When a menu item is created, it is assigned an ID. This ID is appended, as the ItemID, to any page accessed via the menu item and is used by Joomla to persist the menu item’s settings to those pages. When you set the visibility of a module from within the module settings, you are basically saying, “show this module for the following ItemIDs.” You can see this for yourself by taking note of the ItemID for you home page.</p>
 
-<div class="highlight"><pre><code class="html">  joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=1<span class="err">&amp;</span>itemid=100
-</code></pre></div>
+<div class="highlight">
+  <pre>
+    <code class="html">
+    joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=1<span class="err">&amp;</span>itemid=100
+    </code>
+  </pre>
+</div>
 
 
 <p>Now browse to another page that has a different module arrangement. Replace the ItemID in the URL on that page with the one for your home page.</p>
 
 <div class="highlight">
-  <pre><code class="html">
-  //Original Path
-  joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=999<span class="err">&amp;</span>itemid=500
+  <pre>
+    <code class="html">
+  <span class="c">//Original Path</span>
+  <span class="k">joomla.org/index.php?option=com_content</<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=999<span class="err">&amp;</span>itemid=500</span>
 
-  //Path updated with the home page&#39;s itemid
-  joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=999<span class="err">&amp;</span>itemid=100
-</code></pre></div>
+  <span class="c">//Path updated with the home page&#39;s itemid</span>
+  <span class="k">joomla.org/index.php?option=com_content<span class="err">&amp;</span>view=article<span class="err">&amp;</span>d=999<span class="err">&amp;</span>itemid=100</span>
+    </code>
+  </pre>
+</div>
 
 
 <p>Refresh that page and you should see that the page now has the module layout of your home page. (Note: This will only work if you are not using any type of URL rewriting). To learn more about the ItemID, take a look at this old but still relevant article: [http://documentation.hwdmediashare.co.uk/wiki/The_Joomla_Itemid_Explained]. Another good read can be found here: [http://www.itoctopus.com/what-is-itemid-in-a-joomla-url-and-why-it-is-important-to-have-it]</p>
