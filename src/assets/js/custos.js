@@ -68,4 +68,32 @@ $(document).ready(function(){
   var position = getPosition(myElement);
   alert("The image is located at: " + position.x + ", " + position.y);
 */
+
+
+/*
+ * Google Analytics Event Tracking
+ */
+
+/* Requires:
+ * <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+ * <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+ *
+ * @USAGE:Add classes to elements you want tracked and update the code below to target them. View results in Google Analytics
+ */
+
+/*
+  if (typeof(_gaq) !== 'undefined') // Check if Google Analytics is Loaded
+  {
+  // Video Tracking for Google Analytics
+  $('.video-track').click(function(e){_gaq.push(['_trackEvent', 'Videos', 'Play', 'Video_'+$(this).attr('title')+'_'+location.href]);  });
+  // Form Tracking for Google Analytics
+  $('.form-track').click(function(e){_gaq.push(['_trackEvent', 'Form', 'Completions', 'Form_'+$(this).attr('title')+'_'+location.href]);  });
+
+  // Journal Tracking for Google Analytics
+  $('.journal-track').click(function(e){_gaq.push(['_trackEvent', 'JournalArticles', 'Download', 'Journal_'+$(this).attr('title')+'_'+location.href]);  });
+
+  // Share Tracking for Google Analytics
+  $('.social-track').click(function(e){_gaq.push(['_trackEvent', 'Social', 'View', 'Social_'+$(this).attr('title')+'_'+location.href]);  });
+  }
+  */
 });

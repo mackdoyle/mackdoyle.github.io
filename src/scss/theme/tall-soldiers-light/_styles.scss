@@ -1,0 +1,79 @@
+/**
+  * Tall Soldier Light Theme Styles
+  * Jason Doyle - Jan 2015
+*/
+
+body {
+  background: $body-color;
+  color: $body-font-color;
+  font-weight: 300;
+  @media(min-resolution: 2dppx){
+    font-weight: 200;
+  }
+}
+
+a:active, a:focus {
+  color: $medium-gray;
+}
+
+.contain-to-grid {
+  background: $header-color;
+}
+
+.top-bar {
+  background: rgba($body-color, .5);
+  border-bottom: 1px solid #000;
+
+  #logo a {
+    color: $dark-gray;
+  }
+
+  .internal-links li a.active {
+    color: $medium-gray;
+  }
+
+  .external-links li a::before {
+    color: $medium-gray;
+    text-shadow: none;
+  }
+}
+
+.teaser {
+  background: none repeat scroll 0% 0% #FFF;
+  box-shadow: none;
+}
+
+
+
+// -------------------------------------------------
+// masonry-style grid layout
+// -------------------------------------------------
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+}
+
+.content-container {
+  width:100%;
+  height: 100%;
+  margin: 78px 2% 2% 2%;
+  //@include baseline-it(33, 140, 90, 90, 22, 1); //Baseline Grid for type testing
+  @include breakpoint(I----I){
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .post {
+    padding: 0 $gutter-size 0 $gutter-size;
+  }
+}
+
+.content-container .baseline {
+  @include baseline-it(34, 100, 100, 100, 22, 0); //Baseline Grid for type testing
+}
+
+

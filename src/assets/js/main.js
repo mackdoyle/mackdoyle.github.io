@@ -1,5 +1,52 @@
 (function(window) {
-    'use strict';
+  'use strict';
+  
+    // Article Progress Bar
+    // -------------------------------------------------
+    /*
+     * @Todo: Complete code that renders thin progress at the bottom of the viewport and progresses as you read through an article
+     * @Todo: add css. Something like:
+     *  .read-line{
+     *    display: inline-block;
+     *    position: fixed;
+     *    bottom: 0; left: 0;
+     *    width: 0%; height: 3px;
+     *    max-width: 100% !important;
+     *    background-color: fuchsia;
+     * }
+     */
+ 
+    /*
+    // get offset from viewport position
+    var win = $(window);
+
+    $.fn.viewportOffset = function() {
+      var offset = $(this).offset();
+      return {
+        left: offset.left + win.scrollLeft(),
+        top: offset.top + win.scrollTop()
+      };
+    };
+
+
+    $(document).ready(function(){
+      // Element to measure
+      var article = $('article'),
+          // Height of the article
+          readHeight = article.height(),
+          // Calculate offset for a starting point
+          readStartpoint = article.offset().top*1.8,
+          // set default
+          currentPosition = 0;
+      $(window).scroll(function(){
+        // turn all this into percentages
+        currentPosition = (article.viewportOffset().top-readStartpoint)/readHeight*100;
+        //$('#count').text(currentPosition);
+        $('.read-line').css('width', currentPosition + '%');
+      })
+    });
+    */
+
     // Isotope
     // -------------------------------------------------
     // Init Isotope on Projects Page

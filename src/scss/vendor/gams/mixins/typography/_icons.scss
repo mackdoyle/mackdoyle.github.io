@@ -1,0 +1,66 @@
+// Simple icon placement
+// Simplify the process of adding icons to elements.
+// @requires
+//   $font-icon: "FontAwesome";
+//
+// @example
+//  [href^="#search-popup"] {
+//    @include icon(before, magnify) {
+//      color: #b4b4b6;
+//      font-size: 24px;
+//    }
+//  }
+
+
+// Custom mapping
+// Use FontAwesome mappings, a mixture of popular libraries or create your own. You can even mix font icons with SVG files
+
+$icons: (
+    search: "\f002",
+    facebook: "\f09a",
+    twitter: "\f099",
+    magnify: "\f002"
+);
+
+
+// Icon mixin
+@mixin icon($position: before, $icon: false, $styles: true) {
+    @if $position == both {
+        $position: 'before, &:after';
+    }
+    // Either a :before or :after pseudo-element, or both, defaulting to :before
+    &:#{$position} {
+        @if $icon {
+            // A particular icon has been specified
+            content: "#{map-get($icons, $icon)}";
+        }
+        @if $styles {
+            // Supportive icon styles required
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-family: $font-icon;
+        }
+        // Include any extra rules supplied for the pseudo-element
+        @content;
+    }
+}
+
+// An example of using a loop for icon lists
+//
+// First create mapping to loop over
+// $icons: (
+//   // Font Awesome's .fa-user
+//   about: "\f007",
+//   // Font Awesome's .fa-bullhorn
+//   contact: "\f0a1",
+//   // Font Awesome's .fa-newspaper-o
+//   news: "\f1ea",
+// );
+//
+// Now loop over the mapping to generate a list with icons
+// @each $nav-item in about, news, contact {
+//     & > li.#{$nav-item} > a {
+//         @include icon(before, #{$nav-item});
+//     }
+// }

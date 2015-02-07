@@ -487,9 +487,34 @@ module.exports = function (grunt) {
           ]
         }
       }
-    }
+    },
 
-  });
+
+
+    /*
+   * =================================================
+   * Tests
+   * =================================================
+   */
+
+   // Show page speed of live site in terminal output
+    pagespeed: {
+      test: {
+        options: {
+          nokey: true,
+          url: 'http://jmd.io',
+          locale: 'en_US',
+          strategy: 'desktop',
+          threshold: 880000
+        }
+      }
+    },
+
+
+
+
+
+  }); // End task registration
 
   /*
    * =================================================
@@ -538,9 +563,7 @@ module.exports = function (grunt) {
   // Grunt Test
   // No real tests yet. Add your own.
   grunt.registerTask('test', [
-  //   'clean:serve',
-  //   'concurrent:test',
-  //   'connect:test'
+    'pagespeed:test'
   ]);
 
   // Grunt Check
