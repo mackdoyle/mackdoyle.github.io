@@ -20,7 +20,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    
+   <!-- Injected above the fold CSS -->
+  <style>
+    .top-bar{background:#333;border-bottom:1px solid #000;height:48px;left:0;padding:0 15px !important;position:fixed;right:0;top:0;width:100%;z-index:999}.top-bar #logo{color:#fff;float:left;font-family:Oswald,"Arial Narrow",sans-serif;font-size:1.3rem;font-weight:400;line-height:48px;margin-bottom:0}.top-bar #logo a{color:#fff}.container{height:100%;margin:0 auto;padding:0;position:relative;width:100%}.content-container{height:100%;margin:78px 2% 2%;width:100%}@media max-width:720px){.content-container{margin:0;max-width:100%}}
+  </style>
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/styles.min.css">
@@ -35,7 +38,7 @@
 
   <body>
 
-    
+
 
 
 
@@ -72,7 +75,7 @@
   <header style="background-image:url('assets/images/articles/assets.png');">
     <div class="title">
       <h1>Fixing Joomla Asset Table Issues</h1>
-      
+
       <p class="meta"><i class="fa fa-clock-o">&nbsp;</i> <time datetime="June 12, 2013" title="June 12, 2013">June 12, 2013</time></p>
     </div>
   </header>
@@ -101,7 +104,7 @@
 
 <div class="highlight"><pre><code class="mysql">    <span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">whm_categories</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">asset_id</span><span class="p">,</span> <span class="n">parent_id</span><span class="p">,</span> <span class="n">lft</span><span class="p">,</span> <span class="n">rgt</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">extension</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">alias</span><span class="p">,</span> <span class="n">note</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">published</span><span class="p">,</span> <span class="n">checked_out</span><span class="p">,</span> <span class="n">checked_out_time</span><span class="p">,</span> <span class="n">access</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">metadesc</span><span class="p">,</span> <span class="n">metakey</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">created_user_id</span><span class="p">,</span> <span class="n">created_time</span><span class="p">,</span> <span class="n">modified_user_id</span><span class="p">,</span> <span class="n">modified_time</span><span class="p">,</span> <span class="n">hits</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span> <span class="k">VALUES</span>
     <span class="o">`</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">331</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;system&#39;</span><span class="p">,</span> <span class="s1">&#39;ROOT&#39;</span><span class="p">,</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;{}&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    
+
 </code></pre></div>
 
 
@@ -116,7 +119,7 @@
     <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">alias</span>
     <span class="k">HAVING</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span>
     <span class="k">ORDER</span> <span class="k">BY</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span>
-    
+
 </code></pre></div>
 
 
@@ -135,7 +138,7 @@
     <span class="k">WHERE</span> <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-1&#39;</span> <span class="k">OR</span>
          <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-2&#39;</span> <span class="k">OR</span>
          <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-3&#39;</span>
-    
+
 </code></pre></div>
 
 
@@ -156,7 +159,7 @@
     <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-2&#39;</span> <span class="k">OR</span>
     <span class="n">alias</span> <span class="o">=</span> <span class="s1">&#39;alias-3&#39;</span>
     <span class="p">)</span>
-    
+
 </code></pre></div>
 
 
@@ -184,7 +187,7 @@ If you have noticed records with an <code>asset_id</code> of 0, there are likely
                 <span class="p">)</span>
         <span class="k">WHERE</span>
             <span class="n">cats</span><span class="p">.</span><span class="n">asset_id</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span>
-    
+
 </code></pre></div>
 
 
@@ -238,7 +241,7 @@ And this: <a href="http://docs.joomla.org/Developing_a_Model-View-Controller_Com
 <div class="highlight"><pre><code class="mysql">    <span class="cm">/* Fix Categories */</span>
     <span class="k">UPDATE</span> <span class="c1">#_assets SET rules=&#39;{&quot;core.create&quot;:{&quot;5&quot;:1},&quot;core.delete&quot;:{&quot;5&quot;:1},&quot;core.edit&quot;:{&quot;4&quot;:1,&quot;5&quot;:1},&quot;core.edit.state&quot;:{&quot;5&quot;:1},&quot;core.edit.own&quot;:{&quot;5&quot;:1}}&#39;</span>
     <span class="k">WHERE</span> <span class="n">name</span> <span class="k">LIKE</span> <span class="s1">&#39;%com_content.category%&#39;</span>
-    
+
 </code></pre></div>
 
 
@@ -264,7 +267,7 @@ And this: <a href="http://docs.joomla.org/Developing_a_Model-View-Controller_Com
             <span class="s2">&quot;core.edit.state&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">,</span>
             <span class="s2">&quot;core.edit.own&quot;</span><span class="p">:</span><span class="err">{</span><span class="s2">&quot;5&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span>
         <span class="err">}</span>
-    
+
 </code></pre></div>
 
 
@@ -278,7 +281,7 @@ And this: <a href="http://docs.joomla.org/Developing_a_Model-View-Controller_Com
     <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">name</span>
     <span class="k">HAVING</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span>
     <span class="k">ORDER</span> <span class="k">BY</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span>
-    
+
 </code></pre></div>
 
 
@@ -290,7 +293,7 @@ And this: <a href="http://docs.joomla.org/Developing_a_Model-View-Controller_Com
 
     <span class="k">SELECT</span> <span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="c1">#_assets</span>
     <span class="k">WHERE</span> <span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;com_content.category.&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    
+
 </code></pre></div>
 
 
@@ -302,7 +305,7 @@ And this: <a href="http://docs.joomla.org/Developing_a_Model-View-Controller_Com
     <span class="k">SELECT</span> <span class="n">cont</span><span class="p">.</span><span class="n">asset_id</span><span class="p">,</span> <span class="n">assets</span><span class="p">.</span><span class="n">id</span>
     <span class="k">FROM</span> <span class="n">whm_content</span> <span class="n">cont</span><span class="p">,</span> <span class="n">whm_assets</span>  <span class="n">assets</span>
     <span class="k">WHERE</span> <span class="p">(</span><span class="n">cont</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">assets</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;com_content.article.&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="k">AND</span>   <span class="p">(</span><span class="n">cont</span><span class="p">.</span><span class="n">asset_id</span>  <span class="o">&lt;&gt;</span> <span class="n">assets</span><span class="p">.</span><span class="n">id</span> <span class="p">)</span>
-    
+
 </code></pre></div>
 
 
@@ -313,31 +316,31 @@ And this: <a href="http://docs.joomla.org/Developing_a_Model-View-Controller_Com
 
   <footer>
     <div class="paging">
-    	
-  	  
+
+
   	    <div class="footer-col"><a rel=next href="/articles/html-canvas-getimagedata/">Next Post &rarr;</a></div>
-  	  
+
     </div>
 
     <div class="tags">
-  	  
+
   	    <div class="footer-col">
 
 
 	<div class="category-list-container">
 		<ul class="inline categories">
       <li class="first">Posted in</li>
-			
+
 				<li><a href="categories.html#joomla">joomla</a>
-      
+
 				</li>
-			
+
 		</ul>
 	</div>
 
 </div>
-  	  
-      
+
+
     </div>
   </footer>
 </article>
