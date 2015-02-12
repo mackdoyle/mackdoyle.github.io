@@ -1,8 +1,8 @@
 (function(window) {
   'use strict';
-  
+
     // Article Progress Bar
-    // -------------------------------------------------
+    // -----------------------------------------------------------------
     /*
      * @Todo: Complete code that renders thin progress at the bottom of the viewport and progresses as you read through an article
      * @Todo: add css. Something like:
@@ -15,7 +15,7 @@
      *    background-color: fuchsia;
      * }
      */
- 
+
     /*
     // get offset from viewport position
     var win = $(window);
@@ -48,7 +48,7 @@
     */
 
     // Isotope
-    // -------------------------------------------------
+    // -----------------------------------------------------------------
     // Init Isotope on Projects Page
     if ($(".panels-container").length) {
         var $projectsContainer = $('.panels-container').imagesLoaded(function() {
@@ -94,34 +94,8 @@
     }
 */
 
-    //Fade top bar on scroll
-    // -------------------------------------------------
-/*
-    $(window).scroll(function(){
-      var scrollTop = $(window).scrollTop();
-      if(scrollTop !== 0) {
-        $('.top-bar').stop().animate({'opacity':'0.2'},400);
-      }else {
-        $('.top-bar').stop().animate({'opacity':'1'},400);
-      }
-    });
-
-    $('.top-bar').hover(
-      function (e) {
-        var scrollTop = $(window).scrollTop();
-        if(scrollTop !== 0){
-          $('.top-bar').stop().animate({'opacity':'1'},400);
-        }
-      },
-      function (e) {
-        var scrollTop = $(window).scrollTop();
-        if(scrollTop !== 0){
-          $('.top-bar').stop().animate({'opacity':'0.2'},400);
-        }
-      }
-    );
-*/
-    //Sticky topbar Scoll Funtions
+    //Topbar Effects
+    // -----------------------------------------------------------------
     var nav = $('.top-bar'),
         navHeight = nav.height(),
         scrollPosition = 0;
@@ -152,5 +126,30 @@
             }
         }
         scrollPosition = newScrollPosition;
+    });
+
+
+    // EVENT LOGGING TO GOOGLE ANALYTICS
+    // -----------------------------------------------------------------
+    // Track basic JavaScript errors
+    window.addEventListener('error', function(e) {
+        _gaq.push([
+            '_trackEvent',
+            'JavaScript Error',
+            e.message,
+            e.filename + ':  ' + e.lineno,
+            true
+        ]);
+    });
+
+    // Track AJAX errors (jQuery API)
+    $(document).ajaxError(function(e, request, settings) {
+        _gaq.push([
+            '_trackEvent',
+            'Ajax error',
+            settings.url,
+            e.result,
+            true
+        ]);
     });
 })(window);

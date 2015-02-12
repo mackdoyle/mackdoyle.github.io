@@ -69,9 +69,37 @@ module.exports = function (grunt) {
       }
     },
 
+    /*
+     * CSS - Combine like media queries (CSS Task 3)
+     * -------------------------------------------------
+     */
+
+    cmq: {
+      options: {
+        log: false
+      },
+      build: {
+        files: '<%= path.src %>/assets/css/styles.css'
+      }
+    },
 
     /*
-     * CSSmin (CSS Task 3)
+     * Remove unused CSS from the given files and gen a new cleansed stylesheet (CSS Task 4)
+     * -------------------------------------------------
+     */
+
+    // NOTE: Need to using something liek Processinghtml to add tidy.css to header
+    // NOTE: This doe snot check articles so do not use cleansed css file on them.
+    uncss: {
+      build: {
+        files: {
+          '<%= path.src %>/assets/css/tidy.css': ['<%= path.srv %>/index.html', '<%= path.srv %>/about.html', '<%= path.srv %>/projects.html']
+        }
+      }
+    },
+
+    /*
+     * CSSmin (CSS Task 5)
      * -------------------------------------------------
      */
     cssmin: {
@@ -182,6 +210,22 @@ module.exports = function (grunt) {
       }
     },
 
+    /*
+     * Image Optimization
+     * @requires ImageAplha, ImageOptim, and jpegMini
+     * Only optimize build/dist images in case something goes wrong
+     * -------------------------------------------------
+     */
+    imageoptim: {
+      build: {
+        options: {
+          jpegMini: false,
+          imageAlpha: true,
+          quitAfter: true
+        },
+        src: ['assets/images']
+      }
+    },
 
     /*
      * Clean
@@ -206,6 +250,24 @@ module.exports = function (grunt) {
         }]
       }
     },
+
+
+
+   /*
+   * Process HTML
+   * Another tool to inject CSS and JS links on build.
+   * -------------------------------------------------
+   */
+
+    // NOT COMPLETE: Add files that contain build placeholders that need processing
+    processhtml: {
+      dist: {
+        files: {
+          '<%= path.srv %>/index.html': ['<%= path.src %>/includes/header.html']
+        }
+      }
+    },
+
 
 
     /*
@@ -257,38 +319,23 @@ module.exports = function (grunt) {
     },
 
 
-    /*
-     * File Revision
-     * -------------------------------------------------
-     */
-    filerev: {
-      options: {
-        length: 4
-      },
-      dist: {
-        files: [{
-          src: [
-            '<%= path.srv %>/assets/js/**/*.js',
-            '<%= path.srv %>/assets/css/**/*.css',
-            '<%= path.srv %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= path.srv %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
-          ]
-        }]
-      }
-    },
-
 
     /*
-     * Build Control
+     * Git Build Control
      * -------------------------------------------------
      */
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
-          branch: 'docs.wheretraveler',
           commit: true,
-          push: true
+          push: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+        }
+      },
+      github: {
+        options: {
+          remote: 'git@github.com:mackdoyle/mackdoyle.github.io.git',
+          branch: 'gh-pages'
         }
       }
     },
@@ -505,7 +552,7 @@ module.exports = function (grunt) {
           url: 'http://jmd.io',
           locale: 'en_US',
           strategy: 'desktop',
-          threshold: 880000
+          threshold: 35
         }
       }
     },
@@ -550,6 +597,8 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'useminPrepare',
     'sass:dist',
+    'cmq:build',
+    'uncss:build',
     'cssmin',
     'concat',
     'uglify',
@@ -557,7 +606,8 @@ module.exports = function (grunt) {
     'svgmin',
     'usemin',
     'htmlmin',
-    'jekyll:dist'
+    'jekyll:dist',
+    'imageoptim:build'
   ]);
 
   // Grunt Test

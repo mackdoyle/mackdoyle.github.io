@@ -33,7 +33,11 @@
     "node": ">=0.8.0"
   },
   "devDependencies": {
+    "grunt-combine-media-queries": "^1.0.19",
+    "grunt-critical": "^0.1.1",
+    "grunt-imageoptim": "^1.4.1",
     "grunt-notify": "^0.3.0",
+    "grunt-processhtml": "^0.3.7",
     "shell": "^0.3.2"
   },
   "scripts": {
