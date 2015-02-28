@@ -598,7 +598,6 @@ module.exports = function (grunt) {
     'useminPrepare',
     'sass:dist',
     'cmq:build',
-    'uncss:build',
     'cssmin',
     'concat',
     'uglify',
