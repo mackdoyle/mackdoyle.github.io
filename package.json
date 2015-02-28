@@ -38,6 +38,7 @@
     "grunt-imageoptim": "^1.4.1",
     "grunt-notify": "^0.3.0",
     "grunt-processhtml": "^0.3.7",
+    "grunt-uncss": "^0.4.0",
     "shell": "^0.3.2"
   },
   "scripts": {

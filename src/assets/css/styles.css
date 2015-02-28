@@ -1643,11 +1643,21 @@ table {
 /*
 Another option is to use this trick:
 
-.abs-center {
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}
+    .abs-center {
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+    }
+
+And another...
+
+    .abs-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
 */
 /**
  * Font-size and line-height Mixin
@@ -3018,15 +3028,15 @@ h1 + hr {
   position: fixed;
   overflow: hidden;
   top: 10%;
-  left: 1200px;
+  left: 80%;
   height: 100px;
   line-height: 97px;
   padding: 0 1.5% 0 1%;
   font-family: "Helvetica Neue", sans-serif;
   font-size: .8rem;
   font-weight: bold;
-  color: white;
-  text-shadow: -1px -1px 0px #210000;
+  color: #424242;
+  letter-spacing: .025rem;
   border-radius: 0 6 6 0; }
   @media (max-width: 1280px) {
     .post-note {
@@ -3047,14 +3057,14 @@ h1 + hr {
   .post-note:after {
     width: 98%;
     height: 50%;
-    background: #238dbb;
+    background: #A6E22E;
     position: absolute;
     content: "";
     left: 0;
     top: 25%;
     z-index: -1;
     border-radius: 0 6px 6px 0;
-    box-shadow: inset 0 0 40px 0px #38718A; }
+    box-shadow: inset 0 0 40px 0px #93C62D; }
 
 /**
  *
@@ -3329,16 +3339,31 @@ h1 + hr {
   display: none; }
 
 .top-bar {
+  /*
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  height: 48px;
+  width:100%;
+  height: $top-bar-height;
   z-index: 999;
   background: #333333;
-  padding: 0 15px !important;
+  padding: 0 $gutter-size !important;
   border-bottom: 1px solid black;
+  */
+  /*
+  #logo {
+    float: left;
+    font-family: $logo-font;
+    font-weight: 400;
+    color: white;
+    @include font-rhythm(1.3);
+    line-height: $top-bar-height;
+    a{
+      color: white;
+    }
+  }
+  */
   /*
   &:after {
     content: "";
@@ -3358,20 +3383,6 @@ h1 + hr {
     background-repeat: no-repeat;
   }
   */ }
-  .top-bar #logo {
-    float: left;
-    font-family: "Oswald", "Arial Narrow", sans-serif;
-    font-weight: 400;
-    color: white;
-    font-size: 20.8px;
-    line-height: 24px;
-    margin-bottom: 0px;
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-    margin-bottom: 0rem;
-    line-height: 48px; }
-    .top-bar #logo a {
-      color: white; }
   .top-bar .internal-links {
     position: absolute;
     left: 134px; }
@@ -3458,22 +3469,27 @@ footer {
 body {
   background: #efefef; }
 
+/*
 .container {
   position: relative;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   padding: 0;
-  height: 100%; }
-
-.content-container {
-  width: 100%;
   height: 100%;
-  margin: 78px 2% 2% 2%; }
-  @media (max-width: 720px) {
-    .content-container {
-      max-width: 100%;
-      margin: 0; } }
+}
+*/
+.content-container {
+  /*
+  width:100%;
+  height: 100%;
+  margin: 78px 2% 2% 2%;
+  //@include baseline-it(33, 140, 90, 90, 22, 1); //Baseline Grid for type testing
+  @include breakpoint(I----I){
+    max-width: 100%;
+    margin: 0;
+  }
+  */ }
   .content-container .post {
     padding: 0 15px 0 15px; }
 

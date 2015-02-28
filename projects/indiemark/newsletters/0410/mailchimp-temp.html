@@ -1,0 +1,380 @@
+<html>
+<title>*|MC:SUBJECT|*</title>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" >
+<style type="text/css">
+<style>
+
+	
+	#header{
+	}
+	
+		/** 
+	* @tab Header 
+	* @section Header Text 
+	* @tip Set the styling for the text of the header section.
+	* @theme header
+	*/ 
+	
+	#header p{
+		/*@editable*/color:#999999;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-size:10px;
+		/*@editable*/line-height:10px;
+		text-align:center;
+	}
+	
+	/** 
+	* @tab Header 
+	* @section Header Links 
+	* @tip Set the styling for the links in the header section.
+	* @theme header
+	*/ 
+	
+	#header a{
+		/*@editable*/color:#999999;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-size:10px;
+		/*@editable*/line-height:10px;
+		text-decoration:underline;
+	}
+
+	#content{
+	}
+	/** 
+	* @tab Content 
+	* @section Feature Headline
+	* @tip Set the styling for the feature headline.
+	* @theme content
+	*/ 
+	
+	.feature-heading{
+		/*@editable*/color:#444444;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-size:24px;
+		/*@editable*/line-height:24px;
+		margin-top:15px;
+		margin-bottom:10px;
+		margin-left:20px;
+		margin-right:10px;
+	}
+	/** 
+	* @tab Content 
+	* @section Main Text
+	* @tip Set the styling for the text of the main content section of email.
+	* @theme content
+	*/ 	
+	
+	#content p{
+		/*@editable*/color:#666666;
+		/*@editable*/font-family:Arial, Helvetica, sans-serif;
+		/*@editable*/font-size:15px;
+		/*@editable*/line-height:20px;
+		margin-top:15px;
+		margin-bottom:10px;
+		margin-left:20px;
+		margin-right:10px;
+	}
+	
+	/** 
+	* @tab Content 
+	* @section Main Content Links
+	* @tip Set the styling for the links of the content links of your email.
+	* @theme content
+	*/ 
+	
+	#content a{
+		/*@editable*/color:#C32025;
+		/*@editable*/font-family:Arial, Helvetica, sans-serif;
+		/*@editable*/font-size:15px;
+		/*@editable*/line-height:20px;
+		/*@editable*/font-weight:bold;
+		text-decoration:none;
+	}
+	
+		/** 
+	* @tab Content 
+	* @section Button Color
+	* @tip Set the styling for the button color.
+	* @theme content
+	*/ 
+	
+	#button{
+		background-color:#C32025;
+		margin-top:15px;
+		margin-bottom:0;
+		margin-left:20px;
+	}
+		/** 
+	* @tab Content 
+	* @section Button Link Color.
+	* @theme content
+	*/ 
+	#button a{
+		background-color:#C32025;
+		/*@editable*/color:#ffffff;
+		/*@editable*/font-size:17px;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-weight:normal;
+		/*@editable*/line-height:16px;
+		text-decoration:none;
+	}
+		
+	#news{
+	}
+	
+	/** 
+	* @tab News 
+	* @section News Headline
+	* @tip Set the styling for the title of the news of your email.
+	* @theme content
+	*/ 
+	
+	.news-heading{
+		/*@editable*/color:#ffffff;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-size:24px;
+		/*@editable*/line-height:24px;
+		margin-top:15px;
+		margin-bottom:10px;
+		margin-left:20px;
+		margin-right:10px;
+	}
+	/** 
+	* @tab News 
+	* @section News Text
+	* @tip Set the styling for the text of the news section of your email.
+	* @theme content
+	*/ 
+	
+	#news p{
+		/*@editable*/color:#E2E2E2;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-size:15px;
+		/*@editable*/line-height:20px;
+		margin-top:15px;
+		margin-bottom:10px;
+		margin-left:20px;
+		margin-right:10px;
+	}
+	/** 
+	* @tab News
+	* @section News Link
+	* @tip Set the styling for the button color.
+	* @theme content
+	*/ 
+		
+	#news a{
+		/*@editable*/color:#FFFFFF;
+		/*@editable*/text-decoration:underline;
+	}
+	
+
+	
+	#navigation{
+	}
+			/** 
+	* @tab Navigation 
+	* @section Navigation Text 
+	* @tip Set the styling for the text of the navigation section.
+	* @theme content
+	*/ 
+	#navigation p{
+		/*@editable*/color:#9F9F9F;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-size:12px;
+		/*@editable*/font-weight:bold;
+		/*@editable*/line-height:12px;
+		letter-spacing:4px;
+		text-align:left;
+		margin-top:0px;
+		margin-bottom:15px;
+	}
+				
+	/** 
+	* @tab Navigation 
+	* @section Navigation Links
+	* @tip Set the styling for the links of the navigation section.
+	* @theme content
+	*/ 
+		
+	#navigation a{
+		/*@editable*/color:#666666;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-size:12px;
+		/*@editable*/line-height:10px;
+		letter-spacing:0px;
+		text-decoration:none;
+	}
+		
+		
+	#footer{
+	}
+	
+	/** 
+	* @tab Footer 
+	* @section Footer Text
+	* @tip Set the styling for the text of the footer of your email.
+	* @theme content
+	*/ 
+	
+	#footer p{
+		/*@editable*/color:#999999;
+		/*@editable*/font-family:Arial;
+		/*@editable*/font-size:12px;
+		/*@editable*/line-height:15px;
+		margin-top:20px;
+		margin-bottom:20px;
+		text-align:center;
+	}
+	
+	/** 
+	* @tab Footer 
+	* @section Footer Links
+	* @tip Set the styling for the links of the footer of your email.
+	* @theme content
+	*/ 
+	#footer a{
+		/*@editable*/color:#666666;
+		/*@editable*/text-decoration:underline;
+	}
+</style>
+
+
+
+<center>
+<table cellpadding="0" cellspacing="0" width="100%" height="100%">
+<tr>
+  <td align="center" bgcolor="#FFFFFF"><table width="600" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="header" id="header" mc:edit="header" ><div align="center">
+        <p>Hi *|FNAME|*, [INSERT PRE HEADE TEXT]. <a href="*|ARCHIVE|*">View it online</a> or share it on *|SHARE:Facebook,LinkedIn,Twitter|*</p>
+      </div></td>
+      </tr>
+  </table></td>
+</tr>
+<tr>
+  <td align="center" bgcolor="#E2E2E2"><table width="600" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">&nbsp;</td>
+      <td height="81" valign="bottom"><a href="http://www.indiemark.com/" target="_blank"><img src="masthead.gif" alt="Indiemark" width="567" height="81" border="0" mc:edit="masthead"></a></td>
+      <td valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top"><img src="left-padding.gif" width="33" height="244" mc:edit="padding-left"></td>
+      <td valign="top" bgcolor="#FFFFFF"><table width="567" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top" class="content" id="content" mc:edit="feature">
+              <h1 class="feature-heading">Article Title </h1>
+              <p class="content">The renting of email subscriber lists is often misunderstood and frequently maligned.<br>
+              </p>
+              <table class="button" id="button" mc:edit="button" border="0" cellspacing="0" cellpadding="10">
+        <tr>
+          <td ><a href="http://bit.ly/bCku7H"> Link</a></td>
+          </tr>
+    </table>
+	           </td>
+          <td width="199" height="275"><img src="feature.gif" width="199" height="275" mc:edit="feature-image"></td>
+        </tr>
+      </table></td>
+      <td valign="top"><img src="right-padding.gif" width="33" height="244" mc:edit="padding-right"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td height="43"><img src="feature-break.gif" width="567" height="43" border="0" mc:edit="feature-break"></td>
+      <td height="43">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td bgcolor="#FFFFFF"><table width="567" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top" class="content" id="content" mc:edit="blog">
+            <h1 class="feature-heading">Blog News Title </h1>
+            <p> The renting of email subscriber lists is often misunderstood and frequently maligned. <a href="#">Learn More. </a></p>
+                </td>
+          </tr>
+      </table></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td height="43">*|INTERESTED: Email Lists|* <img src="blog-break.gif" width="567" height="43" border="0" mc:edit="blog-break"></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td bgcolor="#FFFFFF"><table width="567" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top" class="content" id="content" mc:edit="lists">
+            <h1 class="feature-heading">List News Title </h1>
+            <p> The renting of email subscriber lists is often misunderstood and frequently maligned. <a href="#">Learn More. </a> </p>                </td>
+        </tr>
+      </table></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td height="43">*|END:INTERESTED|* <img src="list-break.gif" width="567" height="43" mc:edit="list-break"></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td bgcolor="#C32025"><table width="567" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top" class="news" id="news" mc:edit="news">
+            <h1 class="news-heading">Company News Title </h1>
+            <p> The renting of email subscriber lists is often misunderstood and frequently maligned. <a href="#">Learn More. </a></p>
+                </td>
+        </tr>
+      </table></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td height="10" valign="top"><img src="news-break.gif" width="567" height="10" mc:edit="news-break"></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td class="navigation" id="navigation" mc:edit="navigation">   <table width="567" border="0" align="center" cellpadding="20" cellspacing="0">
+        <tr valign="top">
+          <td width="25%"><p>BROWSE</p>
+            <p>              <a href="#">Home</a></p>
+            <p>                  <a href="#">Services
+                  </a>                  </p></td>
+          <td width="25%"><p>SOCIALIZE</p>
+            <p><a href="#">Home</a></p>
+            <p> <a href="#">Services </a>                    </p>
+            </td>
+          <td width="25%"><p>READ</p>
+            <p><a href="#">Home</a></p>
+            <p> <a href="#">Services </a>                    </p>
+            </td>
+          <td width="25%"><p>CONTACT</p>
+            <p><a href="#">Home</a></p>
+            <p> <a href="#">Services </a> </p></td>
+        </tr>
+      </table></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>    </td>
+</tr>
+<tr>
+  <td align="center" valign="top" bgcolor="#E2E2E2" style="padding-bottom:20px;"><table width="600" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="footer" id="footer" mc:edit="footer">
+        <p><a href="*|ARCHIVE|*">View</a> | <a href="*|FORWARD|*">Forward</a> | <a href="*|SHARE|*">Share</a> | <a href="http://www.indiemark.com/newsletter.html">Subscribe</a><br>
+<br>
+
+        *|LIST:DESCRIPTION|* Want us to buzz off? You can <a href="*|UNSUB|*">unsubscribe</a> or update<a href="*|UPDATE_PROFILE|*"> update your profile</a><a href="*|FORWARD|*"></a> anytime.<br>
+          <br>
+          Copyright (C) *|CURRENT_YEAR|* *|LIST:COMPANY|* All rights reserved.*<span style="font-size:14px;font-weight:normal;color:#666666;font-family:Arial, Helvetica, sans-serif, Helvetica, sans-serif;line-height:150%;"><span style="font-size:14px;font-weight:normal;color:#000000;font-family:Arial, Helvetica, sans-serif, Helvetica, sans-serif;line-height:150%;"><br>
+          <br>
+          <span style="font-size:12px;font-weight:normal;color:#999999;font-family:Arial, Helvetica, sans-serif, Helvetica, sans-serif;line-height:150%;">*|LIST:ADDRESS|* </span></p></td>
+      </tr>
+  </table>
+
+</td>
+</tr>
+</table>
+</body>
+</html>

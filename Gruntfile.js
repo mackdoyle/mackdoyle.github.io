@@ -88,8 +88,8 @@ module.exports = function (grunt) {
      * -------------------------------------------------
      */
 
-    // NOTE: Need to using something liek Processinghtml to add tidy.css to header
-    // NOTE: This doe snot check articles so do not use cleansed css file on them.
+    // NOTE: Need to use something like Processinghtml to add tidy.css to header
+    // NOTE: This does not currently check articles so do not use cleansed css file on them.
     uncss: {
       build: {
         files: {
