@@ -15,8 +15,8 @@ highlighter: pygments
 pygments: true
 markdown: rdiscount
 #markdown: kramdown
-kramdown:
-  input: GFM
+#kramdown:
+#  input: GFM
 
 # -- Path Config
 include: ['_pages']

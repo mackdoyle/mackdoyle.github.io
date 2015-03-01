@@ -1,0 +1,40 @@
+
+/*
+* Theme Name: Invention
+* Theme URI: http://www.jozoor.com
+* Description: Invention Theme for corporate and creative sites, responsive and clean layout, more than color skins
+* Author: Jozoor team
+* Author URI: http://www.jozoor.com
+* Version: 1.0
+*/
+
+/*
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+=     00   00 00 00   00 00 00   00 00 00   00 00 00   00 00    =
+=     00   00    00        00    00    00   00    00   00       =
+=     00   00    00      00      00    00   00    00   00       =
+=     00   00    00    00        00    00   00    00   00       =
+=  00 00   00 00 00   00 00 00   00 00 00   00 00 00   00       =
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+*/
+
+/* Import Basic Files
+================================================== */
+  @import "src/font";                                 /* Custom Font */
+  @import "fonts/fontawesome/font-awesome"; /* Font Awesome */
+  @import "fonts/fontello/scss/fontello";             /* Fontello Social */
+  @import "src/base";                                 /* Reset & Basics */
+  @import "src/skeleton";                             /* Base 960 Grid */
+  @import "src/javascript";                           /* Css Styles for js scripts */
+  @import "src/shortcodes";                           /* Css Styles for shortcodes */
+  @import "src/skins/white";                          /* Layout Skin */
+  @import "src/custom";                               /* Css Styles File for any changes you want to add */
+  @import "src/style";
+
+/* Theme Styles
+  ----------------------------------------  */
+  @import "src/skins/colors/red";
+
+  /* Layout
+  ----------------------------------------  */
+  @import "src/layout/wide";
