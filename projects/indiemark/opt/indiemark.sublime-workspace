@@ -43,20 +43,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 51.0,
+		"height": 183.0,
 		"selected_items":
 		[
 			[
-				"fix",
-				"FixMyJS"
+				"install",
+				"Package Control: Install Package"
 			],
 			[
 				"insta",
 				"Package Control: Install Package"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
+				"fix",
+				"FixMyJS"
 			],
 			[
 				"inst",
@@ -164,36 +164,18 @@
 	],
 	"file_history":
 	[
-		"/Users/jdoyle/Sites/jmd/src/assets/js/custos.js",
-		"/Users/jdoyle/Sites/keen/assets/js/keen.chart.articles.js",
-		"/Users/jdoyle/Sites/jmd/src/assets/js/main.js",
-		"/Users/jdoyle/Sites/indiemark2/js/files.txt",
-		"/Users/jdoyle/Sites/indiemark2/js/scripts.min.js",
-		"/Users/jdoyle/Sites/indiemark2/js/custom.js",
-		"/Users/jdoyle/Sites/indiemark2/js/jquery.sticky.js",
-		"/Users/jdoyle/Sites/indiemark2/js/fancybox/jquery.fancybox.js",
-		"/Users/jdoyle/Sites/indiemark2/js/doubletaptogo.js",
-		"/Users/jdoyle/Sites/indiemark2/js/jquery.ui.totop.js",
-		"/Users/jdoyle/Sites/indiemark2/js/carousel.js",
-		"/Users/jdoyle/Sites/indiemark2/js/tytabs.js",
-		"/Users/jdoyle/Sites/indiemark2/js/colortip.js",
-		"/Users/jdoyle/Sites/indiemark2/js/jquery.flexslider.js",
-		"/Users/jdoyle/Sites/indiemark2/js/jquery-cookie.js",
-		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
-		"/Users/jdoyle/Sites/indiemark/versions/orig/js/jquery-ui/jquery.ui.accordion.js",
-		"/Users/jdoyle/Sites/indiemark2/js/jquery-ui/jquery.ui.accordion.js",
-		"/Users/jdoyle/Sites/indiemark2/js/jquery-ui/jquery.ui.widget.js",
-		"/Users/jdoyle/Sites/indiemark/versions/orig/js/jquery-ui/jquery.ui.widget.js",
-		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/jdoyle/Sites/indiemark2/js/jquery-ui/jquery.ui.core.js",
-		"/Users/jdoyle/Sites/indiemark2/js/jquery.easing.1.3.min.js",
-		"/Users/jdoyle/Sites/indiemark/app/js/archived/custom.js",
 		"/Users/jdoyle/Sites/indiemark2/indiemark.sublime-project",
+		"/Users/jdoyle/Sites/indiemark2/js/files.txt",
 		"/Users/jdoyle/Sites/indiemark2/index.html",
+		"/Users/jdoyle/Sites/indiemark2/js/custom.js",
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/CombineAndMinfiy/readme.txt",
+		"/Users/jdoyle/Sites/indiemark2/js/jquery.ui.totop.js",
+		"/Users/jdoyle/Sites/indiemark2/js/doubletaptogo.js",
+		"/Users/jdoyle/Sites/indiemark2/js/colortip.js",
 		"/Users/jdoyle/Sites/indiemark2/styles/fonts/fontawesome/_fixed-width.scss",
 		"/Users/jdoyle/Sites/indiemark2/full-service-email-marketing/index.html",
 		"/Users/jdoyle/Sites/indiemark2/inc/functions.php",
+		"/Users/jdoyle/Sites/indiemark2/js/carousel.js",
 		"/Users/jdoyle/Sites/indiemark2/js/ddsmoothmenu.js",
 		"/Users/jdoyle/Sites/indiemark2/app/js/custom.js",
 		"/Users/jdoyle/Sites/indiemark/versions/opt/js/scripts.min.js",
@@ -215,9 +197,11 @@
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
 		"/Users/jdoyle/.zshrc",
 		"/Users/jdoyle/scripts/terminal-prompt.sh",
+		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/jdoyle/Sites/indiemark/app/styles/src/_font.scss",
 		"/Users/jdoyle/Sites/indiemark/app/styles/fonts/fontawesome/_font-awesome.scss",
 		"/Users/jdoyle/Sites/indiemark/app/styles/fonts/fontawesome/_variables.scss",
+		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/User/Mondrian.tmTheme",
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/User/Glacial Moraine.tmTheme",
 		"/Users/jdoyle/Library/Containers/it.bloop.airmail/Data/Library/Application Support/Airmail/General/Tmp/HTML/index.html",
@@ -234,6 +218,7 @@
 		"/Users/jdoyle/Sites/developer-wheretraveler/app/_pages/getting-started.md",
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Installed Packages/Theme - Soda.sublime-package",
 		"/Users/jdoyle/Projects/blackbox/data/bb/bb_03/dedupe_sorted.py",
+		"/Users/jdoyle/Sites/jmd/src/assets/js/main.js",
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/jdoyle/Library/Application Support/Sublime Text 3/Packages/User/Plain text.sublime-settings",
 		"/Users/jdoyle/Sites/blackbox-angular/app/scripts/directives/ngLoadFileDirective.js",
@@ -291,11 +276,26 @@
 		"/Users/jdoyle/Sites/wt-api/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/source-map/build/prefix-source-map.jsm",
 		"/Users/jdoyle/Sites/wt-api/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/sourcemap.js",
 		"/Users/jdoyle/Sites/wt-api/node_modules/grunt-svgmin/node_modules/svgo/plugins/collapseGroups.js",
-		"/Users/jdoyle/Sites/wt-api/node_modules/grunt/node_modules/colors/colors.js"
+		"/Users/jdoyle/Sites/wt-api/node_modules/grunt/node_modules/colors/colors.js",
+		"/Users/jdoyle/Sites/wt-api/node_modules/grunt/node_modules/colors/package.json",
+		"/Users/jdoyle/Sites/wt-api/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/coffee-script.js",
+		"/Users/jdoyle/Sites/wt-api/node_modules/grunt-build-control/test/expected/custom_options",
+		"/Users/jdoyle/Sites/wt-api/_config.yml",
+		"/Users/jdoyle/Sites/jmd/src/scss/global/content/_projects.scss",
+		"/Users/jdoyle/Sites/jmd/src/scss/global/_layout.scss",
+		"/Users/jdoyle/Sites/jmd/src/scss/global/content/_teasers.scss",
+		"/Users/jdoyle/Sites/jmd/src/_layouts/landing.html",
+		"/Users/jdoyle/Sites/jmd/src/index.html",
+		"/Users/jdoyle/Sites/jmd/src/_layouts/default.html",
+		"/Users/jdoyle/Sites/jmd/src/scss/gams/patterns/_tiler.scss",
+		"/Users/jdoyle/Sites/jmd/src/scss/global/content/_teasers-spectrum.scss",
+		"/Users/jdoyle/Sites/wt-api/app/_pages/users.md",
+		"/Users/jdoyle/Sites/wt-api/app/_pages/home.md",
+		"/Users/jdoyle/Sites/wt-api/app/_pages/rate-limiting.md"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -323,13 +323,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"//",
-			"function(",
-			"//tabs",
-			"//",
-			";;",
-			" // ms.",
-			"// Defaults to “carousel”.",
 			"  ",
 			"<script src=\"js/",
 			"==",
@@ -450,7 +443,8 @@
 			"hovera",
 			"colllapse",
 			"collapse",
-			".token"
+			".token",
+			"save"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -458,8 +452,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"function (",
-			";",
 			"  \n\n",
 			"\n",
 			"var",
@@ -503,13 +495,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"folders":
-	[
-		{
-			"follow_symlinks": true,
-			"path": "/Users/jdoyle/Sites/indiemark2"
-		}
-	],
 	"groups":
 	[
 		{
@@ -520,7 +505,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -569,10 +554,10 @@
 	{
 		"height": 0.0
 	},
-	"project": "",
+	"project": "indiemark.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
