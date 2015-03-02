@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+    "settings":
+    {
+        "Combine: FileList": "/js/files.txt",
+        "Combine: InPath": "/js/",
+        "Combine: OutPath": "/js/",
+        "Combine: MasterName": "scripts.js",
+        "Combine: MinifyName": "scripts.min.js"
+    }
+}
