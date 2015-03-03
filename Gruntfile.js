@@ -59,7 +59,7 @@ module.exports = function (grunt) {
     autoprefixer: {
       options: {
         browsers: ['last 2 versions'],
-        cascade: "false"
+        cascade: 'false'
       },
       serve: {
         src: '<%= path.src %>/assets/css/styles.css'
