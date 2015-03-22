@@ -15,12 +15,16 @@
   ],
   "dependencies": {
     "isotope": "~2.0.1",
-    "imagesloaded": "~3.1.8"
+    "imagesloaded": "~3.1.8",
+    "screenfull": "~2.0.0"
   },
   "homepage": "https://github.com/mackdoyle/mackdoyle.github.io",
   "main": "assets/js/main.min.js",
   "keywords": [
     "js"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "Cortana": "~1.2.8"
+  }
 }

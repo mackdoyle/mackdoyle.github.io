@@ -318,6 +318,18 @@ module.exports = function (grunt) {
       }
     },
 
+    /*
+     * Hologram
+     * Style Guide Framework
+     * -------------------------------------------------
+     */
+    hologram: {
+      generate: {
+        options: {
+          config: './hologram/config.yml'
+        }
+      }
+    },
 
 
     /*
@@ -369,6 +381,12 @@ module.exports = function (grunt) {
         dest: '<%= path.src %>/assets/css/styles.linted.css'
       }
     },
+
+    /*
+     * Testing Procedures
+     */
+
+
 
 
     /*
