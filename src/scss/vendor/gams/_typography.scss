@@ -68,7 +68,7 @@ header p {
 
 p {
   @include font-rhythm(1.125, $baseline-height, 2);
-
+  font-weight: 400;
 }
 
 a {

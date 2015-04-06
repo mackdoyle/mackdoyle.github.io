@@ -7,7 +7,7 @@
  ///
 
 $top-bar-height: 48px;
-$top-bar-link: #666666;
+$top-bar-link: #fff;
 
 //Compensate for fixed topbar area
 .container {
@@ -15,7 +15,7 @@ $top-bar-link: #666666;
 }
 
 .mobile-menu {
-	display: none;
+  display: none;
 }
 
 .top-bar {
@@ -50,12 +50,14 @@ $top-bar-link: #666666;
 
 
   .internal-links {
-    position: absolute;
     left: 134px;
+    position: absolute;
+    
     li{
       display: inline-block;
       line-height: $top-bar-height;
       margin: 0 $top-bar-height / 4;
+
       a{
         position: relative;
         display: block;

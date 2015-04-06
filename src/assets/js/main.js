@@ -61,7 +61,7 @@
     }
 
     // Init Isotope on Teasers Page
-    //If styling affect sizing, set styles for animations after isotope inits so they do not affect its calculations.
+    //If styling affects sizing, set styles for animations after isotope inits so they do not affect its calculations.
     $('.teaser').css({
         'opacity': 0.0
     });
@@ -76,6 +76,7 @@
                 // options
                 itemSelector: '.teaser',
                 layoutMode: 'masonry',
+
                 masonry: {
                     gutter: 25
                 }
@@ -85,14 +86,14 @@
     }
 
     //Init masrony on teasers using Stalactite
-/*
+    /*
     if ($(".teaser").length) {
       $('.content-container').stalactite();
         updateLoader(function() {
         $('.content-container').fadeIn();
       });
     }
-*/
+    */
 
     //Topbar Effects
     // -----------------------------------------------------------------
@@ -105,11 +106,12 @@
         var w = $(this),
             newScrollPosition = w.scrollTop(),
             html = $('html');
+
         if (!html.hasClass('desktop')) {
             return;
         }
         //HIDE/SHOW NAV
-        //dont do anything until you get past the header's height...
+        // Dont do anything until you get past the header's height...
         if (newScrollPosition <= navHeight) {
             nav.stop(true, true).css('display', 'block');
         } else {
@@ -132,6 +134,7 @@
     // EVENT LOGGING TO GOOGLE ANALYTICS
     // -----------------------------------------------------------------
     // Track basic JavaScript errors
+    /*
     window.addEventListener('error', function(e) {
         _gaq.push([
             '_trackEvent',
@@ -152,4 +155,5 @@
             true
         ]);
     });
+    */
 })(window);

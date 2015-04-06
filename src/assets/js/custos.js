@@ -4,7 +4,8 @@ $(document).ready(function(){
 
 
   // Parallax Background Scrolling
-  if ($body.hasClass('background-parallax')) {
+  /*
+  if $('body').hasClass('background-parallax')) {
 
       var ratio     = 2,
           container = $('.wrapper:first').css({
@@ -18,26 +19,11 @@ $(document).ready(function(){
           container.style.backgroundPosition = ('50%' + xPos) + 'px';
       });
   }
-
-  // Sticky headerbar on scroll
-  var $topbar = $("#top-bar"),
-      y_pos = $topbar.offset().top,
-      height = $topbar.height();
-
-  $(document).scroll(function(){
-    var scrollTop = $(this).scrollTop();
-
-    if (scrollTop > y_pos + height){
-      $topbar.addClass("top-bar-fixed").animate({ top: 0 });
-    } else if (scrollTop <= y_pos){
-      $topbar.removeClass("top-bar-fixed").clearQueue().animate({ top: "-44px" }, 0);
-    }
-  });
-
-
+  */
 
   // Indent the body copy as it touches the nav icons during a scroll event
   // @TODO: Still need A LOT of work
+  /*
   var theTop = $("#article-content").offset().top;
 
   $(document).scroll(function() {
@@ -47,6 +33,7 @@ $(document).ready(function(){
       $('#wrapped').css({"border":"2px solid red"});
     }
   });
+*/
 
 
 

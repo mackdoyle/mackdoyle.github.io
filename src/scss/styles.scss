@@ -9,17 +9,19 @@
 // Base Files (Styles that are dropped into most projects)
 // -------------------------- *
 @import
-  "base/deopinionate";
+  'base/deopinionate';
 
 // Authored Dependencies
 @import
-	"vendor/base";
+	'vendor/base';
+  
+
+// Sections
+
+@import
+  'partials/base';
+
 
 // Sections
 @import
-  "partials/base";
-
-
-// Sections
-@import
-  "theme/tall-soldiers/base";
+  'theme/tall-soldiers/base';

@@ -4,7 +4,7 @@ title:  "Sassy Annotations"
 date:   2013-12-27 20:04:14
 author: Jason Doyle
 categories: scss
-image: assets/images/articles/annotated.png
+image: /assets/images/articles/annotated.png
 ---
 
 
