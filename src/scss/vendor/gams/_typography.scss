@@ -44,12 +44,12 @@ h1 {
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 400;
   @include font-rhythm(($baseline-height * .85), $baseline-height);
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 400;
   @include font-rhythm(($baseline-height * .75), $baseline-height);
 }
 
@@ -61,7 +61,7 @@ h4, h5, h6 {
 // Sub-headline
 header p {
   font-family: $sub-headline-font;
-  font-weight: 300;
+  font-weight: 400;
   color: $body-headline-color;
   @include font-rhythm(($baseline-height * .75), ($baseline-height * .75), 0);
 }
