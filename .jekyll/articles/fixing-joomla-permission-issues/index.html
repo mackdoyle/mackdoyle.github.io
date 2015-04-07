@@ -131,7 +131,7 @@ Other processes running under <code>mod_php</code> can read your configuration.p
 
 <h2>Set <code>open_basedir</code></h2>
 
-<p><code>open_basedir</code>is not set in php.ini on our servers but should be. It limits the files that can be accessed by PHP to the specified directory. Also, fopen() uses the path to check the location of the file its opening. Also, some permission issues can be resolved by setting the tmp directory on the property as well. Multiple subdirectories can be added, separated by a colon.
+<p><code>open_basedir</code> is not set in php.ini on our servers but should be. It limits the files that can be accessed by PHP to the specified directory. Also, fopen() uses the path to check the location of the file its opening. Also, some permission issues can be resolved by setting the tmp directory on the property as well. Multiple subdirectories can be added, separated by a colon.
 Example:
 <code>open_basedir=/home/site_name/public_html:/tmp</code> (must have trailing slash)</p>
 

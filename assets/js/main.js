@@ -103,11 +103,10 @@
 
     $(window).on('scroll', function(e) {
         //VARS
-        console.log('begining scroll on');
         var w = $(this),
             newScrollPosition = w.scrollTop(),
             html = $('html');
-            console.log('w: ' + w + 'newScrollPosition: ' + newScrollPosition + 'html: ' + html);
+
         if (!html.hasClass('desktop')) {
             return;
         }
@@ -115,21 +114,17 @@
         // Dont do anything until you get past the header's height...
         if (newScrollPosition <= navHeight) {
             nav.stop(true, true).css('display', 'block');
-            console.log('new pos: ' + newScrollPosition);
         } else {
             //scrolling up
-            console.log('New pos: ' + newScrollPosition);
             if (scrollPosition > newScrollPosition) {
                 if (!nav.is(':visible')) {
                     nav.stop(true, true).slideDown(100, function() {
                         $(this).css('overflow', '');
                     });
                 }
-                console.log('scrolling up');
             } else if (!nav.is(':animated')) {
                 //scrolling down
                 nav.stop(true, true).slideUp(300);
-                console.log('scrolling down');
             }
         }
         scrollPosition = newScrollPosition;

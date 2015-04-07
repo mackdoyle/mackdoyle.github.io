@@ -16,48 +16,59 @@ image: assets/images/articles/assets.png
   OK, so let's get started...
 
 ### Gather diagnostics ###
-  Before doing anything, you should gather as much information as you can to understand the source of the issue. Download Elin Warig's [Asset Table Diagnostics] tool and run it. This will generate a report showing any problems related to the assets table. If the report is clean, you might have another issue. If it is not, keep it open as we will go back to it several times during this process.
+Before doing anything, you should gather as much information as you can to understand the source of the issue. Download Elin Warig's [Asset Table Diagnostics] tool and run it. This will generate a report showing any problems related to the assets table. If the report is clean, you might have another issue. If it is not, keep it open as we will go back to it several times during this process.
 
 ### Get some context on the issue ###
-  Head over to this [article][3] on Joomla docs. This will give you a bit of background along with a few suggestions. At this point you are likely to go all ADD and start trying some of the suggestions the document suggests, but do not do it, stay focused, and come back here. We will walk through those steps later with some sample code.
+Head over to this [article][3] on Joomla docs. This will give you a bit of background along with a few suggestions. At this point you are likely to go all ADD and start trying some of the suggestions the document suggests, but do not do it, stay focused, and come back here. We will walk through those steps later with some sample code.
 
 ### Fix a missing root level category ###
-  Take a look at your `#_categories` table. The first record should be ROOT. If it is not, try creating it.
+Take a look at your `prefix_categories` table. The first record should be ROOT. If it is not, try creating it.
 
-  	{% highlight mysql %}
-  	INSERT INTO whm_categories(id, asset_id, parent_id, lft, rgt, level, path, extension, title, alias, note, description, published, checked_out, checked_out_time, access, params, metadesc, metakey, metadata, created_user_id, created_time, modified_user_id, modified_time, hits, language, version) VALUES
-  	`(1, 0, 0, 0, 331, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '*', 1)
-  	{% endhighlight %}
+{% highlight mysql %}
+INSERT INTO whm_categories(
+  id, asset_id, parent_id, lft, rgt, level, path, 
+  extension, title, alias, note, description, published, checked_out, 
+  checked_out_time, access, params, metadesc, metakey, metadata, 
+  created_user_id, created_time, modified_user_id, modified_time, hits, 
+  language, version
+) 
+VALUES (
+  1, 0, 0, 0, 331, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, 
+  '0000-00-00 00:00:00', 1, '{}', '', '', '', 0, '0000-00-00 00:00:00', 
+  0, '0000-00-00 00:00:00', 0, '*', 1
+)
+{% endhighlight %}
+
 After you successfully execute this query, you will need to head over to you categories in the Joomla admin and click on the Rebuild button
 
 ### Remove duplicate records ###
 OK, at this point you have verified you have an asset table issue and gained a little insight into what parts of the data structure are affected. So let's get started and check off an easy one. If you are coming from an upgrade, it's likely you have some duplicate content. To find out, run this on the content table.
 
-  	{% highlight mysql %}
-  	SELECT count(*), alias
-  	FROM#_content
-  	GROUP BY alias
-  	HAVING count(*)>1
-  	ORDER BY count(*) DESC
-  	{% endhighlight %}
+{% highlight mysql %}
+SELECT count(*), alias
+FROM prefix_content
+GROUP BY alias
+HAVING count(*)>1
+ORDER BY count(*) DESC
+{% endhighlight %}
 
 
-  This query will simply return a count of duplicate alias names. You might have multiple articles with the same title or legitimate duplicates of articles, so you will need to look at each one to determine if you need it.
+This query will simply return a count of duplicate alias names. You might have multiple articles with the same title or legitimate duplicates of articles, so you will need to look at each one to determine if you need it.
 
-  Before you go any further, log into the Joomla admin and create a new category named 'Temp' and take note of its id. Keep this around as you will find yourself using it to group items for processing.
+Before you go any further, log into the Joomla admin and create a new category named 'Temp' and take note of its id. Keep this around as you will find yourself using it to group items for processing.
 
-  Follow these steps to remove duplicate articles without breaking any foreign-key relationships. Then repeat the process for categories.
+Follow these steps to remove duplicate articles without breaking any foreign-key relationships. Then repeat the process for categories.
 
 #### Step 1 ####
-  Copy the result set of the duplicate count query to a text editor. Use Find a Replace to build a `SELECT` statement that returns all of the duplicated articles by alias. You should end up with something like this:
+Copy the result set of the duplicate count query to a text editor. Use Find a Replace to build a `SELECT` statement that returns all of the duplicated articles by alias. You should end up with something like this:
 
-  	{% highlight mysql %}
-  	SELECT *
-  	FROM #_content
-  	WHERE alias = 'alias-1' OR
-  		 alias = 'alias-2' OR
-  		 alias = 'alias-3'
-  	{% endhighlight %}
+{% highlight mysql %}
+SELECT *
+FROM prefix_content
+WHERE alias = 'alias-1' OR
+	 alias = 'alias-2' OR
+	 alias = 'alias-3'
+{% endhighlight %}
 
 #### Step 2 ####
 Look through the results and try to find something that differentiates the original record from its duplicates. In my data, the duplicates had a `modifed_by` value of 0 while the original had a user id. This allowed me to differentiate them from the original.
@@ -65,17 +76,17 @@ Look through the results and try to find something that differentiates the origi
 #### Step 3 ####
 Modify the `SELECT` statement into an `UPDATE` that keys off the `modified_by` field. Use this to move the duplicate records into the Temp category using the `catid` field. The query should look similar to this:
 
-  	{% highlight mysql %}
-  	UPDATE #_content
-  	SET catid = 158
-  	WHERE modified_by < 1
-  	AND
-  	(
-  	alias = 'alias-1' OR
-  	alias = 'alias-2' OR
-  	alias = 'alias-3'
-  	)
-  	{% endhighlight %}
+{% highlight mysql %}
+UPDATE prefix_content
+SET catid = 158
+WHERE modified_by < 1
+AND
+(
+alias = 'alias-1' OR
+alias = 'alias-2' OR
+alias = 'alias-3'
+)
+{% endhighlight %}
 
 #### Step 4
 Now head back to the Joomla admin and filter your articles by the Temp category. Now you have a collection of all the duplicate items that you can trash and delete. This process allows Joomla to remove the items and perform any necessary clean-up that you would have missed by performing a manual `DELETE` statement in the database.
@@ -87,28 +98,28 @@ Elin has written another great script to get you closer to resolution. So go dow
 TODO: Rework to update all relationships, not just ones with an asset id of 0.
 If you have noticed records with an `asset_id` of 0, there are likely asset records that exist for them and we need to restore that relationship. To do so, run this on the categories table.
 
-	{% highlight mysql %}
-    	UPDATE
-    	  #_categories cats
-    	SET
-    	    cats.asset_id =
-    		    (
-    	            SELECT assets.id
-    	            FROM #_assets assets
-    	            WHERE SUBSTRING_INDEX(assets.name, 'com_content.category.', -1) = cats.id
-    			)
-    	WHERE
-    	    cats.asset_id < 2;
-	{% endhighlight %}
+{% highlight mysql %}
+  	UPDATE
+  	  prefix_categories cats
+  	SET
+  	    cats.asset_id =
+  		    (
+  	            SELECT assets.id
+  	            FROM prefix_assets assets
+  	            WHERE SUBSTRING_INDEX(assets.name, 'com_content.category.', -1) = cats.id
+  			)
+  	WHERE
+  	    cats.asset_id < 2;
+{% endhighlight %}
 
 Then modify it to run on the content table. The broken relationships for articles and categories should now be restored.
 
 ### Create new asset table relationships
 After restoring broken relationships, you will likely be left with items that have no asset relationship and they need one. Opening an item in the Joomla admin and saving it will create a relationship and this is the best approach if you have a few items to fix. If you too many for that solution to be feasible, follow these steps:
   1. Create a new category named Temp and note it ID.
-  2. Log into the database an browse to the `#_content` table.
-  3. Find all of the articles without asset id `SELECT FROM #_content WHERE asset_id < 1`
-  4. Now add those articles to the Temp category by updating their records with the Temp categories id `UPDATE #_content SET catid = 158 WHERE asset_id < 1`. Remember to back up your database before running any queries.
+  2. Log into the database an browse to the `prefix_content` table.
+  3. Find all of the articles without asset id `SELECT FROM prefix_content WHERE asset_id < 1`
+  4. Now add those articles to the Temp category by updating their records with the Temp categories id `UPDATE prefix_content SET catid = 158 WHERE asset_id < 1`. Remember to back up your database before running any queries.
   5. Head back to the Joomla admin. All of the broken articles now have something in common, a category, and that means you can perform a bulk operation on them. So filter the articles by the Temp category, select all of them and perform a bulk operation to move them into the Uncategorised category or another category of your choice.
   6. Repeat these step for broken categories as well.
   Now all your articles and categories will have an `asset_id`.
@@ -142,66 +153,67 @@ And this: [http://docs.joomla.org/Developing\_a\_Model-View-Controller\_Componen
 
 Also, try adding the default rule properties first and see if that works. For example set all the rules below to `rules= {"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}`
 
-  	{% highlight mysql %}
-  	/* Fix Categories */
-  	UPDATE #_assets SET rules='{"core.create":{"5":1},"core.delete":{"5":1},"core.edit":{"4":1,"5":1},"core.edit.state":{"5":1},"core.edit.own":{"5":1}}'
-  	WHERE name LIKE '%com_content.category%'
-  	{% endhighlight %}
+{% highlight mysql %}
+/* Fix Categories */
+UPDATE prefix_assets 
+SET rules='{"core.create":{"5":1},"core.delete":{"5":1},"core.edit":{"4":1,"5":1},"core.edit.state":{"5":1},"core.edit.own":{"5":1}}'
+WHERE name LIKE '%com_content.category%'
+{% endhighlight %}
 
-	{% highlight mysql %}
-  	/* Fix Articles */
-  	UPDATE #_assets SET rules='{"core.delete":{"6":1,"5":1},"core.edit":{"6":1,"4":1,"5":1},"core.edit.state":{"6":1,"5":1}}'
-  	WHERE name LIKE '%com_content.article%'
-
-  	DELETE
-  		{
-  			"core.create":{"6":1,"3":1,"8":1},
-  			"core.delete":{"6":1},
-  			"core.edit":{"6":1,"4":1,"8":1},
-  			"core.edit.state":{"6":1,"5":1,"8":1},
-  			"core.edit.own":{"6":1,"3":1,"8":1}
-  		}
-
-  		{
-  			"core.create":{"5":1},
-  			"core.delete":{"5":1},
-  			"core.edit":{"4":1,"5":1},
-  			"core.edit.state":{"5":1},
-  			"core.edit.own":{"5":1}
-  		}
-	{% endhighlight %}
+{% highlight mysql %}
+	/* Fix Articles */
+	UPDATE prefix_assets 
+  SET rules='{"core.delete":{"6":1,"5":1},"core.edit":{"6":1,"4":1,"5":1},"core.edit.state":{"6":1,"5":1}}'
+	WHERE name LIKE '%com_content.article%'
+	DELETE
+		'{
+			"core.create":{"6":1,"3":1,"8":1},
+			"core.delete":{"6":1},
+			"core.edit":{"6":1,"4":1,"8":1},
+			"core.edit.state":{"6":1,"5":1,"8":1},
+			"core.edit.own":{"6":1,"3":1,"8":1}
+		}
+		{
+			"core.create":{"5":1},
+			"core.delete":{"5":1},
+			"core.edit":{"4":1,"5":1},
+			"core.edit.state":{"5":1},
+			"core.edit.own":{"5":1}
+		}'
+{% endhighlight %}
 
 #### Validate Assets
 Check for records with duplicate item references in the `name` field.
 
-	{% highlight mysql %}
-  	/* Duplicates for 'Uncategorised' is expected behavior */
-  	SELECT count(*), name
-  	FROM  whm_assets
-  	GROUP BY name
-  	HAVING count(*)>1
-  	ORDER BY count(*) DESC
-	{% endhighlight %}
+{% highlight mysql %}
+	/* Duplicates for 'Uncategorised' is expected behavior */
+	SELECT count(*), name
+	FROM  whm_assets
+	GROUP BY name
+	HAVING count(*)>1
+	ORDER BY count(*) DESC
+{% endhighlight %}
 
 #### Validate Categories
 Check the total number of categories and compare it to the number of category assets. The count should be the same.
 
-	{% highlight mysql %}
-  	SELECT count(*) FROM #_categories
+{% highlight mysql %}
+	SELECT count(*) 
+  FROM prefix_categories
 
-  	SELECT count(*) FROM #_assets
-  	WHERE SUBSTRING_INDEX(name, 'com_content.category.', -1)
-	{% endhighlight %}
+	SELECT count(*) FROM prefix_assets
+	WHERE SUBSTRING_INDEX(name, 'com_content.category.', -1)
+{% endhighlight %}
 
 #### Validate Articles
 Check for broken references by locating an existing asset record for an item that has a different ID than the item's `asset_id`.
 
-	{% highlight mysql %}
-  	/* This should return 0 results if there are no broken relationships */
-  	SELECT cont.asset_id, assets.id
-  	FROM whm_content cont, whm_assets  assets
-  	WHERE (cont.id = SUBSTRING_INDEX(assets.name, 'com_content.article.', -1)) AND   (cont.asset_id  <> assets.id )
-	{% endhighlight %}
+{% highlight mysql %}
+	/* This should return 0 results if there are no broken relationships */
+	SELECT cont.asset_id, assets.id
+	FROM whm_content cont, whm_assets  assets
+	WHERE (cont.id = SUBSTRING_INDEX(assets.name, 'com_content.article.', -1)) AND   (cont.asset_id  <> assets.id )
+{% endhighlight %}
 
 [1]:	http://en.wikipedia.org/wiki/Adjacency_list_model
 [2]:	https://github.com/elinw/AssetDiagnosis

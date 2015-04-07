@@ -361,7 +361,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     dir: '<%= app.dist %>',
-                    remote: 'git@github.com:mackdoyle/repo.git',
+                    remote: 'git@github.com:mackdoyle/mackdoyle.github.io.git',
                     branch: 'master',
                     commit: true,
                     push: true,
@@ -409,9 +409,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('deploy', [
         'build',
-        'imagemin',
-        'svgmin',
-        'buildcontrol'
+        'imagemin:dist',
+        'svgmin:dist',
+        'buildcontrol:dist'
     ]);
 
     grunt.registerTask('default', [

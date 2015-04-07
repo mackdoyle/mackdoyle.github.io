@@ -21,6 +21,7 @@ If any of those directories doesn't show the last "x" set (the one for "others")
 If the ACL for any of those directories shows that user www has been specifically denied access, then use the appropriate arguments to chmod to fix the ACLs
 
 ##General File Permission Settings
+
 ###With FTP Layer
 If a joomla installation is hosted on apache with `mod_php`, then all virtual hosts on that server run in the same context as your joomla code. If the files are owned by some other user than 'nobody' or 'wwwrun', the safest permissions are those which prevent changes to the joomla code, unless via an authorized channel (e.g. FTP):
 *DocumentRoot directory: 750 (e.g. `public_html`)
@@ -36,7 +37,7 @@ Other processes running under `mod_php` can read your configuration.php. You can
 + Directories: 755 (711 if you are paranoid, but not for directories which need to be listed)
 
 ##Set `open_basedir`
-`open_basedir`is not set in php.ini on our servers but should be. It limits the files that can be accessed by PHP to the specified directory. Also, fopen() uses the path to check the location of the file its opening. Also, some permission issues can be resolved by setting the tmp directory on the property as well. Multiple subdirectories can be added, separated by a colon.
+`open_basedir` is not set in php.ini on our servers but should be. It limits the files that can be accessed by PHP to the specified directory. Also, fopen() uses the path to check the location of the file its opening. Also, some permission issues can be resolved by setting the tmp directory on the property as well. Multiple subdirectories can be added, separated by a colon.
 Example:
 `open_basedir=/home/site_name/public_html:/tmp` (must have trailing slash)
 ##Protect directories and files
