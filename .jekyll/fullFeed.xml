@@ -6,8 +6,76 @@
 		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
 		<language>en</language>
 		<copyright><![CDATA[&copy; 2015 . All rights reserved.]]></copyright>
-		<pubDate>2015-04-07T11:11:19-04:00</pubDate>
+		<pubDate>2015-04-24T12:20:45-04:00</pubDate>
 		
+	<item>
+		<title><![CDATA[How to Deal with Render Blocking Resources]]></title>
+		<description>
+			<![CDATA[
+				<p>All modern browsers hold page rendering until it looks up the media tree view of a stylesheet, initiates the stylesheet load and finally contracts the CSS Object Model. This is why CSS is known as a render blocking resource. So we need to do everything we can to optimize this process. The two standard techniques are to always use media types and media queries. Media types tell the browser to only load the css under certain conditions. For example, print styles sheets should have media=“print” applied to them.</p>
+
+
+				<p>All modern browsers hold page rendering until it looks up the media tree view of a stylesheet, initiates the stylesheet load and finally contracts the CSS Object Model. This is why CSS is known as a render blocking resource. So we need to do everything we can to optimize this process. The two standard techniques are to always use media types and media queries. Media types tell the browser to only load the css under certain conditions. For example, print styles sheets should have media=“print” applied to them.</p>
+
+
+
+
+<h2>Asynchronously loading CSS</h2>
+
+
+
+
+<p>It’s possible to exploit the conditional nature of the media type and trick the browser into releasing the render block. This opens up the ability to load CSS asynchronously. All you need to do is set the media type to a condition that will never be met. This will prevent the stylesheet from loading but will instruct the browser to begin rendering the page. You can then inject the CSS into the page using Javascript.</p>
+
+
+
+
+<p>The Filament Group created a library that does exactly this. The library is very small so I suggest checking it out before you try to build something on your own.</p>
+
+
+
+
+<p><a href="https://github.com/filamentgroup/loadCSS">https://github.com/filamentgroup/loadCSS</a></p>
+
+
+
+
+<h2>Asynchronous Javascript</h2>
+
+
+
+
+<p>Loading external javascript files can create the same render blocking issues as CSS. Traditionally, you see js files loaded like this:</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;//host.com/script.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span></code></pre></div>
+
+
+
+
+<p>There have been multiple methods suggested to get this js to load asynchronously but they typically cause more harm then good. Generally issues appear due to the relationship the browser puts on CSS and JS. Specifically, browsers will not execute javascript until the CSSOM has loaded. There is correct way to handle this, though, and it is as simple as adding the async attribute to the script tag.</p>
+
+
+
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;//host.com/script.js&quot;</span> <span class="nx">async</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span></code></pre></div>
+
+
+
+
+										
+					<p>Posted in: workflow</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/render-blocking-resources/]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/render-blocking-resources/]]></guid>
+	</item>
+
 	<item>
 		<title><![CDATA[Regular Expressions for Cleaning Markup]]></title>
 		<description>

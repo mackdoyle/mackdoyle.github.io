@@ -16,7 +16,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Jason Doyle</title>
+    <title>How to Deal with Render Blocking Resources</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -57,7 +57,7 @@
 
   <ul class="internal-links">
     <li>
-      <a class="active" href="/index.html" title="Articles">Articles</a>
+      <a  href="/index.html" title="Articles">Articles</a>
     </li>
     <li>
       <a  href="/projects.html" title="Projects">Projects</a>
@@ -76,88 +76,79 @@
     <div class="container">
 
   <section class="content-container">
-    
-  <article class="teaser ">
-    <header>
-      <a href="/articles/render-blocking-resources/">
-        <img src="assets/images/articles/render-blocking-resources.png" border="0" />
-      </a>
-    </header>
-	</article>
+    <article class="post">
+  <!--<div class="article-hero">
+    <img style="margin-bottom:26px" src="assets/images/articles/render-blocking-resources.png">
+  </div>-->
+
+  <header>
+    <div class="title">
+      <h1>How to Deal with Render Blocking Resources</h1>
+      
+      <p class="meta"><i class="fa fa-clock-o">&nbsp;</i> <time datetime="March 26, 2015" title="March 26, 2015">March 26, 2015</time></p>
+    </div>
+  </header>
+
+  <div id="article-content" class="article-content">
+    <span id="wrapped" style="float:left"></span>
+    <div class="paragraph-measure">
+      <p>All modern browsers hold page rendering until it looks up the media tree view of a stylesheet, initiates the stylesheet load and finally contracts the CSS Object Model. This is why CSS is known as a render blocking resource. So we need to do everything we can to optimize this process. The two standard techniques are to always use media types and media queries. Media types tell the browser to only load the css under certain conditions. For example, print styles sheets should have media=“print” applied to them.</p>
+
+<h2>Asynchronously loading CSS</h2>
+
+<p>It’s possible to exploit the conditional nature of the media type and trick the browser into releasing the render block. This opens up the ability to load CSS asynchronously. All you need to do is set the media type to a condition that will never be met. This will prevent the stylesheet from loading but will instruct the browser to begin rendering the page. You can then inject the CSS into the page using Javascript.</p>
+
+<p>The Filament Group created a library that does exactly this. The library is very small so I suggest checking it out before you try to build something on your own.</p>
+
+<p><a href="https://github.com/filamentgroup/loadCSS">https://github.com/filamentgroup/loadCSS</a></p>
+
+<h2>Asynchronous Javascript</h2>
+
+<p>Loading external javascript files can create the same render blocking issues as CSS. Traditionally, you see js files loaded like this:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;//host.com/script.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
-  <article class="teaser ">
-    <header>
-      <a href="/articles/regular-expressions-for-tag-cleaning/">
-        <img src="assets/images/articles/regex.png" border="0" />
-      </a>
-    </header>
-	</article>
+<p>There have been multiple methods suggested to get this js to load asynchronously but they typically cause more harm then good. Generally issues appear due to the relationship the browser puts on CSS and JS. Specifically, browsers will not execute javascript until the CSSOM has loaded. There is correct way to handle this, though, and it is as simple as adding the async attribute to the script tag.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;//host.com/script.js&quot;</span> <span class="nx">async</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span></code></pre></div>
 
 
-  <article class="teaser ">
-    <header>
-      <a href="/articles/type-baseline-sass-utility/">
-        <img src="assets/images/articles/baseline.png" border="0" />
-      </a>
-    </header>
-	</article>
 
 
-  <article class="teaser ">
-    <header>
-      <a href="/articles/what-i-like-about-my-prompt/">
-        <img src="assets/images/articles/prompt.png" border="0" />
-      </a>
-    </header>
-	</article>
+    </div>
+  </div>
+
+  <footer>
+    <div class="paging">
+    	
+  	    <div class="footer-col"><a rel=prev href="/articles/regular-expressions-for-tag-cleaning/">&larr; Prev Post</a></div>
+  	  
+  	  
+    </div>
+
+    <div class="tags">
+  	  
+  	    <div class="footer-col">
 
 
-  <article class="teaser ">
-    <header>
-      <a href="/articles/fixing-joomla-permission-issues/">
-        <img src="assets/images/articles/permissions.png" border="0" />
-      </a>
-    </header>
-	</article>
+	<div class="category-list-container">
+		<ul class="inline categories">
+      <li class="first">Posted in</li>
+			
+				<li><a href="categories.html#workflow">workflow</a>
+      
+				</li>
+			
+		</ul>
+	</div>
 
-
-  <article class="teaser ">
-    <header>
-      <a href="/articles/joomla-module-beatdown/">
-        <img src="assets/images/articles/cubism.png" border="0" />
-      </a>
-    </header>
-	</article>
-
-
-  <article class="teaser ">
-    <header>
-      <a href="/articles/sassy-annotations/">
-        <img src="/assets/images/articles/annotated.png" border="0" />
-      </a>
-    </header>
-	</article>
-
-
-  <article class="teaser ">
-    <header>
-      <a href="/articles/html-canvas-getimagedata/">
-        <img src="/assets/images/bkgs/sm/desk.jpg" border="0" />
-      </a>
-    </header>
-	</article>
-
-
-  <article class="teaser ">
-    <header>
-      <a href="/articles/fixing-joomla-asset-table/">
-        <img src="assets/images/articles/assets.png" border="0" />
-      </a>
-    </header>
-	</article>
-
-
+</div>
+  	  
+      
+    </div>
+  </footer>
+</article>
 
 
 
