@@ -401,11 +401,11 @@
           ]
         },
         "properties": {
-          "name": "Harrison Tower Apartment Homes Apartments",
-          "price": "",
-          "notes": "",
+          "name": "Harrison Tower",
+          "price": "$1626.00",
+          "notes": "777sqft",
           "phoneFormatted": "",
-          "phone": "",
+          "phone": "971-202-9806",
           "district": "Downtown",
           "address": "222 SW Harrison St.",
           "city": "Portland",
@@ -413,8 +413,8 @@
           "crossStreet": "",
           "postalCode": "97201",
           "state": "OR",
-          "url": "",
-          "img": "",
+          "url": "http://www.experienceharrisontower.com/",
+          "img": "images/places/harrison-tower.jpg",
           "status": ""
         }
       },
@@ -441,31 +441,6 @@
           "url": "http://hassalooneighth.com/",
           "img": "http://thumbs.trulia-cdn.com/pictures/thumbs_5/ps.70/c/5/4/3/picture-uh=ae5fff68c1b1ffb8e7c5e4da632eacc7-ps=c543fde98cc372341b82d82e73c2e31f.jpg",
           "status": ""
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -122.6741978, 45.5077861
-          ]
-        },
-        "properties": {
-          "name": "Mint Urban RiverPlace",
-          "price": "",
-          "notes": "Scared of horrible reviews from tenents",
-          "phoneFormatted": "",
-          "phone": "",
-          "district": "Downtown",
-          "address": "2083 SW River Dr.",
-          "city": "Portland",
-          "country": "United States",
-          "crossStreet": "",
-          "state": "OR",
-          "url": "",
-          "img": "",
-          "status": "muted"
         }
       },
       {
