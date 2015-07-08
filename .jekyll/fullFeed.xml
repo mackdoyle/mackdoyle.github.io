@@ -6,7 +6,11 @@
 		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
 		<language>en</language>
 		<copyright><![CDATA[&copy; 2015 . All rights reserved.]]></copyright>
+<<<<<<< HEAD
+		<pubDate>2015-04-24T12:20:45-04:00</pubDate>
+=======
 		<pubDate>2015-05-29T12:50:26-04:00</pubDate>
+>>>>>>> 3a45fd68902f8667443048b4fc5918036126dc78
 		
 	<item>
 		<title><![CDATA[How to Deal with Render Blocking Resources]]></title>
