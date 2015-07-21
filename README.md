@@ -7,7 +7,6 @@ License
 -------
 (The MIT License)
 
-Copyright (c) 2012 Sebastian Teumert (<http://www.teumert.net>, <http://github.com/NetzwergX>)
 
 THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
