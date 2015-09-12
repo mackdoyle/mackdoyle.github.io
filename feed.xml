@@ -6,8 +6,26 @@
 		<description><![CDATA[Periodic postings of musings and whatever else I feel like writing about.]]></description>
 		<language>en</language>
 		<copyright><![CDATA[&copy; 2015 . All rights reserved.]]></copyright>
-		<pubDate>2015-04-07T11:11:19-04:00</pubDate>
+		<pubDate>2015-09-12T12:01:24-04:00</pubDate>
 		
+	<item>
+		<title><![CDATA[How to Deal with Render Blocking Resources]]></title>
+		<description>
+			<![CDATA[
+				<p>All modern browsers hold page rendering until it looks up the media tree view of a stylesheet, initiates the stylesheet load and finally contracts the CSS Object Model. This is why CSS is known as a render blocking resource. So we need to do everything we can to optimize this process. The two standard techniques are to always use media types and media queries. Media types tell the browser to only load the css under certain conditions. For example, print styles sheets should have media=“print” applied to them.</p>
+
+
+										
+					<p>Posted in: workflow</p>
+						
+						
+			]]>
+		</description>
+		<link><![CDATA[/articles/render-blocking-resources/]]></link>
+		<author><![CDATA[Jason Doyle]]></author>
+		<guid><![CDATA[/articles/render-blocking-resources/]]></guid>
+	</item>
+
 	<item>
 		<title><![CDATA[Regular Expressions for Cleaning Markup]]></title>
 		<description>
@@ -81,24 +99,6 @@ offers endless possibilities for modification.</p>
 		<link><![CDATA[/articles/fixing-joomla-permission-issues/]]></link>
 		<author><![CDATA[Jason Doyle]]></author>
 		<guid><![CDATA[/articles/fixing-joomla-permission-issues/]]></guid>
-	</item>
-
-	<item>
-		<title><![CDATA[Joomla Module Beatdown]]></title>
-		<description>
-			<![CDATA[
-				<p>One of the quirks of Joomla that can really cause you to tear your hair out, is the seemingly random display (or refusal to display) of modules on certain pages. One of the more common places this can occur is on search results pages. To avoid the problem, you must first understand the central roll menus, and their underlying ItemID, play in defining context for Joomla pages.</p>
-
-
-										
-					<p>Posted in: joomla,, cms,, and php</p>
-						
-						
-			]]>
-		</description>
-		<link><![CDATA[/articles/joomla-module-beatdown/]]></link>
-		<author><![CDATA[Jason Doyle]]></author>
-		<guid><![CDATA[/articles/joomla-module-beatdown/]]></guid>
 	</item>
 
 
