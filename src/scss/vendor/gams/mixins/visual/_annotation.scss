@@ -1,13 +1,13 @@
 //============================================================
-//Annotations with line pointers
+// Annotations with line pointers
 // @param y-position: num required
 // @param x-position: num required
 // @param box-width: num optional
 // @param box-height: num optional
-//
 //============================================================
-/* Variables
--------------------------------------- */
+
+// Variables
+// --------------------------------------
 // Colors
 $bkg-color: rgba(255,255,255,0.9);
 $line-color: rgba(255,255,255,0.5);
@@ -17,15 +17,15 @@ $shadow-color:  rgba(0,0,0,0.1);
 // Sizing
 $endpointSize: 8px;
 
-/* Functions
--------------------------------------- */
-//@function toggleColors(){
+// Functions
+// --------------------------------------
+//@function toggleColors() {
   //@return ("blue !important");
 //}
 
 
-/* Mixins
--------------------------------------- */
+// Mixins
+// --------------------------------------
 @mixin annotation($y-position, $x-position, $box-width:275, $box-height:75 ) {
   position: relative;
   display: block;
@@ -44,8 +44,11 @@ $endpointSize: 8px;
 }
 
 // Pointer
-// Defines the vertical and horizontal line segments using absolutly positioned :before and :after pseudo elements. Their lengths are derived form the annotation box size in that the vertical line segment is 100% of the box height and the horizontal line segment is 100% of the box width.
-@mixin pointer($direction){
+// Defines the vertical and horizontal line segments using absolutly positioned :before and 
+// :after pseudo elements. Their lengths are derived form the annotation box size in that the 
+// vertical line segment is 100% of the box height and the horizontal line segment is 100% 
+// of the box width.
+@mixin pointer($direction) {
   position:relative;
   &:before{
     // x line
@@ -87,126 +90,126 @@ $endpointSize: 8px;
   }
 }
 
-@mixin xLinePosition($direction){  
-  @if($direction == "left"){
+@mixin xLinePosition($direction) {  
+  @if($direction == "left") {
     display: none; 
-  }@elseif($direction == "left-up"){
+  } @elseif($direction == "left-up") {
     top:  0%;
     left: -100%;
-  }@elseif($direction == "up-left"){
+  } @elseif($direction == "up-left") {
     top:  -50%;
     left: 50%;
-  }@elseif($direction == "up"){
+  } @elseif($direction == "up") {
     top: -50%;
     left: 50%;
-  }@elseif($direction == "up-right"){
+  } @elseif($direction == "up-right") {
     top:  -50%;
     left: 50%;
-  }@elseif($direction == "right-up"){
+  } @elseif($direction == "right-up") {
     top:  0%;
     left: 200%;
-  }@elseif($direction == "right"){
+  } @elseif($direction == "right") {
     display: none;
-  }@elseif($direction == "right-down"){
+  } @elseif($direction == "right-down") {
     top:  100%;
     left: 200%;
-  }@elseif($direction == "down-right"){
+  } @elseif($direction == "down-right") {
     top:  150%;
     left: 50%;
-  }@elseif($direction == "down"){
+  } @elseif($direction == "down") {
     top:  150%;
     left: 50%;
-  }@elseif($direction == "down-left"){
+  } @elseif($direction == "down-left") {
     top:  150%;
     left: 50%;
-  }@elseif($direction == "left-down"){
+  } @elseif($direction == "left-down") {
     top:  100%;
     left: -100%
-  }@else{
+  } @else{
     top:  50%;
     left: 50%;
   }
 }
 
-@mixin yLinePosition($direction){  
-  @if($direction == "left"){
+@mixin yLinePosition($direction) {  
+  @if($direction == "left") {
     top:  50%;
     left: -50%;  
-  }@elseif($direction == "left-up"){
+  } @elseif($direction == "left-up") {
     top:  50%;
     left: -50%;
-  }@elseif($direction == "up-left"){
+  } @elseif($direction == "up-left") {
     top:  -100%;
     left: 0%;
-  }@elseif($direction == "up"){
+  } @elseif($direction == "up") {
     display: none;
-  }@elseif($direction == "up-right"){
+  } @elseif($direction == "up-right") {
     top:  -100%;
     left: 100%;
-  }@elseif($direction == "right-up"){
+  } @elseif($direction == "right-up") {
     top:  50%;
     left: 150%;
-  }@elseif($direction == "right"){
+  } @elseif($direction == "right") {
     top:  50%;
     left: 150%;
-  }@elseif($direction == "right-down"){
+  } @elseif($direction == "right-down") {
     top:  50%;
     left: 150%;
-  }@elseif($direction == "down-right"){
+  } @elseif($direction == "down-right") {
     top:  200%;
     left: 100%;
-  }@elseif($direction == "down"){
+  } @elseif($direction == "down") {
     display: none;
-  }@elseif($direction == "down-left"){
+  } @elseif($direction == "down-left") {
     top:  200%;
     left: 0%;
-  }@elseif($direction == "left-down"){
+  } @elseif($direction == "left-down") {
     top:  50%;
     left: -50%;
-  }@else{
+  } @else{
     top: 50%;
     left: 50%;
   }
 }
 
-@mixin endpointPosition($direction){  
-  @if($direction == "left"){
-    top:  50%;
+@mixin endpointPosition($direction) {  
+  @if($direction == "left") {
+    top:    50%;
     left: -100%; 
-  }@elseif($direction == "left-up"){
-    top:  -50%;
+  } @elseif($direction == "left-up") {
+    top:   -50%;
     left: -100%;
-  }@elseif($direction == "up-left"){
+  } @elseif($direction == "up-left") {
     top:  -100%;
-    left: -50%;
-  }@elseif($direction == "up"){
-    top: -100%;
-    left: 50%;
-  }@elseif($direction == "up-right"){
-    top: -100%;
-    left: 150%;
-  }@elseif($direction == "right-up"){
-    top:  -50%;
-    left: 200%;
-  }@elseif($direction == "right"){
-    top:  50%;
-    left: 200%;
-  }@elseif($direction == "right-down"){
-    top:  150%;
-    left: 200%;
-  }@elseif($direction == "down-right"){
-    top:  200%;
-    left: 150%;
-  }@elseif($direction == "down"){
-    top:  200%;
-    left: 50%;
-  }@elseif($direction == "down-left"){
-    top:  200%;
-    left: -50%;
-  }@elseif($direction == "left-down"){
-    top:  150%;
+    left:  -50%;
+  } @elseif($direction == "up") {
+    top:  -100%;
+    left:   50%;
+  } @elseif($direction == "up-right") {
+    top:  -100%;
+    left:  150%;
+  } @elseif($direction == "right-up") {
+    top:   -50%;
+    left:  200%;
+  } @elseif($direction == "right") {
+    top:    50%;
+    left:  200%;
+  } @elseif($direction == "right-down") {
+    top:   150%;
+    left:  200%;
+  } @elseif($direction == "down-right") {
+    top:   200%;
+    left:  150%;
+  } @elseif($direction == "down") {
+    top:   200%;
+    left:   50%;
+  } @elseif($direction == "down-left") {
+    top:   200%;
+    left:  -50%;
+  } @elseif($direction == "left-down") {
+    top:   150%;
     left: -100%;
-  }@else{
+  } @else{
     top: 0px;
     left: 0px;
   }

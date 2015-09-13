@@ -19,7 +19,7 @@
   // --------------------------------------------
 .post {
   height: 100%;
-
+  padding: 68px 2% 2%;
 /*
   @include breakpoint(I---I) {
     overflow-y: scroll; //intertia scrolling on iOS
@@ -72,6 +72,14 @@
 
     p {
       letter-spacing: .013rem;
+    }
+
+    a.download-link {
+      &:before {
+        font-family: "FontAwesome";
+        content: "\f019";
+        padding-right: 6px;
+      }
     }
   }
 

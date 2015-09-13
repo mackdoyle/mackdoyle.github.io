@@ -3039,6 +3039,7 @@ h1 + hr {
 
 .post {
   height: 100%;
+  padding: 68px 2% 2%;
   /*
   @include breakpoint(I---I) {
     overflow-y: scroll; //intertia scrolling on iOS
@@ -3076,7 +3077,8 @@ h1 + hr {
 .panels-container {
   font-size: 0;
   background: rgba(20, 20, 20, 0.9);
-  padding: 2% 0 2% 2%; }
+  padding: 2% 0 2% 2%;
+  margin: 68px 0 0 0; }
 
 .panel-container {
   width: 47%;
@@ -3280,9 +3282,6 @@ h1 + hr {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 100%; }
-
-.container {
-  margin-top: 48px; }
 
 .mobile-menu {
   display: none; }

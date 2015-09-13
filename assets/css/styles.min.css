@@ -535,6 +535,7 @@ pre code {
 
 .post {
   height: 100%;
+  padding: 68px 2% 2%;
 }
 
 .post header .title {
@@ -581,6 +582,7 @@ pre code {
   font-size: 0;
   background: rgba(20,20,20,.9);
   padding: 2% 0 2% 2%;
+  margin: 68px 0 0 0;
 }
 
 .panel-container {
@@ -676,10 +678,6 @@ footer .paging {
 
 footer {
   padding: 15px;
-}
-
-.container {
-  margin-top: 48px;
 }
 
 .top-bar .internal-links {

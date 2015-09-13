@@ -11,7 +11,8 @@ $top-bar-link: #fff;
 
 //Compensate for fixed topbar area
 .container {
-  margin-top: $top-bar-height;
+  //margin-top: $top-bar-height;
+  margin: 68px 0 2% 2%;
 }
 
 .mobile-menu {

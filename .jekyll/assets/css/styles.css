@@ -1713,244 +1713,142 @@ And another...
     @include stiches(#999, #efefef, 2px, .5rem);
   }
 */
-/* Variables
--------------------------------------- */
-/* Functions
--------------------------------------- */
-/* Mixins
--------------------------------------- */
-.c {
-  color: #75715e; }
+.highlight, .highlight pre {
+  background-color: #2b303b;
+  color: #fefefe; }
 
-/* Comment */
-.err {
-  color: #960050; }
-
-/* Error */
-.k {
-  color: #66d9ef; }
-
-/* Keyword */
-.l {
-  color: #ae81ff; }
-
-/* Literal */
-.n {
-  color: #f8f8f2; }
-
-/* Name */
-.o {
-  color: #f92672; }
-
-/* Operator */
-.p {
-  color: #f8f8f2; }
-
-/* Punctuation */
-.cm {
-  color: #75715e; }
-
-/* Comment.Multiline */
-.cp {
-  color: #75715e; }
-
-/* Comment.Preproc */
-.c1 {
-  color: #75715e; }
-
-/* Comment.Single */
-.cs {
-  color: #75715e; }
-
-/* Comment.Special */
-.ge {
+.highlight .ge {
   font-style: italic; }
 
-/* Generic.Emph */
-.gs {
+.highlight .gs {
   font-weight: bold; }
 
-/* Generic.Strong */
-.kc {
-  color: #66d9ef; }
+.highlight .c {
+  color: #68A5BE; }
 
-/* Keyword.Constant */
-.kd {
-  color: #66d9ef; }
+.highlight .cp {
+  color: #68A5BE; }
 
-/* Keyword.Declaration */
-.kn {
-  color: #f92672; }
+.highlight .c1 {
+  color: #68A5BE; }
 
-/* Keyword.Namespace */
-.kp {
-  color: #66d9ef; }
+.highlight .cs {
+  color: #68A5BE; }
 
-/* Keyword.Pseudo */
-.kr {
-  color: #66d9ef; }
+.highlight .cm {
+  color: #68A5BE; }
 
-/* Keyword.Reserved */
-.kt {
-  color: #66d9ef; }
+.highlight .m {
+  color: #FF9117; }
 
-/* Keyword.Type */
-.ld {
-  color: #e6db74; }
+.highlight .mf {
+  color: #FF9117; }
 
-/* Literal.Date */
-.m {
-  color: #ae81ff; }
+.highlight .mi {
+  color: #FF9117; }
 
-/* Literal.Number */
-.s {
-  color: #e6db74; }
+.highlight .mo {
+  color: #FF9117; }
 
-/* Literal.String */
-.na {
-  color: #a6e22e; }
+.highlight .se {
+  color: #FF9117; }
 
-/* Name.Attribute */
-.nb {
-  color: #f8f8f2; }
+.highlight .kc {
+  color: #FF9117; }
 
-/* Name.Builtin */
-.nc {
-  color: #a6e22e; }
+.highlight .k {
+  color: #1bddec; }
 
-/* Name.Class */
-.no {
-  color: #66d9ef; }
+.highlight .kd {
+  color: #1bddec; }
 
-/* Name.Constant */
-.nd {
-  color: #a6e22e; }
+.highlight .kn {
+  color: #1bddec; }
 
-/* Name.Decorator */
-.ni {
-  color: #f8f8f2; }
+.highlight .s {
+  color: #8fd3B7; }
 
-/* Name.Entity */
-.ne {
-  color: #a6e22e; }
+.highlight .sb {
+  color: #8fd3B7; }
 
-/* Name.Exception */
-.nf {
-  color: #a6e22e; }
+.highlight .sc {
+  color: #8fd3B7; }
 
-/* Name.Function */
-.nl {
-  color: #f8f8f2; }
+.highlight .sd {
+  color: #a3be8c; }
 
-/* Name.Label */
-.nn {
-  color: #f8f8f2; }
+.highlight .s2 {
+  color: #8fd3B7; }
 
-/* Name.Namespace */
-.nx {
-  color: #a6e22e; }
+.highlight .sh {
+  color: #8fd3B7; }
 
-/* Name.Other */
-.py {
-  color: #f8f8f2; }
+.highlight .si {
+  color: #8fd3B7; }
 
-/* Name.Property */
-.nt {
-  color: #f92672; }
+.highlight .sx {
+  color: #8fd3B7; }
 
-/* Name.Tag */
-.nv {
-  color: #f8f8f2; }
+.highlight .sr {
+  color: #96b5b4; }
 
-/* Name.Variable */
-.ow {
-  color: #f92672; }
+.highlight .s1 {
+  color: #8fd3B7; }
 
-/* Operator.Word */
-.w {
-  color: #f8f8f2; }
+.highlight .ss {
+  color: #8fd3B7; }
 
-/* Text.Whitespace */
-.mf {
-  color: #ae81ff; }
+.highlight .na {
+  color: #E0B061; }
 
-/* Literal.Number.Float */
-.mh {
-  color: #ae81ff; }
+.highlight .bp {
+  color: #E0B061; }
 
-/* Literal.Number.Hex */
-.mi {
-  color: #ae81ff; }
+.highlight .nc {
+  color: #E0B061; }
 
-/* Literal.Number.Integer */
-.mo {
-  color: #ae81ff; }
+.highlight .no {
+  color: #E0B061; }
 
-/* Literal.Number.Oct */
-.sb {
-  color: #e6db74; }
+.highlight .nd {
+  color: #E0B061; }
 
-/* Literal.String.Backtick */
-.sc {
-  color: #e6db74; }
+.highlight .ne {
+  color: #E0B061; }
 
-/* Literal.String.Char */
-.sd {
-  color: #e6db74; }
+.highlight .nf {
+  color: #8fa1b3; }
 
-/* Literal.String.Doc */
-.s2 {
-  color: #e6db74; }
+.highlight .nt {
+  color: #68A5BE; }
 
-/* Literal.String.Double */
-.se {
-  color: #ae81ff; }
+.highlight .nv {
+  color: #68A5BE; }
 
-/* Literal.String.Escape */
-.sh {
-  color: #e6db74; }
+.highlight .ow {
+  color: #fefefe; }
 
-/* Literal.String.Heredoc */
-.si {
-  color: #e6db74; }
+.highlight .o {
+  color: #68A5BE; }
 
-/* Literal.String.Interpol */
-.sx {
-  color: #e6db74; }
+.highlight .n {
+  color: #fefefe; }
 
-/* Literal.String.Other */
-.sr {
-  color: #e6db74; }
+.highlight .nl {
+  color: #fefefe; }
 
-/* Literal.String.Regex */
-.s1 {
-  color: #e6db74; }
+.highlight .nn {
+  color: #fefefe; }
 
-/* Literal.String.Single */
-.ss {
-  color: #e6db74; }
+.highlight .nx {
+  color: #fefefe; }
 
-/* Literal.String.Symbol */
-.bp {
-  color: #f8f8f2; }
+.highlight .bp {
+  color: #E0B061; }
 
-/* Name.Builtin.Pseudo */
-.vc {
-  color: #f8f8f2; }
+.highlight .p {
+  color: #fefefe; }
 
-/* Name.Variable.Class */
-.vg {
-  color: #f8f8f2; }
-
-/* Name.Variable.Global */
-.vi {
-  color: #f8f8f2; }
-
-/* Name.Variable.Instance */
-.il {
-  color: #ae81ff; }
-
-/* Literal.Number.Integer.Long */
 /* 
  * Hipster Ampersand
  * This uses the unicode range which tells the browser to only load the ampersand character 
@@ -2282,6 +2180,9 @@ pre code {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   margin: 2rem auto; }
 
+code.language-html {
+  color: #efefef; }
+
 pre.terminal {
   border: 1px solid #000;
   background-color: #2c2f33;
@@ -2320,20 +2221,11 @@ pre.terminal code {
 section {
   /* Pointer Lines */ }
   section .annotation-container {
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    right: 50%;
-    width: 1024px;
-    height: 880px;
-    background: url('http://farm4.staticflickr.com/3054/2724885374_742acd12ca_b.jpg') no-repeat;
-    background-position: 50% 50%;
-    margin: 0 auto;
-    box-shadow: 0 0 300px 0px rgba(0, 0, 0, 0.5); }
+    width: 800;
+    height: 688px;
+    background: url('/assets/images/articles/fly.jpg') no-repeat;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 0 260px 0px rgba(0, 0, 0, 0.3); }
   section .header {
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
@@ -2359,6 +2251,72 @@ section {
           visibility: hidden; }
         section .header .control-panel li .toggle-colors:checked ~ span {
           color: toggleColors(); }
+  section section .endpoint {
+    background-color: #47E20A !important; }
+  section .annotation-one p, section .annotation-two p, section .annotation-three p, section .annotation-four p {
+    font-size: 12px;
+    line-height: 1.4em;
+    font-weight: bold; }
+  section .annotation-one {
+    position: relative;
+    display: block;
+    top: 220px;
+    left: -80px;
+    width: 275px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .2s; }
+  section .annotation-two {
+    position: relative;
+    display: block;
+    top: 520px;
+    left: 60px;
+    width: 275px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .2s; }
+  section .annotation-three {
+    position: relative;
+    display: block;
+    top: -50px;
+    left: 535px;
+    width: 275px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .2s; }
+  section .annotation-four {
+    position: relative;
+    display: block;
+    top: 385px;
+    left: 680px;
+    width: 275px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .2s; }
   section .left {
     position: relative; }
     section .left:before {
@@ -2871,66 +2829,6 @@ section {
       box-shadow: 24px 24px 4px rgba(0, 0, 0, 0.1);
       top: 150%;
       left: -100%; }
-  section .annotation-one {
-    position: relative;
-    display: block;
-    top: 220px;
-    left: -80px;
-    width: 275px;
-    height: 75px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
-    color: rgba(0, 0, 0, 0.6);
-    z-index: 10;
-    box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow .2s; }
-  section .annotation-two {
-    position: relative;
-    display: block;
-    top: 505px;
-    left: 65px;
-    width: 275px;
-    height: 75px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
-    color: rgba(0, 0, 0, 0.6);
-    z-index: 10;
-    box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow .2s; }
-  section .annotation-three {
-    position: relative;
-    display: block;
-    top: -50px;
-    left: 535px;
-    width: 275px;
-    height: 75px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
-    color: rgba(0, 0, 0, 0.6);
-    z-index: 10;
-    box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow .2s; }
-  section .annotation-four {
-    position: relative;
-    display: block;
-    top: 385px;
-    left: 680px;
-    width: 275px;
-    height: 75px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
-    color: rgba(0, 0, 0, 0.6);
-    z-index: 10;
-    box-shadow: 24px 24px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow .2s; }
 
 .meta {
   color: #101010;
@@ -2951,6 +2849,11 @@ section {
 
 .inline {
   display: inline-block; }
+
+.caption {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: right; }
 
 .seperator {
   text-align: center; }
@@ -3039,6 +2942,7 @@ h1 + hr {
 
 .post {
   height: 100%;
+  padding: 68px 2% 2%;
   /*
   @include breakpoint(I---I) {
     overflow-y: scroll; //intertia scrolling on iOS
@@ -3070,13 +2974,18 @@ h1 + hr {
       margin: 0 auto; }
     .post .article-content p {
       letter-spacing: .013rem; }
+    .post .article-content a.download-link:before {
+      font-family: "FontAwesome";
+      content: "\f019";
+      padding-right: 6px; }
   .post footer {
     position: relative; }
 
 .panels-container {
   font-size: 0;
   background: rgba(20, 20, 20, 0.9);
-  padding: 2% 0 2% 2%; }
+  padding: 2% 0 2% 2%;
+  margin: 68px 0 0 0; }
 
 .panel-container {
   width: 47%;
@@ -3282,7 +3191,7 @@ h1 + hr {
   border-radius: 100%; }
 
 .container {
-  margin-top: 48px; }
+  margin: 68px 0 2% 2%; }
 
 .mobile-menu {
   display: none; }

@@ -2,21 +2,22 @@
 
 /* Selectors
 -------------------------------------- */
-section{
-	.annotation-container {
-	  position: absolute;
-	  transform: translate(-50%, -50%); //Allows for positioning from
-	  top:50%;
-	  bottom: 50%;
-	  left: 50%;
-	  right:50%;
-	  width: 1024px;
-	  height: 880px;
-	  background:   url('http://farm4.staticflickr.com/3054/2724885374_742acd12ca_b.jpg') no-repeat;
-	  background-position: 50% 50%;
-	  margin: 0 auto;
-	  box-shadow: 0 0 300px 0px rgba(0,0,0,0.5);
-	}
+section {
+		.annotation-container {
+		  //position: absolute;
+		  //transform: translate(-50%, -50%); //Allows for positioning from
+		  //top:50%;
+		  //bottom: 50%;
+		  //left: 50%;
+		  //right:50%;
+		  width: 800;
+		  height: 688px;
+		  background: url('/assets/images/articles/fly.jpg') no-repeat;
+		  //background-position: 50% 50%;
+		  margin: 0 auto $gutter-size auto;
+		  box-shadow: 0 0 260px 0px rgba(0,0,0,0.3);
+		}
+		
 
 	.header {
 	  position: absolute;
@@ -51,6 +52,37 @@ section{
 	    }
 	  }
 	}
+
+	// Endpoint Override
+	// --------------------------------------- 
+	section .endpoint {
+	  background-color: #47E20A !important;
+	}
+
+	// Annotation Initialization
+	// --------------------------------------- 
+	.annotation-one p, .annotation-two p, .annotation-three p, .annotation-four p {
+		font-size: 12px;
+		line-height: 1.4em;
+		font-weight: bold;
+	}
+
+	.annotation-one {
+	  @include annotation(220, -80);
+	}
+
+	.annotation-two {
+	  @include annotation(520, 60);
+	}
+
+	.annotation-three {
+	  @include annotation(-50, 535);
+	}
+
+	.annotation-four {
+	  @include annotation(385, 680);
+	}
+
 
 	/* Pointer Lines */
 	.left {
@@ -88,25 +120,6 @@ section{
 	}
 	.left-down {
 	  @include pointer("left-down");
-	}
-
-	// Annotation Initialization
-	// --------------------------------------- 
-	.annotation-one {
-	  @include annotation(220, -80);
-	}
-
-	.annotation-two {
-	  @include annotation(505, 65);
-	}
-
-	.annotation-three {
-	  @include annotation(-50, 535);
-	}
-
-
-	.annotation-four {
-	  @include annotation(385, 680);
 	}
 
 }

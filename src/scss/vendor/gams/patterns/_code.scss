@@ -35,6 +35,10 @@ pre code {
   margin: 2rem auto;
 }
 
+// Set default text color for pygments
+code.language-html {
+    color: #efefef;
+}
 
 //Terminal
 // -------------------------

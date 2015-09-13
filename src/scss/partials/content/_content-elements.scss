@@ -17,6 +17,13 @@
  display: inline-block;
 }
 
+// Caption
+.caption {
+    font-size: 12px;
+    color: rgba(0,0,0,.5);
+    text-align: right;
+}
+
 // Teaser Seperator
 .seperator {
 	text-align: center;
@@ -25,6 +32,7 @@
 		width: 20%;
 		border-bottom: 1px solid $light-gray;
 	}
+  
 	&:after{
 		content: "";
 		width: 20%;
@@ -43,6 +51,7 @@ hr {
     position: relative;
     border-bottom: 1px solid #ddd;
 }
+
 hr:after {
     content: "✫";
     background: $body-color;
@@ -58,6 +67,7 @@ h1 + hr {margin:-0.5em 0 1.5em; font-size: 400%;}
   @include breakpoint(I--------I){
     display: none;
   }
+
   position: fixed;
   overflow: hidden;
   top: 10%;
@@ -71,9 +81,11 @@ h1 + hr {margin:-0.5em 0 1.5em; font-size: 400%;}
   color: #424242;
   letter-spacing: .025rem;
   @include border-radius(0 6 6 0);
+
   i {
     font-size: 1rem;
   }
+
   &:before {
     // Clipped shadow
     content: "";
@@ -87,6 +99,7 @@ h1 + hr {margin:-0.5em 0 1.5em; font-size: 400%;}
   	@include border-radius(50%);
   	@include box-shadow(0px 5px 20px 0px rgba(0,0,0,0.4));
   }
+  
   &:after {
     width: 98%;
     height: 50%;

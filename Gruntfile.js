@@ -27,8 +27,9 @@ module.exports = function(grunt) {
             },
             jekyll: {
                 files: ['<%= app.source %>/**/*.{html,yml,md,mkd,markdown}'],
-                tasks: ['jekyll:server', 'watch:scripts']
+                tasks: ['clean:server', 'jekyll:server', 'sass:server', 'autoprefixer:server', 'cssmin:dist', 'uglify:server', 'uncss:dist']
             },
+            
             images: {
                 files: ['<%= app.source %>/assets/images**/*.{gif,jpg,jpeg,png,svg,webp}'],
                 tasks: ['copy:server']
