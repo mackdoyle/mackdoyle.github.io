@@ -215,3 +215,44 @@ $endpointSize: 8px;
   }
 }
 
+
+
+  /* Pointer Lines */
+  .left {
+    @include pointer("left");
+  }
+  .left-up {
+    @include pointer("left-up");
+  }
+  .up-left {
+    @include pointer("up-left");
+  }
+  .up {
+    @include pointer("up");
+  }
+  .up-right {
+    @include pointer("up-right");
+  }
+  .right-up {
+    @include pointer("right-up");
+  }
+  .right {
+    @include pointer("right");
+  }
+  .right-down {
+    @include pointer("right-down");
+  }
+  .down-right {
+    @include pointer("down-right");
+  }
+  .down {
+    @include pointer("down");
+  }
+  .down-left {
+    @include pointer("down-left");
+  }
+  
+  .left-down {
+    @include pointer("left-down");
+  }
+
