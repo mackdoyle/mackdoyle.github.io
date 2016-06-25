@@ -357,6 +357,7 @@ header p {
     box-shadow: none;
     height: 100%;
     max-width: 80%;
+    padding: 3em;
     overflow-y: auto;
     position: fixed;
     right: 0;
