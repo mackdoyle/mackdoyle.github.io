@@ -100,16 +100,19 @@
 
     <h2>The Terminal Emulator</h2>
 
-    <p>iTerm2 is a powerful replacement to the default Terminal app that come on OS X. Some advantages of iTerm2 are:
+    <p>iTerm is a powerful replacement to the default Terminal app that come on OS X. Apple has stepped up and improved Terminal in the last few versions of OSX but I still prefer iTerm.</p>
+    <p>Some advantages of iTerm are:</p>
 
     <ol>
-      <li>1. tmux integration. This allows you to have multiple virtual windows open in a single terminal.</li>
-      <li>2. Better color support. iTerm supports 256 color modes, which we will use later.</li>
-      <li>3. Arrangements. You can configure iTerm2 how you like it, including its location on your desktop, and save it for various situations.</li>
-      <li>4. Highly configurable. iTerm2 has a rich preferences section so you can get it just the way you want it.</li>
+      <li>1. Quick window splitting without having to learn tmux commands by using intuitive shortcuts like <cmd-d> and <shift-cmd-d>.</li>
+      <li>2. Arrangements. You can configure iTerm to open by default into a predefined a location on your desktop, with multiple windows and unique profiles per window.</li>
+      <li>3. Search term highlighting</li>
+      <li>4. Growl support for notification of completed processes.</li>
+      <li>5. Highly configurable. iTerm2 has a rich preferences section so you can get it just the way you want it.</li>
     </ol>
 
     <p>Go ahead and download iTerm2 here: <a href="http://iterm2.com/" target="_blank">iTerm2</a></p>
+    <p> Also, install the shell integration features here: <a href="https://iterm2.com/documentation-shell-integration.html" target="_blank">iTerm2 Shell Integration</a></p>
 
     <h2>zsh shell and oh-my-zsh</h2>
 
@@ -126,17 +129,27 @@
 
     <h2>Install zsh</h2>
 
+    <h3>Install with Homebrew</h3>
+    <ol>
+      <li>$brew install zsh</li>
+      <li>Go to System Preferences>Users and Group. Click on the padlock to unlock it and then ctrl-click on your profile icon to open the Advance Options.</li>
+      <li>In the Advanced Options for you profile, set your Login Shell to: <code>/bin/zsh</code></li>
+      <li>If you hate it, set it back to: <code>exec bash</code></li>
+    </ol>
+
+    <h3>Install Manually</h3>
     <ol>
       <li>CD to your user directory</li>
       <li>Get autoconf if you don't have it: $git clone git://git.sv.gnu.org/autoconf</li>
       <li>Get zsh:  $git clone git://git.code.sf.net/p/zsh/code zsh</li>
       <li>Run <code>$~/zsh/Ultil/preconfig</code></li>
-      <li>Open up Users and Group, unlock it and ctrl-click on your profile to get to the Advance Options.</li>
-      <li>Set your Login Shell to: <code>exec zsh</code></li>
+      <li>Go to System Preferences>Users and Group. Click on the padlock to unlock it and then ctrl-click on your profile icon to open the Advance Options.</li>
+      <li>In the Advanced Options for you profile, set your Login Shell to: <code>/bin/zsh</code></li>
       <li>If you hate it, set it back to: <code>exec bash</code></li>
     </ol>
-    </li>
-    </ol>
+
+    <img src="assets/images/articles/profile-advanced-options.png">
+
 
 
     </div>
